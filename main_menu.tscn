@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://m27tcea44pb2"]
+[gd_scene load_steps=7 format=3 uid="uid://m27tcea44pb2"]
 
 [ext_resource type="Texture2D" uid="uid://d4be7c7gsqp6" path="res://Main Menu assets/langit.png" id="2_fu7sn"]
 [ext_resource type="Script" uid="uid://d0g33cxpav7kl" path="res://scripts/langit_moving.gd" id="2_jix8l"]
 [ext_resource type="Texture2D" uid="uid://bn1xylcymig51" path="res://Main Menu assets/Title Sample(no photoshop pa).png" id="4_glbon"]
 [ext_resource type="Texture2D" uid="uid://d2abvfbjl0bkn" path="res://Main Menu assets/main2.png" id="5_glbon"]
 [ext_resource type="Texture2D" uid="uid://b1tm8odbiuy57" path="res://Main Menu assets/Ilaw effect.png" id="5_nlkkf"]
+[ext_resource type="Texture2D" uid="uid://ck363d8y7h67j" path="res://Main Menu assets/dahon.png" id="6_nlkkf"]
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3
@@ -50,7 +51,6 @@ centered = false
 script = ExtResource("2_jix8l")
 
 [node name="TitleSample(noPhotoshopPa)" type="Sprite2D" parent="."]
-show_behind_parent = true
 position = Vector2(838, 198)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("4_glbon")
@@ -65,3 +65,9 @@ show_behind_parent = true
 position = Vector2(575.94104, 324)
 scale = Vector2(0.07499792, 0.074991316)
 texture = ExtResource("5_glbon")
+
+[node name="Dahon" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(576, 325)
+scale = Vector2(0.07509895, 0.07562031)
+texture = ExtResource("6_nlkkf")
