@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cl3ubpeg45aqq"
+path="res://.godot/imported/Festival_Dialogue.dialogue-58204f9185b6908732c977b41d5639c6.tres"
+
+[deps]
+
+source_file="res://dialogue/Festival_Dialogue.dialogue"
+dest_files=["res://.godot/imported/Festival_Dialogue.dialogue-58204f9185b6908732c977b41d5639c6.tres"]
+
+[params]
+
+defaults=true

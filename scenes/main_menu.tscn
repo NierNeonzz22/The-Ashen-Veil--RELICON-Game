@@ -1,0 +1,77 @@
+[gd_scene load_steps=8 format=3 uid="uid://m27tcea44pb2"]
+
+[ext_resource type="Script" uid="uid://w3ib3v6ip60q" path="res://scripts/button.gd" id="1_oa1go"]
+[ext_resource type="Texture2D" uid="uid://d4be7c7gsqp6" path="res://assets/Main Menu assets/langit.png" id="2_fu7sn"]
+[ext_resource type="Script" uid="uid://d0g33cxpav7kl" path="res://scripts/langit_moving.gd" id="2_jix8l"]
+[ext_resource type="Texture2D" uid="uid://bn1xylcymig51" path="res://assets/Main Menu assets/Title Sample(no photoshop pa).png" id="4_glbon"]
+[ext_resource type="Texture2D" uid="uid://d2abvfbjl0bkn" path="res://assets/Main Menu assets/main2.png" id="5_glbon"]
+[ext_resource type="Texture2D" uid="uid://b1tm8odbiuy57" path="res://assets/Main Menu assets/Ilaw effect.png" id="5_nlkkf"]
+[ext_resource type="Texture2D" uid="uid://ck363d8y7h67j" path="res://assets/Main Menu assets/dahon.png" id="6_nlkkf"]
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -202.0
+offset_top = -248.0
+offset_right = -82.0
+offset_bottom = -147.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(1.2, 1.2)
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "START"
+script = ExtResource("1_oa1go")
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "SETTINGS"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "QUIT"
+
+[node name="Langit_moving" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(-1579.0001, 4.5474735e-13)
+scale = Vector2(0.21, 0.21)
+texture = ExtResource("2_fu7sn")
+centered = false
+script = ExtResource("2_jix8l")
+
+[node name="TitleSample(noPhotoshopPa)" type="Sprite2D" parent="."]
+position = Vector2(838, 198)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_glbon")
+
+[node name="IlawEffect" type="Sprite2D" parent="."]
+position = Vector2(576, 324.5)
+scale = Vector2(0.075120434, 0.07556995)
+texture = ExtResource("5_nlkkf")
+
+[node name="Main2" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(575.94104, 324)
+scale = Vector2(0.07499792, 0.074991316)
+texture = ExtResource("5_glbon")
+
+[node name="Dahon" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(576, 325)
+scale = Vector2(0.07509895, 0.07562031)
+texture = ExtResource("6_nlkkf")
+
+[connection signal="pressed" from="VBoxContainer/Button" to="VBoxContainer/Button" method="_on_pressed"]

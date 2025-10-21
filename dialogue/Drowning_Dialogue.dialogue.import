@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://ntba8c00dxcd"
+path="res://.godot/imported/Drowning_Dialogue.dialogue-1ed8c06ed8e9d6a699fc3b248a936ae9.tres"
+
+[deps]
+
+source_file="res://dialogue/Drowning_Dialogue.dialogue"
+dest_files=["res://.godot/imported/Drowning_Dialogue.dialogue-1ed8c06ed8e9d6a699fc3b248a936ae9.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmxyyxevyquaq"]
+
+[ext_resource type="Script" uid="uid://noufxym8rxag" path="res://scripts/scene_2_drowning_scene.gd" id="1_rgyje"]
+[ext_resource type="Texture2D" uid="uid://ducu546x6ur5u" path="res://assets/assets_scene 1/sprites/portraits/Tristan/tristan arms up w overshirt.png" id="1_siqr0"]
+[ext_resource type="Resource" uid="uid://ntba8c00dxcd" path="res://dialogue/Drowning_Dialogue.dialogue" id="2_4rv8i"]
+[ext_resource type="Texture2D" uid="uid://g7y36qlysk66" path="res://assets/assets_scene2/dagat.png" id="4_yf7s8"]
+
+[node name="Scene2_Drowning Scene" type="Node2D"]
+script = ExtResource("1_rgyje")
+dialogue_resource = ExtResource("2_4rv8i")
+
+[node name="TristanArmsUpWOvershirt" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(593, 253.00002)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_siqr0")
+
+[node name="Dagat" type="Sprite2D" parent="."]
+show_behind_parent = true
+texture_filter = 1
+position = Vector2(578.00006, 325)
+scale = Vector2(3.6093748, 3.616666)
+texture = ExtResource("4_yf7s8")
