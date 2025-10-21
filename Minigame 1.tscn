@@ -1,0 +1,261 @@
+[gd_scene load_steps=16 format=3 uid="uid://646ya6q2fhy5"]
+
+[ext_resource type="Script" uid="uid://rd1anro6267x" path="res://character_body_2d.gd" id="1_pixi3"]
+[ext_resource type="Texture2D" uid="uid://bjr4uxx2ar0q8" path="res://Minigame Assets/BETA SPRITE SHEET TRISTANuntitled.png" id="2_ob3l2"]
+[ext_resource type="Texture2D" uid="uid://e6bv4j1pihhh" path="res://Minigame Assets/CAVE MAP SEMIFINAL(no pillar).png" id="3_q8m2s"]
+[ext_resource type="Texture2D" uid="uid://dy6qmivauw827" path="res://Minigame Assets/di na lit.png" id="4_ob3l2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1tns4"]
+size = Vector2(28, 71)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jk4yg"]
+atlas = ExtResource("2_ob3l2")
+region = Rect2(0, 0, 155, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_646m1"]
+atlas = ExtResource("2_ob3l2")
+region = Rect2(0, 240, 155, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1bv70"]
+atlas = ExtResource("2_ob3l2")
+region = Rect2(0, 160, 155, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2nn7"]
+atlas = ExtResource("2_ob3l2")
+region = Rect2(155, 160, 155, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gyjms"]
+atlas = ExtResource("2_ob3l2")
+region = Rect2(310, 160, 155, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbqeb"]
+atlas = ExtResource("2_ob3l2")
+region = Rect2(465, 160, 155, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cuml1"]
+atlas = ExtResource("2_ob3l2")
+region = Rect2(0, 80, 155, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4vdsr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jk4yg")
+}],
+"loop": true,
+"name": &"Down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_646m1")
+}],
+"loop": true,
+"name": &"Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1bv70")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2nn7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gyjms")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mbqeb")
+}],
+"loop": true,
+"name": &"Right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cuml1")
+}],
+"loop": true,
+"name": &"Up",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uwblx"]
+size = Vector2(5.6457405, 5.7133865)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ob3l2"]
+size = Vector2(10.801601, 17.108776)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(34, -277)
+script = ExtResource("1_pixi3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(530, 319.5)
+shape = SubResource("RectangleShape2D_1tns4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+texture_filter = 1
+position = Vector2(529, 322)
+sprite_frames = SubResource("SpriteFrames_4vdsr")
+animation = &"Up"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -101
+offset_left = -28.0
+offset_top = -28.0
+offset_right = 1163.0
+offset_bottom = 863.0
+color = Color(0, 0, 0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -100
+texture_filter = 1
+position = Vector2(571.00006, 387)
+scale = Vector2(1.549841, 1.400209)
+texture = ExtResource("3_q8m2s")
+
+[node name="Spike Hibox" type="StaticBody2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Sprite2D/Spike Hibox"]
+position = Vector2(-212.92508, -54.277622)
+scale = Vector2(0.9999991, 0.9999992)
+shape = SubResource("RectangleShape2D_uwblx")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Sprite2D/Spike Hibox"]
+position = Vector2(-168.4044, -131.40897)
+scale = Vector2(0.9999993, 0.99999934)
+shape = SubResource("RectangleShape2D_uwblx")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Sprite2D/Spike Hibox"]
+position = Vector2(166.46866, 92.12912)
+scale = Vector2(0.9999995, 0.9999997)
+shape = SubResource("RectangleShape2D_uwblx")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Sprite2D/Spike Hibox"]
+position = Vector2(205.82755, -172.83128)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_uwblx")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Sprite2D/Spike Hibox"]
+position = Vector2(213.57022, -124.98129)
+scale = Vector2(0.9999995, 0.99999964)
+shape = SubResource("RectangleShape2D_uwblx")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Sprite2D/Spike Hibox"]
+position = Vector2(176.14708, -173.54555)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_uwblx")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Sprite2D/Spike Hibox"]
+position = Vector2(149.04753, -112.8403)
+scale = Vector2(0.9999998, 0.9999999)
+shape = SubResource("RectangleShape2D_uwblx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Spike Hibox"]
+position = Vector2(133.72336, -119.982086)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_uwblx")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Sprite2D/Spike Hibox"]
+position = Vector2(191.0679, -14.283539)
+scale = Vector2(0.9999998, 0.9999999)
+shape = SubResource("RectangleShape2D_uwblx")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Sprite2D/Spike Hibox"]
+position = Vector2(205.18228, -67.13283)
+scale = Vector2(0.99999964, 0.9999998)
+shape = SubResource("RectangleShape2D_uwblx")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Sprite2D/Spike Hibox"]
+position = Vector2(178.08273, 76.417175)
+scale = Vector2(0.9999994, 0.9999995)
+shape = SubResource("RectangleShape2D_uwblx")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Sprite2D/Spike Hibox"]
+position = Vector2(-192.27783, -54.99179)
+scale = Vector2(0.9999995, 0.9999997)
+shape = SubResource("RectangleShape2D_uwblx")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Sprite2D/Spike Hibox"]
+position = Vector2(-207.76328, -25.710442)
+scale = Vector2(0.9999995, 0.9999997)
+shape = SubResource("RectangleShape2D_uwblx")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Sprite2D/Spike Hibox"]
+position = Vector2(-197.43964, 23.567917)
+scale = Vector2(0.9999995, 0.9999997)
+shape = SubResource("RectangleShape2D_uwblx")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Sprite2D/Spike Hibox"]
+position = Vector2(-129.69077, 147.83508)
+scale = Vector2(0.9999991, 0.9999992)
+shape = SubResource("RectangleShape2D_uwblx")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="Sprite2D/Spike Hibox"]
+position = Vector2(-150.33801, 125.695526)
+scale = Vector2(0.9999991, 0.9999992)
+shape = SubResource("RectangleShape2D_uwblx")
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="Sprite2D/Spike Hibox"]
+position = Vector2(-167.11392, 106.41269)
+scale = Vector2(0.9999991, 0.9999992)
+shape = SubResource("RectangleShape2D_uwblx")
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="Sprite2D/Spike Hibox"]
+position = Vector2(185.82553, 22.139542)
+scale = Vector2(0.9999991, 0.9999992)
+shape = SubResource("RectangleShape2D_uwblx")
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="Sprite2D/Spike Hibox"]
+position = Vector2(155.49979, 129.26643)
+scale = Vector2(0.99999905, 0.9999992)
+shape = SubResource("RectangleShape2D_uwblx")
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="Sprite2D/Spike Hibox"]
+position = Vector2(-187.7612, -117.83957)
+scale = Vector2(0.9999991, 0.9999992)
+shape = SubResource("RectangleShape2D_uwblx")
+
+[node name="Walls" type="StaticBody2D" parent="Sprite2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D/Walls"]
+position = Vector2(41.294514, -201.39851)
+build_mode = 1
+polygon = PackedVector2Array(0, -2.85672, 1.935669, -3.5709, 72.910706, 0, 123.238464, -21.425377, 185.1803, -20.711197, 182.59937, 36.423134, 202.60144, 66.41865, 189.05164, 111.411934, 166.46869, 176.40222, 153.56415, 256.3903, 145.17615, 326.37985, 64.522736, 369.2306, 52.263428, 392.08432, 20.002045, 369.94476, 2.580902, 381.37164, -16.130676, 366.37387, -35.48752, 384.22836, -51.618195, 372.0873, -80.65344, 380.65747, -105.81729, 385.6567, -118.72186, 392.08432, -139.36914, 369.94476, -174.85663, 372.80148, -197.43959, 377.08658, -231.63666, 319.95224, -235.50801, 286.38583, -281.31915, 177.11642, -283.9001, 96.41418, -258.7362, 99.98507, -253.57439, 27.138802, -185.18027, 44.2791, -134.2073, 14.283577, -70.3298, 8.570145, -70.3298, -76.41717, -58.070465, -97.84254, -20.647278, -96.414185, -20.002045, -32.13806, -16.130676, -7.1417923)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 129.0
+offset_top = -24.000092
+offset_right = 169.0
+offset_bottom = 15.999908
+rotation = 1.5657414
+scale = Vector2(26.28, 1)
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+offset_left = 1049.0
+offset_top = -23.999998
+offset_right = 1089.0
+offset_bottom = 16.000002
+rotation = 1.5657414
+scale = Vector2(26.28, 1)
+color = Color(0, 0, 0, 1)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(542, 280)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+texture_filter = 1
+position = Vector2(-4.5, 17.08191)
+rotation = -3.1415925
+scale = Vector2(4.166049, -11.8163805)
+shape = SubResource("RectangleShape2D_ob3l2")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+texture_filter = 1
+position = Vector2(0, 16)
+scale = Vector2(2.76, 3.5600007)
+texture = ExtResource("4_ob3l2")
