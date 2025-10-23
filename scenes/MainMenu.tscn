@@ -1,0 +1,202 @@
+[gd_scene load_steps=19 format=3 uid="uid://m27tcea44pb2"]
+
+[ext_resource type="Script" uid="uid://dqvu5fih85p20" path="res://scripts/MainMenu.gd" id="1_2nypq"]
+[ext_resource type="Texture2D" uid="uid://ckh3l7y23qwwx" path="res://assets/Main Menu assets/Start_button.png" id="2_bky6r"]
+[ext_resource type="Texture2D" uid="uid://byx1g2ds16psh" path="res://assets/Main Menu assets/settings_button.png" id="3_l4mxc"]
+[ext_resource type="Texture2D" uid="uid://ca7wsw7l01w3e" path="res://assets/Main Menu assets/Quit_button.png" id="4_5faoh"]
+[ext_resource type="Texture2D" uid="uid://d4be7c7gsqp6" path="res://assets/Main Menu assets/langit.png" id="5_ptake"]
+[ext_resource type="Script" uid="uid://d0g33cxpav7kl" path="res://scripts/langit_moving.gd" id="6_hubol"]
+[ext_resource type="Texture2D" uid="uid://bn1xylcymig51" path="res://assets/Main Menu assets/Title Sample(no photoshop pa).png" id="7_8vx4p"]
+[ext_resource type="Texture2D" uid="uid://b1tm8odbiuy57" path="res://assets/Main Menu assets/Ilaw effect.png" id="8_tdapf"]
+[ext_resource type="Texture2D" uid="uid://d2abvfbjl0bkn" path="res://assets/Main Menu assets/main2.png" id="9_v41fp"]
+[ext_resource type="Texture2D" uid="uid://ck363d8y7h67j" path="res://assets/Main Menu assets/dahon.png" id="10_7shrw"]
+[ext_resource type="Texture2D" uid="uid://bfr8po36bepvt" path="res://assets/Main Menu assets/LINES.png" id="11_viowm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_flqon"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rcqid"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ajci"]
+
+[sub_resource type="Animation" id="Animation_1ajci"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadeLayer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FadeLayer:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_rcqid"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadeLayer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FadeLayer:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_7b55j"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadeLayer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FadeLayer:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5pajh"]
+_data = {
+&"RESET": SubResource("Animation_1ajci"),
+&"fade_in": SubResource("Animation_7b55j"),
+&"fade_out": SubResource("Animation_rcqid")
+}
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2nypq")
+
+[node name="UI" type="VBoxContainer" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -252.0
+offset_top = -298.0
+offset_right = 123.0
+offset_bottom = 154.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.5, 0.5)
+
+[node name="StartButton" type="Button" parent="UI"]
+layout_mode = 2
+theme_override_icons/icon = ExtResource("2_bky6r")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_flqon")
+
+[node name="Button2" type="Button" parent="UI"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rcqid")
+icon = ExtResource("3_l4mxc")
+
+[node name="Button3" type="Button" parent="UI"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1ajci")
+icon = ExtResource("4_5faoh")
+
+[node name="Langit_moving" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(-1579.0001, 4.5474735e-13)
+scale = Vector2(0.21, 0.21)
+texture = ExtResource("5_ptake")
+centered = false
+script = ExtResource("6_hubol")
+
+[node name="TitleSample(noPhotoshopPa)" type="Sprite2D" parent="."]
+position = Vector2(838, 198)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("7_8vx4p")
+
+[node name="IlawEffect" type="Sprite2D" parent="."]
+position = Vector2(576, 324.5)
+scale = Vector2(0.075120434, 0.07556995)
+texture = ExtResource("8_tdapf")
+
+[node name="Main2" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(575.94104, 324)
+scale = Vector2(0.07499792, 0.074991316)
+texture = ExtResource("9_v41fp")
+
+[node name="Dahon" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(576, 325)
+scale = Vector2(0.07509895, 0.07562031)
+texture = ExtResource("10_7shrw")
+
+[node name="Lines" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(962.31256, 498)
+scale = Vector2(0.24841669, 0.52960527)
+texture = ExtResource("11_viowm")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_5pajh")
+}
+
+[node name="FadeLayer" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+top_level = true
+layout_mode = 0
+anchor_left = -0.00086805556
+anchor_top = -0.0030864198
+anchor_right = 1.0008681
+anchor_bottom = 1.0061729
+offset_bottom = -6.1035156e-05
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="UI/StartButton" to="." method="_on_start_button_pressed"]

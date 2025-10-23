@@ -1,10 +1,98 @@
-[gd_scene load_steps=6 format=3 uid="uid://chan4ce6dfrhw"]
+[gd_scene load_steps=10 format=3 uid="uid://chan4ce6dfrhw"]
 
 [ext_resource type="Script" uid="uid://bcof8had2m036" path="res://scripts/scene_1_dialogue.gd" id="1_qqjxr"]
-[ext_resource type="Texture2D" uid="uid://clkkgfvprto15" path="res://assets/assets_scene 1/sprites/portraits/Tristan/tristan arms crossed w overshirt.png" id="2_qqjxr"]
+[ext_resource type="Texture2D" uid="uid://u8t3h2fdqf0e" path="res://assets/assets_scene 1/sprites/portraits/! TRISTAN/tristan arms crossed w overshirt.png" id="2_qqjxr"]
 [ext_resource type="Resource" uid="uid://cl3ubpeg45aqq" path="res://dialogue/Festival_Dialogue.dialogue" id="2_y4jhi"]
-[ext_resource type="Texture2D" uid="uid://t2bb6lmrdw6l" path="res://assets/assets_scene 1/sprites/portraits/Elia/elia arms crossed.png" id="3_y4jhi"]
+[ext_resource type="Texture2D" uid="uid://dqbmlrhpssgsh" path="res://assets/assets_scene 1/sprites/portraits/! ELIA/elia arms crossed.png" id="3_y4jhi"]
 [ext_resource type="Texture2D" uid="uid://tih71yl4dp8a" path="res://assets/assets_scene 1/white_bg.jpg" id="4_y4jhi"]
+
+[sub_resource type="Animation" id="Animation_1ajci"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadeLayer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FadeLayer:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_7b55j"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadeLayer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FadeLayer:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_rcqid"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadeLayer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FadeLayer:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5pajh"]
+_data = {
+&"RESET": SubResource("Animation_1ajci"),
+&"fade_in": SubResource("Animation_7b55j"),
+&"fade_out": SubResource("Animation_rcqid")
+}
 
 [node name="scene_1_dialogue" type="Node2D"]
 script = ExtResource("1_qqjxr")
@@ -27,3 +115,22 @@ show_behind_parent = true
 position = Vector2(578, 323)
 scale = Vector2(4.120996, 3.566667)
 texture = ExtResource("4_y4jhi")
+
+[node name="FadeLayer" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+top_level = true
+anchors_preset = -1
+anchor_left = -0.00086805556
+anchor_top = -0.0030864198
+anchor_right = 1.0008681
+anchor_bottom = 1.0061729
+offset_bottom = -6.1035156e-05
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_5pajh")
+}
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
