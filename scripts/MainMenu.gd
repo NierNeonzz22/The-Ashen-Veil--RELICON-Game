@@ -14,4 +14,4 @@ func _on_start_button_pressed() -> void:
 	fade_layer.mouse_filter = Control.MOUSE_FILTER_STOP
 	anim.play("fade_out")
 	await anim.animation_finished
-	get_tree().change_scene_to_file("res://scenes/Scene1_FestivalScene.tscn")
+	get_tree().change_scene_to_file("res://scripts/scene_1_festival_scene.gd")

@@ -1,0 +1,446 @@
+[gd_scene load_steps=51 format=3 uid="uid://bmy0qhn0g3uq4"]
+
+[ext_resource type="Texture2D" uid="uid://bfdfvxccfnrvp" path="res://assets/assets_scene 1/sprites/backgrounds/Shot of Taal Lake (smoking a bit)8x.png" id="1_3axev"]
+[ext_resource type="Script" uid="uid://dvt7x00dad2lk" path="res://scripts/scene_1_festival_scene.gd" id="1_ja3nj"]
+[ext_resource type="Texture2D" uid="uid://deapyw86t0o8x" path="res://assets/assets_scene 1/sprites/Animated Sprites/Tristan_animations/Tristan_Spritesheet .png" id="2_mj10s"]
+[ext_resource type="Texture2D" uid="uid://bwg3mh3qoxl2" path="res://assets/assets_scene 1/sprites/Animated Sprites/Tristan_animations/Tristaneyebrowsheet.png" id="4_7jf1b"]
+[ext_resource type="Texture2D" uid="uid://b3parh4vlj0ic" path="res://assets/assets_scene 1/sprites/Animated Sprites/Elia_animations/Elia_sheet.png" id="5_67tdt"]
+[ext_resource type="Texture2D" uid="uid://cc3eufg21kf7c" path="res://assets/assets_scene 1/sprites/Animated Sprites/Elia_animations/Elia_mouthsheet.png" id="5_tqana"]
+[ext_resource type="Texture2D" uid="uid://bmqxlngufil5j" path="res://assets/assets_scene 1/sprites/Animated Sprites/Tristan_animations/Tristaneyesheet.png" id="6_tqana"]
+[ext_resource type="Texture2D" uid="uid://dts2jrpjnsoim" path="res://assets/assets_scene 1/sprites/Animated Sprites/Elia_animations/Elia_browsheet.png" id="8_qywme"]
+[ext_resource type="Texture2D" uid="uid://b7ayc6div4t8i" path="res://assets/assets_scene 1/sprites/Animated Sprites/Elia_animations/Elia_eyesheet.png" id="9_x5eib"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ti62"]
+atlas = ExtResource("2_mj10s")
+region = Rect2(3072, 0, 1536, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7jf1b"]
+atlas = ExtResource("2_mj10s")
+region = Rect2(0, 0, 1536, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5h0r"]
+atlas = ExtResource("2_mj10s")
+region = Rect2(0, 0, 1536, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ja3nj"]
+atlas = ExtResource("2_mj10s")
+region = Rect2(1536, 2048, 1536, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_67tdt"]
+atlas = ExtResource("2_mj10s")
+region = Rect2(3072, 0, 1536, 2048)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6ti62"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ti62")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7jf1b")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 0.2
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h5h0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ja3nj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_67tdt")
+}],
+"loop": true,
+"name": &"talk",
+"speed": 1.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_equk6"]
+atlas = ExtResource("4_7jf1b")
+region = Rect2(0, 0, 1536, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ckhob"]
+atlas = ExtResource("4_7jf1b")
+region = Rect2(1536, 0, 1536, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epv5u"]
+atlas = ExtResource("4_7jf1b")
+region = Rect2(0, 2048, 1536, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8g0nw"]
+atlas = ExtResource("4_7jf1b")
+region = Rect2(1536, 2048, 1536, 2048)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wlofc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_equk6")
+}],
+"loop": true,
+"name": &"TAngry_brow",
+"speed": 0.1
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ckhob")
+}],
+"loop": true,
+"name": &"TNeutral_brow",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epv5u")
+}],
+"loop": true,
+"name": &"TSad_brow",
+"speed": 0.1
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8g0nw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epv5u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ckhob")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_equk6")
+}],
+"loop": true,
+"name": &"TSurprised_brow",
+"speed": 0.1
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wlofc"]
+atlas = ExtResource("5_tqana")
+region = Rect2(1536, 0, 1536, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3u7ev"]
+atlas = ExtResource("5_tqana")
+region = Rect2(3072, 2048, 1536, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yrmma"]
+atlas = ExtResource("5_tqana")
+region = Rect2(0, 0, 1536, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gbd7h"]
+atlas = ExtResource("5_tqana")
+region = Rect2(3072, 0, 1536, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hpehc"]
+atlas = ExtResource("5_tqana")
+region = Rect2(1536, 2048, 1536, 2048)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p4hv8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wlofc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3u7ev")
+}],
+"loop": true,
+"name": &"Tno_talk",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yrmma")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gbd7h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gbd7h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hpehc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3u7ev")
+}],
+"loop": true,
+"name": &"Ttalk",
+"speed": 2.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5p0fm"]
+atlas = ExtResource("6_tqana")
+region = Rect2(1536, 0, 1536, 1100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lnd4n"]
+atlas = ExtResource("6_tqana")
+region = Rect2(0, 0, 1536, 1100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ia6mi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5p0fm")
+}],
+"loop": true,
+"name": &"Tbig_eye",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lnd4n")
+}],
+"loop": true,
+"name": &"Tneutral_eye",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5vff"]
+atlas = ExtResource("5_67tdt")
+region = Rect2(1536, 0, 1536, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqana"]
+atlas = ExtResource("5_67tdt")
+region = Rect2(0, 0, 1536, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qywme"]
+atlas = ExtResource("5_67tdt")
+region = Rect2(0, 2048, 1536, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x5eib"]
+atlas = ExtResource("5_67tdt")
+region = Rect2(0, 0, 1536, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pxc48"]
+atlas = ExtResource("5_67tdt")
+region = Rect2(1536, 0, 1536, 2048)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8g0nw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p5vff")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqana")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qywme")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x5eib")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pxc48")
+}],
+"loop": true,
+"name": &"talk",
+"speed": 0.4
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yie07"]
+atlas = ExtResource("8_qywme")
+region = Rect2(0, 0, 1536, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vynpn"]
+atlas = ExtResource("8_qywme")
+region = Rect2(1536, 0, 1536, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p4hv8"]
+atlas = ExtResource("8_qywme")
+region = Rect2(0, 2048, 1536, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ia6mi"]
+atlas = ExtResource("8_qywme")
+region = Rect2(1536, 2048, 1536, 2048)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_27rfu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yie07")
+}],
+"loop": true,
+"name": &"Eangry_brow",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vynpn")
+}],
+"loop": true,
+"name": &"Eneutral_brow",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p4hv8")
+}],
+"loop": true,
+"name": &"Esad_brow",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ia6mi")
+}],
+"loop": true,
+"name": &"Esurprised_brow",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ryjj"]
+atlas = ExtResource("9_x5eib")
+region = Rect2(1536, 0, 1536, 1500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s5swf"]
+atlas = ExtResource("9_x5eib")
+region = Rect2(0, 0, 1536, 1500)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_deox7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ryjj")
+}],
+"loop": true,
+"name": &"Ebig_eye",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s5swf")
+}],
+"loop": true,
+"name": &"Eneutral_eye",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_77ch8"]
+atlas = ExtResource("5_tqana")
+region = Rect2(0, 0, 1536, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmq3c"]
+atlas = ExtResource("5_tqana")
+region = Rect2(3072, 0, 1536, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u7mrb"]
+atlas = ExtResource("5_tqana")
+region = Rect2(0, 2048, 1536, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jmvd0"]
+atlas = ExtResource("5_tqana")
+region = Rect2(1536, 2048, 1536, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_113ci"]
+atlas = ExtResource("5_tqana")
+region = Rect2(1536, 0, 1536, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_68ivt"]
+atlas = ExtResource("5_tqana")
+region = Rect2(3072, 2048, 1536, 2048)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kq8og"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_77ch8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pmq3c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u7mrb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jmvd0")
+}],
+"loop": true,
+"name": &"E_talking",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_113ci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_68ivt")
+}],
+"loop": true,
+"name": &"Eneutral_mouth",
+"speed": 1.0
+}]
+
+[node name="Scene1_FestivalScene" type="Node2D"]
+script = ExtResource("1_ja3nj")
+
+[node name="ShotOfTaalLake(smokingABit)8x" type="Sprite2D" parent="."]
+position = Vector2(575.3685, 323.32574)
+scale = Vector2(0.05628049, 0.056535758)
+texture = ExtResource("1_3axev")
+
+[node name="Tristan" type="AnimatedSprite2D" parent="."]
+top_level = true
+position = Vector2(215.99998, 301)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_6ti62")
+animation = &"talk"
+frame = 2
+frame_progress = 0.95435303
+
+[node name="Tristan Eyebrows" type="AnimatedSprite2D" parent="Tristan"]
+top_level = true
+position = Vector2(217, 304)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_wlofc")
+animation = &"TNeutral_brow"
+frame_progress = 0.45347208
+
+[node name="Tristan Mouth" type="AnimatedSprite2D" parent="Tristan"]
+top_level = true
+position = Vector2(216.00002, 252)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_p4hv8")
+animation = &"Ttalk"
+frame_progress = 0.32499915
+
+[node name="Tristan Eyes" type="AnimatedSprite2D" parent="Tristan"]
+show_behind_parent = true
+top_level = true
+position = Vector2(217.00003, 208)
+scale = Vector2(0.18313801, 0.19136363)
+sprite_frames = SubResource("SpriteFrames_ia6mi")
+animation = &"Tbig_eye"
+
+[node name="Elia" type="AnimatedSprite2D" parent="."]
+position = Vector2(957, 301)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_8g0nw")
+animation = &"idle"
+
+[node name="Elia Eyebrows" type="AnimatedSprite2D" parent="Elia"]
+position = Vector2(4.9999995, 0)
+sprite_frames = SubResource("SpriteFrames_27rfu")
+animation = &"Esurprised_brow"
+
+[node name="Elia Eyes" type="AnimatedSprite2D" parent="Elia"]
+position = Vector2(5, -284.99997)
+scale = Vector2(0.9, 0.9)
+sprite_frames = SubResource("SpriteFrames_deox7")
+animation = &"Ebig_eye"
+
+[node name="Elia_mouth" type="AnimatedSprite2D" parent="Elia"]
+position = Vector2(2.9563904e-05, 0)
+sprite_frames = SubResource("SpriteFrames_kq8og")
+animation = &"Eneutral_mouth"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
