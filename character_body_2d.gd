@@ -2,10 +2,10 @@
 
 extends CharacterBody2D
 
-@export var speed = 100.0 
+@export var speed = 200.0 
 
-var base_speed = 100.0
-var run_bonus = 50.0
+var base_speed = 200.0
+var run_bonus = 100.0
 #run speed
 
 @onready var _animation_sprite = $AnimatedSprite2D
@@ -25,7 +25,7 @@ func get_input():
 
 #run function
 	if Input.is_action_pressed("Run"): #KEYMAPS
-		speed = speed + run_bonus
+		speed = base_speed + run_bonus
 	elif Input.is_action_just_released("Run"): #KEYMAPS
 		speed = base_speed
 
