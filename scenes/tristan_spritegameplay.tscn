@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cm6svbho22655"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_saohw"]
+
+[node name="Tristan_spritegameplay" type="Node2D"]
+
+[node name="Tristan_gameplay" type="CharacterBody2D" parent="."]
+
+[node name="Tristan_moveset" type="AnimatedSprite2D" parent="Tristan_gameplay"]
+sprite_frames = SubResource("SpriteFrames_saohw")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://bmy0qhn0g3uq4"]
+[gd_scene load_steps=51 format=3 uid="uid://dfr4jx78vhchq"]
 
 [ext_resource type="Texture2D" uid="uid://bfdfvxccfnrvp" path="res://assets/assets_scene 1/sprites/backgrounds/Shot of Taal Lake (smoking a bit)8x.png" id="1_3axev"]
 [ext_resource type="Script" uid="uid://dvt7x00dad2lk" path="res://scripts/scene_1_festival_scene.gd" id="1_ja3nj"]
