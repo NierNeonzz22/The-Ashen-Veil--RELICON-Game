@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://duwwp82lbj7yf"
+path="res://.godot/imported/d#5.mp3-9c69ecd62c4a55ffb495a8743e3dac0f.mp3str"
+
+[deps]
+
+source_file="res://sfx/Minigame 5/Notes/d#5.mp3"
+dest_files=["res://.godot/imported/d#5.mp3-9c69ecd62c4a55ffb495a8743e3dac0f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

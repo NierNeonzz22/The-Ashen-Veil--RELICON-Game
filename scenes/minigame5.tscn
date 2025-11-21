@@ -1,8 +1,34 @@
-[gd_scene load_steps=13 format=3 uid="uid://cnslvssgvyso3"]
+[gd_scene load_steps=40 format=3 uid="uid://cnslvssgvyso3"]
 
 [ext_resource type="Texture2D" uid="uid://1sjjn2yf318w" path="res://assets/assets_minigame5/minigame5 semifinal.png" id="1_4hkn6"]
+[ext_resource type="Script" uid="uid://wp6p4gwfj1ou" path="res://scripts/minigame5.gd" id="1_6hb12"]
 [ext_resource type="Script" uid="uid://bbi0aiygulkhi" path="res://scripts/tristan_gameplaymoveset.gd" id="2_6hb12"]
 [ext_resource type="Texture2D" uid="uid://bjr4uxx2ar0q8" path="res://assets/Minigame Assets/BETA SPRITE SHEET TRISTANuntitled.png" id="3_uqii8"]
+[ext_resource type="Script" uid="uid://dauxsaxv8wmwv" path="res://scripts/MG5_button_script.gd" id="5_75udb"]
+[ext_resource type="Texture2D" uid="uid://dvj1xnvrjs7p" path="res://assets/assets_minigame5/Musical Stones 1 Dark.png" id="5_uqii8"]
+[ext_resource type="AudioStream" uid="uid://bges1q4likmau" path="res://sfx/Minigame 5/Notes/a#4.mp3" id="6_bj4go"]
+[ext_resource type="Texture2D" uid="uid://bfw3gjmp4lb1u" path="res://assets/assets_minigame5/Musical Stones 1 Light.png" id="7_306mo"]
+[ext_resource type="Texture2D" uid="uid://ua1m11s3dqcl" path="res://assets/assets_minigame5/Musical Stones 2 Dark.png" id="9_npo21"]
+[ext_resource type="AudioStream" uid="uid://bd163sasf0ir" path="res://sfx/Minigame 5/Notes/a#5.mp3" id="9_oiqlh"]
+[ext_resource type="Texture2D" uid="uid://duq6mqat20762" path="res://assets/assets_minigame5/Musical Stones 2 Light.png" id="10_71ioa"]
+[ext_resource type="Texture2D" uid="uid://bdgmgq7ye636m" path="res://assets/assets_minigame5/Musical Stones 3 Dark.png" id="11_j0ton"]
+[ext_resource type="AudioStream" uid="uid://dkl8euw52p3td" path="res://sfx/Minigame 5/Notes/c#5.mp3" id="12_go66l"]
+[ext_resource type="AudioStream" uid="uid://dcvgdr5rj56h1" path="res://sfx/Minigame 5/Notes/c#6.mp3" id="14_7qx4m"]
+[ext_resource type="Texture2D" uid="uid://dndl0tuenjju6" path="res://assets/assets_minigame5/Musical Stones 3 Light.png" id="14_go66l"]
+[ext_resource type="Texture2D" uid="uid://bjb7oj4eb4qcp" path="res://assets/assets_minigame5/Musical Stones 4 Dark.png" id="15_lkk4d"]
+[ext_resource type="Texture2D" uid="uid://cubanwq1wle2v" path="res://assets/assets_minigame5/Musical Stones 4 Light.png" id="16_abjjg"]
+[ext_resource type="AudioStream" uid="uid://duwwp82lbj7yf" path="res://sfx/Minigame 5/Notes/d#5.mp3" id="17_adqki"]
+[ext_resource type="Texture2D" uid="uid://fjms6xhf3ou1" path="res://assets/assets_minigame5/Musical Stones 5 Dark.png" id="18_a3dm4"]
+[ext_resource type="Texture2D" uid="uid://b88tgk4a1q8j6" path="res://assets/assets_minigame5/Musical Stones 5 Light.png" id="19_6folt"]
+[ext_resource type="AudioStream" uid="uid://djdp21171khop" path="res://sfx/Minigame 5/Notes/f#5.mp3" id="20_km5dx"]
+[ext_resource type="Texture2D" uid="uid://p50v7l61e8wv" path="res://assets/assets_minigame5/Musical Stones 6 Dark.png" id="21_oaxym"]
+[ext_resource type="Texture2D" uid="uid://bucg8rx58e0jq" path="res://assets/assets_minigame5/Musical Stones 6 Light.png" id="22_534ai"]
+[ext_resource type="AudioStream" uid="uid://ygvv20pshw5" path="res://sfx/Minigame 5/Notes/g#4.mp3" id="23_fwp4r"]
+[ext_resource type="Texture2D" uid="uid://dxga4v041mf3y" path="res://assets/assets_minigame5/Musical Stones 7 Dark.png" id="24_d7a7q"]
+[ext_resource type="Texture2D" uid="uid://dgd8rqw4pcg8x" path="res://assets/assets_minigame5/Musical Stones 7 Light.png" id="25_e004t"]
+[ext_resource type="AudioStream" uid="uid://dcl4h15yvfkxe" path="res://sfx/Minigame 5/Notes/g#5.mp3" id="26_uhaqw"]
+[ext_resource type="Texture2D" uid="uid://daed67oyb6m32" path="res://assets/assets_minigame5/Musical Stones 8 Dark.png" id="27_v1bml"]
+[ext_resource type="Texture2D" uid="uid://cbtx8u4psohd3" path="res://assets/assets_minigame5/Musical Stones 8 Light.png" id="28_6b48f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4hkn6"]
 size = Vector2(18.5, 33)
@@ -79,7 +105,11 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_75udb"]
+size = Vector2(20, 27.666672)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_6hb12")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(899, 365)
@@ -116,3 +146,201 @@ animation = &"Right"
 
 [node name="Camera2D" type="Camera2D" parent="Tristan_gameplay"]
 position = Vector2(0, 109)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(887, 477)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[node name="ButtonContainer" type="Node2D" parent="."]
+
+[node name="Button1" type="Area2D" parent="ButtonContainer"]
+position = Vector2(611, 358)
+script = ExtResource("5_75udb")
+note_sound = ExtResource("6_bj4go")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonContainer/Button1"]
+texture_filter = 1
+position = Vector2(0, 0.5)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_75udb")
+
+[node name="NormalSprite" type="Sprite2D" parent="ButtonContainer/Button1"]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("5_uqii8")
+
+[node name="LitSprite" type="Sprite2D" parent="ButtonContainer/Button1"]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("7_306mo")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ButtonContainer/Button1"]
+
+[node name="Button2" type="Area2D" parent="ButtonContainer"]
+position = Vector2(791, 369)
+script = ExtResource("5_75udb")
+button_number = 2
+note_sound = ExtResource("9_oiqlh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonContainer/Button2"]
+texture_filter = 1
+position = Vector2(0, 0.5)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_75udb")
+
+[node name="NormalSprite" type="Sprite2D" parent="ButtonContainer/Button2"]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("9_npo21")
+
+[node name="LitSprite" type="Sprite2D" parent="ButtonContainer/Button2"]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("10_71ioa")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ButtonContainer/Button2"]
+
+[node name="Button3" type="Area2D" parent="ButtonContainer"]
+position = Vector2(987, 363)
+script = ExtResource("5_75udb")
+button_number = 3
+note_sound = ExtResource("12_go66l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonContainer/Button3"]
+texture_filter = 1
+position = Vector2(0, 0.5)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_75udb")
+
+[node name="NormalSprite" type="Sprite2D" parent="ButtonContainer/Button3"]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("11_j0ton")
+
+[node name="LitSprite" type="Sprite2D" parent="ButtonContainer/Button3"]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("14_go66l")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ButtonContainer/Button3"]
+
+[node name="Button4" type="Area2D" parent="ButtonContainer"]
+position = Vector2(1159, 363)
+script = ExtResource("5_75udb")
+button_number = 4
+note_sound = ExtResource("14_7qx4m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonContainer/Button4"]
+texture_filter = 1
+position = Vector2(0, 0.5)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_75udb")
+
+[node name="NormalSprite" type="Sprite2D" parent="ButtonContainer/Button4"]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("15_lkk4d")
+
+[node name="LitSprite" type="Sprite2D" parent="ButtonContainer/Button4"]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("16_abjjg")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ButtonContainer/Button4"]
+
+[node name="Button5" type="Area2D" parent="ButtonContainer"]
+position = Vector2(610, 531)
+script = ExtResource("5_75udb")
+button_number = 5
+note_sound = ExtResource("17_adqki")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonContainer/Button5"]
+texture_filter = 1
+position = Vector2(0, 0.5)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_75udb")
+
+[node name="NormalSprite" type="Sprite2D" parent="ButtonContainer/Button5"]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("18_a3dm4")
+
+[node name="LitSprite" type="Sprite2D" parent="ButtonContainer/Button5"]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("19_6folt")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ButtonContainer/Button5"]
+
+[node name="Button6" type="Area2D" parent="ButtonContainer"]
+position = Vector2(790, 515)
+script = ExtResource("5_75udb")
+button_number = 6
+note_sound = ExtResource("20_km5dx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonContainer/Button6"]
+texture_filter = 1
+position = Vector2(0, 0.5)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_75udb")
+
+[node name="NormalSprite" type="Sprite2D" parent="ButtonContainer/Button6"]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("21_oaxym")
+
+[node name="LitSprite" type="Sprite2D" parent="ButtonContainer/Button6"]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("22_534ai")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ButtonContainer/Button6"]
+
+[node name="Button7" type="Area2D" parent="ButtonContainer"]
+position = Vector2(992, 520)
+script = ExtResource("5_75udb")
+button_number = 7
+note_sound = ExtResource("23_fwp4r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonContainer/Button7"]
+texture_filter = 1
+position = Vector2(0, 0.5)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_75udb")
+
+[node name="NormalSprite" type="Sprite2D" parent="ButtonContainer/Button7"]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("24_d7a7q")
+
+[node name="LitSprite" type="Sprite2D" parent="ButtonContainer/Button7"]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("25_e004t")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ButtonContainer/Button7"]
+
+[node name="Button8" type="Area2D" parent="ButtonContainer"]
+position = Vector2(1169, 516)
+script = ExtResource("5_75udb")
+button_number = 8
+note_sound = ExtResource("26_uhaqw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonContainer/Button8"]
+texture_filter = 1
+position = Vector2(0, 0.5)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_75udb")
+
+[node name="NormalSprite" type="Sprite2D" parent="ButtonContainer/Button8"]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("27_v1bml")
+
+[node name="LitSprite" type="Sprite2D" parent="ButtonContainer/Button8"]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("28_6b48f")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ButtonContainer/Button8"]
