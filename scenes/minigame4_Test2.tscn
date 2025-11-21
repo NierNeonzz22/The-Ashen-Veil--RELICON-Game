@@ -1,0 +1,124 @@
+[gd_scene load_steps=12 format=3 uid="uid://11cp6lp4q5sp"]
+
+[ext_resource type="Texture2D" uid="uid://cyg1qnab103s7" path="res://assets/assets_minigame4/minigame4 semifinal.png" id="1_2syki"]
+[ext_resource type="Script" uid="uid://d2mwx300kytx7" path="res://scripts/sliding_puzzlemanager.gd" id="2_3hmwq"]
+[ext_resource type="Texture2D" uid="uid://b4himuqwh4dnx" path="res://assets/assets_minigame4/00.png" id="2_lrhcg"]
+[ext_resource type="Texture2D" uid="uid://b0klug2y5no7q" path="res://assets/assets_minigame4/01.png" id="3_3hmwq"]
+[ext_resource type="Texture2D" uid="uid://cyjl8eyllc56t" path="res://assets/assets_minigame4/02.png" id="4_wxurk"]
+[ext_resource type="Texture2D" uid="uid://d1jahhvmh8a8e" path="res://assets/assets_minigame4/10.png" id="5_s8045"]
+[ext_resource type="Texture2D" uid="uid://c6b5kb6xhj66o" path="res://assets/assets_minigame4/11.png" id="6_ppnyi"]
+[ext_resource type="Texture2D" uid="uid://wn6i44h6q08l" path="res://assets/assets_minigame4/12.png" id="7_c0c1n"]
+[ext_resource type="Texture2D" uid="uid://b16avmye3tch5" path="res://assets/assets_minigame4/20.png" id="8_tiqqe"]
+[ext_resource type="Texture2D" uid="uid://ccek0myonnrkw" path="res://assets/assets_minigame4/21.png" id="9_mdm0o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_at5qs"]
+size = Vector2(86.333305, 87)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Minigame4_map" type="Sprite2D" parent="."]
+position = Vector2(566, 331)
+scale = Vector2(0.58, 0.58)
+texture = ExtResource("1_2syki")
+
+[node name="MG4_Walls" type="StaticBody2D" parent="Minigame4_map"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Minigame4_map/MG4_Walls"]
+position = Vector2(184.48276, -36.20688)
+build_mode = 1
+polygon = PackedVector2Array(536, -400, 550, -123, 696, -90, 709, 198, 549, 196, 544, 512, -861, 520, -884, 357, -1078, 362, -1081, 111, -899.9091, 125.81818, -887, -408, -805, -440, 421, -443)
+
+[node name="PuzzleManager" type="Node2D" parent="." node_paths=PackedStringArray("puzzle_pieces")]
+script = ExtResource("2_3hmwq")
+puzzle_pieces = [NodePath("../Node2D/Piece1"), NodePath("../Node2D/Piece2"), NodePath("../Node2D/Piece3"), NodePath("../Node2D/Piece4"), NodePath("../Node2D/Piece5"), NodePath("../Node2D/Piece6"), NodePath("../Node2D/Piece7"), NodePath("../Node2D/Piece8"), null]
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(357, 137)
+
+[node name="Piece1" type="Area2D" parent="Node2D"]
+position = Vector2(65, 65)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Piece1"]
+scale = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_at5qs")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Piece1"]
+scale = Vector2(0.521, 0.521)
+texture = ExtResource("2_lrhcg")
+
+[node name="Piece2" type="Area2D" parent="Node2D"]
+position = Vector2(209, 65)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Piece2"]
+scale = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_at5qs")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Piece2"]
+scale = Vector2(0.521, 0.521)
+texture = ExtResource("5_s8045")
+
+[node name="Piece3" type="Area2D" parent="Node2D"]
+position = Vector2(354, 65)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Piece3"]
+scale = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_at5qs")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Piece3"]
+scale = Vector2(0.521, 0.521)
+texture = ExtResource("8_tiqqe")
+
+[node name="Piece4" type="Area2D" parent="Node2D"]
+position = Vector2(64, 209)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Piece4"]
+scale = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_at5qs")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Piece4"]
+scale = Vector2(0.521, 0.521)
+texture = ExtResource("3_3hmwq")
+
+[node name="Piece5" type="Area2D" parent="Node2D"]
+position = Vector2(209, 209)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Piece5"]
+scale = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_at5qs")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Piece5"]
+scale = Vector2(0.521, 0.521)
+texture = ExtResource("6_ppnyi")
+
+[node name="Piece6" type="Area2D" parent="Node2D"]
+position = Vector2(354, 209)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Piece6"]
+scale = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_at5qs")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Piece6"]
+scale = Vector2(0.521, 0.521)
+texture = ExtResource("9_mdm0o")
+
+[node name="Piece7" type="Area2D" parent="Node2D"]
+position = Vector2(64, 355)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Piece7"]
+scale = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_at5qs")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Piece7"]
+scale = Vector2(0.521, 0.521)
+texture = ExtResource("4_wxurk")
+
+[node name="Piece8" type="Area2D" parent="Node2D"]
+position = Vector2(209, 355)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Piece8"]
+scale = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_at5qs")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Piece8"]
+scale = Vector2(0.521, 0.521)
+texture = ExtResource("7_c0c1n")

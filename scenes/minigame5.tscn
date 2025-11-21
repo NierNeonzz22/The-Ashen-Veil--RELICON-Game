@@ -1,0 +1,118 @@
+[gd_scene load_steps=13 format=3 uid="uid://cnslvssgvyso3"]
+
+[ext_resource type="Texture2D" uid="uid://1sjjn2yf318w" path="res://assets/assets_minigame5/minigame5 semifinal.png" id="1_4hkn6"]
+[ext_resource type="Script" uid="uid://bbi0aiygulkhi" path="res://scripts/tristan_gameplaymoveset.gd" id="2_6hb12"]
+[ext_resource type="Texture2D" uid="uid://bjr4uxx2ar0q8" path="res://assets/Minigame Assets/BETA SPRITE SHEET TRISTANuntitled.png" id="3_uqii8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4hkn6"]
+size = Vector2(18.5, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jk4yg"]
+atlas = ExtResource("3_uqii8")
+region = Rect2(0, 0, 155, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_646m1"]
+atlas = ExtResource("3_uqii8")
+region = Rect2(0, 240, 155, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1bv70"]
+atlas = ExtResource("3_uqii8")
+region = Rect2(0, 160, 155, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2nn7"]
+atlas = ExtResource("3_uqii8")
+region = Rect2(155, 160, 155, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gyjms"]
+atlas = ExtResource("3_uqii8")
+region = Rect2(310, 160, 155, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbqeb"]
+atlas = ExtResource("3_uqii8")
+region = Rect2(465, 160, 155, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cuml1"]
+atlas = ExtResource("3_uqii8")
+region = Rect2(0, 80, 155, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6hb12"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jk4yg")
+}],
+"loop": true,
+"name": &"Down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_646m1")
+}],
+"loop": true,
+"name": &"Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1bv70")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2nn7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gyjms")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mbqeb")
+}],
+"loop": true,
+"name": &"Right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cuml1")
+}],
+"loop": true,
+"name": &"Up",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(899, 365)
+texture = ExtResource("1_4hkn6")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(179, -34)
+build_mode = 1
+polygon = PackedVector2Array(700, -261, 701, -52, 254, -49, 256, 519, -657, 522, -652, -54, -1070, -60, -1062, -280)
+
+[node name="Tristan_gameplay" type="CharacterBody2D" parent="."]
+position = Vector2(562, 76)
+script = ExtResource("2_6hb12")
+base_speed = 100.0
+run_bonus = 150.0
+
+[node name="PullRay" type="RayCast2D" parent="Tristan_gameplay"]
+top_level = true
+position = Vector2(561, 78)
+target_position = Vector2(46, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tristan_gameplay"]
+position = Vector2(23, 86)
+shape = SubResource("RectangleShape2D_4hkn6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Tristan_gameplay"]
+texture_filter = 1
+position = Vector2(23.25, 83.5)
+scale = Vector2(1.7, 1.88)
+sprite_frames = SubResource("SpriteFrames_6hb12")
+animation = &"Right"
+
+[node name="Camera2D" type="Camera2D" parent="Tristan_gameplay"]
+position = Vector2(0, 109)
