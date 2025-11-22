@@ -8,18 +8,48 @@ extends CharacterBody2D
 var is_pulling := false
 var pulling_direction := Vector2.ZERO
 
-# --- LIGHTING ---
+# --- LIGHTING & REDIRECTION ---
 @export var sprite_unlit: Texture2D
 @export var sprite_lit: Texture2D
-@export var is_lit := false
+@export var redirect_angle: float = 0.0  # Angle in degrees (0=right, 90=up, 180=left, 270=down)
+var is_lit := false
 
 signal lit_changed(pillar)
+signal pillar_hit(pillar, redirect_angle)
 
 # --- NODES ---
 @onready var sprite_node: Sprite2D = $Sprite2D
+@onready var sprite_lit_node: Sprite2D = $Sprite2D_Lit
+
+func _ready():
+	add_to_group("pillar")  # CRITICAL: Add to pillar group
+	$CollisionShape2D.disabled = false
+	unlight()
+	print(name, " redirects at angle: ", redirect_angle, "°")
 
 # ---------------------------
-#   START / STOP PULL
+#   LIGHTING CONTROL
+# ---------------------------
+func light_up() -> void:
+	if not is_lit:
+		is_lit = true
+		_update_visual()
+		emit_signal("lit_changed", self)
+		emit_signal("pillar_hit", self, redirect_angle)
+
+func unlight() -> void:
+	if is_lit:
+		is_lit = false
+		_update_visual()
+		emit_signal("lit_changed", self)
+
+func _update_visual() -> void:
+	if sprite_node and sprite_lit_node:
+		sprite_node.visible = not is_lit
+		sprite_lit_node.visible = is_lit
+
+# ---------------------------
+#   MOVEMENT METHODS
 # ---------------------------
 func start_pull(direction: Vector2) -> void:
 	if direction == Vector2.ZERO:
@@ -30,47 +60,16 @@ func start_pull(direction: Vector2) -> void:
 func stop_pull() -> void:
 	is_pulling = false
 
-# ---------------------------
-#   PHYSICS LOOP
-# ---------------------------
 func _physics_process(delta: float) -> void:
 	if is_pulling:
 		var motion := pulling_direction * pull_speed * delta
 		_move_safe(motion)
 
-# ---------------------------
-#   PUSH: CALLED BY PLAYER
-# ---------------------------
 func push(direction: Vector2, delta: float) -> void:
 	var motion := direction.normalized() * push_strength * delta
 	_move_safe(motion)
 
-# ---------------------------
-#   SAFE MOVEMENT WRAPPER
-# ---------------------------
 func _move_safe(motion: Vector2) -> void:
-	# convert the motion into proper velocity for CharacterBody2D
 	velocity = motion / get_physics_process_delta_time()
-
-	var remainder = move_and_slide()
-
-	# Prevent rotation (CharacterBody2D does not rotate, but just in case)
+	move_and_slide()
 	rotation = 0
-
-# ---------------------------
-#   LIGHTING CONTROL
-# ---------------------------
-func light_up() -> void:
-	if not is_lit:
-		is_lit = true
-		_update_visual()
-		emit_signal("lit_changed", self)
-
-func unlight() -> void:
-	if is_lit:
-		is_lit = false
-		_update_visual()
-		emit_signal("lit_changed", self)
-
-func _update_visual() -> void:
-	sprite_node.texture = sprite_lit if is_lit else sprite_unlit
