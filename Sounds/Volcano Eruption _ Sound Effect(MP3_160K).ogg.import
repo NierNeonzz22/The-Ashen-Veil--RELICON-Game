@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://byqng7cu3kd1h"
+path="res://.godot/imported/Volcano Eruption _ Sound Effect(MP3_160K).ogg-214a3cf2f49eac5f0d671f505e81b69c.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/Volcano Eruption _ Sound Effect(MP3_160K).ogg"
+dest_files=["res://.godot/imported/Volcano Eruption _ Sound Effect(MP3_160K).ogg-214a3cf2f49eac5f0d671f505e81b69c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
