@@ -1,0 +1,481 @@
+[gd_scene load_steps=55 format=3 uid="uid://c8vcakbgkunrq"]
+
+[ext_resource type="Texture2D" uid="uid://cm04fddpjnbk2" path="res://Minigame Assets/minigame2 semifinal.png" id="1_3m0ai"]
+[ext_resource type="Script" uid="uid://d04c8vgeaakm4" path="res://minigame_2_test.gd" id="1_7yig0"]
+[ext_resource type="Script" uid="uid://ckf3lod0ius1e" path="res://character_body_2d2.gd" id="2_bm7f1"]
+[ext_resource type="Texture2D" uid="uid://bjr4uxx2ar0q8" path="res://Minigame Assets/BETA SPRITE SHEET TRISTANuntitled.png" id="3_bm7f1"]
+[ext_resource type="Texture2D" uid="uid://dakav6k1qq7ap" path="res://Minigame Assets/rock 1.png" id="4_1hakp"]
+[ext_resource type="Script" uid="uid://c81ei2o4wb16m" path="res://node_2d.gd" id="4_ujias"]
+[ext_resource type="Script" uid="uid://dhp2ecyyicu21" path="res://static_body_2d.gd" id="5_axt1m"]
+[ext_resource type="Texture2D" uid="uid://0cjpnr64s4c" path="res://Minigame Assets/Relicon_MULAWIN__M_-removebg-preview.png" id="7_axt1m"]
+[ext_resource type="Shader" uid="uid://1om7gqxuccv5" path="res://new_shader.gdshader" id="7_cvuvx"]
+[ext_resource type="Texture2D" uid="uid://xi3gnv2kit4a" path="res://Minigame Assets/Relicon_MULAWIN__U_-removebg-preview.png" id="8_pnrgl"]
+[ext_resource type="Texture2D" uid="uid://b2cdlm4hhuxi0" path="res://Minigame Assets/rock 2.png" id="9_fnfnq"]
+[ext_resource type="Texture2D" uid="uid://c63cg8wg5y83f" path="res://Minigame Assets/rock 3.png" id="10_ourl1"]
+[ext_resource type="Texture2D" uid="uid://pyrpbr4dt7ue" path="res://Minigame Assets/Relicon_MULAWIN__L_-removebg-preview.png" id="11_fnfnq"]
+[ext_resource type="Texture2D" uid="uid://fyr354qfh1k4" path="res://Minigame Assets/rock 4.png" id="12_x0ukw"]
+[ext_resource type="Texture2D" uid="uid://bxybuqx8aqjx3" path="res://Minigame Assets/Relicon_MULAWIN__A_-removebg-preview.png" id="13_m25uv"]
+[ext_resource type="Texture2D" uid="uid://ber3gb3cionj4" path="res://Minigame Assets/rock 5.png" id="14_mnrwn"]
+[ext_resource type="Texture2D" uid="uid://battjd2frkyig" path="res://Minigame Assets/Relicon_MULAWIN__W_-removebg-preview.png" id="15_oh1q8"]
+[ext_resource type="Texture2D" uid="uid://cquv8f7rm060r" path="res://Minigame Assets/rock 6.png" id="16_fgv6d"]
+[ext_resource type="Texture2D" uid="uid://bhu7wnyytldht" path="res://Minigame Assets/Relicon_MULAWIN__I_-removebg-preview.png" id="17_ltdmo"]
+[ext_resource type="Texture2D" uid="uid://b34sir2o8nk5b" path="res://Minigame Assets/rock 7.png" id="18_cvuvx"]
+[ext_resource type="Texture2D" uid="uid://cbuapukdmrdk4" path="res://Minigame Assets/Relicon_MULAWIN__N_-removebg-preview.png" id="19_7yig0"]
+[ext_resource type="Texture2D" uid="uid://4m4qg2bkigdj" path="res://Minigame Assets/rock 8.png" id="20_ltdmo"]
+[ext_resource type="Texture2D" uid="uid://80i20kt8aq8h" path="res://Minigame Assets/rock 9.png" id="21_cvuvx"]
+[ext_resource type="Texture2D" uid="uid://cfnbdsa5gwl07" path="res://Minigame Assets/seaweed 1.png" id="22_7yig0"]
+[ext_resource type="Texture2D" uid="uid://dvxwfik12txg1" path="res://Minigame Assets/seaweed 2.png" id="23_ju6ib"]
+[ext_resource type="Texture2D" uid="uid://bgd5h7ki0qti4" path="res://Minigame Assets/seaweed 3.png" id="24_bwf24"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7yig0"]
+size = Vector2(39, 35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3m0ai"]
+size = Vector2(253, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ujias"]
+size = Vector2(28, 71)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jk4yg"]
+atlas = ExtResource("3_bm7f1")
+region = Rect2(0, 0, 155, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_646m1"]
+atlas = ExtResource("3_bm7f1")
+region = Rect2(0, 240, 155, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1bv70"]
+atlas = ExtResource("3_bm7f1")
+region = Rect2(0, 160, 155, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2nn7"]
+atlas = ExtResource("3_bm7f1")
+region = Rect2(155, 160, 155, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gyjms"]
+atlas = ExtResource("3_bm7f1")
+region = Rect2(310, 160, 155, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbqeb"]
+atlas = ExtResource("3_bm7f1")
+region = Rect2(465, 160, 155, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cuml1"]
+atlas = ExtResource("3_bm7f1")
+region = Rect2(0, 80, 155, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_axt1m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jk4yg")
+}],
+"loop": true,
+"name": &"Down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_646m1")
+}],
+"loop": true,
+"name": &"Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1bv70")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2nn7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gyjms")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mbqeb")
+}],
+"loop": true,
+"name": &"Right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cuml1")
+}],
+"loop": true,
+"name": &"Up",
+"speed": 5.0
+}]
+
+[sub_resource type="GDScript" id="GDScript_bm7f1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bm7f1"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7yig0"]
+shader = ExtResource("7_cvuvx")
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ju6ib"]
+shader = ExtResource("7_cvuvx")
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bwf24"]
+shader = ExtResource("7_cvuvx")
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p73p4"]
+shader = ExtResource("7_cvuvx")
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0g57y"]
+shader = ExtResource("7_cvuvx")
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1k3h7"]
+shader = ExtResource("7_cvuvx")
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bj8pq"]
+shader = ExtResource("7_cvuvx")
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ffeg5"]
+shader = ExtResource("7_cvuvx")
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l0axw"]
+shader = ExtResource("7_cvuvx")
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wu068"]
+shader = ExtResource("7_cvuvx")
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g1qfu"]
+shader = ExtResource("7_cvuvx")
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ovq2k"]
+shader = ExtResource("7_cvuvx")
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7gnit"]
+shader = ExtResource("7_cvuvx")
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ks7yb"]
+shader = ExtResource("7_cvuvx")
+shader_parameter/alpha = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p73p4"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_7yig0")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(636, 319)
+texture = ExtResource("13_m25uv")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D2/Area2D"]
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_7yig0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(577, 337)
+scale = Vector2(0.51779366, 0.64508283)
+texture = ExtResource("1_3m0ai")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(94.632286, -443.3539)
+build_mode = 1
+polygon = PackedVector2Array(7.7250977, -9.301132, -1.9311523, -69.758484, -185.40198, -65.10792, -187.33325, 65.107925, -281.9655, 105.41283, -990.74207, 103.862625, -1114.3434, 139.51697, -1118.2059, 745.6407, -1004.261, 816.94934, 867.14075, 813.84894, 925.079, 787.4958, 921.21643, 168.97055, 818.859, 125.56528, 137.12036, 111.61357, 3.8625488, 65.107925)
+
+[node name="Node" type="Node" parent="Sprite2D"]
+
+[node name="SPIKE HITBOXDO NOT OPEN!" type="StaticBody2D" parent="Sprite2D/Node"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Node/SPIKE HITBOXDO NOT OPEN!"]
+position = Vector2(386.5, 164)
+shape = SubResource("RectangleShape2D_3m0ai")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Sprite2D/Node/SPIKE HITBOXDO NOT OPEN!"]
+position = Vector2(106.00003, 277)
+rotation = 1.5723143
+shape = SubResource("RectangleShape2D_3m0ai")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Sprite2D/Node/SPIKE HITBOXDO NOT OPEN!"]
+position = Vector2(799, 200)
+shape = SubResource("RectangleShape2D_3m0ai")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Sprite2D/Node/SPIKE HITBOXDO NOT OPEN!"]
+position = Vector2(106, 529)
+rotation = 1.5723143
+shape = SubResource("RectangleShape2D_3m0ai")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Sprite2D/Node/SPIKE HITBOXDO NOT OPEN!"]
+position = Vector2(1058.9999, 167.00003)
+rotation = 1.5723143
+shape = SubResource("RectangleShape2D_3m0ai")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Sprite2D/Node/SPIKE HITBOXDO NOT OPEN!"]
+position = Vector2(1054, 529)
+rotation = 1.5723143
+shape = SubResource("RectangleShape2D_3m0ai")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Sprite2D/Node/SPIKE HITBOXDO NOT OPEN!"]
+position = Vector2(268, 550)
+shape = SubResource("RectangleShape2D_3m0ai")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Sprite2D/Node/SPIKE HITBOXDO NOT OPEN!"]
+position = Vector2(521, 547)
+shape = SubResource("RectangleShape2D_3m0ai")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Sprite2D/Node/SPIKE HITBOXDO NOT OPEN!"]
+position = Vector2(774, 546)
+shape = SubResource("RectangleShape2D_3m0ai")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Sprite2D/Node/SPIKE HITBOXDO NOT OPEN!"]
+position = Vector2(984, 544)
+shape = SubResource("RectangleShape2D_3m0ai")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+visible = false
+position = Vector2(575, 342)
+script = ExtResource("2_bm7f1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-1.5, -4.5)
+shape = SubResource("RectangleShape2D_ujias")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+texture_filter = 1
+position = Vector2(-1.5, -7)
+sprite_frames = SubResource("SpriteFrames_axt1m")
+animation = &"Right"
+
+[node name="Node2D" type="Node2D" parent="CharacterBody2D"]
+position = Vector2(10, -5)
+script = ExtResource("4_ujias")
+
+[node name="Rocks" type="Node" parent="."]
+script = SubResource("GDScript_bm7f1")
+
+[node name="Rock1" type="StaticBody2D" parent="Rocks"]
+position = Vector2(206, 219)
+script = ExtResource("5_axt1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rocks/Rock1"]
+shape = SubResource("RectangleShape2D_bm7f1")
+
+[node name="Rock1" type="Sprite2D" parent="Rocks/Rock1"]
+material = SubResource("ShaderMaterial_7yig0")
+texture = ExtResource("4_1hakp")
+
+[node name="M" type="Sprite2D" parent="Rocks/Rock1"]
+visible = false
+material = SubResource("ShaderMaterial_ju6ib")
+position = Vector2(2, 4)
+scale = Vector2(1.6219512, 1.4787234)
+texture = ExtResource("7_axt1m")
+
+[node name="Rock2" type="StaticBody2D" parent="Rocks"]
+position = Vector2(245, 429)
+script = ExtResource("5_axt1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rocks/Rock2"]
+shape = SubResource("RectangleShape2D_bm7f1")
+
+[node name="M" type="Sprite2D" parent="Rocks/Rock2"]
+visible = false
+material = SubResource("ShaderMaterial_bwf24")
+position = Vector2(2, 9.536743e-07)
+scale = Vector2(1.4761904, 1.475)
+texture = ExtResource("8_pnrgl")
+
+[node name="Rock1" type="Sprite2D" parent="Rocks/Rock2"]
+material = SubResource("ShaderMaterial_p73p4")
+texture = ExtResource("9_fnfnq")
+
+[node name="Rock3" type="StaticBody2D" parent="Rocks"]
+position = Vector2(282, 279)
+script = ExtResource("5_axt1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rocks/Rock3"]
+shape = SubResource("RectangleShape2D_bm7f1")
+
+[node name="Rock1" type="Sprite2D" parent="Rocks/Rock3"]
+material = SubResource("ShaderMaterial_0g57y")
+texture = ExtResource("10_ourl1")
+
+[node name="M" type="Sprite2D" parent="Rocks/Rock3"]
+visible = false
+material = SubResource("ShaderMaterial_1k3h7")
+position = Vector2(1.000001, -0.99999905)
+scale = Vector2(1.4512196, 1.4069767)
+texture = ExtResource("11_fnfnq")
+
+[node name="Rock4" type="StaticBody2D" parent="Rocks"]
+position = Vector2(471, 354)
+script = ExtResource("5_axt1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rocks/Rock4"]
+shape = SubResource("RectangleShape2D_bm7f1")
+
+[node name="Rock1" type="Sprite2D" parent="Rocks/Rock4"]
+material = SubResource("ShaderMaterial_bj8pq")
+texture = ExtResource("12_x0ukw")
+
+[node name="M" type="Sprite2D" parent="Rocks/Rock4"]
+visible = false
+material = SubResource("ShaderMaterial_ffeg5")
+position = Vector2(1.000001, -0.99999905)
+scale = Vector2(1.4512196, 1.4069767)
+texture = ExtResource("13_m25uv")
+
+[node name="Rock5" type="StaticBody2D" parent="Rocks"]
+position = Vector2(694, 349)
+script = ExtResource("5_axt1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rocks/Rock5"]
+shape = SubResource("RectangleShape2D_bm7f1")
+
+[node name="Rock1" type="Sprite2D" parent="Rocks/Rock5"]
+material = SubResource("ShaderMaterial_l0axw")
+texture = ExtResource("14_mnrwn")
+
+[node name="M" type="Sprite2D" parent="Rocks/Rock5"]
+visible = false
+material = SubResource("ShaderMaterial_wu068")
+position = Vector2(1.000001, -0.99999905)
+scale = Vector2(1.4512196, 1.4069767)
+texture = ExtResource("15_oh1q8")
+
+[node name="Rock6" type="StaticBody2D" parent="Rocks"]
+position = Vector2(803, 272)
+script = ExtResource("5_axt1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rocks/Rock6"]
+shape = SubResource("RectangleShape2D_bm7f1")
+
+[node name="Rock1" type="Sprite2D" parent="Rocks/Rock6"]
+material = SubResource("ShaderMaterial_g1qfu")
+texture = ExtResource("16_fgv6d")
+
+[node name="M" type="Sprite2D" parent="Rocks/Rock6"]
+visible = false
+material = SubResource("ShaderMaterial_ovq2k")
+position = Vector2(1.000001, -0.99999905)
+scale = Vector2(1.0884147, 1.1333979)
+texture = ExtResource("17_ltdmo")
+
+[node name="Rock7" type="StaticBody2D" parent="Rocks"]
+position = Vector2(892, 393)
+script = ExtResource("5_axt1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rocks/Rock7"]
+shape = SubResource("RectangleShape2D_bm7f1")
+
+[node name="Rock1" type="Sprite2D" parent="Rocks/Rock7"]
+material = SubResource("ShaderMaterial_7gnit")
+texture = ExtResource("18_cvuvx")
+
+[node name="M" type="Sprite2D" parent="Rocks/Rock7"]
+visible = false
+material = SubResource("ShaderMaterial_ks7yb")
+position = Vector2(1.000001, -0.99999905)
+scale = Vector2(0.9536586, 1.117305)
+texture = ExtResource("19_7yig0")
+
+[node name="Fake rocks" type="Node" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Fake rocks"]
+position = Vector2(187, 367)
+
+[node name="Sprite2D" type="Sprite2D" parent="Fake rocks/StaticBody2D"]
+texture = ExtResource("20_ltdmo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake rocks/StaticBody2D"]
+shape = SubResource("RectangleShape2D_p73p4")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Fake rocks"]
+position = Vector2(353, 351)
+
+[node name="Sprite2D" type="Sprite2D" parent="Fake rocks/StaticBody2D2"]
+texture = ExtResource("21_cvuvx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake rocks/StaticBody2D2"]
+shape = SubResource("RectangleShape2D_p73p4")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Fake rocks"]
+position = Vector2(478, 258)
+
+[node name="Sprite2D" type="Sprite2D" parent="Fake rocks/StaticBody2D3"]
+texture = ExtResource("22_7yig0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake rocks/StaticBody2D3"]
+shape = SubResource("RectangleShape2D_p73p4")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Fake rocks"]
+position = Vector2(546, 418)
+
+[node name="Sprite2D" type="Sprite2D" parent="Fake rocks/StaticBody2D4"]
+texture = ExtResource("23_ju6ib")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake rocks/StaticBody2D4"]
+shape = SubResource("RectangleShape2D_p73p4")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Fake rocks"]
+position = Vector2(765, 413)
+
+[node name="Sprite2D" type="Sprite2D" parent="Fake rocks/StaticBody2D5"]
+texture = ExtResource("24_bwf24")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake rocks/StaticBody2D5"]
+shape = SubResource("RectangleShape2D_p73p4")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Fake rocks"]
+position = Vector2(959, 251)
+
+[node name="Sprite2D" type="Sprite2D" parent="Fake rocks/StaticBody2D6"]
+texture = ExtResource("14_mnrwn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake rocks/StaticBody2D6"]
+shape = SubResource("RectangleShape2D_p73p4")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="Fake rocks"]
+position = Vector2(991, 372)
+
+[node name="Sprite2D" type="Sprite2D" parent="Fake rocks/StaticBody2D7"]
+position = Vector2(0, -1)
+texture = ExtResource("9_fnfnq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake rocks/StaticBody2D7"]
+shape = SubResource("RectangleShape2D_p73p4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="InventoryPanel" type="Panel" parent="CanvasLayer"]
+offset_left = 79.0
+offset_top = 110.0
+offset_right = 192.15791
+offset_bottom = 172.87033
+scale = Vector2(8.775348, 7.2371182)
+
+[connection signal="input_event" from="CharacterBody2D" to="CharacterBody2D" method="_on_input_event"]
+[connection signal="input_event" from="Rocks/Rock1" to="CharacterBody2D" method="_on_static_body_2d_input_event"]
+[connection signal="input_event" from="Rocks/Rock1" to="Rocks/Rock1" method="_on_input_event"]
+[connection signal="input_event" from="Rocks/Rock2" to="Rocks/Rock2" method="_on_input_event"]
+[connection signal="input_event" from="Rocks/Rock3" to="Rocks/Rock3" method="_on_input_event"]
+[connection signal="input_event" from="Rocks/Rock4" to="Rocks/Rock4" method="_on_input_event"]
+[connection signal="input_event" from="Rocks/Rock5" to="Rocks/Rock5" method="_on_input_event"]
+[connection signal="input_event" from="Rocks/Rock6" to="Rocks/Rock6" method="_on_input_event"]
+[connection signal="input_event" from="Rocks/Rock7" to="Rocks/Rock7" method="_on_input_event"]

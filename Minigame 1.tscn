@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://dy6qmivauw827" path="res://Minigame Assets/di na lit.png" id="4_ob3l2"]
 [ext_resource type="Script" uid="uid://b66usklyuu1b" path="res://rigid_body_2d.gd" id="4_q8m2s"]
 [ext_resource type="Texture2D" uid="uid://dl3ivhb8aib6b" path="res://Minigame Assets/medyo lit.png" id="5_fyd18"]
-[ext_resource type="Script" uid="uid://chymyexj0yvv8" path="res://area_2d.gd" id="6_8jmpj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1tns4"]
 size = Vector2(28, 71)
@@ -119,8 +118,10 @@ func _on_Area2D_body_entered(body: Node2D) -> void:
 		static_object._on_Area2D_body_entered(body)  
 "
 
+[sub_resource type="GDScript" id="GDScript_8jmpj"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q8m2s"]
-size = Vector2(11.5, 12.5)
+size = Vector2(2.302391, 1.525116)
 
 [node name="Node2D" type="Node2D"]
 
@@ -443,10 +444,11 @@ texture = ExtResource("4_ob3l2")
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(473, 190)
 scale = Vector2(17.373268, 23.604765)
-script = ExtResource("6_8jmpj")
+script = SubResource("GDScript_8jmpj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-2, -2)
+position = Vector2(-0.057559967, -0.12709379)
+scale = Vector2(0.99999976, 0.9999999)
 shape = SubResource("RectangleShape2D_q8m2s")
 
 [connection signal="body_entered" from="Area2D" to="R" method="_on_area_2d_body_entered"]

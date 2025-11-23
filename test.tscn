@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://drp3l5ftkq60i"]
+
+[ext_resource type="Script" uid="uid://cicu2fbn0pi2l" path="res://test.gd" id="1_8uh7m"]
+[ext_resource type="Texture2D" uid="uid://bxybuqx8aqjx3" path="res://Minigame Assets/Relicon_MULAWIN__A_-removebg-preview.png" id="2_6uqi0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ppyta"]
+size = Vector2(56, 48)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="test" type="Node2D" parent="."]
+script = ExtResource("1_8uh7m")
+
+[node name="Sprite2D" type="Sprite2D" parent="test"]
+position = Vector2(451.3789, 266.63055)
+scale = Vector2(-6.2338657, 6.7665467)
+texture = ExtResource("2_6uqi0")
+
+[node name="Area2D" type="Area2D" parent="test"]
+position = Vector2(451.3789, 266.63055)
+scale = Vector2(-6.2338657, 6.7665467)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="test/Area2D"]
+position = Vector2(-4, 3)
+shape = SubResource("RectangleShape2D_ppyta")
+
+[connection signal="input_event" from="test/Area2D" to="test" method="_on_area_2d_input_event"]

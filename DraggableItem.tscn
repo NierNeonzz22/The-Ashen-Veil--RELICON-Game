@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cikrg5a5d713y"]
+
+[ext_resource type="Texture2D" uid="uid://bxybuqx8aqjx3" path="res://Minigame Assets/Relicon_MULAWIN__A_-removebg-preview.png" id="1_f0e70"]
+[ext_resource type="Script" uid="uid://5755gjfbu0wy" path="res://DraggableItem.gd" id="2_3bcl0"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_f0e70")
+script = ExtResource("2_3bcl0")

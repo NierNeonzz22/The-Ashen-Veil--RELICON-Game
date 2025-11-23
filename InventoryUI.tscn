@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://bke0x5otnl78d"]
+
+[ext_resource type="Script" uid="uid://bnowi43ns5mj2" path="res://inventory_ui.gd" id="1_dsn3v"]
+
+[node name="Panel" type="Panel"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_dsn3v")
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CloseButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]
