@@ -1,0 +1,815 @@
+[gd_scene load_steps=13 format=3 uid="uid://beq8y4oii0gm"]
+
+[ext_resource type="Texture2D" uid="uid://54pore35p3s2" path="res://dagat.png" id="1_2lpcn"]
+[ext_resource type="Texture2D" uid="uid://c7r50nmgljxxj" path="res://TRISTAN/TRISTAN NEUTRAL.png" id="2_poq5l"]
+[ext_resource type="Texture2D" uid="uid://f53nt8mhe5xk" path="res://TRISTAN/TRISTAN SMILE.png" id="3_oak5s"]
+[ext_resource type="Texture2D" uid="uid://dg75y5lny5fla" path="res://TRISTAN/TRISTAN SAD.png" id="4_fvjng"]
+[ext_resource type="Texture2D" uid="uid://yj1kmn0xnq1l" path="res://TRISTAN/TRISTAN WORRIED.png" id="5_l48ix"]
+[ext_resource type="Texture2D" uid="uid://bov4fxx0tqude" path="res://NIUALA/NIUALA SAD.png" id="6_vpq2k"]
+[ext_resource type="Texture2D" uid="uid://cs8tp5xbslnqc" path="res://NIUALA/NIUALA SURPISED.png" id="7_j3m4h"]
+[ext_resource type="Texture2D" uid="uid://du5wbdqxxa8jh" path="res://NIUALA/NIUALA SMILE.png" id="8_df7we"]
+[ext_resource type="Texture2D" uid="uid://cve1jd0xg0gk6" path="res://NIUALA/NIUALA NEUTRAL.png" id="9_t6ewl"]
+
+[sub_resource type="Animation" id="Animation_fgs51"]
+resource_name = "niuala scene 3 win"
+length = 100.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node/Panel/1:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.5333333, 5.9666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "Piece by piece, I fit the fragments. They complete each other, forming the image of a lotus, blossoming, glowing gold. "]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node/Panel/2:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(6.916299),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": ["[b]NIUALA[/b]"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node/Panel/3:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(15.566667, 17.633333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "I tilted my head, curiosity getting the best of me.
+"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node/Panel/4:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(18.65598),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": ["[b]TRISTAN[/b]"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node/Panel/5:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(22.076542),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": ["[b]NIUALA[/b]"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node/Panel/6:text")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(29.783867, 31.850533),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "Horrible, indeed. 
+"]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node/Panel/7:text")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(32.833332, 32.878174),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["[b]TRISTAN[/b]", "[b]TRISTAN[/b]"]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node/Panel/8:text")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(36.373913),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": ["[b]NIUALA[/b]"]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node/Panel/9:text")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(41.233334, 43.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "I nod in agreement, seeking out the next rune.
+"]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node/Panel/1:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(6.1666665, 6.766667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node/Panel/2:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(6.866667, 7.266667, 14.866667, 15.566667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node/Panel/3:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(17.966667, 18.566668),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node/Panel/4:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(18.606348, 19.006348, 21.266666, 21.966665),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Node/Panel/5:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(22.026909, 22.426908, 29.1, 29.800001),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node/Panel/6:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(32.18387, 32.783867),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Node/Panel/7:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(32.82854, 33.22854, 35.633335, 36.333332),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Node/Panel/8:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(36.32428, 36.72428, 40.333332, 41.033337),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Node/Panel/9:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(43.633335, 44.233334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Node/Panel/2/a:text")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(6.8333335, 14.633333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "That’s- that’s the lotus she reached for before she drowned! My father used to tell me the story, and he told me that a jealous dwarf from the lake put the lotus there to lure the princess in and drown her."]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Node/Panel/4/b:text")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(18.633333, 20.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "Why couldn’t Mulawin save her?
+"]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Node/Panel/5/c:text")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(22, 28.733334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "I’m not sure if it’s true…but my father said the dwarf cursed her jewelry so she couldn’t be pulled up…It’s horrible!"]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Node/Panel/7/d:text")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(32.8, 35.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "I wonder what happened after…"]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Node/Panel/8/e:text")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(36.333332, 39.533333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "I think… you should keep solving the runes to find out, mister. "]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("bg:modulate")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0.13333334, 1.5333333, 43.587315, 44.187313),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("TristanNeutral:modulate")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0, 1.4, 19.066668, 19.433332),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("TristanSad:modulate")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0, 18.766666, 19.333334, 43.587315, 44.187313),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("NiualaSurprise:modulate")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(6.4666667, 7, 36.533333, 36.833332),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("NiualaSad:modulate")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("NiualaNeutral:modulate")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0, 1.3666667, 6.6666665, 7.0666666, 36.266666, 36.8, 43.587315, 44.187313),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_pclo0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node/Panel/1:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node/Panel/1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node/Panel/2:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node/Panel/2/a:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node/Panel/3:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node/Panel/4/b:text")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node/Panel/5/c:text")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node/Panel/7:text")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["[b]NIUALA[/b]"]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node/Panel/7/d:text")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node/Panel/8/e:text")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node/Panel/9:text")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("bg:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("NiualaNeutral:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("TristanSad:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("NiualaSurprise:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("TristanNeutral:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u03dr"]
+_data = {
+&"RESET": SubResource("Animation_pclo0"),
+&"niuala scene 3 win": SubResource("Animation_fgs51")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="bg" type="Sprite2D" parent="."]
+position = Vector2(576.00006, 325)
+scale = Vector2(3.594444, 3.5944448)
+texture = ExtResource("1_2lpcn")
+
+[node name="TristanNeutral" type="Sprite2D" parent="."]
+position = Vector2(243.11671, 323.84445)
+scale = Vector2(0.31495216, 0.3149523)
+texture = ExtResource("2_poq5l")
+
+[node name="TristanSmile" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0)
+position = Vector2(319.68686, 425.84003)
+scale = Vector2(0.09919487, 0.09919496)
+texture = ExtResource("3_oak5s")
+
+[node name="TristanSad" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0)
+position = Vector2(243.11671, 323.84445)
+scale = Vector2(0.31495216, 0.3149523)
+texture = ExtResource("4_fvjng")
+
+[node name="TristanWorried" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0)
+position = Vector2(243.11671, 323.84445)
+scale = Vector2(0.31495216, 0.3149523)
+texture = ExtResource("5_l48ix")
+
+[node name="NiualaSad" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(921.25, 344.3333)
+scale = Vector2(0.2965495, 0.2965495)
+texture = ExtResource("6_vpq2k")
+
+[node name="NiualaSurprise" type="Sprite2D" parent="."]
+position = Vector2(921.25, 344.3333)
+scale = Vector2(0.2965495, 0.2965495)
+texture = ExtResource("7_j3m4h")
+
+[node name="NiualaSmile" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(921.25, 344.3333)
+scale = Vector2(0.2965495, 0.2965495)
+texture = ExtResource("8_df7we")
+
+[node name="NiualaNeutral" type="Sprite2D" parent="."]
+position = Vector2(921.25, 344.3333)
+scale = Vector2(0.2965495, 0.2965495)
+texture = ExtResource("9_t6ewl")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_u03dr")
+}
+autoplay = "niuala scene 3 win"
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Panel" type="Panel" parent="Node"]
+anchors_preset = -1
+anchor_top = 0.21900001
+anchor_right = 0.9990001
+anchor_bottom = 1.075
+offset_left = 44.0
+offset_top = 358.088
+offset_right = -35.848145
+offset_bottom = -72.60004
+
+[node name="1" type="RichTextLabel" parent="Node/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 13.0
+offset_right = -14.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 20
+
+[node name="2" type="RichTextLabel" parent="Node/Panel"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 13.0
+offset_right = -14.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.8627451, 0.78039217, 1, 1)
+theme_override_font_sizes/bold_font_size = 27
+bbcode_enabled = true
+text = "[b]NIUALA[/b]"
+
+[node name="a" type="RichTextLabel" parent="Node/Panel/2"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 36.0
+offset_right = 1039.0
+offset_bottom = 100.0
+theme_override_font_sizes/normal_font_size = 20
+
+[node name="3" type="RichTextLabel" parent="Node/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 13.0
+offset_right = -14.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 20
+
+[node name="4" type="RichTextLabel" parent="Node/Panel"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 13.0
+offset_right = -14.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.6627451, 0.8392157, 1, 1)
+theme_override_font_sizes/bold_font_size = 27
+bbcode_enabled = true
+text = "[b]TRISTAN[/b]"
+
+[node name="b" type="RichTextLabel" parent="Node/Panel/4"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 36.0
+offset_right = 1035.0
+offset_bottom = 102.0
+theme_override_font_sizes/normal_font_size = 20
+
+[node name="5" type="RichTextLabel" parent="Node/Panel"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 13.0
+offset_right = -14.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.8627451, 0.78039217, 1, 1)
+theme_override_font_sizes/bold_font_size = 27
+bbcode_enabled = true
+text = "[b]NIUALA[/b]"
+
+[node name="c" type="RichTextLabel" parent="Node/Panel/5"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 36.0
+offset_right = 1037.0
+offset_bottom = 102.0
+theme_override_font_sizes/normal_font_size = 20
+
+[node name="6" type="RichTextLabel" parent="Node/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 13.0
+offset_right = -14.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 20
+
+[node name="7" type="RichTextLabel" parent="Node/Panel"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 13.0
+offset_right = -14.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.6627451, 0.8392157, 1, 1)
+theme_override_font_sizes/bold_font_size = 27
+bbcode_enabled = true
+text = "[b]NIUALA[/b]"
+
+[node name="d" type="RichTextLabel" parent="Node/Panel/7"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 36.0
+offset_right = 544.0
+offset_bottom = 76.0
+theme_override_font_sizes/normal_font_size = 20
+
+[node name="8" type="RichTextLabel" parent="Node/Panel"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 23.0
+offset_top = 13.0
+offset_right = -11.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.8627451, 0.78039217, 1, 1)
+theme_override_font_sizes/bold_font_size = 27
+bbcode_enabled = true
+text = "[b]NIUALA[/b]"
+
+[node name="e" type="RichTextLabel" parent="Node/Panel/8"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 36.0
+offset_right = 1037.0
+offset_bottom = 76.0
+theme_override_font_sizes/normal_font_size = 20
+
+[node name="9" type="RichTextLabel" parent="Node/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 9.0
+offset_right = -18.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 20
