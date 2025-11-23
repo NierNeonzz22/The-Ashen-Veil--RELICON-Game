@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0804duh6v0qt"
-path="res://.godot/imported/dagat.png-0c073e3087f720adf904eb1a51abc327.ctex"
+uid="uid://bhnqn16crnklm"
+path="res://.godot/imported/RELICON DIALOGUE BOX (1).png-487ca0f00a97dde05decffd16ad4cdef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dagat.png"
-dest_files=["res://.godot/imported/dagat.png-0c073e3087f720adf904eb1a51abc327.ctex"]
+source_file="res://RELICON DIALOGUE BOX (1).png"
+dest_files=["res://.godot/imported/RELICON DIALOGUE BOX (1).png-487ca0f00a97dde05decffd16ad4cdef.ctex"]
 
 [params]
 

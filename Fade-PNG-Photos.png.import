@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0804duh6v0qt"
-path="res://.godot/imported/dagat.png-0c073e3087f720adf904eb1a51abc327.ctex"
+uid="uid://bvlop14wsmxgc"
+path="res://.godot/imported/Fade-PNG-Photos.png-d243fd6fbfd715a52974b63d31b44e49.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dagat.png"
-dest_files=["res://.godot/imported/dagat.png-0c073e3087f720adf904eb1a51abc327.ctex"]
+source_file="res://Fade-PNG-Photos.png"
+dest_files=["res://.godot/imported/Fade-PNG-Photos.png-d243fd6fbfd715a52974b63d31b44e49.ctex"]
 
 [params]
 
