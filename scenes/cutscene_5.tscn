@@ -1,0 +1,636 @@
+[gd_scene load_steps=10 format=3 uid="uid://yxjm1x2yiu6x"]
+
+[ext_resource type="Texture2D" uid="uid://d2utgxk8yh1vu" path="res://assets/Elia assets/ELIA WORRIED.png" id="3_44j3e"]
+[ext_resource type="Texture2D" uid="uid://7v18iaqbhj5e" path="res://assets/assets_scene5/Shot of volcano erupting.png" id="3_53rrf"]
+[ext_resource type="Texture2D" uid="uid://b8prdd05g4ev1" path="res://assets/assets_scene5/tristan rising from water.png" id="4_44j3e"]
+[ext_resource type="Texture2D" uid="uid://oq48skhuup5q" path="res://assets/Pablo assets/PABLO WORRIED.png" id="4_gcdqu"]
+[ext_resource type="AudioStream" uid="uid://d25eoauo7aapp" path="res://Sounds/lv_0_20251122230015-muffled.ogg" id="5_53rrf"]
+[ext_resource type="AudioStream" uid="uid://byqng7cu3kd1h" path="res://Sounds/Volcano Eruption _ Sound Effect(MP3_160K).ogg" id="5_533e2"]
+
+[sub_resource type="Animation" id="Animation_gcdqu"]
+resource_name = "Cutscene 5.1"
+length = 100.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Volcano erruption:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.033333335, 2.1333334, 9.1, 33.3, 46, 64.833336, 65.63333, 68, 69.26667, 91.666664, 93.13333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0.9647059, 0.9647059, 0.9647059, 1), Color(0.9647059, 0.9647059, 0.9647059, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Tristan raising:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(9.1, 14.133333, 31.4667, 33.3, 46, 52, 64.86667, 68),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(0.973535, 0.9735351, 0.973535, 1), Color(0.9843137, 0.9843137, 0.9843137, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node/Dialogue1:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(14.3, 27.166666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "I gasped for air as I broke through the surface, for the first time in hours, breathing actual air. And yet, the air I sucked in wasn’t fresh; it was smoky, gray, and polluted."]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node/Dialogue1:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(27.243525, 31.466667, 33.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node/Dialogue2:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(34.5, 41.433334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "Screams and cries flooded my ears, making me thrash in confusion. One voice in particular breaks through, just as two hands reach out for me."]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node/Dialogue2:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(41.466667, 46, 52),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node/Dialogue3:text")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(52.366665, 54.866665),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "
+Tristan! Oh my goodness, hold onto Pablo, quickly!"]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node/Dialogue3:self_modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(54.866665, 57.7, 58.266666),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node/Dialogue4:text")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(58.8, 60.666668),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "
+DUDE! WE’RE GONNA DIE, GRAB ONTO ME ALREADY!"]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node/Dialogue4:self_modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(60.8, 64.53333, 65.166664),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node/Dialogue5:text")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(69.36667, 77),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "I look back at the Taal volcano, now erupting. Its crater spews red, burning lava and pitch black smoke. I grab onto Pablo’s hands in a panic, and he pulls me out of the water."]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node/Dialogue5:self_modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(76.97699, 80, 82),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node/Dialogue6:text")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(82.5, 88),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "I turn back to the volcano, angry and spewing hate, and the only thing I can think of in the moment is: What the hell have I done?"]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Node/Dialogue6:self_modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(88, 91, 92.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node/The end:self_modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(93.666664, 95.26667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Node/ColorRect:color")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(13.5, 14.3, 31.4667, 33.3, 34.433334, 46, 52.366665, 53.333332, 64.63333, 65.433334, 68.8, 69.333336),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.60784316), Color(0, 0, 0, 0.60784316), Color(0, 0, 0, 0), Color(0, 0, 0, 0.60784316), Color(0, 0, 0, 0.60784316), Color(0, 0, 0, 0), Color(0, 0, 0, 0.5882353), Color(0, 0, 0, 0.5882353), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 0.60784316)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Elia:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(52.366665, 53.366665, 57.7, 58.2667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.9411765, 0.9411765, 0.9411765, 0), Color(0.9411765, 0.9411765, 0.9411765, 1), Color(0.9411765, 0.9411765, 0.9411765, 1), Color(1, 1, 1, 0)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Pablo:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(58.8, 59.6, 64.63333, 65.433334),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Node/Elia:self_modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(52.3666, 52.4, 57.7, 58.2667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Node/Pablo:self_modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(58.7, 58.7333, 64.6333, 65.4333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qohyt"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Volcano erruption:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.78815395, 0.78815395, 0.78815395, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Tristan raising:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node/Dialogue1:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["I gasped for air as I broke through the surface, for the first time in hours, breathing actual air. And yet, the air I sucked in wasn’t fresh; it was smoky, gray, and polluted."]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node/Dialogue1:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node/Dialogue2:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Screams and cries flooded my ears, making me thrash in confusion. One voice in particular breaks through, just as two hands reach out for me."]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node/Dialogue2:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node/Dialogue3:text")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Elia: Tristan! Oh my goodness, hold onto Pablo, quickly!"]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node/Dialogue3:self_modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node/Dialogue4:text")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Pablo: DUDE! WE’RE "]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node/Dialogue4:self_modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node/Dialogue5:text")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["I look back at the Taal volcano, now erupting. Its crater spews red, burning lava and pitch black smoke. I grab onto Pablo’s hands in a panic, and he pulls me out of the water."]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node/Dialogue5:self_modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node/Dialogue6:text")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["I turn back to the volcano, angry and spewing hate, and the only thing I can think of in the moment is: What the hell have I done?"]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Node/Dialogue6:self_modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node/The end:self_modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Node/ColorRect:color")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.44313726)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Elia:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Pablo:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Node/Elia:self_modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Node/Pablo:self_modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vifyl"]
+_data = {
+&"Cutscene 5.1": SubResource("Animation_gcdqu"),
+&"RESET": SubResource("Animation_qohyt")
+}
+
+[node name="Cutscene5" type="Node2D"]
+
+[node name="Volcano erruption" type="Sprite2D" parent="."]
+modulate = Color(0.78815395, 0.78815395, 0.78815395, 1)
+position = Vector2(576.25, 325.5)
+scale = Vector2(3.6109383, 3.6388893)
+texture = ExtResource("3_53rrf")
+
+[node name="Tristan raising" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(578.99994, 324.99997)
+scale = Vector2(3.617201, 3.6000595)
+texture = ExtResource("4_44j3e")
+
+[node name="Elia" type="Sprite2D" parent="."]
+position = Vector2(230.875, 328.75784)
+scale = Vector2(0.32828775, 0.31226346)
+texture = ExtResource("3_44j3e")
+
+[node name="Pablo" type="Sprite2D" parent="."]
+position = Vector2(228.00003, 322)
+scale = Vector2(0.34375, 0.31982422)
+texture = ExtResource("4_gcdqu")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_vifyl")
+}
+autoplay = "Cutscene 5.1"
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Crowd panicking_sound" type="AudioStreamPlayer" parent="Node"]
+stream = ExtResource("5_53rrf")
+autoplay = true
+
+[node name="Volcano erruptio_sound" type="AudioStreamPlayer" parent="Node"]
+stream = ExtResource("5_533e2")
+autoplay = true
+
+[node name="ColorRect" type="ColorRect" parent="Node"]
+offset_left = 47.0
+offset_top = 490.0
+offset_right = 1108.0
+offset_bottom = 625.0
+color = Color(0, 0, 0, 0.44313726)
+
+[node name="Dialogue1" type="RichTextLabel" parent="Node"]
+offset_left = 60.0
+offset_top = 491.0
+offset_right = 1090.0
+offset_bottom = 624.0
+theme_override_font_sizes/normal_font_size = 30
+text = "I gasped for air as I broke through the surface, for the first time in hours, breathing actual air. And yet, the air I sucked in wasn’t fresh; it was smoky, gray, and polluted."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dialogue2" type="RichTextLabel" parent="Node"]
+offset_left = 59.0
+offset_top = 493.0
+offset_right = 1094.0
+offset_bottom = 625.0
+theme_override_font_sizes/normal_font_size = 30
+text = "Screams and cries flooded my ears, making me thrash in confusion. One voice in particular breaks through, just as two hands reach out for me."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dialogue3" type="RichTextLabel" parent="Node"]
+offset_left = 65.0
+offset_top = 495.0
+offset_right = 1087.0
+offset_bottom = 624.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 35
+text = "Elia: Tristan! Oh my goodness, hold onto Pablo, quickly!"
+
+[node name="Dialogue4" type="RichTextLabel" parent="Node"]
+offset_left = 66.0
+offset_top = 492.0
+offset_right = 1089.0
+offset_bottom = 609.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 35
+text = "Pablo: DUDE! WE’RE "
+vertical_alignment = 1
+
+[node name="Dialogue5" type="RichTextLabel" parent="Node"]
+offset_left = 72.0
+offset_top = 492.0
+offset_right = 1084.0
+offset_bottom = 632.0
+theme_override_font_sizes/normal_font_size = 30
+text = "I look back at the Taal volcano, now erupting. Its crater spews red, burning lava and pitch black smoke. I grab onto Pablo’s hands in a panic, and he pulls me out of the water."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dialogue6" type="RichTextLabel" parent="Node"]
+offset_left = 66.0
+offset_top = 487.0
+offset_right = 1087.0
+offset_bottom = 626.0
+theme_override_font_sizes/normal_font_size = 30
+text = "I turn back to the volcano, angry and spewing hate, and the only thing I can think of in the moment is: What the hell have I done?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="The end" type="RichTextLabel" parent="Node"]
+offset_left = 288.0
+offset_top = 209.0
+offset_right = 882.0
+offset_bottom = 421.0
+theme_override_font_sizes/normal_font_size = 150
+text = "The End"
+horizontal_alignment = 1
+vertical_alignment = 3
+
+[node name="Elia" type="RichTextLabel" parent="Node"]
+offset_left = 65.0
+offset_top = 493.0
+offset_right = 277.0
+offset_bottom = 557.0
+theme_override_colors/default_color = Color(1, 0.91764706, 0.654902, 1)
+theme_override_font_sizes/normal_font_size = 35
+text = "Elia:"
+
+[node name="Pablo" type="RichTextLabel" parent="Node"]
+offset_left = 66.0
+offset_top = 491.0
+offset_right = 393.0
+offset_bottom = 543.0
+theme_override_colors/default_color = Color(0.78039217, 0.9764706, 0.8, 1)
+theme_override_font_sizes/normal_font_size = 35
+text = "Pablo:"
