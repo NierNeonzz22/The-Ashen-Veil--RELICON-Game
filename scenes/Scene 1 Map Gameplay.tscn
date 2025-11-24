@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://wvhkofsoklhj"]
+[gd_scene load_steps=32 format=3 uid="uid://wvhkofsoklhj"]
 
 [ext_resource type="Texture2D" uid="uid://dy8sw3h7n6b6h" path="res://assets/maps/Festival-Recovered.png" id="1_afks2"]
 [ext_resource type="PackedScene" uid="uid://ycva3qn3np6q" path="res://scenes/player.tscn" id="2_afks2"]
@@ -18,6 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://o0ojrsilirkx" path="res://assets/map assets/dalawambahay.png" id="15_1rdwa"]
 [ext_resource type="Texture2D" uid="uid://bnlensw0bcwej" path="res://assets/map assets/MGA STALL/balloonstall.png" id="17_wyais"]
 [ext_resource type="Texture2D" uid="uid://hwo7s07bcctn" path="res://assets/map assets/MGA STALL/poste.png" id="18_ehpw1"]
+[ext_resource type="Texture2D" uid="uid://chtrhc24oenw7" path="res://assets/map assets/stage.png" id="19_ehpw1"]
+[ext_resource type="Texture2D" uid="uid://b6kwi8osofkfh" path="res://assets/map assets/fountain.png" id="20_s7fiu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ptora"]
 size = Vector2(58.787502, 44.90912)
@@ -29,6 +31,12 @@ size = Vector2(100, 73)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_um6tp"]
 size = Vector2(40, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gevvu"]
+size = Vector2(86, 98)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s7fiu"]
+size = Vector2(56, 49)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oe624"]
 size = Vector2(51, 2124)
@@ -61,11 +69,11 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_s7fiu"]
-size = Vector2(56, 49)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_grem4"]
 size = Vector2(431, 41.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ohiqf"]
+size = Vector2(117, 110)
 
 [node name="Node2D" type="Node2D"]
 
@@ -415,17 +423,6 @@ position = Vector2(-7.8488255, 29.323643)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YSORT/Tree21/StaticBody2D"]
 shape = SubResource("CircleShape2D_oe624")
 
-[node name="Tree22" type="Sprite2D" parent="YSORT"]
-position = Vector2(1039, 1033)
-scale = Vector2(2.1659293, 2.148437)
-texture = ExtResource("5_ptora")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="YSORT/Tree22"]
-position = Vector2(-7.8488255, 29.323643)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSORT/Tree22/StaticBody2D"]
-shape = SubResource("CircleShape2D_oe624")
-
 [node name="Tree23" type="Sprite2D" parent="YSORT"]
 position = Vector2(1706, -114)
 scale = Vector2(2.1659293, 2.148437)
@@ -499,6 +496,26 @@ texture = ExtResource("8_acsqf")
 position = Vector2(321, 223)
 texture = ExtResource("14_61iss")
 
+[node name="Fountain" type="Sprite2D" parent="YSORT"]
+position = Vector2(1501, 382)
+texture = ExtResource("20_s7fiu")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="YSORT/Fountain"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSORT/Fountain/StaticBody2D"]
+position = Vector2(8, 9)
+shape = SubResource("RectangleShape2D_gevvu")
+
+[node name="Greenballloon" type="Sprite2D" parent="."]
+position = Vector2(1030, 916)
+texture = ExtResource("8_acsqf")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Greenballloon"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Greenballloon/StaticBody2D"]
+position = Vector2(-18, 14.5)
+shape = SubResource("RectangleShape2D_s7fiu")
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-131, 367)
 
@@ -567,23 +584,13 @@ texture = ExtResource("17_wyais")
 position = Vector2(-18, 14.5)
 shape = SubResource("RectangleShape2D_s7fiu")
 
-[node name="Greenballloon" type="Sprite2D" parent="."]
-position = Vector2(1030, 916)
-texture = ExtResource("8_acsqf")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Greenballloon"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Greenballloon/StaticBody2D"]
-position = Vector2(-18, 14.5)
-shape = SubResource("RectangleShape2D_s7fiu")
-
-[node name="Poste" type="Sprite2D" parent="."]
-position = Vector2(1544, 887)
-texture = ExtResource("18_ehpw1")
-
 [node name="ReliconBushSprite" type="Sprite2D" parent="."]
 position = Vector2(1237, 967)
 texture = ExtResource("5_00r76")
+
+[node name="Poste" type="Sprite2D" parent="ReliconBushSprite"]
+position = Vector2(307, -80)
+texture = ExtResource("18_ehpw1")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="ReliconBushSprite"]
 
@@ -597,3 +604,13 @@ shape = SubResource("RectangleShape2D_s7fiu")
 position = Vector2(876.25, 479)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_grem4")
+
+[node name="Stage" type="Sprite2D" parent="."]
+position = Vector2(2002, 295)
+texture = ExtResource("19_ehpw1")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Stage"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage/StaticBody2D"]
+position = Vector2(23.5, 29)
+shape = SubResource("RectangleShape2D_ohiqf")
