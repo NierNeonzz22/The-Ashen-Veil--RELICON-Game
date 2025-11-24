@@ -1,0 +1,397 @@
+[gd_scene load_steps=9 format=3 uid="uid://dnqmix4gjsjqy"]
+
+[ext_resource type="Texture2D" uid="uid://ci8m7lmaxtpjt" path="res://dagat.png" id="1_cpckp"]
+[ext_resource type="Texture2D" uid="uid://cgsen5qqwvtkq" path="res://assets/assets_scene 3/NAMARU SMILE.png" id="2_cpckp"]
+[ext_resource type="Script" uid="uid://dkcyx6bfbwgor" path="res://option_1(2).gd" id="3_bo0vv"]
+[ext_resource type="Script" uid="uid://bbpexxtq4xlvn" path="res://option_2(2).gd" id="4_rxn5t"]
+[ext_resource type="Script" uid="uid://bmtbijltg47t6" path="res://option_3(2).gd" id="5_6k3dt"]
+
+[sub_resource type="Animation" id="Animation_sva7b"]
+resource_name = "Cutscene option 1 and 3"
+length = 12.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Dagat:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Namaru:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 10, 11),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.60784316), Color(0, 0, 0, 0.60784316), Color(0, 0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Namaru:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1, 1.5, 10, 11),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Dialogue1:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.5, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "
+Ah ah ah! Such impatience with a high amount of incompetence will only result in complications, mister. "]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Dialogue1:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(8, 10, 11),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Control/Option 1(2):modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(11.5, 12),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../Control/Option 2(2):modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(11.5, 12),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../Control/Option 3(2):modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(11.5, 12),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../Control/Option 1(2):position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(-0.2, -0.06666666, 11.433333, 11.466666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(280, 217), Vector2(-778, 217), Vector2(-591, 198), Vector2(280, 217)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../Control/Option 2(2):position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(-0.1, 0, 11.433333, 11.466666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(278, 302), Vector2(-771, 302), Vector2(-617, 298), Vector2(278, 302)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../Control/Option 3(2):position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(-0.26666668, -0.06666669, 11.433333, 11.466666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(279, 391), Vector2(-777, 391), Vector2(-780, 404), Vector2(279, 391)]
+}
+
+[sub_resource type="Animation" id="Animation_l4vep"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Dagat:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Namaru:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.60784316)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Namaru:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Dialogue1:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["
+Ah ah ah! Such impatience with a high amount of incompetence will only result in complications, mister. "]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Dialogue1:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Control/Option 1(2):modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../Control/Option 2(2):modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../Control/Option 3(2):modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../Control/Option 1(2):position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(280, 217)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../Control/Option 2(2):position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(278, 302)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../Control/Option 3(2):position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(279, 391)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bo0vv"]
+_data = {
+&"Cutscene option 1 and 3": SubResource("Animation_sva7b"),
+&"RESET": SubResource("Animation_l4vep")
+}
+
+[node name="Option 1 & 3 result" type="Node2D"]
+
+[node name="Dagat" type="Sprite2D" parent="."]
+position = Vector2(576, 323)
+scale = Vector2(3.6062498, 3.6000001)
+texture = ExtResource("1_cpckp")
+
+[node name="Namaru" type="Sprite2D" parent="."]
+position = Vector2(531.84894, 368.663)
+scale = Vector2(0.2931654, 0.27799124)
+texture = ExtResource("2_cpckp")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Node")
+libraries = {
+&"": SubResource("AnimationLibrary_bo0vv")
+}
+autoplay = "Cutscene option 1 and 3"
+
+[node name="Node" type="Node" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Node"]
+modulate = Color(0, 0, 0, 0.60784316)
+offset_left = 39.0
+offset_top = 504.0
+offset_right = 1118.0
+offset_bottom = 637.0
+
+[node name="Namaru" type="RichTextLabel" parent="Node"]
+offset_left = 60.0
+offset_top = 514.0
+offset_right = 319.0
+offset_bottom = 560.0
+theme_override_colors/default_color = Color(0.59607846, 1, 0.59607846, 1)
+theme_override_font_sizes/normal_font_size = 30
+text = "Namaru:"
+
+[node name="Dialogue1" type="RichTextLabel" parent="Node"]
+offset_left = 61.0
+offset_top = 517.0
+offset_right = 1108.0
+offset_bottom = 632.0
+theme_override_font_sizes/normal_font_size = 27
+text = "
+Ah ah ah! Such impatience with a high amount of incompetence will only result in complications, mister. "
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Option 1(2)" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = -776.916
+offset_top = 216.88986
+offset_right = -208.91559
+offset_bottom = 274.888
+theme_override_font_sizes/font_size = 30
+text = "“What does this have to do with me?”
+"
+script = ExtResource("3_bo0vv")
+
+[node name="Option 2(2)" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = -771.0
+offset_top = 302.0
+offset_right = -200.00024
+offset_bottom = 360.0
+theme_override_font_sizes/font_size = 30
+text = "“What does she want from me?”"
+script = ExtResource("4_rxn5t")
+
+[node name="Option 3(2)" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = -777.01733
+offset_top = 391.07535
+offset_right = -205.01715
+offset_bottom = 453.07535
+theme_override_font_sizes/font_size = 30
+text = "“Just get me out of here.”"
+script = ExtResource("5_6k3dt")
+
+[connection signal="pressed" from="Control/Option 1(2)" to="Control/Option 1(2)" method="_on_pressed"]
+[connection signal="pressed" from="Control/Option 2(2)" to="Control/Option 2(2)" method="_on_pressed"]
+[connection signal="pressed" from="Control/Option 3(2)" to="Control/Option 3(2)" method="_on_pressed"]

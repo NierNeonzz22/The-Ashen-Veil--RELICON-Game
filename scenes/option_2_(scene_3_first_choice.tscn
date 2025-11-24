@@ -1,0 +1,605 @@
+[gd_scene load_steps=10 format=3 uid="uid://8llp1plipdra"]
+
+[ext_resource type="Texture2D" uid="uid://ci8m7lmaxtpjt" path="res://dagat.png" id="1_uoahw"]
+[ext_resource type="Texture2D" uid="uid://cd1v076620my4" path="res://assets/assets_scene 3/NAMARU SURPISED.png" id="2_b65s7"]
+[ext_resource type="Texture2D" uid="uid://cgsen5qqwvtkq" path="res://assets/assets_scene 3/NAMARU SMILE.png" id="3_rlheo"]
+[ext_resource type="Script" uid="uid://dkcyx6bfbwgor" path="res://option_1(2).gd" id="4_rlheo"]
+[ext_resource type="Script" uid="uid://bbpexxtq4xlvn" path="res://option_2(2).gd" id="5_y5oum"]
+[ext_resource type="Script" uid="uid://bmtbijltg47t6" path="res://option_3(2).gd" id="6_y5oum"]
+
+[sub_resource type="Animation" id="Animation_y5oum"]
+resource_name = "Option 2"
+length = 35.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dagat:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Namaru(Surprised):modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node/ColorRect:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 33, 34),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.60784316), Color(0, 0, 0, 0.60784316), Color(0, 0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node/Dialogue1:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.5, 9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "
+Noooooo! You can’t grovel already! Not after such an idiotic stunt! Swimming during a festival, us nonlocals never learn, do we?"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node/Namaru:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1, 1.5, 11, 12, 21.066668, 21.6, 28, 29),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node/Dialogue1:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(9, 11, 12),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node/Dialogue2:text")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(12.5, 18),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "Her words sound almost mocking, but her voice is calming and steady, like the weight of a river."]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node/Dialogue2:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(18, 20, 21),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Namaru(Smile):self_modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(21.066668, 21.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node/Dialogue3:text")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(21.633333, 26),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["
+", "
+I am Namaru, by the way. I was pulled down once, like you… by the princess."]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node/Dialogue3:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(26, 28, 29),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node/Dialogue4:text")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(29.166666, 32),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "I swallowed, but it rasped at my throat."]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node/Dialogue4:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(32, 33, 34),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Control/Option 1(2):modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(34.3, 34.866665),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Control/Option 2(2):modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(34.3, 34.866665),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Control/Option 3(2):modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(34.3, 34.8667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Control/Option 1(2):position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(-0.13333334, -0.06666667, 34.233334, 34.266666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(280, 217), Vector2(-780, 217), Vector2(-780, 217), Vector2(280, 217)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Control/Option 2(2):position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(-0.1, -0.06666667, 34.233334, 34.266666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(278, 302), Vector2(-778, 302), Vector2(-778, 302), Vector2(278, 302)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Control/Option 3(2):position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(-0.13333334, -0.06666667, 34.233334, 34.266666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(279, 391), Vector2(-779, 391), Vector2(-779, 391), Vector2(279, 391)]
+}
+
+[sub_resource type="Animation" id="Animation_716fr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dagat:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Namaru(Surprised):modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node/ColorRect:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node/Namaru:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node/Dialogue1:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["
+Noooooo! You can’t grovel already! Not after such an idiotic stunt! Swimming during a festival, us nonlocals never learn, do we?"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node/Dialogue1:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node/Dialogue2:text")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Her words sound almost mocking, but her voice is calming and steady, like the weight of a river."]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node/Dialogue2:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Namaru(Smile):self_modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node/Dialogue3:text")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["
+I am Namaru, by the way. I was pulled down once, like you… by the princess."]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node/Dialogue3:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node/Dialogue4:text")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["I swallowed, but it rasped at my throat."]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node/Dialogue4:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Control/Option 1(2):modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Control/Option 2(2):modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Control/Option 3(2):modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Control/Option 3(2):position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(279, 391)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Control/Option 2(2):position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(278, 302)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Control/Option 1(2):position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(280, 217)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dywtc"]
+_data = {
+&"Option 2": SubResource("Animation_y5oum"),
+&"RESET": SubResource("Animation_716fr")
+}
+
+[node name="Option 2 (scene 3 first choice" type="Node2D"]
+
+[node name="Dagat" type="Sprite2D" parent="."]
+position = Vector2(577.5, 323)
+scale = Vector2(3.6156247, 3.6000001)
+texture = ExtResource("1_uoahw")
+
+[node name="Namaru(Surprised)" type="Sprite2D" parent="."]
+position = Vector2(531.84894, 368.663)
+scale = Vector2(0.2931654, 0.27799124)
+texture = ExtResource("2_b65s7")
+
+[node name="Namaru(Smile)" type="Sprite2D" parent="."]
+position = Vector2(531.84894, 368.663)
+scale = Vector2(0.2931654, 0.27799124)
+texture = ExtResource("3_rlheo")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_dywtc")
+}
+autoplay = "Option 2"
+
+[node name="Node" type="Node" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Node"]
+modulate = Color(0, 0, 0, 0)
+offset_left = 39.0
+offset_top = 504.0
+offset_right = 1118.0
+offset_bottom = 637.0
+
+[node name="Namaru" type="RichTextLabel" parent="Node"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 60.0
+offset_top = 514.0
+offset_right = 319.0
+offset_bottom = 560.0
+theme_override_colors/default_color = Color(0.59607846, 1, 0.59607846, 1)
+theme_override_font_sizes/normal_font_size = 30
+text = "Namaru:"
+
+[node name="Dialogue1" type="RichTextLabel" parent="Node"]
+offset_left = 61.0
+offset_top = 517.0
+offset_right = 1108.0
+offset_bottom = 632.0
+theme_override_font_sizes/normal_font_size = 27
+text = "
+Noooooo! You can’t grovel already! Not after such an idiotic stunt! Swimming during a festival, us nonlocals never learn, do we?"
+
+[node name="Dialogue2" type="RichTextLabel" parent="Node"]
+offset_left = 59.0
+offset_top = 506.0
+offset_right = 1100.0
+offset_bottom = 634.0
+theme_override_font_sizes/normal_font_size = 30
+text = "Her words sound almost mocking, but her voice is calming and steady, like the weight of a river."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dialogue3" type="RichTextLabel" parent="Node"]
+offset_left = 62.0
+offset_top = 508.0
+offset_right = 1099.0
+offset_bottom = 635.0
+theme_override_font_sizes/normal_font_size = 30
+text = "
+I am Namaru, by the way. I was pulled down once, like you… by the princess."
+
+[node name="Dialogue4" type="RichTextLabel" parent="Node"]
+offset_left = 60.0
+offset_top = 506.0
+offset_right = 1100.0
+offset_bottom = 635.0
+theme_override_font_sizes/normal_font_size = 30
+text = "I swallowed, but it rasped at my throat."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_bottom = 7.0
+
+[node name="Option 1(2)" type="Button" parent="Control"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 280.0
+offset_top = 217.0
+offset_right = 848.0
+offset_bottom = 275.0
+theme_override_font_sizes/font_size = 30
+text = "“What does this have to do with me?”
+"
+script = ExtResource("4_rlheo")
+
+[node name="Option 2(2)" type="Button" parent="Control"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 278.0
+offset_top = 302.0
+offset_right = 849.0
+offset_bottom = 360.0
+theme_override_font_sizes/font_size = 30
+text = "“What does she want from me?”"
+script = ExtResource("5_y5oum")
+
+[node name="Option 3(2)" type="Button" parent="Control"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 279.0
+offset_top = 391.0
+offset_right = 851.0
+offset_bottom = 453.0
+theme_override_font_sizes/font_size = 30
+text = "“Just get me out of here.”"
+script = ExtResource("6_y5oum")
+
+[connection signal="pressed" from="Control/Option 1(2)" to="Control/Option 1(2)" method="_on_pressed"]
+[connection signal="pressed" from="Control/Option 2(2)" to="Control/Option 2(2)" method="_on_pressed"]
+[connection signal="pressed" from="Control/Option 3(2)" to="Control/Option 3(2)" method="_on_pressed"]
