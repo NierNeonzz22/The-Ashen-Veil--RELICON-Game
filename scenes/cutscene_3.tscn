@@ -1,0 +1,1034 @@
+[gd_scene load_steps=16 format=3 uid="uid://hwftkqtmqhlb"]
+
+[ext_resource type="Texture2D" uid="uid://bh0ixgapknluk" path="res://assets/assets_scene 3/hand pov tristan.png" id="1_l3jdo"]
+[ext_resource type="Texture2D" uid="uid://xbflnlye1vw5" path="res://assets/assets_scene 3/namaru pov shot (1).png" id="2_68ts2"]
+[ext_resource type="Texture2D" uid="uid://ci8m7lmaxtpjt" path="res://dagat.png" id="2_c2nt5"]
+[ext_resource type="Texture2D" uid="uid://b71wrs7tdhmd3" path="res://assets/assets_scene 3/tristan namaru lean.png" id="3_c2nt5"]
+[ext_resource type="Texture2D" uid="uid://dntt31i4idxmy" path="res://assets/assets_scene 3/tristan namaru.png" id="4_d4spc"]
+[ext_resource type="Texture2D" uid="uid://c3om5oj4vipfd" path="res://assets/assets_scene 3/KALAO NEUTRAL.png" id="6_8t7ks"]
+[ext_resource type="Texture2D" uid="uid://ceojxk5h2divq" path="res://assets/assets_scene 3/NIUALA NEUTRAL.png" id="7_hwgu4"]
+[ext_resource type="Texture2D" uid="uid://cxntmwxufcs6c" path="res://assets/assets_scene 3/DAYON NEUTRAL.png" id="8_bvfwo"]
+[ext_resource type="Texture2D" uid="uid://cgsen5qqwvtkq" path="res://assets/assets_scene 3/NAMARU SMILE.png" id="10_p0jyh"]
+[ext_resource type="Script" uid="uid://b3j8xyhne0ygx" path="res://option_1.gd" id="11_hwgu4"]
+[ext_resource type="Script" uid="uid://dstsg7qkc4acd" path="res://option_3.gd" id="12_bvfwo"]
+[ext_resource type="Script" uid="uid://cb43jprdba6jc" path="res://option_2.gd" id="12_dyl12"]
+
+[sub_resource type="Animation" id="Animation_2xcjm"]
+resource_name = "Cutscene 3"
+length = 80.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hand pov:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 3, 19.966667, 21, 22, 24, 38, 38.666668, 39.033333, 39.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hand pov/My beautiful Namaru pov:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(38.8, 39.1, 52.9, 53),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Hand pov/Namaru leaning:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(51.5, 53, 62.533333, 63.833332),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Hand pov/Namaru leaning (speaking):modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(55, 55.001, 75, 76.5, 77.2, 78.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(0.0020709634, 0.0020709634, 0.0020709634, 0.9559923), Color(0.047058824, 0.047058824, 0.047058824, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node/ColorRect:color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(3, 4, 19.5, 20.5, 24, 25.033333, 36, 48.5, 50.5, 53.5, 54.5, 74, 75),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.60784316), Color(0, 0, 0, 0.60784316), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 0.60784316), Color(0, 0, 0, 0.60784316), Color(0, 0, 0, 0.60784316), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 0.60784316), Color(0, 0, 0, 0.60784316), Color(0, 0, 0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node/Dialogue1:text")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(3, 11),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "The first thing I feel is silence. Not the quiet warmth of waking under a blanket, but the still, heavy silence of water pressing in on all sides."]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node/Dialogue1:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(11, 12, 13),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node/Dialogue2:text")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(13.5, 18.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "I expected to have my lungs filled with liquid, to my surprise, it did not ache. "]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node/Dialogue2:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(18.5, 19.5, 20.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Hand pov/Dagat:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(21.833334, 22.166666, 38.4, 39, 76.76667, 76.933334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Hand pov/Namaru:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(21.733334, 21.95841, 38.4, 39, 78, 79),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(1, 1, 1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Hand pov/Dayon:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(21.733334, 21.95841, 38.4, 39),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Hand pov/Niula:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(21.733334, 21.95841, 38.4, 39),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Hand pov/Kalao:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(21.766666, 21.95841, 38.4, 39),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node/Dialogue3:text")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(24, 32),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "4 figures stirred like a veil throughout the cove. It was my fault for failing to notice the shifting shadows surrounding me."]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Node/Dialogue3:self_modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(32, 34, 36),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Node/Dialogue4:text")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(36.5, 46.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "One of the shadow crept towards me, then revealed a young figure with gentle, comforting eyes like lanterns."]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Hand pov/Namaru:scale")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(36.5, 39, 39.933334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.08136042, 0.07729168), Vector2(0.118, 0.112), Vector2(0.081, 0.077)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Node/Dialogue4:modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(46.5, 48.5, 50.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Node/Dialogue5:self_modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(55.066666, 55.1, 58, 58.033333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Node/Dialogue6:self_modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(58.1, 58.133335, 60.366665, 61),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Node/Dialogue7:text")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(61.466667, 65),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "I lean back in shock. When I recovered, I panicked."]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Node/Dialogue7:self_modulate")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(65, 67, 68),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Node/Dialogue8:text")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(68.3, 72),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "I was desperate to get out of this place. It felt suffocating. "]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Node/Dialogue8:self_modulate")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(72, 74, 75),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("Node/Namaru:modulate")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(55.0667, 55.1, 58, 58.0333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("Node/Tristan:text")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("Node/Tristan:self_modulate")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(58.1, 58.1333, 60.3667, 61),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("Control/Option 1:modulate")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(79.36667, 80),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("Control/Option 2:modulate")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(79.3667, 80),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("Control/Option 3:modulate")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(79.3667, 80),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("Control/Option 1:position")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(-0.06666667, -0.033333335, 79.3, 79.333336),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(280, 217), Vector2(-781, 217), Vector2(-599, 220), Vector2(280, 217)]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("Control/Option 2:position")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(-0.06666667, -0.033333335, 79.3, 79.333336),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(278, 302), Vector2(-778, 302), Vector2(-778, 302), Vector2(278, 302)]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("Control/Option 3:position")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(-0.06666667, -0.033333335, 79.3, 79.333336),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(278, 391), Vector2(-771, 391), Vector2(-777, 391), Vector2(278, 391)]
+}
+
+[sub_resource type="Animation" id="Animation_50e0g"]
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hand pov:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hand pov/My beautiful Namaru pov:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Hand pov/Namaru leaning:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Hand pov/Namaru leaning (speaking):modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node/ColorRect:color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.60784316)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node/Dialogue1:text")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["The first thing I feel is silence. Not the quiet warmth of waking under a blanket, but the still, heavy silence of water pressing in on all sides."]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node/Dialogue1:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node/Dialogue2:text")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["I expected to have my lungs filled with liquid, to my surprise, it did not ache. "]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node/Dialogue2:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Hand pov/Dagat:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Hand pov/Namaru:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Hand pov/Dayon:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Hand pov/Niula:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Hand pov/Kalao:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node/Dialogue3:text")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["5 figures stirred like a veil throughout the cove. It was my fault for failing to notice the shifting shadows surrounding me."]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Node/Dialogue3:self_modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Node/Dialogue4:text")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["The shadow crept towards me, then revealed a young figure with gentle, comforting eyes like lanterns. The surroundings shone a gentle MINT GREEN."]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Hand pov/Namaru:scale")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.08136042, 0.07729168)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Node/Dialogue4:modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Node/Dialogue5:self_modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Node/Dialogue6:self_modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Node/Dialogue7:text")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["I lean back in shock. When I recovered, I panicked."]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Node/Dialogue7:self_modulate")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Node/Dialogue8:text")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["I was desperate to get out of this place. It felt suffocating. "]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Node/Dialogue8:self_modulate")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("Node/Namaru:modulate")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("Node/Tristan:self_modulate")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("Control/Option 1:modulate")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("Control/Option 2:modulate")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("Control/Option 3:modulate")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("Control/Option 1:position")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(280, 217)]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("Control/Option 2:position")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(278, 302)]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("Control/Option 3:position")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(278, 391)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8t7ks"]
+_data = {
+&"Cutscene 3": SubResource("Animation_2xcjm"),
+&"RESET": SubResource("Animation_50e0g")
+}
+
+[node name="Cutscene 3" type="Node2D"]
+
+[node name="Hand pov" type="Sprite2D" parent="."]
+position = Vector2(577.5, 326)
+scale = Vector2(3.5968747, 3.6000001)
+texture = ExtResource("1_l3jdo")
+
+[node name="Dagat" type="Sprite2D" parent="Hand pov"]
+modulate = Color(1, 1, 1, 0)
+texture = ExtResource("2_c2nt5")
+
+[node name="My beautiful Namaru pov" type="Sprite2D" parent="Hand pov"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-0.6950531, 0.13889313)
+scale = Vector2(0.9973933, 1.0015432)
+texture = ExtResource("2_68ts2")
+
+[node name="Namaru leaning" type="Sprite2D" parent="Hand pov"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-0.27801514, 0.5555496)
+scale = Vector2(0.9999998, 1.0030863)
+texture = ExtResource("4_d4spc")
+
+[node name="Namaru leaning (speaking)" type="Sprite2D" parent="Hand pov"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-0.27801514, 0.55555725)
+scale = Vector2(0.9999998, 1.0030863)
+texture = ExtResource("3_c2nt5")
+
+[node name="Kalao" type="Sprite2D" parent="Hand pov"]
+position = Vector2(-59.12945, 26.795132)
+scale = Vector2(0.06269231, 0.06278821)
+texture = ExtResource("6_8t7ks")
+
+[node name="Niula" type="Sprite2D" parent="Hand pov"]
+position = Vector2(-116.733284, 23.784725)
+scale = Vector2(0.08520671, 0.06554497)
+texture = ExtResource("7_hwgu4")
+
+[node name="Dayon" type="Sprite2D" parent="Hand pov"]
+position = Vector2(68.592766, -1.9479074)
+scale = Vector2(0.110693775, 0.09087117)
+texture = ExtResource("8_bvfwo")
+
+[node name="Namaru" type="Sprite2D" parent="Hand pov"]
+position = Vector2(-12.093824, 11.944446)
+scale = Vector2(0.08136042, 0.07729168)
+texture = ExtResource("10_p0jyh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_8t7ks")
+}
+autoplay = "Cutscene 3"
+
+[node name="Node" type="Node" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Node"]
+offset_left = 39.0
+offset_top = 504.0
+offset_right = 1118.0
+offset_bottom = 637.0
+color = Color(0, 0, 0, 0.60784316)
+
+[node name="Dialogue1" type="RichTextLabel" parent="Node"]
+offset_left = 41.0
+offset_top = 522.0
+offset_right = 1118.0
+offset_bottom = 624.0
+theme_override_font_sizes/normal_font_size = 30
+text = "The first thing I feel is silence. Not the quiet warmth of waking under a blanket, but the still, heavy silence of water pressing in on all sides."
+horizontal_alignment = 1
+
+[node name="Dialogue2" type="RichTextLabel" parent="Node"]
+offset_left = 42.0
+offset_top = 505.0
+offset_right = 1120.0
+offset_bottom = 642.0
+theme_override_font_sizes/normal_font_size = 30
+text = "I expected to have my lungs filled with liquid, to my surprise, it did not ache. "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dialogue3" type="RichTextLabel" parent="Node"]
+offset_left = 41.0
+offset_top = 501.0
+offset_right = 1124.0
+offset_bottom = 640.0
+theme_override_font_sizes/normal_font_size = 30
+text = "5 figures stirred like a veil throughout the cove. It was my fault for failing to notice the shifting shadows surrounding me."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dialogue4" type="RichTextLabel" parent="Node"]
+offset_left = 47.0
+offset_top = 511.0
+offset_right = 1125.0
+offset_bottom = 641.0
+theme_override_font_sizes/normal_font_size = 30
+text = "The shadow crept towards me, then revealed a young figure with gentle, comforting eyes like lanterns. The surroundings shone a gentle MINT GREEN."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dialogue5" type="RichTextLabel" parent="Node"]
+offset_left = 54.0
+offset_top = 506.0
+offset_right = 1095.0
+offset_bottom = 635.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 30
+text = "
+“This place is not meant for your eyes.”"
+vertical_alignment = 1
+
+[node name="Dialogue6" type="RichTextLabel" parent="Node"]
+offset_left = 54.0
+offset_top = 504.0
+offset_right = 1101.0
+offset_bottom = 637.0
+theme_override_font_sizes/normal_font_size = 30
+text = "
+Gah!
+"
+vertical_alignment = 1
+
+[node name="Dialogue7" type="RichTextLabel" parent="Node"]
+offset_left = 40.0
+offset_top = 505.0
+offset_right = 1117.0
+offset_bottom = 637.0
+theme_override_font_sizes/normal_font_size = 30
+text = "I lean back in shock. When I recovered, I panicked."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dialogue8" type="RichTextLabel" parent="Node"]
+offset_left = 40.0
+offset_top = 506.0
+offset_right = 1117.0
+offset_bottom = 636.0
+theme_override_font_sizes/normal_font_size = 30
+text = "I was desperate to get out of this place. It felt suffocating. "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Namaru" type="RichTextLabel" parent="Node"]
+offset_left = 63.0
+offset_top = 520.0
+offset_right = 607.0
+offset_bottom = 574.0
+theme_override_colors/default_color = Color(0.59607846, 1, 0.59607846, 1)
+theme_override_font_sizes/normal_font_size = 30
+text = "??? (Gentle yet Stern):"
+
+[node name="Tristan" type="RichTextLabel" parent="Node"]
+offset_left = 56.0
+offset_top = 519.0
+offset_right = 493.0
+offset_bottom = 567.0
+theme_override_colors/default_color = Color(0.6627451, 0.8392157, 1, 1)
+theme_override_font_sizes/normal_font_size = 30
+text = "Tristan:"
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1151.0
+offset_bottom = 649.0
+
+[node name="Option 1" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 217.0
+offset_right = 848.0
+offset_bottom = 274.99835
+theme_override_font_sizes/font_size = 30
+text = "“Who are you? What am I doing here?!”"
+script = ExtResource("11_hwgu4")
+
+[node name="Option 2" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 278.0
+offset_top = 302.0
+offset_right = 849.0
+offset_bottom = 360.0
+theme_override_font_sizes/font_size = 30
+text = "“HELP ME, PLEASE!”"
+script = ExtResource("12_dyl12")
+
+[node name="Option 3" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 278.0
+offset_top = 391.0
+offset_right = 850.0
+offset_bottom = 453.0
+theme_override_font_sizes/font_size = 30
+text = "“Get me out of here!”"
+script = ExtResource("12_bvfwo")
+
+[connection signal="pressed" from="Control/Option 1" to="Control/Option 1" method="_on_pressed"]
+[connection signal="pressed" from="Control/Option 2" to="Control/Option 2" method="_on_pressed"]
+[connection signal="pressed" from="Control/Option 3" to="Control/Option 1" method="_on_option_3_pressed"]
