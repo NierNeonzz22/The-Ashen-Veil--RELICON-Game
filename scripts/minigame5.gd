@@ -6,52 +6,93 @@ var sequence_notes = []
 var current_note_index = 0
 var is_player_turn = false
 var game_active = true
+var is_first_sequence = true
 
-# Level sequences with rests for rhythm, but player only clicks notes
+# References - UPDATED with correct node name
+@onready var player = $Tristan_gameplay  # Changed from $Player
+@onready var camera = $Tristan_gameplay/Camera2D  # Updated path
+@onready var buttons_camera = $ButtonsCamera
+@onready var button_container = $ButtonContainer
+
+# Timer UI integration
+@export var timer_ui_scene: PackedScene  # Assign your TimerUI.tscn here
+var timer_ui_instance: Node2D = null
+var game_timer: Timer
+var time_remaining: float = 0.0
+var level_time_limits = {
+	1: 45.0,   # Reduced from 60 seconds
+	2: 55.0,   # Reduced from 75 seconds  
+	3: 65.0,   # Reduced from 90 seconds
+	4: 75.0,   # Reduced from 105 seconds
+	5: 85.0,   # Reduced from 120 seconds
+	6: 95.0,   # Reduced from 135 seconds
+	7: 105.0   # Reduced from 150 seconds
+}
+
+# Store original camera offset
+var original_camera_offset: Vector2
+
+# Level sequences
 var level_data = {
 	1: {
-		"notes": [5, 1, 3],  # D#5, A#4, C#5
+		"notes": [5, 1, 3],
 		"bpm": 91,
 		"description": "D#5, A#4, C#5"
 	},
 	2: {
-		"notes": [3, 7, 2, 0, 8],  # C#5, G#4, A#5, REST, G#5
+		"notes": [3, 7, 2, 0, 8],
 		"bpm": 121,
 		"description": "C#5, G#4, A#5, REST, G#5"
 	},
 	3: {
-		"notes": [2, 8, 6, 0, 3, 4],  # A#5, G#5, F#5, REST, C#5, C#6
+		"notes": [2, 8, 6, 0, 3, 4],
 		"bpm": 121,
 		"description": "A#5, G#5, F#5, REST, C#5, C#6"
 	},
 	4: {
-		"notes": [4, 0, 3, 0, 2, 8, 4, 0, 3],  # C#6, REST, C#5, REST, A#5, G#5, C#6, REST, C#5
+		"notes": [4, 0, 3, 0, 2, 8, 4, 0, 3],
 		"bpm": 120,
 		"description": "C#6, REST, C#5, REST, A#5, G#5, C#6, REST, C#5"
 	},
 	5: {
-		"notes": [5, 1, 2, 0, 8, 0, 3, 7, 8, 0, 6],  # D#5, A#4, A#5, REST, G#5, REST, C#5, G#4, G#5, REST, F#5
+		"notes": [5, 1, 2, 0, 8, 0, 3, 7, 8, 0, 6],
 		"bpm": 120,
 		"description": "D#5, A#4, A#5, REST, G#5, REST, C#5, G#4, G#5, REST, F#5"
 	},
 	6: {
-		"notes": [5, 1, 4, 0, 8, 0.5, 3, 0, 4, 0, 6, 0.5, 3, 0, 2],  # With rests for rhythm
+		"notes": [5, 1, 4, 0, 8, 0.5, 3, 0, 4, 0, 6, 0.5, 3, 0, 2],
 		"bpm": 120,
 		"description": "D#5, A#4, C#6, REST, G#5, REST, C#5, REST, C#6, REST, F#5, REST, C#5, REST, A#5"
 	},
 	7: {
-		"notes": [5, 1, 3, 0, 2, 0, 8, 6, 3, 0, 4],  # D#5, A#4, C#5, REST, A#5, REST, G#5, F#5, C#5, REST, C#6
+		"notes": [5, 1, 3, 0, 2, 0, 8, 6, 3, 0, 4],
 		"bpm": 121,
 		"description": "D#5, A#4, C#5, REST, A#5, REST, G#5, F#5, C#5, REST, C#6"
 	}
 }
 
-# References
-@onready var button_container = $ButtonContainer
-
 func _ready():
+	# Debug: Check if references are valid
+	print("Player reference: ", player)
+	print("Camera reference: ", camera)
+	print("ButtonsCamera reference: ", buttons_camera)
+	
+	# Store the camera's original offset from player
+	if camera:
+		original_camera_offset = camera.position
+		print("Original camera offset: ", original_camera_offset)
+	
+	# Setup game timer
+	_setup_game_timer()
+	
 	connect_buttons()
 	start_game()
+
+func _setup_game_timer():
+	game_timer = Timer.new()
+	add_child(game_timer)
+	game_timer.one_shot = true
+	game_timer.timeout.connect(_on_game_timeout)
 
 func connect_buttons():
 	for i in range(1, 9):
@@ -61,9 +102,10 @@ func connect_buttons():
 
 func start_game():
 	current_level = 1
-	load_level(current_level)
+	is_first_sequence = true
+	load_level(current_level, false)  # Pass false for is_retry
 
-func load_level(level_num):
+func load_level(level_num, is_retry: bool = false):
 	if not level_num in level_data:
 		print("*** ALL LEVELS COMPLETED! ***")
 		return
@@ -74,31 +116,89 @@ func load_level(level_num):
 	is_player_turn = false
 	game_active = true
 	
-	print("=== LEVEL ", level_num, " ===")
-	print("Sequence: ", level["description"])
+	# Only reset timer if it's NOT a retry (i.e., fresh level load)
+	if not is_retry:
+		time_remaining = level_time_limits.get(level_num, 60.0)
+		print("=== LEVEL ", level_num, " ===")
+		print("Sequence: ", level["description"])
+		print("Time limit: ", time_remaining, " seconds")
+	else:
+		print("=== RETRY LEVEL ", level_num, " ===")
+		print("Time remaining: ", time_remaining, " seconds")
 	
 	disable_all_buttons()
 	demonstrate_sequence(level["bpm"])
 
 func demonstrate_sequence(bpm):
+	# Only pan camera for the very first sequence of Level 1
+	if is_first_sequence and current_level == 1 and buttons_camera and player and camera:
+		await pan_to_buttons()
+	
 	var base_note_delay = 60.0 / bpm
 	
 	# Play sequence with rests for proper rhythm
 	for i in range(sequence_notes.size()):
 		await play_single_sequence_note(i, base_note_delay)
 	
+	# Only pan back for the very first sequence of Level 1
+	if is_first_sequence and current_level == 1 and player and camera:
+		await pan_to_player()
+		is_first_sequence = false
+	
+	# Start timer and player turn AFTER camera pans back
 	start_player_turn()
+
+func pan_to_buttons():
+	print("Panning to buttons...")
+	
+	if not buttons_camera or not player or not camera:
+		print("ERROR: Missing references for camera pan!")
+		return
+	
+	# Calculate the offset needed to center camera on buttons
+	var buttons_global_pos = buttons_camera.global_position
+	var player_global_pos = player.global_position
+	var desired_camera_offset = buttons_global_pos - player_global_pos
+	
+	print("Player global position: ", player_global_pos)
+	print("Buttons global position: ", buttons_global_pos)
+	print("Desired camera offset: ", desired_camera_offset)
+	
+	# Smoothly tween the camera offset to focus on buttons
+	var tween = create_tween()
+	tween.set_ease(Tween.EASE_IN_OUT)
+	tween.set_trans(Tween.TRANS_CUBIC)
+	tween.tween_property(camera, "position", desired_camera_offset, 2.0)
+	await tween.finished
+	
+	print("Camera pan to buttons complete")
+
+func pan_to_player():
+	print("Panning back to player...")
+	
+	if not player or not camera:
+		print("ERROR: Missing references for camera return!")
+		return
+	
+	# Smoothly tween the camera offset back to original (centered on player)
+	var tween = create_tween()
+	tween.set_ease(Tween.EASE_IN_OUT)
+	tween.set_trans(Tween.TRANS_CUBIC)
+	tween.tween_property(camera, "position", original_camera_offset, 2.0)
+	await tween.finished
+	
+	print("Camera pan to player complete")
 
 func play_single_sequence_note(index: int, base_note_delay: float):
 	var note = sequence_notes[index]
 	
-	if note == 0:  # REST note - just wait, no highlight
+	if note == 0:
 		await get_tree().create_timer(base_note_delay).timeout
-	elif note > 0 and note < 1:  # Fractional rest
+	elif note > 0 and note < 1:
 		var fractional_delay = base_note_delay * abs(note)
 		await get_tree().create_timer(fractional_delay).timeout
-	else:  # Regular note (1-8) - highlight and play sound
-		var button_number = abs(note)  # Handle negative values if any
+	else:
+		var button_number = abs(note)
 		highlight_button(button_number)
 		await get_tree().create_timer(base_note_delay).timeout
 
@@ -108,17 +208,57 @@ func highlight_button(note_number: int):
 		button.highlight()
 
 func start_player_turn():
-	print("Your turn! Repeat the sequence (ignore timing, just get the order right)")
+	print("Your turn! Repeat the sequence")
 	is_player_turn = true
 	current_note_index = 0
-	
-	# Skip any rests at the start of the sequence
 	skip_initial_rests()
-	
 	enable_all_buttons()
+	
+	# Start the timer and create timer UI
+	start_level_timer()
+
+func start_level_timer():
+	# Create timer UI
+	if timer_ui_scene and not timer_ui_instance:
+		timer_ui_instance = timer_ui_scene.instantiate()
+		
+		# Make the timer a child of the camera so it stays fixed on screen (HUD style)
+		if camera:
+			camera.add_child(timer_ui_instance)
+			# Position relative to camera (screen coordinates)
+			# Adjust these values to position it where you want on screen
+			timer_ui_instance.position = Vector2(0, -200)  # 200 pixels above center
+			print("Timer added as child of camera at fixed screen position")
+		else:
+			# Fallback if camera not available
+			add_child(timer_ui_instance)
+			timer_ui_instance.position = Vector2(400, 100)
+		
+		print("Timer UI created for rhythm game as HUD element")
+	
+	# Start the game timer
+	game_timer.start(time_remaining)
+	set_process(true)
+	
+	# Update timer display immediately
+	_update_timer_display()
+
+func _process(delta):
+	if game_active and is_player_turn:
+		time_remaining -= delta
+		_update_timer_display()
+		
+		if time_remaining <= 0:
+			game_active = false
+			set_process(false)
+			_on_game_timeout()
+
+func _update_timer_display():
+	# Update the timer UI if it exists
+	if timer_ui_instance and timer_ui_instance.has_method("update_time"):
+		timer_ui_instance.update_time(time_remaining)
 
 func skip_initial_rests():
-	# Skip over any rests at the beginning of the sequence
 	while current_note_index < sequence_notes.size() and (sequence_notes[current_note_index] == 0 or (sequence_notes[current_note_index] > 0 and sequence_notes[current_note_index] < 1)):
 		current_note_index += 1
 
@@ -126,30 +266,24 @@ func on_button_pressed(button_number: int):
 	if not is_player_turn or not game_active:
 		return
 		
-	# Skip any rests and find the next actual note
 	while current_note_index < sequence_notes.size() and (sequence_notes[current_note_index] == 0 or (sequence_notes[current_note_index] > 0 and sequence_notes[current_note_index] < 1)):
 		current_note_index += 1
 	
-	# Check if we've reached the end
 	if current_note_index >= sequence_notes.size():
 		game_over()
 		return
 	
 	var current_note = sequence_notes[current_note_index]
-	var actual_note = abs(current_note)  # Handle negative values
+	var actual_note = abs(current_note)
 	
 	print("You pressed: ", get_note_name(button_number), " | Expected: ", get_note_name(actual_note))
 	
-	# Check if this is the correct next note in sequence
 	if button_number == actual_note:
-		# Correct! Move to next note
 		current_note_index += 1
 		
-		# Skip any consecutive rests
 		while current_note_index < sequence_notes.size() and (sequence_notes[current_note_index] == 0 or (sequence_notes[current_note_index] > 0 and sequence_notes[current_note_index] < 1)):
 			current_note_index += 1
 		
-		# Check if sequence is complete
 		if current_note_index >= sequence_notes.size():
 			await handle_win()
 		else:
@@ -172,14 +306,20 @@ func win_game():
 	print("*** LEVEL ", current_level, " COMPLETE! ***")
 	is_player_turn = false
 	game_active = false
+	set_process(false)
+	game_timer.stop()
 	disable_all_buttons()
+	
+	# Clean up timer UI - safe removal even if child of camera
+	if timer_ui_instance:
+		timer_ui_instance.queue_free()
+		timer_ui_instance = null
 	
 	await get_tree().create_timer(2.0).timeout
 	current_level += 1
-	call_deferred("load_level", current_level)
+	call_deferred("load_level", current_level, false)  # Pass false for is_retry (new level)
 
 func game_over():
-	# Find the expected note (skip rests)
 	var expected_index = current_note_index
 	while expected_index < sequence_notes.size() and (sequence_notes[expected_index] == 0 or (sequence_notes[expected_index] > 0 and sequence_notes[expected_index] < 1)):
 		expected_index += 1
@@ -192,10 +332,22 @@ func game_over():
 		
 	is_player_turn = false
 	game_active = false
+	set_process(false)
+	game_timer.stop()
 	disable_all_buttons()
 	
+	# Clean up timer UI - safe removal even if child of camera
+	if timer_ui_instance:
+		timer_ui_instance.queue_free()
+		timer_ui_instance = null
+	
 	await get_tree().create_timer(2.0).timeout
-	call_deferred("load_level", current_level)
+	call_deferred("load_level", current_level, true)  # Pass true for is_retry
+
+func _on_game_timeout():
+	if game_active and is_player_turn:
+		print("⏰ TIME'S UP! Level failed.")
+		game_over()
 
 func disable_all_buttons():
 	for i in range(1, 9):

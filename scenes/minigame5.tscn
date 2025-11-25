@@ -1,8 +1,9 @@
-[gd_scene load_steps=40 format=3 uid="uid://cnslvssgvyso3"]
+[gd_scene load_steps=41 format=3 uid="uid://cnslvssgvyso3"]
 
 [ext_resource type="Texture2D" uid="uid://1sjjn2yf318w" path="res://assets/assets_minigame5/minigame5 semifinal.png" id="1_4hkn6"]
 [ext_resource type="Script" uid="uid://wp6p4gwfj1ou" path="res://scripts/minigame5.gd" id="1_6hb12"]
 [ext_resource type="Script" uid="uid://bbi0aiygulkhi" path="res://scripts/tristan_gameplaymoveset.gd" id="2_6hb12"]
+[ext_resource type="PackedScene" uid="uid://l435jaidwcf4" path="res://scenes/timer_ui.tscn" id="2_7qx4m"]
 [ext_resource type="Texture2D" uid="uid://bjr4uxx2ar0q8" path="res://assets/Minigame Assets/BETA SPRITE SHEET TRISTANuntitled.png" id="3_uqii8"]
 [ext_resource type="Script" uid="uid://dauxsaxv8wmwv" path="res://scripts/MG5_button_script.gd" id="5_75udb"]
 [ext_resource type="Texture2D" uid="uid://dvj1xnvrjs7p" path="res://assets/assets_minigame5/Musical Stones 1 Dark.png" id="5_uqii8"]
@@ -110,6 +111,7 @@ size = Vector2(20, 27.666672)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_6hb12")
+timer_ui_scene = ExtResource("2_7qx4m")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(899, 365)
@@ -123,7 +125,7 @@ build_mode = 1
 polygon = PackedVector2Array(700, -261, 701, -52, 254, -49, 256, 519, -657, 522, -652, -54, -1070, -60, -1062, -280)
 
 [node name="Tristan_gameplay" type="CharacterBody2D" parent="."]
-position = Vector2(562, 76)
+position = Vector2(140, 52)
 script = ExtResource("2_6hb12")
 base_speed = 100.0
 run_bonus = 150.0
@@ -147,8 +149,8 @@ animation = &"Right"
 [node name="Camera2D" type="Camera2D" parent="Tristan_gameplay"]
 position = Vector2(0, 109)
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(887, 477)
+[node name="ButtonsCamera" type="Camera2D" parent="."]
+position = Vector2(902, 448)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 

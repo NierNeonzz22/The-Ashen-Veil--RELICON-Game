@@ -1,0 +1,2929 @@
+[gd_scene load_steps=23 format=3 uid="uid://dmanyumhp7ud7"]
+
+[ext_resource type="Texture2D" uid="uid://d4be7c7gsqp6" path="res://assets/Main Menu assets/langit.png" id="1_aev2v"]
+[ext_resource type="Script" uid="uid://dypkmf8f8kykd" path="res://scripts/cutscene_1.gd" id="1_simcy"]
+[ext_resource type="Script" uid="uid://d0g33cxpav7kl" path="res://scripts/langit_moving.gd" id="2_3ohvu"]
+[ext_resource type="Texture2D" uid="uid://1403snpr5gld" path="res://assets/assets_scene 1/bg (2) (2).png" id="3_iaa37"]
+[ext_resource type="Texture2D" uid="uid://d2abvfbjl0bkn" path="res://assets/Main Menu assets/main2.png" id="4_h4u2s"]
+[ext_resource type="Texture2D" uid="uid://c6d78gthptvhu" path="res://assets/assets_scene 1/TRISTAN SMILE.png" id="5_0cu4l"]
+[ext_resource type="Texture2D" uid="uid://cdiij8827vkmf" path="res://assets/assets_scene 1/ELIA SMILE.png" id="6_b7nso"]
+[ext_resource type="Texture2D" uid="uid://bv4uk1pidh872" path="res://assets/assets_scene 1/ELIA SURPISED.png" id="7_8u8hc"]
+[ext_resource type="Texture2D" uid="uid://dp53sg3ic464v" path="res://assets/assets_scene 1/ELIA NEUTRAL.png" id="8_l4o8a"]
+[ext_resource type="Texture2D" uid="uid://c14ue5p51mg44" path="res://assets/assets_scene 1/TRISTAN NEUTRAL.png" id="9_rqfb4"]
+[ext_resource type="Texture2D" uid="uid://ggcvjpiw7p0p" path="res://assets/assets_scene 1/PABLO SMILE.png" id="10_qx446"]
+[ext_resource type="Texture2D" uid="uid://ntf0aisd1e2h" path="res://assets/assets_scene 1/PABLO SURPRISED.png" id="11_e3xdq"]
+[ext_resource type="Texture2D" uid="uid://x356f60ng613" path="res://assets/assets_scene 1/PABLO WORRIED.png" id="12_d7vt8"]
+[ext_resource type="Texture2D" uid="uid://bi0ug3737rpq0" path="res://assets/assets_scene 1/TRISTAN SURPRISED.png" id="13_67qbd"]
+[ext_resource type="Texture2D" uid="uid://c3o37rpq345nm" path="res://assets/assets_scene 1/ELIA WORRIED.png" id="14_1yy06"]
+[ext_resource type="Texture2D" uid="uid://b0snafure5hl7" path="res://assets/assets_scene 1/PABLO ANGRY.png" id="15_fsyxi"]
+[ext_resource type="Texture2D" uid="uid://crx3uwr1wpcd2" path="res://assets/assets_scene 1/ELIA ANGRY.png" id="16_2c8ja"]
+[ext_resource type="Texture2D" uid="uid://blxxsoixnk60h" path="res://assets/assets_scene 1/Shot of Taal Lake (smoking a bit).png" id="17_rdfic"]
+
+[sub_resource type="Animation" id="Animation_rj3yn"]
+length = 30.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../ColorRect2:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Text 2:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Text 2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Text 3:visible_ratio")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Text 3:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../../../Langit_moving:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../../../Elia surprised:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../Elia1:visible_ratio")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../Elia1:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../Text 4:visible_ratio")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../Text 4:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../../../Tristan smile:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../ELIA:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../Tristan1:visible_ratio")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../TRISTAN:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../Tristan1:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("../../../Elia smile:visible")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("../Elia2:visible_ratio")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("../Elia2:visible")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("../Tristan2:visible_ratio")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("../Tristan2:visible")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("../Elia3:visible_ratio")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("../Elia3:visible")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("../../../Elia neutral:visible")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("../Tristan4:visible")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("../Tristan4:visible_ratio")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("../../../TristanNeutral:visible")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("../Elia4:visible_ratio")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("../Elia4:visible")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("../Tristan 5:visible")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("../Tristan 5:visible_ratio")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("../../../PabloSmile:visible")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("../PABLO:visible")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("../Pablo1:visible")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("../Pablo1:visible_ratio")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/37/type = "value"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("../Tristan6:visible")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/38/type = "value"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("../Tristan6:visible_ratio")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/39/type = "value"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("../Pablo2:visible")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/40/type = "value"
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/path = NodePath("../Pablo2:visible_ratio")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/41/type = "value"
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/path = NodePath("../Text5:visible_ratio")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/42/type = "value"
+tracks/42/imported = false
+tracks/42/enabled = true
+tracks/42/path = NodePath("../Text5:visible")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/43/type = "value"
+tracks/43/imported = false
+tracks/43/enabled = true
+tracks/43/path = NodePath("../Tristan 7:visible")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/44/type = "value"
+tracks/44/imported = false
+tracks/44/enabled = true
+tracks/44/path = NodePath("../Tristan 7:visible_ratio")
+tracks/44/interp = 1
+tracks/44/loop_wrap = true
+tracks/44/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/45/type = "value"
+tracks/45/imported = false
+tracks/45/enabled = true
+tracks/45/path = NodePath("../../../PabloSurprised:visible")
+tracks/45/interp = 1
+tracks/45/loop_wrap = true
+tracks/45/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/46/type = "value"
+tracks/46/imported = false
+tracks/46/enabled = true
+tracks/46/path = NodePath("../Text 6:visible")
+tracks/46/interp = 1
+tracks/46/loop_wrap = true
+tracks/46/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/47/type = "value"
+tracks/47/imported = false
+tracks/47/enabled = true
+tracks/47/path = NodePath("../Text 6:visible_ratio")
+tracks/47/interp = 1
+tracks/47/loop_wrap = true
+tracks/47/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/48/type = "value"
+tracks/48/imported = false
+tracks/48/enabled = true
+tracks/48/path = NodePath("../../../PabloWorried:visible")
+tracks/48/interp = 1
+tracks/48/loop_wrap = true
+tracks/48/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/49/type = "value"
+tracks/49/imported = false
+tracks/49/enabled = true
+tracks/49/path = NodePath("../Pablo3:visible")
+tracks/49/interp = 1
+tracks/49/loop_wrap = true
+tracks/49/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/50/type = "value"
+tracks/50/imported = false
+tracks/50/enabled = true
+tracks/50/path = NodePath("../Pablo3:visible_ratio")
+tracks/50/interp = 1
+tracks/50/loop_wrap = true
+tracks/50/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/51/type = "value"
+tracks/51/imported = false
+tracks/51/enabled = true
+tracks/51/path = NodePath("../Elia5:visible")
+tracks/51/interp = 1
+tracks/51/loop_wrap = true
+tracks/51/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/52/type = "value"
+tracks/52/imported = false
+tracks/52/enabled = true
+tracks/52/path = NodePath("../Elia5:visible_ratio")
+tracks/52/interp = 1
+tracks/52/loop_wrap = true
+tracks/52/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/53/type = "value"
+tracks/53/imported = false
+tracks/53/enabled = true
+tracks/53/path = NodePath("../../../TristanSurprised:visible")
+tracks/53/interp = 1
+tracks/53/loop_wrap = true
+tracks/53/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/54/type = "value"
+tracks/54/imported = false
+tracks/54/enabled = true
+tracks/54/path = NodePath("../Tristan8:visible")
+tracks/54/interp = 1
+tracks/54/loop_wrap = true
+tracks/54/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/55/type = "value"
+tracks/55/imported = false
+tracks/55/enabled = true
+tracks/55/path = NodePath("../Tristan8:visible_ratio")
+tracks/55/interp = 1
+tracks/55/loop_wrap = true
+tracks/55/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/56/type = "value"
+tracks/56/imported = false
+tracks/56/enabled = true
+tracks/56/path = NodePath("../../../EliaWorried:visible")
+tracks/56/interp = 1
+tracks/56/loop_wrap = true
+tracks/56/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/57/type = "value"
+tracks/57/imported = false
+tracks/57/enabled = true
+tracks/57/path = NodePath("../Elia6:visible_ratio")
+tracks/57/interp = 1
+tracks/57/loop_wrap = true
+tracks/57/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/58/type = "value"
+tracks/58/imported = false
+tracks/58/enabled = true
+tracks/58/path = NodePath("../Elia6:visible")
+tracks/58/interp = 1
+tracks/58/loop_wrap = true
+tracks/58/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/59/type = "value"
+tracks/59/imported = false
+tracks/59/enabled = true
+tracks/59/path = NodePath("../Text7:visible")
+tracks/59/interp = 1
+tracks/59/loop_wrap = true
+tracks/59/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/60/type = "value"
+tracks/60/imported = false
+tracks/60/enabled = true
+tracks/60/path = NodePath("../Text7:visible_ratio")
+tracks/60/interp = 1
+tracks/60/loop_wrap = true
+tracks/60/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/61/type = "value"
+tracks/61/imported = false
+tracks/61/enabled = true
+tracks/61/path = NodePath("../Tristan9:visible")
+tracks/61/interp = 1
+tracks/61/loop_wrap = true
+tracks/61/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/62/type = "value"
+tracks/62/imported = false
+tracks/62/enabled = true
+tracks/62/path = NodePath("../Tristan9:visible_ratio")
+tracks/62/interp = 1
+tracks/62/loop_wrap = true
+tracks/62/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/63/type = "value"
+tracks/63/imported = false
+tracks/63/enabled = true
+tracks/63/path = NodePath("../../../PabloAngry:visible")
+tracks/63/interp = 1
+tracks/63/loop_wrap = true
+tracks/63/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/64/type = "value"
+tracks/64/imported = false
+tracks/64/enabled = true
+tracks/64/path = NodePath("../Pablo4:visible")
+tracks/64/interp = 1
+tracks/64/loop_wrap = true
+tracks/64/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/65/type = "value"
+tracks/65/imported = false
+tracks/65/enabled = true
+tracks/65/path = NodePath("../Pablo4:visible_ratio")
+tracks/65/interp = 1
+tracks/65/loop_wrap = true
+tracks/65/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/66/type = "value"
+tracks/66/imported = false
+tracks/66/enabled = true
+tracks/66/path = NodePath("../Tristan10:visible")
+tracks/66/interp = 1
+tracks/66/loop_wrap = true
+tracks/66/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/67/type = "value"
+tracks/67/imported = false
+tracks/67/enabled = true
+tracks/67/path = NodePath("../Tristan10:visible_ratio")
+tracks/67/interp = 1
+tracks/67/loop_wrap = true
+tracks/67/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/68/type = "value"
+tracks/68/imported = false
+tracks/68/enabled = true
+tracks/68/path = NodePath("../Text8:visible")
+tracks/68/interp = 1
+tracks/68/loop_wrap = true
+tracks/68/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/69/type = "value"
+tracks/69/imported = false
+tracks/69/enabled = true
+tracks/69/path = NodePath("../Text8:visible_ratio")
+tracks/69/interp = 1
+tracks/69/loop_wrap = true
+tracks/69/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/70/type = "value"
+tracks/70/imported = false
+tracks/70/enabled = true
+tracks/70/path = NodePath("../Elia7:visible")
+tracks/70/interp = 1
+tracks/70/loop_wrap = true
+tracks/70/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/71/type = "value"
+tracks/71/imported = false
+tracks/71/enabled = true
+tracks/71/path = NodePath("../Elia7:visible_ratio")
+tracks/71/interp = 1
+tracks/71/loop_wrap = true
+tracks/71/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/72/type = "value"
+tracks/72/imported = false
+tracks/72/enabled = true
+tracks/72/path = NodePath("../Pablo5:visible_ratio")
+tracks/72/interp = 1
+tracks/72/loop_wrap = true
+tracks/72/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/73/type = "value"
+tracks/73/imported = false
+tracks/73/enabled = true
+tracks/73/path = NodePath("../../../EliaAngry:visible")
+tracks/73/interp = 1
+tracks/73/loop_wrap = true
+tracks/73/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/74/type = "value"
+tracks/74/imported = false
+tracks/74/enabled = true
+tracks/74/path = NodePath("../Elia8:visible_ratio")
+tracks/74/interp = 1
+tracks/74/loop_wrap = true
+tracks/74/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/75/type = "value"
+tracks/75/imported = false
+tracks/75/enabled = true
+tracks/75/path = NodePath("../Elia8:visible")
+tracks/75/interp = 1
+tracks/75/loop_wrap = true
+tracks/75/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/76/type = "value"
+tracks/76/imported = false
+tracks/76/enabled = true
+tracks/76/path = NodePath("../Text9:visible")
+tracks/76/interp = 1
+tracks/76/loop_wrap = true
+tracks/76/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/77/type = "value"
+tracks/77/imported = false
+tracks/77/enabled = true
+tracks/77/path = NodePath("../Text9:visible_ratio")
+tracks/77/interp = 1
+tracks/77/loop_wrap = true
+tracks/77/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/78/type = "value"
+tracks/78/imported = false
+tracks/78/enabled = true
+tracks/78/path = NodePath("../Tristan11:visible")
+tracks/78/interp = 1
+tracks/78/loop_wrap = true
+tracks/78/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/79/type = "value"
+tracks/79/imported = false
+tracks/79/enabled = true
+tracks/79/path = NodePath("../Tristan11:visible_ratio")
+tracks/79/interp = 1
+tracks/79/loop_wrap = true
+tracks/79/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/80/type = "value"
+tracks/80/imported = false
+tracks/80/enabled = true
+tracks/80/path = NodePath("../../../EliaSmile:visible")
+tracks/80/interp = 1
+tracks/80/loop_wrap = true
+tracks/80/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/81/type = "value"
+tracks/81/imported = false
+tracks/81/enabled = true
+tracks/81/path = NodePath("../Text10:visible")
+tracks/81/interp = 1
+tracks/81/loop_wrap = true
+tracks/81/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/82/type = "value"
+tracks/82/imported = false
+tracks/82/enabled = true
+tracks/82/path = NodePath("../Text10:visible_ratio")
+tracks/82/interp = 1
+tracks/82/loop_wrap = true
+tracks/82/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/83/type = "value"
+tracks/83/imported = false
+tracks/83/enabled = true
+tracks/83/path = NodePath("../Tristan12:visible_ratio")
+tracks/83/interp = 1
+tracks/83/loop_wrap = true
+tracks/83/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/84/type = "value"
+tracks/84/imported = false
+tracks/84/enabled = true
+tracks/84/path = NodePath("../ColorRect:visible")
+tracks/84/interp = 1
+tracks/84/loop_wrap = true
+tracks/84/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/85/type = "value"
+tracks/85/imported = false
+tracks/85/enabled = true
+tracks/85/path = NodePath("../../../Festival:visible")
+tracks/85/interp = 1
+tracks/85/loop_wrap = true
+tracks/85/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/86/type = "value"
+tracks/86/imported = false
+tracks/86/enabled = true
+tracks/86/path = NodePath("../../../ShotOfTaalLake(smokingABit):visible")
+tracks/86/interp = 1
+tracks/86/loop_wrap = true
+tracks/86/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/87/type = "value"
+tracks/87/imported = false
+tracks/87/enabled = true
+tracks/87/path = NodePath("../ColorRect3:visible")
+tracks/87/interp = 1
+tracks/87/loop_wrap = true
+tracks/87/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/88/type = "value"
+tracks/88/imported = false
+tracks/88/enabled = true
+tracks/88/path = NodePath("../Text11:visible")
+tracks/88/interp = 1
+tracks/88/loop_wrap = true
+tracks/88/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/89/type = "value"
+tracks/89/imported = false
+tracks/89/enabled = true
+tracks/89/path = NodePath("../Text11:visible_ratio")
+tracks/89/interp = 1
+tracks/89/loop_wrap = true
+tracks/89/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/90/type = "value"
+tracks/90/imported = false
+tracks/90/enabled = true
+tracks/90/path = NodePath("../Text12:visible")
+tracks/90/interp = 1
+tracks/90/loop_wrap = true
+tracks/90/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/91/type = "value"
+tracks/91/imported = false
+tracks/91/enabled = true
+tracks/91/path = NodePath("../Text12:visible_ratio")
+tracks/91/interp = 1
+tracks/91/loop_wrap = true
+tracks/91/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/92/type = "value"
+tracks/92/imported = false
+tracks/92/enabled = true
+tracks/92/path = NodePath("../Text13:visible")
+tracks/92/interp = 1
+tracks/92/loop_wrap = true
+tracks/92/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/93/type = "value"
+tracks/93/imported = false
+tracks/93/enabled = true
+tracks/93/path = NodePath("../Text13:visible_ratio")
+tracks/93/interp = 1
+tracks/93/loop_wrap = true
+tracks/93/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_cv4e2"]
+resource_name = "text1"
+length = 231.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../ColorRect2:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.16666667, 13.3, 13.566667, 179.86665, 193, 193.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(0.12941177, 0.12941177, 0.12941177, 0.8509804), Color(0.16078432, 0.16078432, 0.16078432, 0), Color(1, 1, 1, 0), Color(0.12941177, 0.12941177, 0.12941177, 0.8509804), Color(0.16078432, 0.16078432, 0.16078432, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Text 2:visible_ratio")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(4.1, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Text 2:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(4.0666666, 8.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Text 3:visible_ratio")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(8.966666, 11.466666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../Text 3:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(8.961866, 12.706837),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../../../Festival:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 13.3, 191.35701),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../../../Langit_moving:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 13.256104),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../../../Elia surprised:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 13.333333, 22.6667, 40.633335, 64.935875, 67.7088),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, false, true, false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../Elia1:visible_ratio")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(13.3, 14.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../Elia1:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(13.28313, 15.166667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../Text 4:visible_ratio")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(15.4, 17.566668),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../Text 4:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(15.4, 19.166666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../../../Tristan smile:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 13.233334, 39.933334, 64.6667, 65, 84.03333, 108.6333, 170.16667, 175.50941, 182.7265, 191),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, true, true, false, true, false, true, false, true, false]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../ELIA:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 13.311124, 15.1667, 22.707575, 25.1138, 32.1333, 36.8732, 41.4, 46.4333, 70.7174, 75.13333, 79.23333, 83.23333, 120.7705, 131.53084, 144.9667, 155.24484),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../Tristan1:visible_ratio")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(19.18833, 21.464975),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("../TRISTAN:visible")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 19.1883, 22.6667, 25.4406, 31.4333, 37.4333, 41.2, 46.4333, 50, 52.716904, 55.2275, 61.4376, 64.6667, 75.5, 78.8333, 86.1667, 91.6, 109.1333, 112.6, 170.1667, 175.50941, 182.7265, 191),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("../Tristan1:visible")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(19.190807, 22.666666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("../../../Elia smile:visible")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0, 22.6667, 34.3, 37.433334, 49.9479),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("../Elia2:visible_ratio")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(22.707575, 24.558506),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("../Elia2:visible")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(22.7, 25.113785),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("../Tristan2:visible_ratio")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(25.424759, 29.833334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("../Tristan2:visible")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(25.440594, 31.433332),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("../Elia3:visible_ratio")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(32.133335, 35.366665),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("../Elia3:visible")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(32.133335, 36.873196),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("../../../Elia neutral:visible")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0, 32.2, 41.433334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("../../../TristanNeutral:visible")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0, 32.336, 45.733334, 109.01168, 120.5333, 155.7482, 169.5333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false, true, false]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("../Tristan4:visible_ratio")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(37.666668, 40.04356),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("../Tristan4:visible")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(37.4333, 41.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("../Elia4:visible_ratio")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(41.466667, 44.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("../Elia4:visible")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(41.4, 46.433334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("../Tristan 5:visible")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(46.4333, 50),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("../Tristan 5:visible_ratio")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(46.566666, 48.587048),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("../../../PabloSmile:visible")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(0, 49.947895, 58.141, 175.98314, 182.5235),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("../PABLO:visible")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0, 49.9479, 52.56883, 55.54883, 58.141, 67.7667, 70.6667, 91.6524, 108.6333, 131.6, 144.5667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false, true, false, true, false, true, false]
+}
+tracks/37/type = "value"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("../Pablo1:visible_ratio")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(50.014545, 51.466667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/38/type = "value"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("../Pablo1:visible")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"times": PackedFloat32Array(49.9479, 52.56883),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/39/type = "value"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("../Tristan6:visible_ratio")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"times": PackedFloat32Array(52.75392, 54.033333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/40/type = "value"
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/path = NodePath("../Tristan6:visible")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {
+"times": PackedFloat32Array(52.7169, 55.227505),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/41/type = "value"
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/path = NodePath("../Pablo2:visible_ratio")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = {
+"times": PackedFloat32Array(55.7, 57.066666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/42/type = "value"
+tracks/42/imported = false
+tracks/42/enabled = true
+tracks/42/path = NodePath("../Pablo2:visible")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/keys = {
+"times": PackedFloat32Array(55.5488, 58.140972),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/43/type = "value"
+tracks/43/imported = false
+tracks/43/enabled = true
+tracks/43/path = NodePath("../Text5:visible_ratio")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/keys = {
+"times": PackedFloat32Array(58.269695, 59.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/44/type = "value"
+tracks/44/imported = false
+tracks/44/enabled = true
+tracks/44/path = NodePath("../Text5:visible")
+tracks/44/interp = 1
+tracks/44/loop_wrap = true
+tracks/44/keys = {
+"times": PackedFloat32Array(58.269695, 61.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/45/type = "value"
+tracks/45/imported = false
+tracks/45/enabled = true
+tracks/45/path = NodePath("../Tristan 7:visible")
+tracks/45/interp = 1
+tracks/45/loop_wrap = true
+tracks/45/keys = {
+"times": PackedFloat32Array(61.43762, 64.666664),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/46/type = "value"
+tracks/46/imported = false
+tracks/46/enabled = true
+tracks/46/path = NodePath("../Tristan 7:visible_ratio")
+tracks/46/interp = 1
+tracks/46/loop_wrap = true
+tracks/46/keys = {
+"times": PackedFloat32Array(61.43762, 63.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/47/type = "value"
+tracks/47/imported = false
+tracks/47/enabled = true
+tracks/47/path = NodePath("../../../PabloSurprised:visible")
+tracks/47/interp = 1
+tracks/47/loop_wrap = true
+tracks/47/keys = {
+"times": PackedFloat32Array(0, 64.935875, 67.7088),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/48/type = "value"
+tracks/48/imported = false
+tracks/48/enabled = true
+tracks/48/path = NodePath("../Text 6:visible")
+tracks/48/interp = 1
+tracks/48/loop_wrap = true
+tracks/48/keys = {
+"times": PackedFloat32Array(64.9359, 67.70882),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/49/type = "value"
+tracks/49/imported = false
+tracks/49/enabled = true
+tracks/49/path = NodePath("../Text 6:visible_ratio")
+tracks/49/interp = 1
+tracks/49/loop_wrap = true
+tracks/49/keys = {
+"times": PackedFloat32Array(65.13333, 66.505714),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/50/type = "value"
+tracks/50/imported = false
+tracks/50/enabled = true
+tracks/50/path = NodePath("../../../PabloWorried:visible")
+tracks/50/interp = 1
+tracks/50/loop_wrap = true
+tracks/50/keys = {
+"times": PackedFloat32Array(0, 67.76667, 75.166664, 120.63134, 144.5667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false]
+}
+tracks/51/type = "value"
+tracks/51/imported = false
+tracks/51/enabled = true
+tracks/51/path = NodePath("../Pablo3:visible_ratio")
+tracks/51/interp = 1
+tracks/51/loop_wrap = true
+tracks/51/keys = {
+"times": PackedFloat32Array(67.77443, 69.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/52/type = "value"
+tracks/52/imported = false
+tracks/52/enabled = true
+tracks/52/path = NodePath("../Pablo3:visible")
+tracks/52/interp = 1
+tracks/52/loop_wrap = true
+tracks/52/keys = {
+"times": PackedFloat32Array(67.77443, 70.666664),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/53/type = "value"
+tracks/53/imported = false
+tracks/53/enabled = true
+tracks/53/path = NodePath("../Elia5:visible_ratio")
+tracks/53/interp = 1
+tracks/53/loop_wrap = true
+tracks/53/keys = {
+"times": PackedFloat32Array(70.71741, 72.2907),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/54/type = "value"
+tracks/54/imported = false
+tracks/54/enabled = true
+tracks/54/path = NodePath("../Elia5:visible")
+tracks/54/interp = 1
+tracks/54/loop_wrap = true
+tracks/54/keys = {
+"times": PackedFloat32Array(70.71741, 75.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/55/type = "value"
+tracks/55/imported = false
+tracks/55/enabled = true
+tracks/55/path = NodePath("../../../TristanSurprised:visible")
+tracks/55/interp = 1
+tracks/55/loop_wrap = true
+tracks/55/keys = {
+"times": PackedFloat32Array(0, 75.5, 78.8333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/56/type = "value"
+tracks/56/imported = false
+tracks/56/enabled = true
+tracks/56/path = NodePath("../Tristan8:visible_ratio")
+tracks/56/interp = 1
+tracks/56/loop_wrap = true
+tracks/56/keys = {
+"times": PackedFloat32Array(75.566666, 77.338394),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/57/type = "value"
+tracks/57/imported = false
+tracks/57/enabled = true
+tracks/57/path = NodePath("../Tristan8:visible")
+tracks/57/interp = 1
+tracks/57/loop_wrap = true
+tracks/57/keys = {
+"times": PackedFloat32Array(75.49997, 78.833336),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/58/type = "value"
+tracks/58/imported = false
+tracks/58/enabled = true
+tracks/58/path = NodePath("../../../EliaWorried:visible")
+tracks/58/interp = 1
+tracks/58/loop_wrap = true
+tracks/58/keys = {
+"times": PackedFloat32Array(0, 67.7667, 75.2, 79.2333, 83.2333, 120.77048, 144.5667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false, true, false]
+}
+tracks/59/type = "value"
+tracks/59/imported = false
+tracks/59/enabled = true
+tracks/59/path = NodePath("../Elia6:visible")
+tracks/59/interp = 1
+tracks/59/loop_wrap = true
+tracks/59/keys = {
+"times": PackedFloat32Array(79.2333, 83.2333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/60/type = "value"
+tracks/60/imported = false
+tracks/60/enabled = true
+tracks/60/path = NodePath("../Elia6:visible_ratio")
+tracks/60/interp = 1
+tracks/60/loop_wrap = true
+tracks/60/keys = {
+"times": PackedFloat32Array(79.4, 82.11196),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/61/type = "value"
+tracks/61/imported = false
+tracks/61/enabled = true
+tracks/61/path = NodePath("../Text7:visible_ratio")
+tracks/61/interp = 1
+tracks/61/loop_wrap = true
+tracks/61/keys = {
+"times": PackedFloat32Array(83.4667, 84.73337),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/62/type = "value"
+tracks/62/imported = false
+tracks/62/enabled = true
+tracks/62/path = NodePath("../Text7:visible")
+tracks/62/interp = 1
+tracks/62/loop_wrap = true
+tracks/62/keys = {
+"times": PackedFloat32Array(83.433334, 85.60004),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/63/type = "value"
+tracks/63/imported = false
+tracks/63/enabled = true
+tracks/63/path = NodePath("../Tristan9:visible")
+tracks/63/interp = 1
+tracks/63/loop_wrap = true
+tracks/63/keys = {
+"times": PackedFloat32Array(86.166664, 91.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/64/type = "value"
+tracks/64/imported = false
+tracks/64/enabled = true
+tracks/64/path = NodePath("../Tristan9:visible_ratio")
+tracks/64/interp = 1
+tracks/64/loop_wrap = true
+tracks/64/keys = {
+"times": PackedFloat32Array(86.326706, 87.693375),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/65/type = "value"
+tracks/65/imported = false
+tracks/65/enabled = true
+tracks/65/path = NodePath("../../../PabloAngry:visible")
+tracks/65/interp = 1
+tracks/65/loop_wrap = true
+tracks/65/keys = {
+"times": PackedFloat32Array(0, 91.6524, 108.6333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/66/type = "value"
+tracks/66/imported = false
+tracks/66/enabled = true
+tracks/66/path = NodePath("../Pablo4:visible_ratio")
+tracks/66/interp = 1
+tracks/66/loop_wrap = true
+tracks/66/keys = {
+"times": PackedFloat32Array(91.63333, 106.76667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/67/type = "value"
+tracks/67/imported = false
+tracks/67/enabled = true
+tracks/67/path = NodePath("../Pablo4:visible")
+tracks/67/interp = 1
+tracks/67/loop_wrap = true
+tracks/67/keys = {
+"times": PackedFloat32Array(91.6524, 108.63333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/68/type = "value"
+tracks/68/imported = false
+tracks/68/enabled = true
+tracks/68/path = NodePath("../Tristan10:visible_ratio")
+tracks/68/interp = 1
+tracks/68/loop_wrap = true
+tracks/68/keys = {
+"times": PackedFloat32Array(109.5, 110.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/69/type = "value"
+tracks/69/imported = false
+tracks/69/enabled = true
+tracks/69/path = NodePath("../Tristan10:visible")
+tracks/69/interp = 1
+tracks/69/loop_wrap = true
+tracks/69/keys = {
+"times": PackedFloat32Array(109.13333, 112.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/70/type = "value"
+tracks/70/imported = false
+tracks/70/enabled = true
+tracks/70/path = NodePath("../Text8:visible_ratio")
+tracks/70/interp = 1
+tracks/70/loop_wrap = true
+tracks/70/keys = {
+"times": PackedFloat32Array(112.89878, 117.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/71/type = "value"
+tracks/71/imported = false
+tracks/71/enabled = true
+tracks/71/path = NodePath("../Text8:visible")
+tracks/71/interp = 1
+tracks/71/loop_wrap = true
+tracks/71/keys = {
+"times": PackedFloat32Array(112.89878, 120.53333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/72/type = "value"
+tracks/72/imported = false
+tracks/72/enabled = true
+tracks/72/path = NodePath("../Elia7:visible_ratio")
+tracks/72/interp = 1
+tracks/72/loop_wrap = true
+tracks/72/keys = {
+"times": PackedFloat32Array(121.041176, 124.96634),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/73/type = "value"
+tracks/73/imported = false
+tracks/73/enabled = true
+tracks/73/path = NodePath("../Elia7:visible")
+tracks/73/interp = 1
+tracks/73/loop_wrap = true
+tracks/73/keys = {
+"times": PackedFloat32Array(120.7705, 131.53084),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/74/type = "value"
+tracks/74/imported = false
+tracks/74/enabled = true
+tracks/74/path = NodePath("../Pablo5:visible_ratio")
+tracks/74/interp = 1
+tracks/74/loop_wrap = true
+tracks/74/keys = {
+"times": PackedFloat32Array(132.06667, 139.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/75/type = "value"
+tracks/75/imported = false
+tracks/75/enabled = true
+tracks/75/path = NodePath("../Pablo5:visible")
+tracks/75/interp = 1
+tracks/75/loop_wrap = true
+tracks/75/keys = {
+"times": PackedFloat32Array(131.6, 144.56667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/76/type = "value"
+tracks/76/imported = false
+tracks/76/enabled = true
+tracks/76/path = NodePath("../../../EliaAngry:visible")
+tracks/76/interp = 1
+tracks/76/loop_wrap = true
+tracks/76/keys = {
+"times": PackedFloat32Array(0, 144.96666, 155.2448),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/77/type = "value"
+tracks/77/imported = false
+tracks/77/enabled = true
+tracks/77/path = NodePath("../Elia8:visible_ratio")
+tracks/77/interp = 1
+tracks/77/loop_wrap = true
+tracks/77/keys = {
+"times": PackedFloat32Array(145.23334, 152.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/78/type = "value"
+tracks/78/imported = false
+tracks/78/enabled = true
+tracks/78/path = NodePath("../Elia8:visible")
+tracks/78/interp = 1
+tracks/78/loop_wrap = true
+tracks/78/keys = {
+"times": PackedFloat32Array(144.9667, 155.24484),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/79/type = "value"
+tracks/79/imported = false
+tracks/79/enabled = true
+tracks/79/path = NodePath("../Text9:visible")
+tracks/79/interp = 1
+tracks/79/loop_wrap = true
+tracks/79/keys = {
+"times": PackedFloat32Array(155.74825, 169.46666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/80/type = "value"
+tracks/80/imported = false
+tracks/80/enabled = true
+tracks/80/path = NodePath("../Text9:visible_ratio")
+tracks/80/interp = 1
+tracks/80/loop_wrap = true
+tracks/80/keys = {
+"times": PackedFloat32Array(155.96666, 163.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/81/type = "value"
+tracks/81/imported = false
+tracks/81/enabled = true
+tracks/81/path = NodePath("../Tristan11:visible_ratio")
+tracks/81/interp = 1
+tracks/81/loop_wrap = true
+tracks/81/keys = {
+"times": PackedFloat32Array(170.43333, 173.53334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/82/type = "value"
+tracks/82/imported = false
+tracks/82/enabled = true
+tracks/82/path = NodePath("../Tristan11:visible")
+tracks/82/interp = 1
+tracks/82/loop_wrap = true
+tracks/82/keys = {
+"times": PackedFloat32Array(170.1667, 175.50941),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/83/type = "value"
+tracks/83/imported = false
+tracks/83/enabled = true
+tracks/83/path = NodePath("../../../EliaSmile:visible")
+tracks/83/interp = 1
+tracks/83/loop_wrap = true
+tracks/83/keys = {
+"times": PackedFloat32Array(0, 175.9831, 182.5235),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/84/type = "value"
+tracks/84/imported = false
+tracks/84/enabled = true
+tracks/84/path = NodePath("../Text10:visible")
+tracks/84/interp = 1
+tracks/84/loop_wrap = true
+tracks/84/keys = {
+"times": PackedFloat32Array(176.02664, 182.52347),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/85/type = "value"
+tracks/85/imported = false
+tracks/85/enabled = true
+tracks/85/path = NodePath("../Text10:visible_ratio")
+tracks/85/interp = 1
+tracks/85/loop_wrap = true
+tracks/85/keys = {
+"times": PackedFloat32Array(176.23334, 179.53334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/86/type = "value"
+tracks/86/imported = false
+tracks/86/enabled = true
+tracks/86/path = NodePath("../Tristan12:visible")
+tracks/86/interp = 1
+tracks/86/loop_wrap = true
+tracks/86/keys = {
+"times": PackedFloat32Array(182.7265, 191),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/87/type = "value"
+tracks/87/imported = false
+tracks/87/enabled = true
+tracks/87/path = NodePath("../Tristan12:visible_ratio")
+tracks/87/interp = 1
+tracks/87/loop_wrap = true
+tracks/87/keys = {
+"times": PackedFloat32Array(183, 188.81726),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/88/type = "value"
+tracks/88/imported = false
+tracks/88/enabled = true
+tracks/88/path = NodePath("../ColorRect:visible")
+tracks/88/interp = 1
+tracks/88/loop_wrap = true
+tracks/88/keys = {
+"times": PackedFloat32Array(0, 191.10555),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/89/type = "value"
+tracks/89/imported = false
+tracks/89/enabled = true
+tracks/89/path = NodePath("../../../ShotOfTaalLake(smokingABit):visible")
+tracks/89/interp = 1
+tracks/89/loop_wrap = true
+tracks/89/keys = {
+"times": PackedFloat32Array(0, 191.35701),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/90/type = "value"
+tracks/90/imported = false
+tracks/90/enabled = true
+tracks/90/path = NodePath("../ColorRect3:visible")
+tracks/90/interp = 1
+tracks/90/loop_wrap = true
+tracks/90/keys = {
+"times": PackedFloat32Array(0, 193.68039),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/91/type = "value"
+tracks/91/imported = false
+tracks/91/enabled = true
+tracks/91/path = NodePath("../Text11:visible_ratio")
+tracks/91/interp = 1
+tracks/91/loop_wrap = true
+tracks/91/keys = {
+"times": PackedFloat32Array(193.68039, 203.2226),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/92/type = "value"
+tracks/92/imported = false
+tracks/92/enabled = true
+tracks/92/path = NodePath("../Text11:visible")
+tracks/92/interp = 1
+tracks/92/loop_wrap = true
+tracks/92/keys = {
+"times": PackedFloat32Array(193.68039, 205.83333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/93/type = "value"
+tracks/93/imported = false
+tracks/93/enabled = true
+tracks/93/path = NodePath("../Text12:visible_ratio")
+tracks/93/interp = 1
+tracks/93/loop_wrap = true
+tracks/93/keys = {
+"times": PackedFloat32Array(206.06667, 212.43333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/94/type = "value"
+tracks/94/imported = false
+tracks/94/enabled = true
+tracks/94/path = NodePath("../Text12:visible")
+tracks/94/interp = 1
+tracks/94/loop_wrap = true
+tracks/94/keys = {
+"times": PackedFloat32Array(205.6589, 216.48694),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/95/type = "value"
+tracks/95/imported = false
+tracks/95/enabled = true
+tracks/95/path = NodePath("../Text13:visible_ratio")
+tracks/95/interp = 1
+tracks/95/loop_wrap = true
+tracks/95/keys = {
+"times": PackedFloat32Array(217.36667, 223.8297),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/96/type = "value"
+tracks/96/imported = false
+tracks/96/enabled = true
+tracks/96/path = NodePath("../Text13:visible")
+tracks/96/interp = 1
+tracks/96/loop_wrap = true
+tracks/96/keys = {
+"times": PackedFloat32Array(217.09601, 228.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_xtrrr"]
+resource_name = "text1_2"
+length = 30.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Elia1:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(13.3, 14.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xtrrr"]
+_data = {
+&"RESET": SubResource("Animation_rj3yn"),
+&"text1": SubResource("Animation_cv4e2"),
+&"text1_2": SubResource("Animation_xtrrr")
+}
+
+[node name="Cutscene1" type="Node2D"]
+script = ExtResource("1_simcy")
+
+[node name="Langit_moving" type="Sprite2D" parent="."]
+show_behind_parent = true
+texture_filter = 1
+position = Vector2(-1553.0001, -48.999996)
+scale = Vector2(0.21, 0.21)
+texture = ExtResource("1_aev2v")
+centered = false
+script = ExtResource("2_3ohvu")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Node/CanvasLayer/Text 1")
+libraries = {
+&"": SubResource("AnimationLibrary_xtrrr")
+}
+autoplay = "text1"
+
+[node name="Node" type="Node" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Node"]
+
+[node name="ColorRect" type="ColorRect" parent="Node/CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.113000005
+anchor_top = 0.141
+anchor_right = 0.113000005
+anchor_bottom = 0.141
+offset_left = -74.17601
+offset_top = 413.632
+offset_right = 960.824
+offset_bottom = 547.632
+color = Color(0, 0.020916583, 0.007347083, 0.6784314)
+
+[node name="ColorRect3" type="ColorRect" parent="Node/CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.113000005
+anchor_top = 0.141
+anchor_right = 0.113000005
+anchor_bottom = 0.141
+offset_left = -97.17601
+offset_top = 57.631996
+offset_right = 993.824
+offset_bottom = 418.632
+color = Color(0, 0.020916583, 0.007347083, 0.6784314)
+
+[node name="Text 1" type="RichTextLabel" parent="Node/CanvasLayer"]
+anchors_preset = -1
+anchor_right = 0.14500001
+anchor_bottom = 0.162
+offset_left = 80.0
+offset_top = 524.0
+offset_right = 920.95996
+offset_bottom = 459.024
+localize_numeral_system = false
+theme_override_font_sizes/normal_font_size = 28
+text = "The air is cool, almost chilly, with small gusts of wind grazing my arms."
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="ColorRect2" type="ColorRect" parent="Node/CanvasLayer"]
+offset_right = 1181.0
+offset_bottom = 651.0
+color = Color(1, 1, 1, 0)
+
+[node name="Text 2" type="RichTextLabel" parent="Node/CanvasLayer"]
+anchors_preset = -1
+anchor_bottom = 0.062000003
+offset_left = 84.0
+offset_top = 525.0
+offset_right = 988.0
+offset_bottom = 604.824
+theme_override_font_sizes/normal_font_size = 27
+text = "I look up at the welcoming skies; they’re bright and clear today. Today’s a special day, no doubt. We’re lucky the sky is in our favor.
+"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Elia1" type="RichTextLabel" parent="Node/CanvasLayer"]
+anchors_preset = -1
+anchor_right = 0.108
+anchor_bottom = 0.245
+offset_left = 79.0
+offset_top = 562.0
+offset_right = 2025.5464
+offset_bottom = 453.24
+theme_override_colors/default_color = Color(0.85796285, 0.8990225, 1, 1)
+theme_override_font_sizes/normal_font_size = 25
+text = "Tristan? Is that you?!
+"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Text 3" type="RichTextLabel" parent="Node/CanvasLayer"]
+offset_left = 119.0
+offset_top = 529.0
+offset_right = 905.0
+offset_bottom = 760.0
+theme_override_font_sizes/normal_font_size = 25
+text = "As I stare at the big blue, a familiar voice calls out my name. Small and frisky. "
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Text 4" type="RichTextLabel" parent="Node/CanvasLayer"]
+anchors_preset = -1
+anchor_right = 0.035
+anchor_bottom = 0.062000003
+offset_left = 78.0
+offset_top = 527.0
+offset_right = 982.68
+offset_bottom = 590.824
+theme_override_font_sizes/normal_font_size = 22
+text = "I turn to find the source of the sound, to find a girl with wavy hair and a smile as bright as the sun shining over the town, a dear friend, Elia. She runs towards me with a grin.
+"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="ELIA" type="RichTextLabel" parent="Node/CanvasLayer"]
+offset_left = 79.0
+offset_top = 518.0
+offset_right = 244.0
+offset_bottom = 612.0
+theme_override_colors/default_color = Color(1, 0.91764706, 0.654902, 1)
+theme_override_font_sizes/normal_font_size = 31
+text = "Elia
+"
+
+[node name="TRISTAN" type="RichTextLabel" parent="Node/CanvasLayer"]
+offset_left = 76.0
+offset_top = 518.0
+offset_right = 1265.0
+offset_bottom = 576.0
+theme_override_colors/default_color = Color(0.6627451, 0.8392157, 1, 1)
+theme_override_font_sizes/normal_font_size = 31
+text = "Tristan
+"
+
+[node name="Tristan1" type="RichTextLabel" parent="Node/CanvasLayer"]
+offset_left = 81.0
+offset_top = 560.0
+offset_right = 1768.0
+offset_bottom = 600.0
+theme_override_font_sizes/normal_font_size = 25
+text = "Always the tone of surprise; it’s like you don’t want me here."
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Elia2" type="RichTextLabel" parent="Node/CanvasLayer"]
+offset_left = 85.0
+offset_top = 559.0
+offset_right = 1446.0
+offset_bottom = 620.0
+theme_override_font_sizes/normal_font_size = 25
+text = "You’re so dramatic. "
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Tristan2" type="RichTextLabel" parent="Node/CanvasLayer"]
+offset_left = 79.0
+offset_top = 558.0
+offset_right = 1050.0
+offset_bottom = 1050.0
+theme_override_font_sizes/normal_font_size = 24
+text = "You think I’m dramatic when we’re best friends with the most dramatic person in the world? Speaking of the devil…have you run into him yet?"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Elia3" type="RichTextLabel" parent="Node/CanvasLayer"]
+offset_left = 82.0
+offset_top = 556.0
+offset_right = 1435.0
+offset_bottom = 638.0
+theme_override_font_sizes/normal_font_size = 25
+text = "I haven't seen him all day either. His mom told me he was out helping
+ clear out the shore of the lake."
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Tristan 3" type="RichTextLabel" parent="Node/CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Tristan4" type="RichTextLabel" parent="Node/CanvasLayer"]
+offset_left = 81.0
+offset_top = 563.0
+offset_right = 1339.0
+offset_bottom = 603.0
+theme_override_font_sizes/normal_font_size = 25
+text = "The festival’s going to be near the lake?"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Elia4" type="RichTextLabel" parent="Node/CanvasLayer"]
+offset_left = 79.0
+offset_top = 556.0
+offset_right = 966.0
+offset_bottom = 760.0
+theme_override_font_sizes/normal_font_size = 25
+text = "Of course, that’s why everyone’s helping out to make sure the shore is ready, including Pablo. "
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Tristan 5" type="RichTextLabel" parent="Node/CanvasLayer"]
+offset_left = 77.0
+offset_top = 566.0
+offset_right = 1557.0
+offset_bottom = 606.0
+theme_override_font_sizes/normal_font_size = 25
+text = "Here comes the overreacting Pablo…"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Pablo1" type="RichTextLabel" parent="Node/CanvasLayer"]
+offset_left = 85.0
+offset_top = 565.0
+offset_right = 1601.0
+offset_bottom = 605.0
+theme_override_font_sizes/normal_font_size = 25
+text = "OMG! Tristan! It’s been so long!"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="PABLO" type="RichTextLabel" parent="Node/CanvasLayer"]
+offset_left = 83.0
+offset_top = 518.0
+offset_right = 1535.0
+offset_bottom = 558.0
+theme_override_colors/default_color = Color(0.78039217, 0.9764706, 0.8, 1)
+theme_override_font_sizes/normal_font_size = 31
+text = "Pablo"
+
+[node name="Tristan6" type="RichTextLabel" parent="Node/CanvasLayer"]
+offset_left = 87.0
+offset_top = 563.0
+offset_right = 1422.0
+offset_bottom = 603.0
+theme_override_font_sizes/normal_font_size = 25
+text = "It seems you’ve been busy."
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Pablo2" type="RichTextLabel" parent="Node/CanvasLayer"]
+offset_left = 85.0
+offset_top = 563.0
+offset_right = 1496.0
+offset_bottom = 603.0
+theme_override_font_sizes/normal_font_size = 25
+text = "Yeah! We’ve been clearing out the shoreline for the festival."
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Text5" type="RichTextLabel" parent="Node/CanvasLayer"]
+offset_left = 78.0
+offset_top = 530.0
+offset_right = 1512.0
+offset_bottom = 570.0
+theme_override_font_sizes/normal_font_size = 25
+text = "A lightbulb lights up above me, and with a grin, I ask the two.
+"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Tristan 7" type="RichTextLabel" parent="Node/CanvasLayer"]
+offset_left = 74.0
+offset_top = 558.0
+offset_right = 1437.0
+offset_bottom = 598.0
+theme_override_font_sizes/normal_font_size = 25
+text = " If I lend a hand, can I swim in the lake?"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Text 6" type="RichTextLabel" parent="Node/CanvasLayer"]
+offset_left = 78.0
+offset_top = 522.0
+offset_right = 1588.0
+offset_bottom = 562.0
+theme_override_font_sizes/normal_font_size = 25
+text = "Elia’s eyes widen in shock, and Pablo lets out a deep gasp"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Pablo3" type="RichTextLabel" parent="Node/CanvasLayer"]
+offset_left = 85.0
+offset_top = 557.0
+offset_right = 1617.0
+offset_bottom = 597.0
+theme_override_font_sizes/normal_font_size = 25
+text = "TRISTAN! You – you can’t do that!"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Elia5" type="RichTextLabel" parent="Node/CanvasLayer"]
+offset_left = 78.0
+offset_top = 560.0
+offset_right = 983.0
+offset_bottom = 752.0
+theme_override_font_sizes/normal_font_size = 25
+text = "Today’s the festival; you know what happens when you swim in the lake during a festival."
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Tristan8" type="RichTextLabel" parent="Node/CanvasLayer"]
+offset_left = 75.0
+offset_top = 566.0
+offset_right = 1669.0
+offset_bottom = 775.0
+theme_override_font_sizes/normal_font_size = 25
+text = "What? No, I don’t. Why are you all so worked up? What’s going to happen?
+"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Elia6" type="RichTextLabel" parent="Node/CanvasLayer"]
+visible = false
+offset_left = 82.0
+offset_top = 562.0
+offset_right = 922.0
+offset_bottom = 734.0
+theme_override_font_sizes/normal_font_size = 25
+text = "Tristan… Every time someone swims in the lake during the festival, they never get back to shore."
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Text7" type="RichTextLabel" parent="Node/CanvasLayer"]
+offset_left = 78.0
+offset_top = 529.0
+offset_right = 1479.0
+offset_bottom = 569.0
+theme_override_font_sizes/normal_font_size = 25
+text = "I laugh in disbelief."
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Tristan9" type="RichTextLabel" parent="Node/CanvasLayer"]
+offset_left = 80.0
+offset_top = 562.0
+offset_right = 1584.0
+offset_bottom = 602.0
+theme_override_font_sizes/normal_font_size = 25
+text = "Really? They just vanish? No bodies? Are you sure it isn’t just a coincidence? "
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Pablo4" type="RichTextLabel" parent="Node/CanvasLayer"]
+offset_left = 85.0
+offset_top = 557.0
+offset_right = 1083.0
+offset_bottom = 807.0
+theme_override_font_sizes/normal_font_size = 21
+text = "DUDE, it’s too consistent to be a coincidence…they really do disappear. It’s like…the princess is mad, or at least asking to be saved…like RIGHT NOW! The Taal volcano is smoking! She’s mad, bro!"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Tristan10" type="RichTextLabel" parent="Node/CanvasLayer"]
+offset_left = 78.0
+offset_top = 562.0
+offset_right = 1674.0
+offset_bottom = 602.0
+theme_override_font_sizes/normal_font_size = 25
+text = "Huh? Princess?"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Text8" type="RichTextLabel" parent="Node/CanvasLayer"]
+offset_left = 80.0
+offset_top = 534.0
+offset_right = 1105.0
+offset_bottom = 713.0
+theme_override_font_sizes/normal_font_size = 25
+text = "What princess? It seems confusion is written all over my face by the way they immediately explain to me what they’re talking about.
+"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Elia7" type="RichTextLabel" parent="Node/CanvasLayer"]
+offset_left = 80.0
+offset_top = 563.0
+offset_right = 1061.0
+offset_bottom = 943.0
+theme_override_font_sizes/normal_font_size = 22
+text = "Princess Taalita, y’know… she was a princess who drowned in this very lake, and they say she’s the volcano now. That’s who the elders think is pulling people down into the water. "
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Pablo5" type="RichTextLabel" parent="Node/CanvasLayer"]
+offset_left = 87.0
+offset_top = 558.0
+offset_right = 1111.0
+offset_bottom = 805.0
+theme_override_font_sizes/normal_font_size = 23
+text = "You don’t HAVE to believe it, dude. You just have to respect it…okay? We don’t want any incidents this year. If you die in the lake today, I’ll bring you back up and kill you myself!
+"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Elia8" type="RichTextLabel" parent="Node/CanvasLayer"]
+visible = false
+offset_left = 84.0
+offset_top = 557.0
+offset_right = 1078.0
+offset_bottom = 813.0
+theme_override_font_sizes/normal_font_size = 23
+text = "Tristan, he’s serious. You’re getting ahead of yourself. Just celebrate the El Pasabut festival with us, and we can swim another time. Not today. "
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Text9" type="RichTextLabel" parent="Node/CanvasLayer"]
+offset_left = 74.0
+offset_top = 516.0
+offset_right = 1061.0
+offset_bottom = 674.0
+theme_override_font_sizes/normal_font_size = 25
+text = "Their eyes pleaded with me. As locals, they knew stuff I didn’t. They were more accustomed to the traditions; they knew what to say and do. Maybe it would be wrong of me not to trust them. But maybe, they’re just paranoid. 
+"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Tristan11" type="RichTextLabel" parent="Node/CanvasLayer"]
+offset_left = 77.0
+offset_top = 571.0
+offset_right = 1900.0
+offset_bottom = 751.0
+theme_override_font_sizes/normal_font_size = 25
+text = "Fine…fine. "
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Text10" type="RichTextLabel" parent="Node/CanvasLayer"]
+offset_left = 77.0
+offset_top = 525.0
+offset_right = 1932.0
+offset_bottom = 867.0
+theme_override_font_sizes/normal_font_size = 25
+text = "Relief washes over their faces. "
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Tristan12" type="RichTextLabel" parent="Node/CanvasLayer"]
+offset_left = 82.0
+offset_top = 559.0
+offset_right = 2222.0
+offset_bottom = 599.0
+theme_override_font_sizes/normal_font_size = 25
+text = "I’ll just go and buy us drinks and snacks from the vendors.
+"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Text11" type="RichTextLabel" parent="Node/CanvasLayer"]
+offset_left = 68.0
+offset_top = 222.0
+offset_right = 1097.0
+offset_bottom = 738.0
+theme_override_colors/default_color = Color(0.627451, 0.95686275, 0.95686275, 1)
+theme_override_font_sizes/normal_font_size = 38
+text = "The two nod in agreement as I walk away, leaving them there to talk amongst themselves. My legs stride towards the market and then take a turn towards the direction of the shore.
+"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Text12" type="RichTextLabel" parent="Node/CanvasLayer"]
+offset_left = 79.0
+offset_top = 208.0
+offset_right = 1151.0
+offset_bottom = 437.0
+theme_override_colors/default_color = Color(0.627451, 0.95686275, 0.95686275, 1)
+theme_override_font_sizes/normal_font_size = 38
+text = "My mind tells me that this is wrong. And yet my body moves toward the shoreline...
+"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Text13" type="RichTextLabel" parent="Node/CanvasLayer"]
+offset_left = 62.0
+offset_top = 238.0
+offset_right = 1101.0
+offset_bottom = 792.0
+theme_override_colors/default_color = Color(0.6292716, 0.9568166, 0.9557108, 1)
+theme_override_font_sizes/normal_font_size = 42
+text = "Just a quick dip will do no harm, I think. I’m brave; I can swim. I’ve got this covered.
+"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Festival" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(580.24994, 321.49997)
+scale = Vector2(3.6171877, 3.7277772)
+texture = ExtResource("3_iaa37")
+
+[node name="Main2" type="Sprite2D" parent="."]
+show_behind_parent = true
+texture_filter = 1
+position = Vector2(565.9852, 275)
+scale = Vector2(0.08033, 0.08610115)
+texture = ExtResource("4_h4u2s")
+
+[node name="Tristan smile" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(927.00006, 319.45496)
+scale = Vector2(0.35122433, 0.34321773)
+texture = ExtResource("5_0cu4l")
+
+[node name="EliaSmile" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(920.99994, 316)
+scale = Vector2(0.37306717, 0.3818359)
+texture = ExtResource("6_b7nso")
+
+[node name="Elia surprised" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(208.99991, 300)
+scale = Vector2(0.3529806, 0.3501248)
+texture = ExtResource("7_8u8hc")
+
+[node name="Elia smile" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(209.50003, 302.25003)
+scale = Vector2(0.3509115, 0.35180667)
+texture = ExtResource("6_b7nso")
+
+[node name="Elia neutral" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(208.5, 301.5)
+scale = Vector2(0.35351565, 0.35009766)
+texture = ExtResource("8_l4o8a")
+
+[node name="TristanNeutral" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(930, 317.49997)
+scale = Vector2(0.3515625, 0.34130856)
+texture = ExtResource("9_rqfb4")
+
+[node name="PabloSmile" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(238.00002, 360)
+scale = Vector2(0.3720703, 0.35502625)
+texture = ExtResource("10_qx446")
+
+[node name="PabloSurprised" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(917.00006, 343)
+scale = Vector2(0.36979163, 0.34313965)
+texture = ExtResource("11_e3xdq")
+
+[node name="PabloWorried" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(916.99994, 342)
+scale = Vector2(0.36295572, 0.3387451)
+texture = ExtResource("12_d7vt8")
+
+[node name="TristanSurprised" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(591.99994, 375.00003)
+scale = Vector2(0.43489584, 0.4162598)
+texture = ExtResource("13_67qbd")
+
+[node name="EliaWorried" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(204, 294)
+scale = Vector2(0.37581378, 0.3700714)
+texture = ExtResource("14_1yy06")
+
+[node name="PabloAngry" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(255, 362.00003)
+scale = Vector2(0.3776042, 0.3430176)
+texture = ExtResource("15_fsyxi")
+
+[node name="EliaAngry" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(258, 295.00003)
+scale = Vector2(0.39290366, 0.3771973)
+texture = ExtResource("16_2c8ja")
+
+[node name="ShotOfTaalLake(smokingABit)" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(592.5, 330)
+scale = Vector2(3.696875, 3.7)
+texture = ExtResource("17_rdfic")

@@ -3,70 +3,269 @@ extends Node2D
 
 # Reference to your existing grid positions
 @export var grid_positions: Array[Vector2] = [
-	Vector2(64, 64), Vector2(208, 64), Vector2(352, 64),
-	Vector2(64, 208), Vector2(208, 208), Vector2(352, 208),
-	Vector2(64, 352), Vector2(208, 352), Vector2(352, 352)
+	Vector2(64, 64), Vector2(208, 64), Vector2(354, 64),
+	Vector2(64, 208), Vector2(208, 208), Vector2(354, 208),
+	Vector2(64, 354), Vector2(208, 354), Vector2(354, 354)
 ]
 
 # Export the puzzle pieces so you can assign them in the editor
-@export var puzzle_pieces: Array[Node2D] = []  # Only 8 pieces now!
-@export var final_piece: Node2D  # The 9th piece that appears on completion
+@export var puzzle_pieces: Array[Node2D] = []  # Only 8 movable pieces! (all except center)
+@export var final_piece: Node2D  # The center piece that appears on completion
+@export var complete_image: Sprite2D  # The full image that appears over the entire grid
+@export var victory_gem: PackedScene  # Assign your Gem_2.tscn here
 
-# Track where each piece CURRENTLY is in the grid (index 0-8)
+# Timer and Dialogue
+@export var timer_duration: float = 60.0  # 60 second timer
+@export var intro_dialogue: DialogueResource
+@export var win_dialogue: DialogueResource  
+@export var lose_dialogue: DialogueResource
+
+#Variable for timer
+@export var timer_ui_scene: PackedScene  # Assign your TimerUI.tscn here
+var timer_ui_instance: Node2D
+
+# WINNING STATE: Pieces 1-4,6-9 in positions around center, FinalPiece (center) at position 4
 var piece_positions = []  # piece_positions[piece_id] = current_grid_index
-var empty_index = 8  # The empty space is always at grid index 8 initially
+var empty_index = 4  # FinalPiece (center) starts as the empty space
+var game_won = false
+var game_lost = false
+var gem_instance: Area2D = null
+var timer: Timer
+var time_remaining: float = 0.0
 
-@export var debug_draw: bool = false
+@export var test_mode: bool = true  # Set to true for testing, false for normal game
+@export var skip_dialogue: bool = false  # Set to true to skip all dialogue
+
+# Dialogue fallback
+var dialogue_fallback_timer: Timer
 
 func _ready():
-	# If puzzle_pieces array is empty, try to find them automatically
-	if puzzle_pieces.is_empty():
-		puzzle_pieces = get_piece_references()
+	print("=== PUZZLE MANAGER STARTING ===")
 	
-	# Initialize piece positions
-	piece_positions.resize(8)
-	for i in range(8):
-		piece_positions[i] = i  # Piece 1 at pos 0, Piece 2 at pos 1, etc.
+	# Fix: Ensure we only use 8 pieces (all except center)
+	if puzzle_pieces.size() > 8:
+		print("Warning: puzzle_pieces has ", puzzle_pieces.size(), " elements. Using only first 8.")
+		puzzle_pieces.resize(8)
 	
-	# Hide the final piece initially
+	# Setup FinalPiece - make sure it's invisible and non-interactive
 	if final_piece:
 		final_piece.visible = false
-		final_piece.position = grid_positions[8]  # Position it but keep hidden
+		if final_piece is Area2D:
+			final_piece.monitoring = false
+			final_piece.monitorable = false
+	else:
+		print("Error: Final piece (center) not assigned!")
 	
+	# Setup complete image at screen position
+	if complete_image:
+		complete_image.visible = false
+		complete_image.global_position = Vector2(566, 347)
+	
+	# Setup timer
+	setup_timer()
+	
+	# Initialize puzzle state
+	if test_mode:
+		initialize_test_puzzle()  # One move from completion
+	else:
+		initialize_solvable_puzzle()  # Normal shuffled puzzle
+	
+	# Start with dialogue or directly with gameplay
+	if skip_dialogue:
+		print("SKIPPING DIALOGUE - Starting puzzle immediately")
+		start_puzzle_gameplay()
+	else:
+		start_intro_dialogue()
+
+func setup_timer():
+	timer = Timer.new()
+	timer.wait_time = 1.0  # Update every second
+	timer.timeout.connect(_on_timer_timeout)
+	add_child(timer)
+
+func start_intro_dialogue():
+	print("Starting intro dialogue...")
+	if intro_dialogue:
+		# Set up fallback timer FIRST in case dialogue fails
+		setup_dialogue_fallback()
+		
+		# Try to connect to dialogue finished signal
+		if DialogueManager.has_signal("dialogue_ended"):
+			if not DialogueManager.dialogue_ended.is_connected(_on_intro_dialogue_ended):
+				DialogueManager.dialogue_ended.connect(_on_intro_dialogue_ended)
+				print("Connected to dialogue_ended signal")
+			else:
+				print("Already connected to dialogue_ended signal")
+		else:
+			print("WARNING: dialogue_ended signal not found! Using fallback timer.")
+		
+		# Show dialogue starting from "start"
+		print("Showing dialogue balloon...")
+		DialogueManager.show_example_dialogue_balloon(intro_dialogue, "start")
+		print("Intro dialogue shown - waiting for completion...")
+	else:
+		print("No intro dialogue, starting puzzle immediately")
+		start_puzzle_gameplay()
+
+func setup_dialogue_fallback():
+	# Clean up any existing fallback timer
+	if dialogue_fallback_timer and is_instance_valid(dialogue_fallback_timer):
+		dialogue_fallback_timer.queue_free()
+	
+	# Set up a timer to check if dialogue is still active
+	dialogue_fallback_timer = Timer.new()
+	dialogue_fallback_timer.wait_time = 5.0  # 5 seconds should be enough for dialogue
+	dialogue_fallback_timer.one_shot = true
+	dialogue_fallback_timer.timeout.connect(_on_dialogue_fallback_timeout)
+	add_child(dialogue_fallback_timer)
+	dialogue_fallback_timer.start()
+	print("Dialogue fallback timer started (5 seconds)")
+
+func _on_dialogue_fallback_timeout():
+	print("DIALOGUE FALLBACK: Timer triggered - dialogue didn't end properly, forcing puzzle start")
+	start_puzzle_gameplay()
+
+func _on_intro_dialogue_ended():
+	print("DIALOGUE SIGNAL: Intro dialogue ended, starting puzzle")
+	# Clean up fallback timer
+	if dialogue_fallback_timer and is_instance_valid(dialogue_fallback_timer):
+		dialogue_fallback_timer.stop()
+		dialogue_fallback_timer.queue_free()
+		dialogue_fallback_timer = null
+	
+	# Disconnect to avoid multiple calls
+	if DialogueManager.has_signal("dialogue_ended"):
+		if DialogueManager.dialogue_ended.is_connected(_on_intro_dialogue_ended):
+			DialogueManager.dialogue_ended.disconnect(_on_intro_dialogue_ended)
+	
+	start_puzzle_gameplay()
+
+func start_puzzle_gameplay():
+	print("🎮 PUZZLE GAMEPLAY STARTING")
+	print("Timer: ", timer_duration, " seconds")
+	
+	# Reset game states
+	game_won = false
+	game_lost = false
+	
+	# Create timer UI if scene is assigned
+	if timer_ui_scene:
+		timer_ui_instance = timer_ui_scene.instantiate()
+		add_child(timer_ui_instance)
+		print("Timer UI created with slide-down animation")
+	
+	# Setup puzzle connections
 	setup_puzzle()
 	
-	if debug_draw:
-		queue_redraw()
+	# Start timer
+	time_remaining = timer_duration
+	timer.start()
+	
+	# Update timer display
+	update_timer_display()
+	
+	print("Puzzle ready! Pieces should be movable now.")
 
-func get_piece_references() -> Array:
-	var pieces = []
+func _on_timer_timeout():
+	if game_won or game_lost:
+		return
 	
-	# Look for pieces as children of THIS node
-	for i in range(8):  # Only 8 pieces!
-		var piece_name = "Piece" + str(i + 1)
-		var piece = get_node_or_null(piece_name)
-		if piece:
-			pieces.append(piece)
-			print("Found piece: ", piece_name)
-		else:
-			print("Missing piece: ", piece_name)
-			pieces.append(null)
+	time_remaining -= 1.0
+	update_timer_display()
 	
-	return pieces
+	if time_remaining <= 0:
+		on_puzzle_lost()
+
+func update_timer_display():
+	var minutes = int(time_remaining) / 60
+	var seconds = int(time_remaining) % 60
+	var time_text = "%02d:%02d" % [minutes, seconds]
+	
+	# Update the timer UI if it exists
+	if timer_ui_instance and timer_ui_instance.has_method("update_time"):
+		timer_ui_instance.update_time(time_remaining)
+	
+	print("Time remaining: ", time_text)
+
+func on_puzzle_lost():
+	game_lost = true
+	timer.stop()
+	print("⏰ TIME'S UP! Puzzle failed.")
+	
+	# Remove timer UI when puzzle is lost
+	if timer_ui_instance:
+		timer_ui_instance.queue_free()
+		timer_ui_instance = null
+	
+	if lose_dialogue and not skip_dialogue:
+		DialogueManager.show_example_dialogue_balloon(lose_dialogue, "start")
+	else:
+		print("No lose dialogue or dialogue skipped")
+
+func initialize_test_puzzle():
+	# TEST MODE: Puzzle is ONE MOVE away from completion
+	# | Piece1 | Piece2 | Piece3 |
+	# | Piece4 | Piece5 | Piece6 | 
+	# | Piece7 | EMPTY  | Piece8 |
+	
+	piece_positions = [0, 1, 2, 3, 4, 5, 6, 8]  # Piece8 at position 8
+	empty_index = 7  # Empty space at bottom-middle
+	
+	print("TEST MODE: Move Piece8 LEFT into the empty space to win!")
+	update_piece_positions()
+
+func initialize_solvable_puzzle():
+	# Start with solved state - all pieces around center
+	piece_positions = [0, 1, 2, 3, 5, 6, 7, 8]  # All pieces around center (position 4 empty)
+	empty_index = 4  # Center position is empty
+	
+	# Create a solvable shuffle by making many valid moves
+	var shuffle_moves = 50  # Number of random moves to shuffle
+	var directions = [Vector2i.LEFT, Vector2i.RIGHT, Vector2i.UP, Vector2i.DOWN]
+	
+	for i in range(shuffle_moves):
+		var possible_moves = []
+		var empty_pos = Vector2i(empty_index % 3, empty_index / 3)
+		
+		# Find all possible moves around empty space
+		for dir in directions:
+			var neighbor_pos = empty_pos + dir
+			if neighbor_pos.x >= 0 and neighbor_pos.x < 3 and neighbor_pos.y >= 0 and neighbor_pos.y < 3:
+				var neighbor_index = neighbor_pos.y * 3 + neighbor_pos.x
+				var piece_id = find_piece_at_grid_index(neighbor_index)
+				if piece_id != -1:
+					possible_moves.append(piece_id)
+		
+		# Make a random valid move
+		if possible_moves.size() > 0:
+			var random_piece = possible_moves[randi() % possible_moves.size()]
+			var piece_grid_index = piece_positions[random_piece]
+			
+			# Swap piece with empty space
+			piece_positions[random_piece] = empty_index
+			empty_index = piece_grid_index
+	
+	print("Puzzle shuffled! Good luck!")
+	update_piece_positions()
+
+func find_piece_at_grid_index(grid_index: int) -> int:
+	for piece_id in range(8):
+		if piece_positions[piece_id] == grid_index:
+			return piece_id
+	return -1
 
 func setup_puzzle():
-	# Position pieces according to their current grid positions
+	# Connect input events for all pieces
 	for piece_id in range(8):
 		if piece_id < puzzle_pieces.size() and puzzle_pieces[piece_id]:
-			var grid_index = piece_positions[piece_id]
-			puzzle_pieces[piece_id].position = grid_positions[grid_index]
-			
-			# Connect input if using Area2D
 			if puzzle_pieces[piece_id] is Area2D:
 				if !puzzle_pieces[piece_id].input_event.is_connected(_on_piece_input):
 					puzzle_pieces[piece_id].input_event.connect(_on_piece_input.bind(piece_id))
 
 func _on_piece_input(viewport, event, shape_idx, piece_id):
+	if game_won or game_lost:
+		return
+	
 	if event is InputEventMouseButton and event.pressed:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			try_move_piece(piece_id)
@@ -74,9 +273,7 @@ func _on_piece_input(viewport, event, shape_idx, piece_id):
 func try_move_piece(piece_id):
 	var piece_grid_index = piece_positions[piece_id]
 	
-	print("Trying to move piece ", piece_id, " from grid position ", piece_grid_index, " | Empty at: ", empty_index)
-	
-	# SIMPLE ADJACENCY CHECK - just check the four possible directions
+	# Check if the clicked piece is adjacent to the empty space (center)
 	var can_move = false
 	
 	# Convert grid indices to 2D coordinates
@@ -89,26 +286,16 @@ func try_move_piece(piece_id):
 		can_move = true
 	
 	if can_move:
-		print("VALID MOVE - Moving piece ", piece_id, " to empty space ", empty_index)
 		# Move the piece to the empty space
 		move_piece_to_empty(piece_id, piece_grid_index, empty_index)
-	else:
-		print("INVALID MOVE - Not adjacent")
-		print("Piece at grid: ", piece_pos, " Empty at grid: ", empty_pos)
-
+	
 func move_piece_to_empty(piece_id: int, from_index: int, to_index: int):
 	if piece_id >= puzzle_pieces.size() or not puzzle_pieces[piece_id]:
-		print("ERROR: Invalid piece ID: ", piece_id)
 		return
-	
-	print("Moving piece ", piece_id, " from grid ", from_index, " to grid ", to_index)
 	
 	# Update piece position tracking
 	piece_positions[piece_id] = to_index
 	empty_index = from_index  # The empty space moves to where the piece was
-	
-	print("Piece ", piece_id, " now at grid: ", to_index)
-	print("Empty space now at grid: ", empty_index)
 	
 	# Move the piece visually to the empty position
 	var target_pos = grid_positions[to_index]
@@ -121,72 +308,108 @@ func move_piece_to_empty(piece_id: int, from_index: int, to_index: int):
 		on_puzzle_solved()
 	
 func check_win() -> bool:
-	# Check if each piece is in its correct final position
-	# Piece 1 should be at grid 0, Piece 2 at grid 1, ..., Piece 8 at grid 7
-	for piece_id in range(8):
-		if piece_positions[piece_id] != piece_id:
+	# Check WINNING PATTERN:
+	# All 8 pieces in positions around center (0,1,2,3,5,6,7,8)
+	# FinalPiece (center) at position 4
+	var winning_positions = [0, 1, 2, 3, 5, 6, 7, 8]
+	for i in range(8):
+		if piece_positions[i] != winning_positions[i]:
 			return false
-	# Empty space should be at position 8 (bottom-right)
-	return empty_index == 8
+	return empty_index == 4
 
 func on_puzzle_solved():
-	print("Puzzle Solved! Revealing final piece!")
+	game_won = true
+	timer.stop()
+	print("🎉 PUZZLE SOLVED! Time: ", timer_duration - time_remaining, " seconds")
 	
-	# Reveal the final piece with a nice animation
+	# Remove timer UI when puzzle is solved
+	if timer_ui_instance:
+		timer_ui_instance.queue_free()
+		timer_ui_instance = null
+	
+	# START VICTORY SEQUENCE IMMEDIATELY
+	start_victory_sequence()
+
+func start_victory_sequence():
+	print("=== STARTING VICTORY SEQUENCE ===")
+	# Step 1: Reveal the center piece with fade-in
+	reveal_final_piece()
+
+func reveal_final_piece():
+	print("Revealing final piece immediately...")
 	if final_piece:
+		# Position and show the center piece IMMEDIATELY
+		final_piece.position = grid_positions[empty_index]
 		final_piece.visible = true
-		final_piece.position = grid_positions[8]  # Ensure it's at the correct position
 		
-		# Optional: Add a pop-in animation
+		# Fade in from transparent
+		final_piece.modulate = Color(1, 1, 1, 0)
+		var tween_fade = create_tween()
+		tween_fade.tween_property(final_piece, "modulate", Color(1, 1, 1, 1), 1.0)\
+			.set_ease(Tween.EASE_IN_OUT)
+		
+		await tween_fade.finished
+		await get_tree().create_timer(0.5).timeout
+	
+	# Step 2: Play gem animation
+	play_gem_animation()
+
+func play_gem_animation():
+	print("Playing gem animation...")
+	if victory_gem:
+		print("Spawning and playing gem animation!")
+		
+		# Instantiate the gem scene
+		gem_instance = victory_gem.instantiate()
+		add_child(gem_instance)
+		
+		# Position the gem at your specified coordinates
+		gem_instance.global_position = Vector2(899, 352)
+		
+		# Play the animation - just get the AnimationPlayer and play without specifying name
+		var anim_player = gem_instance.get_node_or_null("AnimationPlayer")
+		if anim_player:
+			# Get the first animation (usually the default one)
+			if anim_player.get_animation_list().size() > 0:
+				var animation_name = anim_player.get_animation_list()[0]
+				print("Playing gem animation: ", animation_name)
+				anim_player.play(animation_name)
+				await anim_player.animation_finished
+			else:
+				print("No animations found in AnimationPlayer")
+		else:
+			print("No AnimationPlayer found on gem instance")
+		
+		await get_tree().create_timer(0.5).timeout
+	
+	# Step 3: Show the complete image
+	show_complete_image()
+
+func show_complete_image():
+	print("Showing complete image...")
+	if complete_image:
+		complete_image.visible = true
+		complete_image.global_position = Vector2(566, 347)
+		complete_image.modulate = Color(1, 1, 1, 0)
+		
 		var tween = create_tween()
-		final_piece.scale = Vector2(0, 0)  # Start small
-		tween.tween_property(final_piece, "scale", Vector2(1, 1), 0.5)\
-			.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BACK)
+		tween.tween_property(complete_image, "modulate", Color(1, 1, 1, 1), 1.5)\
+			.set_ease(Tween.EASE_IN_OUT)
 		
-		# Optional: Play a sound, show particles, etc.
+		await tween.finished
+		
+		# Step 4: AFTER victory sequence is complete, show win dialogue
+		show_win_dialogue()
+
+func show_win_dialogue():
+	print("Victory sequence complete! Showing win dialogue...")
+	if win_dialogue and not skip_dialogue:
+		DialogueManager.show_example_dialogue_balloon(win_dialogue, "start")
 	else:
-		print("ERROR: Final piece not assigned!")
+		show_win_message()
 
-# Shuffle using your existing grid
-func shuffle_puzzle():
-	# Reset to solved state first
-	for i in range(8):
-		piece_positions[i] = i
-	empty_index = 8
-	update_piece_positions()
-	
-	# Then shuffle with valid moves
-	for i in range(100):
-		var possible_moves = get_possible_moves_for_shuffle()
-		if possible_moves.size() > 0:
-			var random_piece_id = possible_moves[randi() % possible_moves.size()]
-			var piece_grid_index = piece_positions[random_piece_id]
-			# Force the move without animation for shuffling
-			piece_positions[random_piece_id] = empty_index
-			empty_index = piece_grid_index
-	
-	# Update visual positions after shuffling
-	update_piece_positions()
-
-func get_possible_moves_for_shuffle() -> Array:
-	var moves = []  # This will contain piece IDs that can move
-	
-	var empty_grid_pos = Vector2i(empty_index % 3, empty_index / 3)
-	var directions = [Vector2i.LEFT, Vector2i.RIGHT, Vector2i.UP, Vector2i.DOWN]
-	
-	# Check all four directions around the empty space
-	for dir in directions:
-		var neighbor_pos = empty_grid_pos + dir
-		if neighbor_pos.x >= 0 and neighbor_pos.x < 3 and neighbor_pos.y >= 0 and neighbor_pos.y < 3:
-			var neighbor_index = neighbor_pos.y * 3 + neighbor_pos.x
-			
-			# Find which piece (if any) is at this neighbor position
-			for piece_id in range(8):
-				if piece_positions[piece_id] == neighbor_index:
-					moves.append(piece_id)
-					break
-	
-	return moves
+func show_win_message():
+	print("🏆 YOU WIN! Proceed to the next minigame. 🏆")
 
 func update_piece_positions():
 	# Update all piece positions based on current piece_positions
@@ -194,15 +417,3 @@ func update_piece_positions():
 		if piece_id < puzzle_pieces.size() and puzzle_pieces[piece_id]:
 			var grid_index = piece_positions[piece_id]
 			puzzle_pieces[piece_id].position = grid_positions[grid_index]
-
-# Optional: Debug drawing to visualize grid positions
-func _draw():
-	if debug_draw:
-		for i in range(grid_positions.size()):
-			var pos = grid_positions[i]
-			# Draw small red squares at grid positions
-			draw_rect(Rect2(pos - Vector2(5, 5), Vector2(10, 10)), Color.RED)
-			# Draw position numbers
-			var font = ThemeDB.fallback_font
-			var font_size = ThemeDB.fallback_font_size
-			draw_string(font, pos + Vector2(15, 5), str(i), HORIZONTAL_ALIGNMENT_LEFT, -1, font_size)

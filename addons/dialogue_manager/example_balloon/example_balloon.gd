@@ -71,7 +71,10 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	progress.visible = not dialogue_label.is_typing and dialogue_line.responses.size() == 0 and not dialogue_line.has_tag("voice")
+	if dialogue_line:
+		progress.visible = dialogue_line.responses.size() == 0 and not dialogue_line.has_tag("voice")
+	else:
+		progress.visible = false
 
 
 func _unhandled_input(_event: InputEvent) -> void:

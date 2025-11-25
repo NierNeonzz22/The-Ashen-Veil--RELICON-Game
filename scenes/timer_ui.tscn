@@ -1,0 +1,129 @@
+[gd_scene load_steps=12 format=3 uid="uid://l435jaidwcf4"]
+
+[ext_resource type="Script" uid="uid://bhecnjla72g3j" path="res://scripts/TimerUI.gd" id="1_q6nsa"]
+[ext_resource type="Texture2D" uid="uid://bo3tggy0kswhc" path="res://assets/timer_assets/A-direct-overhead-2D-pixel-art-8-Bit-sprite-design-256px-4.png" id="2_7cu1w"]
+[ext_resource type="FontFile" uid="uid://cmh0wbkpxiu25" path="res://assets/timer_assets/BoldPixels.otf" id="3_o30sn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2eidw"]
+atlas = ExtResource("2_7cu1w")
+region = Rect2(258, 189, 258, 189)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7hj1k"]
+atlas = ExtResource("2_7cu1w")
+region = Rect2(0, 189, 258, 189)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uqt1r"]
+atlas = ExtResource("2_7cu1w")
+region = Rect2(258, 0, 258, 189)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3gdqk"]
+atlas = ExtResource("2_7cu1w")
+region = Rect2(0, 0, 258, 189)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8m6yf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2eidw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7hj1k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uqt1r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3gdqk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_q6nsa"]
+resource_name = "timer_slide_down"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -100), Vector2(0, -5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TimeLabel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-30, -119), Vector2(-30, -24)]
+}
+
+[sub_resource type="Animation" id="Animation_7cu1w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TimeLabel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-30, -24)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o30sn"]
+_data = {
+&"RESET": SubResource("Animation_7cu1w"),
+&"timer_slide_down": SubResource("Animation_q6nsa")
+}
+
+[node name="TimerUI" type="Node2D"]
+position = Vector2(1002, 80)
+script = ExtResource("1_q6nsa")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -5)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_8m6yf")
+frame_progress = 0.70844275
+
+[node name="TimeLabel" type="Label" parent="."]
+offset_left = -30.0
+offset_top = -24.0
+offset_right = 90.0
+offset_bottom = 40.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("3_o30sn")
+theme_override_font_sizes/font_size = 64
+text = "1:XX"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_o30sn")
+}

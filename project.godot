@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+TransitionManager="*res://scripts/transition_manager.gd"
 
 [editor]
 
@@ -114,4 +115,4 @@ pull={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogue/Festival_Dialogue.dialogue", "res://dialogue/untitled.dialogue", "res://dialogue/Drowning_Dialogue.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogue/Festival_Dialogue.dialogue", "res://dialogue/untitled.dialogue", "res://dialogue/Drowning_Dialogue.dialogue", "res://dialogue/minigame_1.dialogue", "res://dialogue/minigame1_win.dialogue", "res://dialogue/minigame1_lose.dialogue", "res://dialogue/minigame_4_intro.dialogue", "res://dialogue/minigame_4_win.dialogue", "res://dialogue/minigame_4_lose.dialogue")

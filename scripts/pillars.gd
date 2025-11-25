@@ -18,7 +18,7 @@ signal lit_changed(pillar)
 signal pillar_hit(pillar, redirect_angle)
 
 # --- NODES ---
-@onready var sprite_node: Sprite2D = $Sprite2D
+@onready var sprite_unlit_node: Sprite2D = $Sprite2D
 @onready var sprite_lit_node: Sprite2D = $Sprite2D_Lit
 
 func _ready():
@@ -36,17 +36,21 @@ func light_up() -> void:
 		_update_visual()
 		emit_signal("lit_changed", self)
 		emit_signal("pillar_hit", self, redirect_angle)
+		print(name, " is now LIT!")
 
 func unlight() -> void:
 	if is_lit:
 		is_lit = false
 		_update_visual()
 		emit_signal("lit_changed", self)
-
+		print(name, " is now UNLIT!")
+		
 func _update_visual() -> void:
-	if sprite_node and sprite_lit_node:
-		sprite_node.visible = not is_lit
+	if sprite_unlit_node and sprite_lit_node:
+		sprite_unlit_node.visible = not is_lit
 		sprite_lit_node.visible = is_lit
+	else:
+		print("ERROR: Sprite nodes not found in ", name)
 
 # ---------------------------
 #   MOVEMENT METHODS

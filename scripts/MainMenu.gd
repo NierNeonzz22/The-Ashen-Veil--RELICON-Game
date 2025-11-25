@@ -1,17 +1,27 @@
 extends Control
 
-@onready var fade_layer: ColorRect = $FadeLayer
-@onready var anim: AnimationPlayer = $AnimationPlayer
-@onready var start_button: Button = $UI/StartButton   # adjust if different path
+@onready var start_button: Button = $UI/StartButton
 
 func _ready() -> void:
-	fade_layer.modulate.a = 0.0
-	fade_layer.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	print("=== DEBUG INFO ===")
+	print("TransitionManager exists: ", has_node("/root/TransitionManager"))
+	
+	if has_node("/root/TransitionManager"):
+		var tm = get_node("/root/TransitionManager")
+		print("TransitionManager methods:")
+		print("- has transition_to_scene: ", tm.has_method("transition_to_scene"))
+		print("- has setup_transition: ", tm.has_method("setup_transition"))
+	else:
+		print("ERROR: TransitionManager not found in Globals/Autoload!")
 
 func _on_start_button_pressed() -> void:
-	print("Start button pressed!")  # ✅ test line
+	print("Start button pressed!")
 	start_button.disabled = true
-	fade_layer.mouse_filter = Control.MOUSE_FILTER_STOP
-	anim.play("fade_out")
-	await anim.animation_finished
-	get_tree().change_scene_to_file("res://scripts/scene_1_festival_scene.gd")
+	
+	if has_node("/root/TransitionManager"):
+		print("Calling TransitionManager...")
+		TransitionManager.transition_to_scene("res://scenes/cutscene_1.tscn")
+	else:
+		print("ERROR: TransitionManager not available!")
+		# Fallback - direct scene change
+		get_tree().change_scene_to_file("res://scenes/cutscene_1.tscn")

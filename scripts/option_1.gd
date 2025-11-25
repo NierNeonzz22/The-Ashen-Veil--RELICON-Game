@@ -1,0 +1,9 @@
+extends Button
+
+
+func _on_pressed():
+	get_tree().change_scene_to_file("res://scenes/option_1_&_3_result (scene 3 first choice).tscn")
+
+
+func _on_option_3_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/option_1_&_3_result (scene 3 first choice).tscn")

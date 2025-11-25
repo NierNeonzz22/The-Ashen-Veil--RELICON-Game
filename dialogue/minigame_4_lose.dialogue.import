@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://5eikdbgccs5n"
+path="res://.godot/imported/minigame_4_lose.dialogue-c72729125dde86b4d30dd2ed6898b9ac.tres"
+
+[deps]
+
+source_file="res://dialogue/minigame_4_lose.dialogue"
+dest_files=["res://.godot/imported/minigame_4_lose.dialogue-c72729125dde86b4d30dd2ed6898b9ac.tres"]
+
+[params]
+
+defaults=true

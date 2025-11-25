@@ -1,13 +1,19 @@
-[gd_scene load_steps=20 format=3 uid="uid://cygdilg04c7p1"]
+[gd_scene load_steps=27 format=3 uid="uid://cygdilg04c7p1"]
 
 [ext_resource type="Texture2D" uid="uid://e6bv4j1pihhh" path="res://assets/Minigame Assets/CAVE MAP SEMIFINAL(no pillar).png" id="1_hsioi"]
 [ext_resource type="Script" uid="uid://bbi0aiygulkhi" path="res://scripts/tristan_gameplaymoveset.gd" id="3_646de"]
 [ext_resource type="Texture2D" uid="uid://bjr4uxx2ar0q8" path="res://assets/Minigame Assets/BETA SPRITE SHEET TRISTANuntitled.png" id="3_hsioi"]
 [ext_resource type="Texture2D" uid="uid://dy6qmivauw827" path="res://assets/Minigame Assets/di na lit.png" id="4_646de"]
 [ext_resource type="Script" uid="uid://csuqx2qaf3kne" path="res://scripts/puzzle_manager.gd" id="4_wmemh"]
+[ext_resource type="Resource" uid="uid://c6jnifc153jvo" path="res://dialogue/minigame1_win.dialogue" id="5_gf44f"]
 [ext_resource type="Script" uid="uid://k0phkww4q2wb" path="res://scripts/light_source.gd" id="5_tbmet"]
 [ext_resource type="Script" uid="uid://bkat805frbxgd" path="res://scripts/pillars.gd" id="5_wmemh"]
+[ext_resource type="Resource" uid="uid://ctsbk5yu3jvuw" path="res://dialogue/minigame1_lose.dialogue" id="6_3mf75"]
+[ext_resource type="PackedScene" uid="uid://dvtjxed4d43xa" path="res://scenes/gem_1.tscn" id="7_nd5ua"]
 [ext_resource type="Texture2D" uid="uid://c0lolbtib4iel" path="res://assets/Minigame Assets/medyo lit.png" id="7_tbmet"]
+[ext_resource type="PackedScene" uid="uid://l435jaidwcf4" path="res://scenes/timer_ui.tscn" id="8_68v71"]
+[ext_resource type="Script" path="res://scripts/dialogue_trigger.gd" id="8_tbmet"]
+[ext_resource type="PackedScene" uid="uid://dnnxk1og0cl4p" path="res://scenes/fade_in_fade_out.tscn" id="9_j6fwm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_646de"]
 size = Vector2(5.6457405, 5.7133865)
@@ -89,6 +95,9 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tbmet"]
 size = Vector2(19, 81)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o2xqm"]
+size = Vector2(54, 140)
 
 [node name="Node2D" type="Node2D"]
 
@@ -234,6 +243,15 @@ animation = &"Right"
 
 [node name="PuzzleManager" type="Node" parent="."]
 script = ExtResource("4_wmemh")
+pillars = Array[NodePath]([NodePath("../Pillar1"), NodePath("../Pillar2"), NodePath("../Pillar3"), NodePath("../Pillar4"), NodePath("../Pillar5"), NodePath("../Pillar6"), NodePath("../Pillar7"), NodePath("../Pillar8")])
+win_dialogue_resource = ExtResource("5_gf44f")
+lose_dialogue_resource = ExtResource("6_3mf75")
+game_time = 180.0
+gem_scene = ExtResource("7_nd5ua")
+timer_ui_scene = ExtResource("8_68v71")
+fade_scene = ExtResource("9_j6fwm")
+
+[node name="Timer" type="Timer" parent="PuzzleManager"]
 
 [node name="LightSource" type="Node2D" parent="."]
 position = Vector2(527, 613)
@@ -249,11 +267,16 @@ points = PackedVector2Array(-10, 5, -111, -70, -168, -134, -159, -299, -51, -413
 default_color = Color(0.85112935, 0.9084997, 0.5137726, 1)
 
 [node name="Pillar1" type="CharacterBody2D" parent="."]
-position = Vector2(439, 309)
+position = Vector2(448, 339)
 script = ExtResource("5_wmemh")
 sprite_unlit = ExtResource("4_646de")
 sprite_lit = ExtResource("7_tbmet")
-redirect_angle = 90.0
+redirect_angle = 92.0
+
+[node name="Sprite2D_Lit" type="Sprite2D" parent="Pillar1"]
+position = Vector2(6, -66)
+scale = Vector2(0.9, 0.823)
+texture = ExtResource("7_tbmet")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pillar1"]
 texture_filter = 1
@@ -266,11 +289,16 @@ position = Vector2(-0.5, -31.5)
 shape = SubResource("RectangleShape2D_tbmet")
 
 [node name="Pillar2" type="CharacterBody2D" parent="."]
-position = Vector2(490, 308)
+position = Vector2(505, 295)
 script = ExtResource("5_wmemh")
 sprite_unlit = ExtResource("4_646de")
 sprite_lit = ExtResource("7_tbmet")
 redirect_angle = 135.0
+
+[node name="Sprite2D_Lit" type="Sprite2D" parent="Pillar2"]
+position = Vector2(5, -61)
+scale = Vector2(0.9, 0.823)
+texture = ExtResource("7_tbmet")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pillar2"]
 texture_filter = 1
@@ -283,11 +311,16 @@ position = Vector2(-0.5, -31.5)
 shape = SubResource("RectangleShape2D_tbmet")
 
 [node name="Pillar3" type="CharacterBody2D" parent="."]
-position = Vector2(547, 300)
+position = Vector2(637, 280)
 script = ExtResource("5_wmemh")
 sprite_unlit = ExtResource("4_646de")
 sprite_lit = ExtResource("7_tbmet")
 redirect_angle = 180.0
+
+[node name="Sprite2D_Lit" type="Sprite2D" parent="Pillar3"]
+position = Vector2(5, -61)
+scale = Vector2(0.9, 0.823)
+texture = ExtResource("7_tbmet")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pillar3"]
 texture_filter = 1
@@ -300,11 +333,16 @@ position = Vector2(-0.5, -31.5)
 shape = SubResource("RectangleShape2D_tbmet")
 
 [node name="Pillar4" type="CharacterBody2D" parent="."]
-position = Vector2(605, 302)
+position = Vector2(767, 311)
 script = ExtResource("5_wmemh")
 sprite_unlit = ExtResource("4_646de")
 sprite_lit = ExtResource("7_tbmet")
 redirect_angle = 225.0
+
+[node name="Sprite2D_Lit" type="Sprite2D" parent="Pillar4"]
+position = Vector2(5, -61)
+scale = Vector2(0.9, 0.823)
+texture = ExtResource("7_tbmet")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pillar4"]
 texture_filter = 1
@@ -317,11 +355,16 @@ position = Vector2(-0.5, -31.5)
 shape = SubResource("RectangleShape2D_tbmet")
 
 [node name="Pillar5" type="CharacterBody2D" parent="."]
-position = Vector2(609, 368)
+position = Vector2(772, 464)
 script = ExtResource("5_wmemh")
 sprite_unlit = ExtResource("4_646de")
 sprite_lit = ExtResource("7_tbmet")
 redirect_angle = 270.0
+
+[node name="Sprite2D_Lit" type="Sprite2D" parent="Pillar5"]
+position = Vector2(5, -61)
+scale = Vector2(0.9, 0.823)
+texture = ExtResource("7_tbmet")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pillar5"]
 texture_filter = 1
@@ -334,11 +377,16 @@ position = Vector2(-0.5, -31.5)
 shape = SubResource("RectangleShape2D_tbmet")
 
 [node name="Pillar6" type="CharacterBody2D" parent="."]
-position = Vector2(538, 363)
+position = Vector2(649, 575)
 script = ExtResource("5_wmemh")
 sprite_unlit = ExtResource("4_646de")
 sprite_lit = ExtResource("7_tbmet")
 redirect_angle = 315.0
+
+[node name="Sprite2D_Lit" type="Sprite2D" parent="Pillar6"]
+position = Vector2(5, -61)
+scale = Vector2(0.9, 0.823)
+texture = ExtResource("7_tbmet")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pillar6"]
 texture_filter = 1
@@ -351,10 +399,15 @@ position = Vector2(-0.5, -31.5)
 shape = SubResource("RectangleShape2D_tbmet")
 
 [node name="Pillar7" type="CharacterBody2D" parent="."]
-position = Vector2(489, 375)
+position = Vector2(478, 578)
 script = ExtResource("5_wmemh")
 sprite_unlit = ExtResource("4_646de")
 sprite_lit = ExtResource("7_tbmet")
+
+[node name="Sprite2D_Lit" type="Sprite2D" parent="Pillar7"]
+position = Vector2(5, -61)
+scale = Vector2(0.9, 0.823)
+texture = ExtResource("7_tbmet")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pillar7"]
 texture_filter = 1
@@ -367,11 +420,16 @@ position = Vector2(-0.5, -31.5)
 shape = SubResource("RectangleShape2D_tbmet")
 
 [node name="Pillar8" type="CharacterBody2D" parent="."]
-position = Vector2(428, 371)
+position = Vector2(449, 397)
 script = ExtResource("5_wmemh")
 sprite_unlit = ExtResource("4_646de")
 sprite_lit = ExtResource("7_tbmet")
 redirect_angle = 45.0
+
+[node name="Sprite2D_Lit" type="Sprite2D" parent="Pillar8"]
+position = Vector2(5, -61)
+scale = Vector2(0.9, 0.823)
+texture = ExtResource("7_tbmet")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pillar8"]
 texture_filter = 1
@@ -382,3 +440,11 @@ texture = ExtResource("4_646de")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pillar8"]
 position = Vector2(-0.5, -31.5)
 shape = SubResource("RectangleShape2D_tbmet")
+
+[node name="DialogueTrigger" type="Area2D" parent="."]
+position = Vector2(547, 15)
+script = ExtResource("8_tbmet")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueTrigger"]
+position = Vector2(12, 60)
+shape = SubResource("RectangleShape2D_o2xqm")

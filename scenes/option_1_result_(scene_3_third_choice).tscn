@@ -1,0 +1,482 @@
+[gd_scene load_steps=9 format=3 uid="uid://du0lwlkdoyju6"]
+
+[ext_resource type="Texture2D" uid="uid://ci8m7lmaxtpjt" path="res://dagat.png" id="1_hjgyr"]
+[ext_resource type="Texture2D" uid="uid://cgsen5qqwvtkq" path="res://assets/assets_scene 3/NAMARU SMILE.png" id="2_amd16"]
+[ext_resource type="Script" uid="uid://dl04oy7hgbu38" path="res://scripts/button_1(4).gd" id="3_kaf2r"]
+[ext_resource type="Script" uid="uid://dkftnkla0nvqk" path="res://scripts/button_2(4).gd" id="4_q0xkv"]
+[ext_resource type="Script" uid="uid://dnaab2twdrv15" path="res://scripts/button_3(4).gd" id="5_e58eb"]
+
+[sub_resource type="Animation" id="Animation_kaf2r"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dagat:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Namaru(Smile):modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node/ColorRect:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.60784316)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node/Dialogue2:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["The gentle spirit whispers, voice too sweet to be safe."]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node/Dialogue1:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["
+Then we'll have you. Another spirit caught in the rune's web. Another echo fading into the ashen void."]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node/Dialogue2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Namaru(Smile):scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.2931654, 0.27799124)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node/Namaru:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node/Dialogue1:theme_override_colors/default_color")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.99961597, 0.044159926, 0.024477568, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Control/Button1(4):modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Control/Button2(4):modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Control/Button3(4):modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Control/Button1(4):position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(280, 217)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Control/Button2(4):position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(279, 302)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Control/Button3(4):position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(279, 391)]
+}
+
+[sub_resource type="Animation" id="Animation_1foqp"]
+resource_name = "Scene"
+length = 17.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dagat:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Namaru(Smile):modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2.3, 8.1, 8.133333, 15.166667, 15.166867),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0.50928617, 0.5092862, 0.509286, 1), Color(0.50928617, 0.5092862, 0.509286, 1), Color(0.3703643, 0.37036455, 0.37036443, 1), Color(0.3703643, 0.37036455, 0.37036443, 1), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node/ColorRect:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 14, 15),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.60784316), Color(0, 0, 0, 0.60784316), Color(0, 0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node/Dialogue2:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "The gentle spirit whispers, voice too sweet to be safe."]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node/Dialogue1:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(8.2, 12),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "
+Then we'll have you. Another spirit caught in the rune's web. Another echo fading into the ashen void."]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node/Dialogue2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(5, 7, 8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Namaru(Smile):scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 8.1, 8.133333, 15.166667, 15.166867),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.2931654, 0.27799124), Vector2(0.2931654, 0.27799124), Vector2(0.4, 0.38), Vector2(0.4, 0.38), Vector2(0.293, 0.278)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node/Namaru:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(8.2, 8.233334, 14, 15),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node/Dialogue1:theme_override_colors/default_color")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(12, 14, 15),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.99961597, 0.044159926, 0.024477568, 1), Color(0.99961597, 0.044159926, 0.024477568, 1), Color(1, 0.043137256, 0.023529412, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Control/Button1(4):modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(15.2, 16.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Control/Button2(4):modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(15.2, 16.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Control/Button3(4):modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(15.2, 16.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Control/Button1(4):position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(-1.6, -0.76666665, 15.2, 15.2002),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(280, 217), Vector2(-781, 217), Vector2(-781, 217), Vector2(280, 217)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Control/Button2(4):position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(-1.6, -0.76666665, 15.2, 15.2002),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(279, 302), Vector2(-778, 302), Vector2(-778, 302), Vector2(278, 302)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Control/Button3(4):position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(-1.6, -0.76666665, 15.2, 15.2002),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(279, 391), Vector2(-778, 391), Vector2(-778, 391), Vector2(279, 391)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q0xkv"]
+_data = {
+&"RESET": SubResource("Animation_kaf2r"),
+&"Scene": SubResource("Animation_1foqp")
+}
+
+[node name="Option 1 result (scene 3 Third choice)" type="Node2D"]
+
+[node name="Dagat" type="Sprite2D" parent="."]
+position = Vector2(576, 323)
+scale = Vector2(3.6062498, 3.6000001)
+texture = ExtResource("1_hjgyr")
+
+[node name="Namaru(Smile)" type="Sprite2D" parent="."]
+position = Vector2(531.84894, 368.663)
+scale = Vector2(0.2931654, 0.27799124)
+texture = ExtResource("2_amd16")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_q0xkv")
+}
+autoplay = "Scene"
+
+[node name="Node" type="Node" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Node"]
+offset_left = 39.0
+offset_top = 504.0
+offset_right = 1118.0
+offset_bottom = 637.0
+color = Color(0, 0, 0, 0.60784316)
+
+[node name="Namaru" type="RichTextLabel" parent="Node"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 60.0
+offset_top = 514.0
+offset_right = 319.0
+offset_bottom = 560.0
+theme_override_colors/default_color = Color(0.59607846, 1, 0.59607846, 1)
+theme_override_font_sizes/normal_font_size = 30
+text = "Namaru:"
+
+[node name="Dialogue1" type="RichTextLabel" parent="Node"]
+offset_left = 61.0
+offset_top = 517.0
+offset_right = 1108.0
+offset_bottom = 632.0
+theme_override_colors/default_color = Color(0.99961597, 0.044159926, 0.024477568, 1)
+theme_override_font_sizes/normal_font_size = 27
+text = "
+Then we'll have you. Another spirit caught in the rune's web. Another echo fading into the ashen void."
+
+[node name="Dialogue2" type="RichTextLabel" parent="Node"]
+offset_left = 59.0
+offset_top = 513.0
+offset_right = 1107.0
+offset_bottom = 634.0
+theme_override_font_sizes/normal_font_size = 29
+text = "The gentle spirit whispers, voice too sweet to be safe."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button1(4)" type="Button" parent="Control"]
+custom_minimum_size = Vector2(568, 0)
+layout_mode = 0
+offset_left = 280.0
+offset_top = 217.0
+offset_right = 848.0
+offset_bottom = 275.0
+theme_override_font_sizes/font_size = 30
+text = "“Then tell me what I have to do.”"
+script = ExtResource("3_kaf2r")
+
+[node name="Button2(4)" type="Button" parent="Control"]
+custom_minimum_size = Vector2(568, 58)
+layout_mode = 0
+offset_left = 279.0
+offset_top = 302.0
+offset_right = 847.0
+offset_bottom = 360.0
+theme_override_font_sizes/font_size = 30
+text = "“Please… help me.”"
+script = ExtResource("4_q0xkv")
+
+[node name="Button3(4)" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 391.0
+offset_right = 847.0
+offset_bottom = 449.0
+theme_override_font_sizes/font_size = 30
+text = "*Stay silent*
+"
+script = ExtResource("5_e58eb")
+
+[connection signal="pressed" from="Control/Button1(4)" to="Control/Button1(4)" method="_on_pressed"]
+[connection signal="pressed" from="Control/Button2(4)" to="Control/Button2(4)" method="_on_pressed"]
+[connection signal="pressed" from="Control/Button3(4)" to="Control/Button3(4)" method="_on_pressed"]

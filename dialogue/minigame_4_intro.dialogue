@@ -1,0 +1,39 @@
+~ start
+
+I walked until I found a girl sitting on the floor, next to shattered fragments of what seemed to be an image of something. 
+
+Niuala: Stupid…puzzle…
+
+The girl turns to me and flinches in shock.
+
+Niuala: Gah! W-who are you, sir?
+
+- [TELL HER]
+	Tristan: My name’s Tristan…Huni told me about you…
+	Niuala: He did? Oh…you must’ve solved his rune, then!
+	I blinked, before nodding in agreement. 
+	Tristan: Yes, and I’m here to solve yours too.
+	My assurance makes her grin in relief.
+	Niuala: Thank you, mister Tristan!
+	I smile, her appreciation warming my heart. I point to the fragmented images beside her.
+	Tristan: Is this it? A puzzle?
+	She sheepishly answers.
+	Niuala: Yes, I- I can’t seem to put it together…
+	Tristan: Don’t worry…I’ve got it.
+	I walk to start.
+	=> END
+
+- [DON’T TELL HER]
+	Tristan: I’d…rather not say. All you need to know is Huni sent me to you…
+	Niuala: He did? Oh…you must’ve solved his rune, then!
+	I blinked, before nodding in agreement. 
+	Tristan: Yes, and I’m here to solve yours too.
+	My assurance makes her grin in relief.
+	Niuala: Thank you, mister Tristan!
+	I smile, her appreciation warming my heart. I point to the fragmented images beside her.
+	Tristan: Is this it? A puzzle?
+	She sheepishly answers.
+	Niuala: Yes, I- I can’t seem to put it together…
+	Tristan: Don’t worry…I’ve got it.
+	I walk to start.
+=> END

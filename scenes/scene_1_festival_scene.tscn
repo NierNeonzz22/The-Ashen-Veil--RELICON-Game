@@ -388,40 +388,41 @@ position = Vector2(575.3685, 323.32574)
 scale = Vector2(0.05628049, 0.056535758)
 texture = ExtResource("1_3axev")
 
-[node name="Tristan" type="AnimatedSprite2D" parent="."]
+[node name="Tristan_body" type="AnimatedSprite2D" parent="."]
 top_level = true
-position = Vector2(215.99998, 301)
-scale = Vector2(0.2, 0.2)
+position = Vector2(565, 350)
+scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_6ti62")
 animation = &"talk"
 frame = 2
 frame_progress = 0.95435303
 
-[node name="Tristan Eyebrows" type="AnimatedSprite2D" parent="Tristan"]
+[node name="Tristan Eyebrows" type="AnimatedSprite2D" parent="Tristan_body"]
 top_level = true
-position = Vector2(217, 304)
-scale = Vector2(0.2, 0.2)
+position = Vector2(563, 354)
+scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_wlofc")
 animation = &"TNeutral_brow"
 frame_progress = 0.45347208
 
-[node name="Tristan Mouth" type="AnimatedSprite2D" parent="Tristan"]
+[node name="Tristan Mouth" type="AnimatedSprite2D" parent="Tristan_body"]
 top_level = true
-position = Vector2(216.00002, 252)
-scale = Vector2(0.2, 0.2)
+position = Vector2(565, 280)
+scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_p4hv8")
 animation = &"Ttalk"
 frame_progress = 0.32499915
 
-[node name="Tristan Eyes" type="AnimatedSprite2D" parent="Tristan"]
+[node name="Tristan Eyes" type="AnimatedSprite2D" parent="Tristan_body"]
 show_behind_parent = true
 top_level = true
-position = Vector2(217.00003, 208)
-scale = Vector2(0.18313801, 0.19136363)
+position = Vector2(566, 213)
+scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_ia6mi")
 animation = &"Tbig_eye"
 
 [node name="Elia" type="AnimatedSprite2D" parent="."]
+visible = false
 position = Vector2(957, 301)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_8g0nw")
@@ -444,3 +445,5 @@ sprite_frames = SubResource("SpriteFrames_kq8og")
 animation = &"Eneutral_mouth"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Tristan2" type="Node2D" parent="."]
