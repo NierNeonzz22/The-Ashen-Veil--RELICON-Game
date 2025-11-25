@@ -1,0 +1,282 @@
+[gd_scene load_steps=6 format=3 uid="uid://c2mwpo5kf4li5"]
+
+[ext_resource type="Texture2D" uid="uid://54pore35p3s2" path="res://dagat.png" id="1_sff5n"]
+[ext_resource type="Texture2D" uid="uid://27i2qb3ms0fh" path="res://NAMARU SAD.png" id="2_0oilc"]
+
+[sub_resource type="Animation" id="Animation_y8anv"]
+resource_name = "namaru intro"
+length = 34.546
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("bg:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 32.866665, 34.166668),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node/Panel/d1:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.9666667, 8.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "Namaru leads me to an area with a set of pillars, each of which shooting a ray of light in various directions. "]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node/Panel/d2:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(9.266666, 20.266666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": ["[b]NAMARU[/b]", "[b]NAMARU[/b]"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node/Panel/d3:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(22.133331, 30.099998),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "I look at the pillars shooting light, and I think. Maybe, I should turn them around so they form a shape, maybe a circular one? I walk to start. "]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node/Panel/d2/d2_1:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(9.166667, 20.066668),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "This is the rune I was tied to, the one I’ve been trying to pass for decades, almost. Maybe they’re supposed to make a shape? I can never be sure, all I know is you can turn them. Act fast, there is a limit to how long you can try to solve it. Take too long, and you drown…"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node/Panel/d1:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(8.9, 9.133333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node/Panel/d2:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(9.266667, 9.566667, 20.499998, 20.933332),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node/Panel/d3:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(22.2, 22.5, 30.233332, 30.666666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("NamaruSad:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 2, 32.8, 34.266666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_qns2l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("bg:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node/Panel/d1:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node/Panel/d1:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node/Panel/d2:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["[b]NAMARU[/b]"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node/Panel/d2:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node/Panel/d2/d2_1:text")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node/Panel/d3:text")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qd5ks"]
+_data = {
+&"RESET": SubResource("Animation_qns2l"),
+&"namaru intro": SubResource("Animation_y8anv")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="bg" type="Sprite2D" parent="."]
+position = Vector2(584.4444, 324.375)
+scale = Vector2(3.6486115, 3.6486113)
+texture = ExtResource("1_sff5n")
+
+[node name="NamaruSad" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(563, 328)
+scale = Vector2(0.31616205, 0.3161621)
+texture = ExtResource("2_0oilc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_qd5ks")
+}
+autoplay = "namaru intro"
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Panel" type="Panel" parent="Node"]
+anchors_preset = -1
+anchor_left = 0.031000001
+anchor_top = 0.76100004
+anchor_right = 0.96400005
+anchor_bottom = 0.96300006
+offset_left = 0.2879982
+offset_top = -0.12802124
+offset_right = 0.47192383
+offset_bottom = -0.024047852
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="d1" type="RichTextLabel" parent="Node/Panel"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 8.0
+offset_right = 1056.0
+offset_bottom = 116.0
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+
+[node name="d2" type="RichTextLabel" parent="Node/Panel"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 8.0
+offset_right = 1063.0
+offset_bottom = 140.0
+theme_override_colors/default_color = Color(0.8627451, 0.78039217, 1, 1)
+theme_override_font_sizes/normal_font_size = 22
+theme_override_font_sizes/bold_font_size = 24
+bbcode_enabled = true
+text = "[b]NAMARU[/b]"
+
+[node name="d2_1" type="RichTextLabel" parent="Node/Panel/d2"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 29.0
+offset_right = 1049.0
+offset_bottom = 141.0
+theme_override_font_sizes/normal_font_size = 22
+
+[node name="d3" type="RichTextLabel" parent="Node/Panel"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 10.0
+offset_top = 8.0
+offset_right = 1055.0
+offset_bottom = 120.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
