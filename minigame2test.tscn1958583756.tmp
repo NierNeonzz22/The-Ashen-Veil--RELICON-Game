@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://c8vcakbgkunrq"]
+[gd_scene load_steps=59 format=3 uid="uid://c8vcakbgkunrq"]
 
 [ext_resource type="Texture2D" uid="uid://cm04fddpjnbk2" path="res://Minigame Assets/minigame2 semifinal.png" id="1_3m0ai"]
 [ext_resource type="Script" uid="uid://d04c8vgeaakm4" path="res://minigame_2_test.gd" id="1_7yig0"]
@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://dvxwfik12txg1" path="res://Minigame Assets/seaweed 2.png" id="23_ju6ib"]
 [ext_resource type="Texture2D" uid="uid://bgd5h7ki0qti4" path="res://Minigame Assets/seaweed 3.png" id="24_bwf24"]
 [ext_resource type="Script" uid="uid://cxip1d7hybna5" path="res://color1_rect.gd" id="28_bwf24"]
+[ext_resource type="Script" uid="uid://bn710g4n21ri" path="res://timer.gd" id="29_p73p4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7yig0"]
 size = Vector2(40.455566, 36.338097)
@@ -722,6 +723,7 @@ script = ExtResource("28_bwf24")
 metadata/_edit_use_anchors_ = true
 
 [node name="Timer" type="Timer" parent="."]
+script = ExtResource("29_p73p4")
 
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0

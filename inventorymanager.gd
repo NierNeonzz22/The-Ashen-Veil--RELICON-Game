@@ -3,6 +3,7 @@ extends Node2D  # Or Control if this is managing UI
 @onready var inventory_panel: Panel = $"CanvasLayer/InventoryPanel"  # Inventory Panel
 @onready var player: CharacterBody2D = $"CharacterBody2D"  # Path to the player node
 
+
 var draggable_sprite_instance: Sprite2D = null  # To hold the instance of the draggable sprite
 var is_inventory_open = false
 

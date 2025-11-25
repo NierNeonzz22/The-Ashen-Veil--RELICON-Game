@@ -1,6 +1,10 @@
 extends Node2D
 
 @onready var inventory_panel: ColorRect = $"ColorRect" 
+@onready var timer = $Timer
+@onready var label = $Label
+var countdown_time = 1000  # replace this with however long it needs to be
+var current_time = countdown_time
 
 @onready var draggable_objects: Array = [
 	$"Sprite2D2", $"Sprite2D3", $"Sprite2D4",
@@ -57,7 +61,7 @@ var unlocked_items := {}
 var selected_sprite: Sprite2D = null
 var mouse_offset: Vector2 = Vector2.ZERO
 var is_inventory_open := false
-
+var timer_running := true  # Flag to control timer state
 
 
 ###############################
@@ -76,7 +80,12 @@ func _ready():
 
 	$"ColorRect/ResetButton".visible = false
 	$"ColorRect/ResetButton".pressed.connect(_on_reset_pressed)
-
+	label.text = str(current_time)
+	
+	timer.connect("timeout", Callable(self, "_on_Timer_timeout"))
+	
+	#timer inverval of 1 second 
+	timer.start(countdown_time)
 
 
 ###############################
@@ -88,7 +97,14 @@ func _process(delta):
 
 	if selected_sprite:
 		selected_sprite.position = get_global_mouse_position() + mouse_offset
-
+		
+	# Timer code
+	if timer_running and not timer.is_stopped():
+		current_time = int(timer.time_left)
+		label.text = str(current_time)
+	elif current_time <= 0:
+		#You probably dont need this
+		label.text = "Time's Up!"
 
 
 ###############################
@@ -124,7 +140,7 @@ func unlock_item_for_rock(rock_name: String):
 		unlocked_items[sprite_name] = true
 		print("Unlocked item: ", sprite_name)
 
-		update_inventory_visibility()  # <--- important
+		update_inventory_visibility()  #dont touch
 
 
 
@@ -181,7 +197,7 @@ func sprite_over_slot(sprite: Sprite2D, slot: Area2D) -> bool:
 	var shape := slot.get_node("CollisionShape2D").shape as RectangleShape2D
 	var half: Vector2 = shape.extents
 
-	var forgiveness := 40  # easier to drop inside
+	var forgiveness := 40  #adjust to make snapping easier
 
 	var slot_rect := Rect2(
 		slot.global_position - half - Vector2(forgiveness, forgiveness),
@@ -203,3 +219,8 @@ func _on_reset_pressed():
 	for slot in slots:
 		slot.get_node("Highlight").color = Color(1, 0, 0, 0.4)
 		
+func _on_Timer_timeout():
+	if current_time <= 0:
+		label.text = "Time's Up!"
+		# NOTE TRANSTITION GAME OVER OR RESTART HERE!!!!!!!
+		timer_running = false
