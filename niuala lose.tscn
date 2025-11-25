@@ -1,0 +1,458 @@
+[gd_scene load_steps=6 format=3 uid="uid://bm5lu3fgwms5i"]
+
+[ext_resource type="Texture2D" uid="uid://b101mo5y2073t" path="res://assets/assets scene 4/dagat.png" id="1_qe1s5"]
+[ext_resource type="Texture2D" uid="uid://dpqpjd60tm5j8" path="res://assets/assets scene 4/NIUALA SAD.png" id="2_ppajw"]
+
+[sub_resource type="Animation" id="Animation_agv2x"]
+resource_name = "niuala lose"
+length = 42.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dagat:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.1271002, 38.308758, 39.75204),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node/Panel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(3.1271002, 4.347013),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node/Panel/My body could sense the child’s disappointment_:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(4.3813767, 6.958657, 8.161388, 10.3263035),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": ["", "My body could sense the child’s disappointment.", "My body could sense the child’s disappointment.", "My body could sense the child’s disappointment. The light began to fade, the air growing colder. "]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node/Panel/My body could sense the child’s disappointment_:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(10.927669, 11.992945),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node/Panel/Niuala:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node/Panel/Niuala:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(13.470585, 14.902407, 17.867998, 18.933273),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("NiualaSad:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(12.514128, 13.94595, 17.867998, 18.933273),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node/Panel/You ran out of time!:text")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(14.318224, 15.4006815, 16.895506),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": ["", "
+ You ran out of time!", "
+ You ran out of time!"]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node/Panel/You ran out of time!:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(17.867998, 18.933273),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node/Panel/She said in a panic, her voice shrill and frisky_:text")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(19.57473, 23.06265, 23.543743),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": ["", "She said in a panic, her voice shrill and frisky.
+", "She said in a panic, her voice shrill and frisky.
+"]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node/Panel/She said in a panic, her voice shrill and frisky_:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(19.586185, 23.930906, 24.996181),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node/Panel/A cold current seized and pulled me downwards_ I struggled against it, but the water was too strong_ The surface, a distant memory, receded from view_:text")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(25.65253, 27.468327, 28.415987, 30.081968, 31.849321, 34.168327, 35.74932),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": ["", "A cold current seized and pulled me downwards.", "A cold current seized and pulled me downwards.", "A cold current seized and pulled me downwards. I struggled against it, but the water was too strong.", "A cold current seized and pulled me downwards. I struggled against it, but the water was too strong.", "A cold current seized and pulled me downwards. I struggled against it, but the water was too strong. The surface, a distant memory, receded from view.", "A cold current seized and pulled me downwards. I struggled against it, but the water was too strong. The surface, a distant memory, receded from view."]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node/Panel/A cold current seized and pulled me downwards_ I struggled against it, but the water was too strong_ The surface, a distant memory, receded from view_:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(36.348816, 37.414093),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Node/Panel/Darkness closed in_:text")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(37.930763, 38.961678),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "Darkness closed in."]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node/Panel/Darkness closed in_:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(39.975403, 41.04068),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_t3p4t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dagat:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node/Panel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node/Panel/My body could sense the child’s disappointment_:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node/Panel/My body could sense the child’s disappointment_:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node/Panel/Niuala:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("NiualaSad:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node/Panel/You ran out of time!:text")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node/Panel/You ran out of time!:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node/Panel/She said in a panic, her voice shrill and frisky_:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node/Panel/She said in a panic, her voice shrill and frisky_:text")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["She said in a panic, her voice shrill and frisky."]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node/Panel/A cold current seized and pulled me downwards_ I struggled against it, but the water was too strong_ The surface, a distant memory, receded from view_:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node/Panel/Darkness closed in_:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ews61"]
+_data = {
+&"RESET": SubResource("Animation_t3p4t"),
+&"niuala lose": SubResource("Animation_agv2x")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Dagat" type="Sprite2D" parent="."]
+position = Vector2(575.5, 325)
+scale = Vector2(3.596875, 3.588889)
+texture = ExtResource("1_qe1s5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ews61")
+}
+autoplay = "niuala lose"
+
+[node name="NiualaSad" type="Sprite2D" parent="."]
+position = Vector2(179, 391)
+scale = Vector2(0.2724609, 0.27246097)
+texture = ExtResource("2_ppajw")
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Panel" type="Panel" parent="Node"]
+modulate = Color(0, 0, 0, 0)
+self_modulate = Color(0.019607844, 0.019607844, 0.019607844, 0.78431374)
+offset_left = 55.0
+offset_top = 516.0
+offset_right = 1090.0
+offset_bottom = 620.0
+metadata/_edit_use_anchors_ = true
+
+[node name="My body could sense the child’s disappointment_" type="RichTextLabel" parent="Node/Panel"]
+layout_mode = 0
+offset_left = 1.000061
+offset_top = 3.0
+offset_right = 1037.0
+offset_bottom = 104.99999
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Niuala" type="RichTextLabel" parent="Node/Panel"]
+modulate = Color(0, 0, 0, 0)
+layout_mode = 0
+offset_left = 2.000122
+offset_top = 6.0
+offset_right = 1038.0001
+offset_bottom = 106.0
+theme_override_colors/default_color = Color(0.8627451, 0.78039217, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 28
+text = " Niuala:"
+metadata/_edit_use_anchors_ = true
+
+[node name="You ran out of time!" type="RichTextLabel" parent="Node/Panel"]
+layout_mode = 0
+offset_left = 1.000061
+offset_top = 3.0
+offset_right = 1037.0
+offset_bottom = 104.99999
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 27
+metadata/_edit_use_anchors_ = true
+
+[node name="She said in a panic, her voice shrill and frisky_" type="RichTextLabel" parent="Node/Panel"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 1.000061
+offset_top = 3.0
+offset_right = 1037.0
+offset_bottom = 104.99999
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 25
+text = "She said in a panic, her voice shrill and frisky."
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="A cold current seized and pulled me downwards_ I struggled against it, but the water was too strong_ The surface, a distant memory, receded from view_" type="RichTextLabel" parent="Node/Panel"]
+layout_mode = 0
+offset_left = 1.000061
+offset_top = 3.0
+offset_right = 1037.0
+offset_bottom = 104.99999
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Darkness closed in_" type="RichTextLabel" parent="Node/Panel"]
+layout_mode = 0
+offset_left = 1.000061
+offset_top = 3.0
+offset_right = 1037.0
+offset_bottom = 104.99999
+theme_override_colors/default_color = Color(0.84218395, 0.20263413, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
