@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://wvhkofsoklhj"]
+[gd_scene load_steps=39 format=3 uid="uid://wvhkofsoklhj"]
 
 [ext_resource type="Texture2D" uid="uid://dy8sw3h7n6b6h" path="res://assets/maps/Festival-Recovered.png" id="1_afks2"]
 [ext_resource type="PackedScene" uid="uid://ycva3qn3np6q" path="res://scenes/player.tscn" id="2_afks2"]
@@ -13,10 +13,16 @@
 [ext_resource type="Script" uid="uid://dshrj40wbwsly" path="res://scenes/elia.gd" id="10_jy2j2"]
 [ext_resource type="Script" uid="uid://bg01t3gut6hlk" path="res://scenes/pablo.gd" id="11_s70y6"]
 [ext_resource type="Texture2D" uid="uid://1e82vtbp6wln" path="res://assets/sprites/Pablo bounce.png" id="12_61iss"]
+[ext_resource type="Texture2D" uid="uid://b8o3dda1beang" path="res://assets/map assets/taalitastall.png" id="12_ftm2n"]
 [ext_resource type="Texture2D" uid="uid://c2moy7vu0aiyp" path="res://assets/sprites/Pablo normal.png" id="13_1rdwa"]
+[ext_resource type="Texture2D" uid="uid://cfucoff3ukj78" path="res://assets/map assets/cyanstall.png" id="13_a0r4b"]
 [ext_resource type="Texture2D" uid="uid://calmys5ogsrv6" path="res://assets/map assets/post2.png" id="14_61iss"]
+[ext_resource type="Texture2D" uid="uid://ybyvth8k17f7" path="res://assets/map assets/purplestall.png" id="14_i786s"]
 [ext_resource type="Texture2D" uid="uid://o0ojrsilirkx" path="res://assets/map assets/dalawambahay.png" id="15_1rdwa"]
+[ext_resource type="Texture2D" uid="uid://38t1o1oe5y10" path="res://assets/map assets/redstall.png" id="16_b58v1"]
+[ext_resource type="Texture2D" uid="uid://ceh60v1ajs8sw" path="res://assets/map assets/brownstall.png" id="17_b762t"]
 [ext_resource type="Texture2D" uid="uid://bnlensw0bcwej" path="res://assets/map assets/MGA STALL/balloonstall.png" id="17_wyais"]
+[ext_resource type="Texture2D" uid="uid://dl8ftkf8h2il1" path="res://assets/map assets/greenballoonstall.png" id="18_45rui"]
 [ext_resource type="Texture2D" uid="uid://hwo7s07bcctn" path="res://assets/map assets/MGA STALL/poste.png" id="18_ehpw1"]
 [ext_resource type="Texture2D" uid="uid://chtrhc24oenw7" path="res://assets/map assets/stage.png" id="19_ehpw1"]
 [ext_resource type="Texture2D" uid="uid://b6kwi8osofkfh" path="res://assets/map assets/fountain.png" id="20_s7fiu"]
@@ -34,6 +40,12 @@ size = Vector2(40, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gevvu"]
 size = Vector2(86, 98)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cqp3j"]
+size = Vector2(82, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_evuyp"]
+size = Vector2(87, 19)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s7fiu"]
 size = Vector2(56, 49)
@@ -68,9 +80,6 @@ animations = [{
 "name": &"idle",
 "speed": 5.0
 }]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_grem4"]
-size = Vector2(431, 41.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ohiqf"]
 size = Vector2(117, 110)
@@ -506,6 +515,109 @@ texture = ExtResource("20_s7fiu")
 position = Vector2(8, 9)
 shape = SubResource("RectangleShape2D_gevvu")
 
+[node name="Taalitastall" type="Sprite2D" parent="YSORT"]
+position = Vector2(943, 277)
+texture = ExtResource("12_ftm2n")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="YSORT/Taalitastall"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSORT/Taalitastall/StaticBody2D"]
+position = Vector2(2, 14)
+shape = SubResource("RectangleShape2D_cqp3j")
+
+[node name="stalls sa gitna" type="Sprite2D" parent="YSORT"]
+y_sort_enabled = true
+
+[node name="Cyanstall" type="Sprite2D" parent="YSORT/stalls sa gitna"]
+position = Vector2(937, 617)
+texture = ExtResource("13_a0r4b")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="YSORT/stalls sa gitna/Cyanstall"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSORT/stalls sa gitna/Cyanstall/StaticBody2D"]
+position = Vector2(-1, 6)
+shape = SubResource("RectangleShape2D_evuyp")
+
+[node name="Purplestall" type="Sprite2D" parent="YSORT/stalls sa gitna"]
+position = Vector2(933, 448)
+texture = ExtResource("14_i786s")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="YSORT/stalls sa gitna/Purplestall"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSORT/stalls sa gitna/Purplestall/StaticBody2D"]
+position = Vector2(5.5, 2.5)
+shape = SubResource("RectangleShape2D_evuyp")
+
+[node name="Greenballloon2" type="Sprite2D" parent="YSORT/stalls sa gitna"]
+position = Vector2(1916, 604)
+texture = ExtResource("8_acsqf")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="YSORT/stalls sa gitna/Greenballloon2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSORT/stalls sa gitna/Greenballloon2/StaticBody2D"]
+position = Vector2(-1, 7)
+shape = SubResource("RectangleShape2D_evuyp")
+
+[node name="Balloonstall" type="Sprite2D" parent="YSORT/stalls sa gitna"]
+position = Vector2(1715, 605)
+texture = ExtResource("17_wyais")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="YSORT/stalls sa gitna/Balloonstall"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSORT/stalls sa gitna/Balloonstall/StaticBody2D"]
+position = Vector2(-5, 19)
+shape = SubResource("RectangleShape2D_evuyp")
+
+[node name="Redstall" type="Sprite2D" parent="YSORT/stalls sa gitna"]
+position = Vector2(1130, 282)
+texture = ExtResource("16_b58v1")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="YSORT/stalls sa gitna/Redstall"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSORT/stalls sa gitna/Redstall/StaticBody2D"]
+position = Vector2(5.5, 2.5)
+shape = SubResource("RectangleShape2D_evuyp")
+
+[node name="Brownstall" type="Sprite2D" parent="YSORT/stalls sa gitna"]
+position = Vector2(1502, 615)
+texture = ExtResource("17_b762t")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="YSORT/stalls sa gitna/Brownstall"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSORT/stalls sa gitna/Brownstall/StaticBody2D"]
+position = Vector2(5.5, 2.5)
+shape = SubResource("RectangleShape2D_evuyp")
+
+[node name="Greenballoonstall" type="Sprite2D" parent="YSORT/stalls sa gitna"]
+position = Vector2(1132, 587)
+texture = ExtResource("18_45rui")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="YSORT/stalls sa gitna/Greenballoonstall"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSORT/stalls sa gitna/Greenballoonstall/StaticBody2D"]
+position = Vector2(5.5, 2.5)
+shape = SubResource("RectangleShape2D_evuyp")
+
+[node name="Brownstall2" type="Sprite2D" parent="YSORT/stalls sa gitna"]
+position = Vector2(1712, 365)
+texture = ExtResource("17_b762t")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="YSORT/stalls sa gitna/Brownstall2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSORT/stalls sa gitna/Brownstall2/StaticBody2D"]
+position = Vector2(5.5, 2.5)
+shape = SubResource("RectangleShape2D_evuyp")
+
+[node name="Redstall2" type="Sprite2D" parent="YSORT/stalls sa gitna"]
+position = Vector2(2107, 617)
+texture = ExtResource("16_b58v1")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="YSORT/stalls sa gitna/Redstall2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSORT/stalls sa gitna/Redstall2/StaticBody2D"]
+position = Vector2(5.5, 2.5)
+shape = SubResource("RectangleShape2D_evuyp")
+
 [node name="Greenballloon" type="Sprite2D" parent="."]
 position = Vector2(1030, 916)
 texture = ExtResource("8_acsqf")
@@ -560,7 +672,8 @@ shape = SubResource("RectangleShape2D_oe624")
 [node name="ELIA" type="Sprite2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ELIA"]
-position = Vector2(108, 422)
+position = Vector2(116.5, 420.5)
+scale = Vector2(1.1875001, 1.1875008)
 sprite_frames = SubResource("SpriteFrames_jl05f")
 animation = &"idle"
 speed_scale = 0.5
@@ -569,7 +682,8 @@ script = ExtResource("10_jy2j2")
 [node name="PABLO" type="Sprite2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PABLO"]
-position = Vector2(60, 425)
+position = Vector2(58.5, 413)
+scale = Vector2(1.2625, 1.3)
 sprite_frames = SubResource("SpriteFrames_deioi")
 animation = &"idle"
 script = ExtResource("11_s70y6")
@@ -597,13 +711,6 @@ texture = ExtResource("18_ehpw1")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ReliconBushSprite/StaticBody2D"]
 position = Vector2(-18, 14.5)
 shape = SubResource("RectangleShape2D_s7fiu")
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(876.25, 479)
-rotation = 1.5707964
-shape = SubResource("RectangleShape2D_grem4")
 
 [node name="Stage" type="Sprite2D" parent="."]
 position = Vector2(2002, 295)
