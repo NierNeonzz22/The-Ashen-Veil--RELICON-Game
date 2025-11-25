@@ -189,10 +189,10 @@ script = ExtResource("2_ju6ib")
 
 [node name="ResetButton" type="Button" parent="ColorRect"]
 layout_mode = 0
-offset_left = 406.0
-offset_top = 348.0
-offset_right = 460.0
-offset_bottom = 379.0
+offset_left = 420.30658
+offset_top = 411.552
+offset_right = 474.30658
+offset_bottom = 442.552
 scale = Vector2(1.5007915, 1.0667464)
 text = "RESET"
 
@@ -590,7 +590,7 @@ shape = SubResource("RectangleShape2D_7yig0")
 
 [node name="Slot1" type="Area2D" parent="Node2D2"]
 z_index = 3
-position = Vector2(107, 256)
+position = Vector2(183, 493)
 scale = Vector2(4.8800006, 4.48)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/Slot1"]
@@ -609,7 +609,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Slot2" type="Area2D" parent="Node2D2"]
 z_index = 3
-position = Vector2(251.00002, 254)
+position = Vector2(314, 491)
 scale = Vector2(4.8800006, 4.48)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/Slot2"]
@@ -628,7 +628,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Slot3" type="Area2D" parent="Node2D2"]
 z_index = 3
-position = Vector2(403, 253)
+position = Vector2(450.00003, 491)
 scale = Vector2(4.8800006, 4.48)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/Slot3"]
@@ -647,7 +647,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Slot4" type="Area2D" parent="Node2D2"]
 z_index = 3
-position = Vector2(565, 253)
+position = Vector2(576, 491)
 scale = Vector2(4.8800006, 4.48)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/Slot4"]
@@ -666,7 +666,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Slot5" type="Area2D" parent="Node2D2"]
 z_index = 3
-position = Vector2(725, 252)
+position = Vector2(702, 492)
 scale = Vector2(4.8800006, 4.48)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/Slot5"]
@@ -685,7 +685,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Slot6" type="Area2D" parent="Node2D2"]
 z_index = 3
-position = Vector2(895, 251)
+position = Vector2(836.00006, 491)
 scale = Vector2(4.8800006, 4.48)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/Slot6"]
@@ -704,7 +704,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Slot7" type="Area2D" parent="Node2D2"]
 z_index = 3
-position = Vector2(1054, 250)
+position = Vector2(962, 492)
 scale = Vector2(4.8800006, 4.48)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/Slot7"]
