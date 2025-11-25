@@ -1,7 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bpmkrb3s3k5xj"]
+[gd_scene load_steps=9 format=3 uid="uid://xdikyk0ff5mw"]
 
 [ext_resource type="Texture2D" uid="uid://ci8m7lmaxtpjt" path="res://dagat.png" id="1_s82bd"]
 [ext_resource type="Texture2D" uid="uid://cgsen5qqwvtkq" path="res://assets/assets_scene 3/NAMARU SMILE.png" id="2_qti7g"]
+[ext_resource type="Script" uid="uid://c177dq1ax6wsd" path="res://scripts/button_1(3).gd" id="3_o63n4"]
+[ext_resource type="Script" uid="uid://cdf84flgh7jo" path="res://scripts/button_2(3).gd" id="4_4ehhg"]
+[ext_resource type="Script" uid="uid://dlcld2t0ag2sj" path="res://scripts/button_3(3).gd" id="5_klk3w"]
 
 [sub_resource type="Animation" id="Animation_5vpc5"]
 length = 0.001
@@ -421,27 +424,34 @@ offset_bottom = 40.0
 
 [node name="Button1(3)" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = -781.0
+offset_left = 280.0
 offset_top = 217.0
-offset_right = -213.0
+offset_right = 848.0
 offset_bottom = 275.0
 theme_override_font_sizes/font_size = 30
 text = "“What if I fail?” "
+script = ExtResource("3_o63n4")
 
 [node name="Button2(3)" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = -779.0
+offset_left = 278.0
 offset_top = 302.0
-offset_right = -211.0
+offset_right = 846.0
 offset_bottom = 360.0
 theme_override_font_sizes/font_size = 30
 text = "“I don’t want to die!”"
+script = ExtResource("4_4ehhg")
 
 [node name="Button3(3)" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = -778.0
+offset_left = 279.0
 offset_top = 391.0
-offset_right = -210.0
+offset_right = 847.0
 offset_bottom = 449.0
 theme_override_font_sizes/font_size = 30
 text = "“Kill me now.”"
+script = ExtResource("5_klk3w")
+
+[connection signal="pressed" from="Control/Button1(3)" to="Control/Button1(3)" method="_on_pressed"]
+[connection signal="pressed" from="Control/Button2(3)" to="Control/Button2(3)" method="_on_pressed"]
+[connection signal="pressed" from="Control/Button3(3)" to="Control/Button3(3)" method="_on_pressed"]

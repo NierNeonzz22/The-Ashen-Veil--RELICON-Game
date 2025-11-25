@@ -5,6 +5,7 @@ extends CharacterBody2D
 @export var push_strength := 60.0
 
 var facing_direction := Vector2.DOWN
+var is_moving := false
 @onready var anim := $AnimatedSprite2D
 
 func _physics_process(delta):
@@ -22,8 +23,9 @@ func _physics_process(delta):
 	else:
 		input_vector.x = 0
 
-	# Update facing direction
-	if input_vector != Vector2.ZERO:
+	# Update movement state and facing direction
+	is_moving = input_vector != Vector2.ZERO
+	if is_moving:
 		facing_direction = input_vector
 
 	# Running speed
@@ -47,11 +49,18 @@ func _handle_push_collisions(delta):
 			obj.push(dir, delta)  # use CharacterBody2D push method
 
 func _update_animation():
-	if facing_direction == Vector2.RIGHT: anim.play("Right")
-	elif facing_direction == Vector2.LEFT: anim.play("Left")
-	elif facing_direction == Vector2.UP: anim.play("Up")
-	elif facing_direction == Vector2.DOWN: anim.play("Down")
-	else: anim.stop()
+	if is_moving:
+		# Play movement animations based on direction
+		if facing_direction == Vector2.RIGHT: anim.play("Right")
+		elif facing_direction == Vector2.LEFT: anim.play("Left")
+		elif facing_direction == Vector2.UP: anim.play("Up")
+		elif facing_direction == Vector2.DOWN: anim.play("Down")
+	else:
+		# Play idle animations based on last facing direction
+		if facing_direction == Vector2.RIGHT: anim.play("Idle_Right")
+		elif facing_direction == Vector2.LEFT: anim.play("Idle_Left")
+		elif facing_direction == Vector2.UP: anim.play("Idle_Up")
+		elif facing_direction == Vector2.DOWN: anim.play("Idle_Down")
 
 func _input(event):
 	if event.is_action_pressed("pull"):

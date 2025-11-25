@@ -42,23 +42,25 @@ func setup_transition() -> void:
 func create_simple_animations() -> void:
 	# Fade out animation (to white) - SLOWER: 1.5 seconds
 	var fade_out = Animation.new()
-	fade_out.length = 1.5  # Increased from 0.5 to 1.5 seconds
+	fade_out.length = 1.5
 	
 	var track_idx = fade_out.add_track(Animation.TYPE_VALUE)
-	fade_out.track_set_path(track_idx, "../FadeLayer:modulate:a")
+	# FIXED PATH: AnimationPlayer is child of FadeLayer, so use ":modulate:a"
+	fade_out.track_set_path(track_idx, ":modulate:a")
 	fade_out.value_track_set_update_mode(track_idx, Animation.UPDATE_CONTINUOUS)
 	fade_out.track_insert_key(track_idx, 0.0, 0.0)
-	fade_out.track_insert_key(track_idx, 1.5, 1.0)  # 1.5 seconds to fade out
+	fade_out.track_insert_key(track_idx, 1.5, 1.0)
 	
 	# Fade in animation (from white) - SLOWER: 1.5 seconds
 	var fade_in = Animation.new()
-	fade_in.length = 1.5  # Increased from 0.5 to 1.5 seconds
+	fade_in.length = 1.5
 	
 	track_idx = fade_in.add_track(Animation.TYPE_VALUE)
-	fade_in.track_set_path(track_idx, "../FadeLayer:modulate:a")
+	# FIXED PATH: Same fix here
+	fade_in.track_set_path(track_idx, ":modulate:a")
 	fade_in.value_track_set_update_mode(track_idx, Animation.UPDATE_CONTINUOUS)
 	fade_in.track_insert_key(track_idx, 0.0, 1.0)
-	fade_in.track_insert_key(track_idx, 1.5, 0.0)  # 1.5 seconds to fade in
+	fade_in.track_insert_key(track_idx, 1.5, 0.0)
 	
 	# Add animations using the new Godot 4 method
 	var library = AnimationLibrary.new()

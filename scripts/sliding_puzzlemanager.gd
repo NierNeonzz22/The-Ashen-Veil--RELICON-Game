@@ -14,11 +14,8 @@ extends Node2D
 @export var complete_image: Sprite2D  # The full image that appears over the entire grid
 @export var victory_gem: PackedScene  # Assign your Gem_2.tscn here
 
-# Timer and Dialogue
+# Timer
 @export var timer_duration: float = 60.0  # 60 second timer
-@export var intro_dialogue: DialogueResource
-@export var win_dialogue: DialogueResource  
-@export var lose_dialogue: DialogueResource
 
 #Variable for timer
 @export var timer_ui_scene: PackedScene  # Assign your TimerUI.tscn here
@@ -34,10 +31,6 @@ var timer: Timer
 var time_remaining: float = 0.0
 
 @export var test_mode: bool = true  # Set to true for testing, false for normal game
-@export var skip_dialogue: bool = false  # Set to true to skip all dialogue
-
-# Dialogue fallback
-var dialogue_fallback_timer: Timer
 
 func _ready():
 	print("=== PUZZLE MANAGER STARTING ===")
@@ -70,75 +63,14 @@ func _ready():
 	else:
 		initialize_solvable_puzzle()  # Normal shuffled puzzle
 	
-	# Start with dialogue or directly with gameplay
-	if skip_dialogue:
-		print("SKIPPING DIALOGUE - Starting puzzle immediately")
-		start_puzzle_gameplay()
-	else:
-		start_intro_dialogue()
+	# Start puzzle gameplay immediately
+	start_puzzle_gameplay()
 
 func setup_timer():
 	timer = Timer.new()
 	timer.wait_time = 1.0  # Update every second
 	timer.timeout.connect(_on_timer_timeout)
 	add_child(timer)
-
-func start_intro_dialogue():
-	print("Starting intro dialogue...")
-	if intro_dialogue:
-		# Set up fallback timer FIRST in case dialogue fails
-		setup_dialogue_fallback()
-		
-		# Try to connect to dialogue finished signal
-		if DialogueManager.has_signal("dialogue_ended"):
-			if not DialogueManager.dialogue_ended.is_connected(_on_intro_dialogue_ended):
-				DialogueManager.dialogue_ended.connect(_on_intro_dialogue_ended)
-				print("Connected to dialogue_ended signal")
-			else:
-				print("Already connected to dialogue_ended signal")
-		else:
-			print("WARNING: dialogue_ended signal not found! Using fallback timer.")
-		
-		# Show dialogue starting from "start"
-		print("Showing dialogue balloon...")
-		DialogueManager.show_example_dialogue_balloon(intro_dialogue, "start")
-		print("Intro dialogue shown - waiting for completion...")
-	else:
-		print("No intro dialogue, starting puzzle immediately")
-		start_puzzle_gameplay()
-
-func setup_dialogue_fallback():
-	# Clean up any existing fallback timer
-	if dialogue_fallback_timer and is_instance_valid(dialogue_fallback_timer):
-		dialogue_fallback_timer.queue_free()
-	
-	# Set up a timer to check if dialogue is still active
-	dialogue_fallback_timer = Timer.new()
-	dialogue_fallback_timer.wait_time = 5.0  # 5 seconds should be enough for dialogue
-	dialogue_fallback_timer.one_shot = true
-	dialogue_fallback_timer.timeout.connect(_on_dialogue_fallback_timeout)
-	add_child(dialogue_fallback_timer)
-	dialogue_fallback_timer.start()
-	print("Dialogue fallback timer started (5 seconds)")
-
-func _on_dialogue_fallback_timeout():
-	print("DIALOGUE FALLBACK: Timer triggered - dialogue didn't end properly, forcing puzzle start")
-	start_puzzle_gameplay()
-
-func _on_intro_dialogue_ended():
-	print("DIALOGUE SIGNAL: Intro dialogue ended, starting puzzle")
-	# Clean up fallback timer
-	if dialogue_fallback_timer and is_instance_valid(dialogue_fallback_timer):
-		dialogue_fallback_timer.stop()
-		dialogue_fallback_timer.queue_free()
-		dialogue_fallback_timer = null
-	
-	# Disconnect to avoid multiple calls
-	if DialogueManager.has_signal("dialogue_ended"):
-		if DialogueManager.dialogue_ended.is_connected(_on_intro_dialogue_ended):
-			DialogueManager.dialogue_ended.disconnect(_on_intro_dialogue_ended)
-	
-	start_puzzle_gameplay()
 
 func start_puzzle_gameplay():
 	print("🎮 PUZZLE GAMEPLAY STARTING")
@@ -196,11 +128,6 @@ func on_puzzle_lost():
 	if timer_ui_instance:
 		timer_ui_instance.queue_free()
 		timer_ui_instance = null
-	
-	if lose_dialogue and not skip_dialogue:
-		DialogueManager.show_example_dialogue_balloon(lose_dialogue, "start")
-	else:
-		print("No lose dialogue or dialogue skipped")
 
 func initialize_test_puzzle():
 	# TEST MODE: Puzzle is ONE MOVE away from completion
@@ -398,18 +325,17 @@ func show_complete_image():
 		
 		await tween.finished
 		
-		# Step 4: AFTER victory sequence is complete, show win dialogue
-		show_win_dialogue()
+		# Step 4: AFTER victory sequence is complete, transition to niuala scene
+		transition_to_niuala_scene()
 
-func show_win_dialogue():
-	print("Victory sequence complete! Showing win dialogue...")
-	if win_dialogue and not skip_dialogue:
-		DialogueManager.show_example_dialogue_balloon(win_dialogue, "start")
-	else:
-		show_win_message()
-
-func show_win_message():
-	print("🏆 YOU WIN! Proceed to the next minigame. 🏆")
+func transition_to_niuala_scene():
+	print("🏆 PUZZLE COMPLETED! Transitioning to scene 3 niuala...")
+	
+	# Wait a moment to let the player see the completed puzzle
+	await get_tree().create_timer(2.0).timeout
+	
+	# Use TransitionManager to go to the niuala scene
+	TransitionManager.transition_to_scene("res://scenes/scene 3 niuala win.tscn")
 
 func update_piece_positions():
 	# Update all piece positions based on current piece_positions

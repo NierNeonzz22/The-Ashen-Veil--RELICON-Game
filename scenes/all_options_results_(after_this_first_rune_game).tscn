@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://22saa3xuf47p"]
+[gd_scene load_steps=7 format=3 uid="uid://22saa3xuf47p"]
 
 [ext_resource type="Texture2D" uid="uid://ci8m7lmaxtpjt" path="res://dagat.png" id="1_hoiha"]
 [ext_resource type="Texture2D" uid="uid://cgsen5qqwvtkq" path="res://assets/assets_scene 3/NAMARU SMILE.png" id="2_cjc3y"]
+[ext_resource type="Script" uid="uid://dgpygahu28fmd" path="res://scripts/To_MG1.gd" id="3_iht27"]
 
 [sub_resource type="Animation" id="Animation_27nor"]
 length = 0.001
@@ -408,3 +409,6 @@ offset_right = 986.0
 offset_bottom = 339.0
 theme_override_font_sizes/font_size = 50
 text = "FIRST RUNE: CONNECT THE DOTS"
+script = ExtResource("3_iht27")
+
+[connection signal="pressed" from="Node/Button" to="Node/Button" method="_on_pressed"]

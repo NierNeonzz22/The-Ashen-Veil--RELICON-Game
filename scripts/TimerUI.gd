@@ -9,12 +9,28 @@ extends Node2D
 @export var normal_color: Color = Color.WHITE
 @export var low_color: Color = Color.RED
 
+var is_ready: bool = false
+
 func _ready():
+	# Wait until we're properly in the scene tree
+	if not is_inside_tree():
+		await ready
+	
 	# Play the slide-down animation when the timer appears
 	if animation_player and animation_player.has_animation("timer_slide_down"):
 		animation_player.play("timer_slide_down")
+	
+	is_ready = true
+	print("✅ TimerUI initialized successfully")
 
 func update_time(time_remaining: float):
+	# Safety check - only update if we're ready and in the scene tree
+	if not is_ready or not is_inside_tree():
+		return
+	
+	if not time_label:
+		return
+	
 	var minutes = int(time_remaining) / 60
 	var seconds = int(time_remaining) % 60
 	var time_text = "%02d:%02d" % [minutes, seconds]

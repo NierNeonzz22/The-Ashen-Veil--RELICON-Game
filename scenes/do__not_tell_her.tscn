@@ -1,0 +1,586 @@
+[gd_scene load_steps=10 format=3 uid="uid://dm35mp0ahrerx"]
+
+[ext_resource type="Texture2D" uid="uid://ci8m7lmaxtpjt" path="res://dagat.png" id="1_jnxuq"]
+[ext_resource type="Texture2D" uid="uid://bdc0qeolfaea5" path="res://assets/assets_scene 3/NIUALA ANGRY.png" id="2_g3174"]
+[ext_resource type="Texture2D" uid="uid://da5xe0r2vv2o8" path="res://assets/assets_scene 3/NIUALA SURPISED.png" id="3_cowwt"]
+[ext_resource type="Texture2D" uid="uid://mtqsgtxk14mn" path="res://assets/assets_scene 3/NIUALA SMILE.png" id="4_50cp3"]
+[ext_resource type="Texture2D" uid="uid://wlw1i8otvmse" path="res://assets/assets_scene 3/TRISTAN NEUTRAL.png" id="5_7o6xn"]
+[ext_resource type="Texture2D" uid="uid://civb8s05hbluu" path="res://assets/assets_scene 3/TRISTAN SMILE.png" id="6_psl4f"]
+
+[sub_resource type="Animation" id="Animation_sfeqp"]
+resource_name = "Do not tell her scene"
+length = 53.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dagat:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 51.2, 51.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Tristan:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 51.2, 51.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Niuala(Surprised):modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 38.666668, 51.2, 51.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Niuala(Smile):modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 6.2999997, 7.1666665, 38.666664, 39.366665),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node/ColorRect:color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1, 51.2, 51.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.60784316), Color(0, 0, 0, 0.60784316), Color(0, 0, 0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Tristan(Smile):modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 16.733334, 17.833334, 21.4, 22.566668, 29.366667, 30.9333, 51.2, 51.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0.6897532), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node/Tristan:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.96666664, 1, 6, 6.5, 16.966667, 16.966867, 20.366667, 21.366667, 38.833332, 38.866665, 41.766666, 42.266666, 46.933334, 46.966667, 50.266666, 50.766666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 0.99674004), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node/Dialogue1:text")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(1, 4.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["
+", "
+I’d…rather not say. All you need to know is Kalao sent me to you…"]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node/Dialogue1:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(4.5, 6, 6.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node/Niuala:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(6.81, 6.8666663, 11.533334, 12.033334, 26.633335, 26.666668, 30.066668, 30.566668, 42.366665, 42.4, 46.266666, 46.766666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node/Dialogue2:text")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(6.8666663, 9.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["
+", "
+He did? Oh…you must’ve solved his rune, then!"]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node/Dialogue2:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(9.7, 11.533334, 12.033334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node/Dialogue3:text")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(12.533334, 14.466667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "I blinked, before nodding in agreement."]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Node/Dialogue3:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(14.466667, 15.966667, 16.466667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node/Dialogue4:text")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(17.033333, 19.433332),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["
+", "
+Yes, and I’m here to solve yours too."]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Node/Dialogue4:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(19.433332, 20.433332, 21.433332),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Node/Dialogue5:text")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(21.733334, 24.133333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "My assurance makes her grin in relief."]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Node/Dialogue5:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(24.133333, 25.633333, 26.133333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Node/Dialogue6:text")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(26.633333, 28.533333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["
+", "
+Thank you, mister Tristan!"]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Node/Dialogue6:modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(28.533333, 30.033333, 30.533333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Node/Dialogue7:text")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(30.933332, 35.333332),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "I smile, her appreciation warming my heart. I point to the fragmented images beside her."]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Node/Dialogue7:modulate")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(35.333332, 37.333332, 38.333332),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Node/Dialogue8:text")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(38.766666, 40.666668),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["
+", "
+Is this it? A puzzle?"]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Node/Dialogue8:modulate")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(40.666668, 41.666668, 42.166668),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Node/Dialogue9:text")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(42.29997, 44.666668),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["
+", "
+Yes, I- I can’t seem to put it together…"]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("Node/Dialogue9:modulate")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(44.666668, 46.166668, 46.666668),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("Node/Dialogue10:text")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(46.86667, 48.666668),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["
+", "
+Don’t worry, I’ve got it."]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("Node/Dialogue10:modulate")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(48.666668, 50.166668, 50.666668),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vlbvl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tristan(Smile):modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jddwc"]
+_data = {
+&"Do not tell her scene": SubResource("Animation_sfeqp"),
+&"RESET": SubResource("Animation_vlbvl")
+}
+
+[node name="DO  NOT TELL HER" type="Node2D"]
+
+[node name="Dagat" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(574, 324)
+scale = Vector2(3.58125, 3.6222222)
+texture = ExtResource("1_jnxuq")
+
+[node name="Niuala(Angy)" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(917, 377.375)
+scale = Vector2(0.2877604, 0.2640381)
+texture = ExtResource("2_g3174")
+
+[node name="Niuala(Surprised)" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(917, 377.2112)
+scale = Vector2(0.2877604, 0.2640381)
+texture = ExtResource("3_cowwt")
+
+[node name="Niuala(Smile)" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(917, 377.2112)
+scale = Vector2(0.2877604, 0.2640381)
+texture = ExtResource("4_50cp3")
+
+[node name="Tristan" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(222, 322)
+scale = Vector2(0.31282547, 0.3217773)
+texture = ExtResource("5_7o6xn")
+
+[node name="Tristan(Smile)" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(221, 322)
+scale = Vector2(0.31282547, 0.3217773)
+texture = ExtResource("6_psl4f")
+
+[node name="Node" type="Node" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Node"]
+offset_left = 39.0
+offset_top = 504.0
+offset_right = 1118.0
+offset_bottom = 637.0
+color = Color(0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="Dialogue1" type="RichTextLabel" parent="Node"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 65.0
+offset_top = 506.0
+offset_right = 1095.0
+offset_bottom = 635.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 30
+text = "
+I’d…rather not say. All you need to know is Kalao sent me to you…"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Dialogue2" type="RichTextLabel" parent="Node"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 65.0
+offset_top = 506.0
+offset_right = 1095.0
+offset_bottom = 635.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 30
+text = "
+He did? Oh…you must’ve solved his rune, then!"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Dialogue3" type="RichTextLabel" parent="Node"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 41.0
+offset_top = 507.0
+offset_right = 1118.0
+offset_bottom = 636.0
+theme_override_font_sizes/normal_font_size = 30
+text = "I blinked, before nodding in agreement."
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Dialogue4" type="RichTextLabel" parent="Node"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 65.0
+offset_top = 506.0
+offset_right = 1095.0
+offset_bottom = 635.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 30
+text = "
+Yes, and I’m here to solve yours too."
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Dialogue5" type="RichTextLabel" parent="Node"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 41.0
+offset_top = 507.0
+offset_right = 1118.0
+offset_bottom = 636.0
+theme_override_font_sizes/normal_font_size = 30
+text = "My assurance makes her grin in relief."
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Dialogue6" type="RichTextLabel" parent="Node"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 65.0
+offset_top = 506.0
+offset_right = 1095.0
+offset_bottom = 635.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 30
+text = "
+Thank you, mister Tristan!"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Dialogue7" type="RichTextLabel" parent="Node"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 41.0
+offset_top = 507.0
+offset_right = 1118.0
+offset_bottom = 636.0
+theme_override_font_sizes/normal_font_size = 30
+text = "I smile, her appreciation warming my heart. I point to the fragmented images beside her."
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Dialogue8" type="RichTextLabel" parent="Node"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 65.0
+offset_top = 506.0
+offset_right = 1095.0
+offset_bottom = 635.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 30
+text = "
+Is this it? A puzzle?"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Dialogue9" type="RichTextLabel" parent="Node"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 65.0
+offset_top = 506.0
+offset_right = 1095.0
+offset_bottom = 635.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 30
+text = "
+Yes, I- I can’t seem to put it together…"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Dialogue10" type="RichTextLabel" parent="Node"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 65.0
+offset_top = 506.0
+offset_right = 1095.0
+offset_bottom = 635.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 30
+text = "
+Don’t worry, I’ve got it."
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Niuala" type="RichTextLabel" parent="Node"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 63.0
+offset_top = 520.0
+offset_right = 607.0
+offset_bottom = 574.0
+theme_override_colors/default_color = Color(0.8627451, 0.78039217, 1, 1)
+theme_override_font_sizes/normal_font_size = 30
+text = "Niuala:"
+metadata/_edit_use_anchors_ = true
+
+[node name="Tristan" type="RichTextLabel" parent="Node"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 63.0
+offset_top = 520.0
+offset_right = 607.0
+offset_bottom = 574.0
+theme_override_colors/default_color = Color(0.6627451, 0.8392157, 1, 1)
+theme_override_font_sizes/normal_font_size = 30
+text = "Tristan:"
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_jddwc")
+}
+autoplay = "Do not tell her scene"

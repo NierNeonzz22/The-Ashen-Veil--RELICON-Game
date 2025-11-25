@@ -1,19 +1,18 @@
-[gd_scene load_steps=27 format=3 uid="uid://cygdilg04c7p1"]
+[gd_scene load_steps=36 format=3 uid="uid://cygdilg04c7p1"]
 
-[ext_resource type="Texture2D" uid="uid://e6bv4j1pihhh" path="res://assets/Minigame Assets/CAVE MAP SEMIFINAL(no pillar).png" id="1_hsioi"]
+[ext_resource type="Texture2D" uid="uid://e6bv4j1pihhh" path="res://Minigame Assets/CAVE MAP SEMIFINAL(no pillar).png" id="1_hsioi"]
 [ext_resource type="Script" uid="uid://bbi0aiygulkhi" path="res://scripts/tristan_gameplaymoveset.gd" id="3_646de"]
-[ext_resource type="Texture2D" uid="uid://bjr4uxx2ar0q8" path="res://assets/Minigame Assets/BETA SPRITE SHEET TRISTANuntitled.png" id="3_hsioi"]
-[ext_resource type="Texture2D" uid="uid://dy6qmivauw827" path="res://assets/Minigame Assets/di na lit.png" id="4_646de"]
+[ext_resource type="Texture2D" uid="uid://r2ughrtiehix" path="res://assets/sprites/SHIT NI TRISTAN ADJUSTED HEIGHT (2).png" id="4_117fq"]
+[ext_resource type="Texture2D" uid="uid://dy6qmivauw827" path="res://Minigame Assets/di na lit.png" id="4_646de"]
 [ext_resource type="Script" uid="uid://csuqx2qaf3kne" path="res://scripts/puzzle_manager.gd" id="4_wmemh"]
-[ext_resource type="Resource" uid="uid://c6jnifc153jvo" path="res://dialogue/minigame1_win.dialogue" id="5_gf44f"]
 [ext_resource type="Script" uid="uid://k0phkww4q2wb" path="res://scripts/light_source.gd" id="5_tbmet"]
 [ext_resource type="Script" uid="uid://bkat805frbxgd" path="res://scripts/pillars.gd" id="5_wmemh"]
-[ext_resource type="Resource" uid="uid://ctsbk5yu3jvuw" path="res://dialogue/minigame1_lose.dialogue" id="6_3mf75"]
 [ext_resource type="PackedScene" uid="uid://dvtjxed4d43xa" path="res://scenes/gem_1.tscn" id="7_nd5ua"]
 [ext_resource type="Texture2D" uid="uid://c0lolbtib4iel" path="res://assets/Minigame Assets/medyo lit.png" id="7_tbmet"]
 [ext_resource type="PackedScene" uid="uid://l435jaidwcf4" path="res://scenes/timer_ui.tscn" id="8_68v71"]
-[ext_resource type="Script" path="res://scripts/dialogue_trigger.gd" id="8_tbmet"]
+[ext_resource type="PackedScene" uid="uid://cf38e73ldd45w" path="res://scenes/label_instruction.tscn" id="8_ias47"]
 [ext_resource type="PackedScene" uid="uid://dnnxk1og0cl4p" path="res://scenes/fade_in_fade_out.tscn" id="9_j6fwm"]
+[ext_resource type="Texture2D" uid="uid://btrrto1qjwavn" path="res://assets/sprites/spirit_sprite_sheet.png" id="15_117fq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_646de"]
 size = Vector2(5.6457405, 5.7133865)
@@ -21,39 +20,74 @@ size = Vector2(5.6457405, 5.7133865)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_flign"]
 size = Vector2(7, 33)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jk4yg"]
-atlas = ExtResource("3_hsioi")
-region = Rect2(0, 0, 155, 80)
+[sub_resource type="AtlasTexture" id="AtlasTexture_j6fwm"]
+atlas = ExtResource("4_117fq")
+region = Rect2(88, 0, 44, 90)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_646m1"]
-atlas = ExtResource("3_hsioi")
-region = Rect2(0, 240, 155, 80)
+[sub_resource type="AtlasTexture" id="AtlasTexture_117fq"]
+atlas = ExtResource("4_117fq")
+region = Rect2(132, 0, 44, 90)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1bv70"]
-atlas = ExtResource("3_hsioi")
-region = Rect2(0, 160, 155, 80)
+[sub_resource type="AtlasTexture" id="AtlasTexture_jfe4f"]
+atlas = ExtResource("4_117fq")
+region = Rect2(0, 0, 44, 90)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_t2nn7"]
-atlas = ExtResource("3_hsioi")
-region = Rect2(155, 160, 155, 80)
+[sub_resource type="AtlasTexture" id="AtlasTexture_x14rb"]
+atlas = ExtResource("4_117fq")
+region = Rect2(0, 180, 44, 90)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gyjms"]
-atlas = ExtResource("3_hsioi")
-region = Rect2(310, 160, 155, 80)
+[sub_resource type="AtlasTexture" id="AtlasTexture_to8v4"]
+atlas = ExtResource("4_117fq")
+region = Rect2(0, 90, 44, 90)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mbqeb"]
-atlas = ExtResource("3_hsioi")
-region = Rect2(465, 160, 155, 80)
+[sub_resource type="AtlasTexture" id="AtlasTexture_cmrvr"]
+atlas = ExtResource("4_117fq")
+region = Rect2(44, 0, 44, 90)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cuml1"]
-atlas = ExtResource("3_hsioi")
-region = Rect2(0, 80, 155, 80)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ias47"]
+atlas = ExtResource("4_117fq")
+region = Rect2(0, 180, 44, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7lbsg"]
+atlas = ExtResource("4_117fq")
+region = Rect2(44, 180, 44, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b3qin"]
+atlas = ExtResource("4_117fq")
+region = Rect2(88, 180, 44, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vd0iq"]
+atlas = ExtResource("4_117fq")
+region = Rect2(132, 180, 44, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pdq0l"]
+atlas = ExtResource("4_117fq")
+region = Rect2(0, 90, 44, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b5xoe"]
+atlas = ExtResource("4_117fq")
+region = Rect2(44, 90, 44, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i4sc1"]
+atlas = ExtResource("4_117fq")
+region = Rect2(88, 90, 44, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fsl67"]
+atlas = ExtResource("4_117fq")
+region = Rect2(132, 90, 44, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_le8ar"]
+atlas = ExtResource("4_117fq")
+region = Rect2(44, 0, 44, 90)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yguuq"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jk4yg")
+"texture": SubResource("AtlasTexture_j6fwm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_117fq")
 }],
 "loop": true,
 "name": &"Down",
@@ -61,7 +95,48 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_646m1")
+"texture": SubResource("AtlasTexture_jfe4f")
+}],
+"loop": true,
+"name": &"Idle_Down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x14rb")
+}],
+"loop": true,
+"name": &"Idle_Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_to8v4")
+}],
+"loop": true,
+"name": &"Idle_Right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cmrvr")
+}],
+"loop": true,
+"name": &"Idle_Up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ias47")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7lbsg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b3qin")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vd0iq")
 }],
 "loop": true,
 "name": &"Left",
@@ -69,16 +144,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1bv70")
+"texture": SubResource("AtlasTexture_pdq0l")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_t2nn7")
+"texture": SubResource("AtlasTexture_b5xoe")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gyjms")
+"texture": SubResource("AtlasTexture_i4sc1")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_mbqeb")
+"texture": SubResource("AtlasTexture_fsl67")
 }],
 "loop": true,
 "name": &"Right",
@@ -86,7 +161,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_cuml1")
+"texture": SubResource("AtlasTexture_le8ar")
 }],
 "loop": true,
 "name": &"Up",
@@ -96,8 +171,27 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tbmet"]
 size = Vector2(19, 81)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_o2xqm"]
-size = Vector2(54, 140)
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhji0"]
+atlas = ExtResource("15_117fq")
+region = Rect2(160, 80, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0jo7q"]
+atlas = ExtResource("15_117fq")
+region = Rect2(80, 80, 80, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0wtrm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yhji0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0jo7q")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Node2D" type="Node2D"]
 
@@ -222,8 +316,6 @@ polygon = PackedVector2Array(-0.64523315, -2.8567429, 72.910706, 0, 123.238464, 
 [node name="Tristan_gameplay" type="CharacterBody2D" parent="."]
 position = Vector2(562, 76)
 script = ExtResource("3_646de")
-base_speed = 100.0
-run_bonus = 150.0
 
 [node name="PullRay" type="RayCast2D" parent="Tristan_gameplay"]
 top_level = true
@@ -239,15 +331,15 @@ texture_filter = 1
 position = Vector2(0, 10)
 scale = Vector2(0.65, 0.65)
 sprite_frames = SubResource("SpriteFrames_yguuq")
-animation = &"Right"
+animation = &"Idle_Up"
 
 [node name="PuzzleManager" type="Node" parent="."]
 script = ExtResource("4_wmemh")
 pillars = Array[NodePath]([NodePath("../Pillar1"), NodePath("../Pillar2"), NodePath("../Pillar3"), NodePath("../Pillar4"), NodePath("../Pillar5"), NodePath("../Pillar6"), NodePath("../Pillar7"), NodePath("../Pillar8")])
-win_dialogue_resource = ExtResource("5_gf44f")
-lose_dialogue_resource = ExtResource("6_3mf75")
 game_time = 180.0
 gem_scene = ExtResource("7_nd5ua")
+instruction_label_scene = ExtResource("8_ias47")
+instruction_display_time = 60.0
 timer_ui_scene = ExtResource("8_68v71")
 fade_scene = ExtResource("9_j6fwm")
 
@@ -267,7 +359,7 @@ points = PackedVector2Array(-10, 5, -111, -70, -168, -134, -159, -299, -51, -413
 default_color = Color(0.85112935, 0.9084997, 0.5137726, 1)
 
 [node name="Pillar1" type="CharacterBody2D" parent="."]
-position = Vector2(448, 339)
+position = Vector2(513, 366)
 script = ExtResource("5_wmemh")
 sprite_unlit = ExtResource("4_646de")
 sprite_lit = ExtResource("7_tbmet")
@@ -289,7 +381,7 @@ position = Vector2(-0.5, -31.5)
 shape = SubResource("RectangleShape2D_tbmet")
 
 [node name="Pillar2" type="CharacterBody2D" parent="."]
-position = Vector2(505, 295)
+position = Vector2(571, 337)
 script = ExtResource("5_wmemh")
 sprite_unlit = ExtResource("4_646de")
 sprite_lit = ExtResource("7_tbmet")
@@ -311,7 +403,7 @@ position = Vector2(-0.5, -31.5)
 shape = SubResource("RectangleShape2D_tbmet")
 
 [node name="Pillar3" type="CharacterBody2D" parent="."]
-position = Vector2(637, 280)
+position = Vector2(642, 376)
 script = ExtResource("5_wmemh")
 sprite_unlit = ExtResource("4_646de")
 sprite_lit = ExtResource("7_tbmet")
@@ -420,7 +512,7 @@ position = Vector2(-0.5, -31.5)
 shape = SubResource("RectangleShape2D_tbmet")
 
 [node name="Pillar8" type="CharacterBody2D" parent="."]
-position = Vector2(449, 397)
+position = Vector2(484, 432)
 script = ExtResource("5_wmemh")
 sprite_unlit = ExtResource("4_646de")
 sprite_lit = ExtResource("7_tbmet")
@@ -441,10 +533,9 @@ texture = ExtResource("4_646de")
 position = Vector2(-0.5, -31.5)
 shape = SubResource("RectangleShape2D_tbmet")
 
-[node name="DialogueTrigger" type="Area2D" parent="."]
-position = Vector2(547, 15)
-script = ExtResource("8_tbmet")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueTrigger"]
-position = Vector2(12, 60)
-shape = SubResource("RectangleShape2D_o2xqm")
+[node name="Namaru" type="AnimatedSprite2D" parent="."]
+position = Vector2(561, 31)
+scale = Vector2(0.7, 0.7)
+sprite_frames = SubResource("SpriteFrames_0wtrm")
+autoplay = "default"
+frame_progress = 0.99540985

@@ -1,14 +1,14 @@
 [gd_scene load_steps=13 format=3 uid="uid://c611innrun2pq"]
 
-[ext_resource type="Texture2D" uid="uid://54pore35p3s2" path="res://dagat.png" id="1_5i76y"]
-[ext_resource type="Script" uid="uid://yn4sj8efo6bu" path="res://scene_3_niuala.gd" id="1_buxwb"]
-[ext_resource type="Texture2D" uid="uid://c7r50nmgljxxj" path="res://TRISTAN/TRISTAN NEUTRAL.png" id="2_buxwb"]
-[ext_resource type="Texture2D" uid="uid://f53nt8mhe5xk" path="res://TRISTAN/TRISTAN SMILE.png" id="3_tq6kl"]
-[ext_resource type="Texture2D" uid="uid://dg75y5lny5fla" path="res://TRISTAN/TRISTAN SAD.png" id="4_d40wm"]
-[ext_resource type="Texture2D" uid="uid://yj1kmn0xnq1l" path="res://TRISTAN/TRISTAN WORRIED.png" id="5_pxus6"]
-[ext_resource type="Texture2D" uid="uid://bov4fxx0tqude" path="res://NIUALA/NIUALA SAD.png" id="6_lroph"]
-[ext_resource type="Texture2D" uid="uid://cs8tp5xbslnqc" path="res://NIUALA/NIUALA SURPISED.png" id="7_yhcr2"]
-[ext_resource type="Texture2D" uid="uid://du5wbdqxxa8jh" path="res://NIUALA/NIUALA SMILE.png" id="8_hsmj6"]
+[ext_resource type="Texture2D" uid="uid://ci8m7lmaxtpjt" path="res://dagat.png" id="1_5i76y"]
+[ext_resource type="Script" uid="uid://c5micrhe654r" path="res://scripts/scene_3_niuala.gd" id="1_w0y2u"]
+[ext_resource type="Texture2D" uid="uid://wlw1i8otvmse" path="res://assets/assets_scene 3/TRISTAN NEUTRAL.png" id="2_buxwb"]
+[ext_resource type="Texture2D" uid="uid://civb8s05hbluu" path="res://assets/assets_scene 3/TRISTAN SMILE.png" id="3_tq6kl"]
+[ext_resource type="Texture2D" uid="uid://n23i68n6tbft" path="res://assets/assets_scene 3/TRISTAN SAD.png" id="4_d40wm"]
+[ext_resource type="Texture2D" uid="uid://dwdtqplwd85r4" path="res://assets/assets_scene 3/TRISTAN WORRIED.png" id="5_pxus6"]
+[ext_resource type="Texture2D" uid="uid://bqqnj8w8mskca" path="res://assets/assets_scene 3/NIUALA SAD.png" id="6_lroph"]
+[ext_resource type="Texture2D" uid="uid://da5xe0r2vv2o8" path="res://assets/assets_scene 3/NIUALA SURPISED.png" id="7_yhcr2"]
+[ext_resource type="Texture2D" uid="uid://mtqsgtxk14mn" path="res://assets/assets_scene 3/NIUALA SMILE.png" id="8_hsmj6"]
 
 [sub_resource type="Animation" id="Animation_c8xue"]
 length = 100.0
@@ -936,7 +936,7 @@ _data = {
 }
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_buxwb")
+script = ExtResource("1_w0y2u")
 
 [node name="bg" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 1)
@@ -1077,7 +1077,6 @@ offset_top = 36.0
 offset_right = 544.0
 offset_bottom = 76.0
 theme_override_font_sizes/normal_font_size = 20
-text = "Gah! W-who are you, sir?"
 
 [node name="5" type="RichTextLabel" parent="Node/Panel"]
 layout_mode = 1
@@ -1102,7 +1101,6 @@ offset_top = 36.0
 offset_right = 1037.0
 offset_bottom = 76.0
 theme_override_font_sizes/normal_font_size = 20
-text = "I’d…rather not say. All you need to know is Kalao sent me to you."
 
 [node name="6" type="RichTextLabel" parent="Node/Panel"]
 layout_mode = 1

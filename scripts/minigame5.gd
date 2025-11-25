@@ -108,6 +108,9 @@ func start_game():
 func load_level(level_num, is_retry: bool = false):
 	if not level_num in level_data:
 		print("*** ALL LEVELS COMPLETED! ***")
+		# TRANSITION TO WIN SCENE
+		await get_tree().create_timer(2.0).timeout
+		TransitionManager.transition_to_scene("res://scenes/dayonscene.tscn")
 		return
 		
 	var level = level_data[level_num]
@@ -317,7 +320,14 @@ func win_game():
 	
 	await get_tree().create_timer(2.0).timeout
 	current_level += 1
-	call_deferred("load_level", current_level, false)  # Pass false for is_retry (new level)
+	
+	# Check if all levels are completed
+	if current_level > 7:  # After completing level 7
+		print("*** ALL LEVELS COMPLETED! Transitioning to win scene ***")
+		# TRANSITION TO WIN SCENE
+		TransitionManager.transition_to_scene("res://scenes/dayonscene.tscn")
+	else:
+		call_deferred("load_level", current_level, false)  # Pass false for is_retry (new level)
 
 func game_over():
 	var expected_index = current_note_index

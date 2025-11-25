@@ -12,8 +12,8 @@ extends Node2D
 
 func _ready():
 	# Play slide animation if available
-	if animation_player and animation_player.has_animation("slide left"):
-		animation_player.play("slide left")
+	if animation_player and animation_player.has_animation("slide_left"):
+		animation_player.play("slide_left")
 	
 	# Set up the label
 	label.text = instruction_text
@@ -36,18 +36,30 @@ func _ready():
 	# Auto-hide after duration
 	if display_duration > 0:
 		await get_tree().create_timer(display_duration).timeout
-		queue_free()
+		hide_instructions()
 
 # Manual control functions
 func show_instructions():
 	visible = true
+	if animation_player and animation_player.has_animation("slide left"):
+		animation_player.play("slide left")
+	
 	if background_sprite and background_sprite.sprite_frames:
 		background_sprite.play()
 
 func hide_instructions():
+	if animation_player and animation_player.has_animation("slide_right"):
+		animation_player.play("slide_right")
+		await animation_player.animation_finished
+	else:
+		# If no slide_right animation, just wait a moment before hiding
+		await get_tree().create_timer(0.5).timeout
+	
 	visible = false
 	if background_sprite:
 		background_sprite.stop()
+	
+	queue_free()
 
 func set_instruction_text(new_text: String):
 	instruction_text = new_text

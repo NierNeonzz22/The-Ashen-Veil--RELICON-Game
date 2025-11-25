@@ -1,0 +1,552 @@
+[gd_scene load_steps=10 format=3 uid="uid://bicn3kkk4wmu2"]
+
+[ext_resource type="Script" uid="uid://d25lpmo60ja0a" path="res://scenes/scene_4.gd" id="1_7p87k"]
+[ext_resource type="Texture2D" uid="uid://bs1wchi38r8ni" path="res://assets/assets scene 4/1 Close shot of gem being put together lam nio yun.png" id="1_rhpos"]
+[ext_resource type="Texture2D" uid="uid://cu4rcgp53h6g5" path="res://assets/assets scene 4/2 pov gem in hands tristan.png" id="2_hbkxh"]
+[ext_resource type="Texture2D" uid="uid://bfr6io42e4vxx" path="res://assets/assets scene 4/3 smoke only.png" id="3_hbkxh"]
+[ext_resource type="Texture2D" uid="uid://iugk8ty8ejon" path="res://assets/assets scene 4/4 smoke w_ silhouette.png" id="4_ijncq"]
+[ext_resource type="Texture2D" uid="uid://b468nyuw4jo3p" path="res://assets/assets scene 4/5 smoke w_ TAALITA.png" id="5_8ro7g"]
+
+[sub_resource type="Animation" id="Animation_hbkxh"]
+length = 85.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1CloseShotOfGemBeingPutTogetherLamNioYun:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("2PovGemInHandsTristan:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(18, 20, 29.5, 31),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node/The last rune is finally completed:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.5, 3, 5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": ["", "The last rune is finally completed", "The last rune is finally completed", ""]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node/the last piece of the gem sinks into my palms_:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(6, 7.5, 10, 11),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": ["", "The last piece of the gem sinks into my palms.", "The last piece of the gem sinks into my palms.", ""]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node/It moves, finding its home with the other pieces_:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(11, 12.5, 13, 15, 16, 17),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": ["", "It moves", "It moves", "It moves, finding its home with the other pieces.", "It moves, finding its home with the other pieces.", ""]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node/The fragments fuse together:text")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(17.5, 18, 20, 21),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": ["", "The fragments fuse together", "The fragments fuse together", ""]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node/forming one blindingly shiny gem:text")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(21, 21.5, 23.5, 24.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": ["", "forming one blindingly shiny gem.", "forming one blindingly shiny gem.", ""]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node/It shines, beckoning me to use it_:text")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(24.5, 26, 26.5, 28.5, 29.5, 30.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": ["", "It shines", "It shines", "It shines, beckoning me to use it.
+", "It shines, beckoning me to use it.
+", ""]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("3SmokeOnly:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 31.5, 32, 33.5, 34.5, 35.5, 37.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 0.2627451), Color(1, 1, 1, 0), Color(1, 1, 1, 0.5019608), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node/As the light bends around the gem, smoke appears in the distance:text")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(32, 34, 35, 36),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": ["", "As the light bends around the gem", "As the light bends around the gem", ""]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node/smoke appears in the distance:text")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(36, 37, 39, 40),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": ["", "smoke appears in the distance.", "smoke appears in the distance.", ""]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node/It spreads an ashen veil_:text")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(40, 41, 43, 44),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": ["", "It spreads an ashen veil. ", "It spreads an ashen veil. ", ""]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("4SmokeWSilhouette:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(45, 46, 46.5, 48.1, 49.1, 50, 52, 53, 54.5, 55.515495, 56.515495, 57.015495, 60),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.33333334), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 0.40784314), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 0.6392157), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 0.33333334), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Node/From the darkness of the smoke, a silhouette forms:text")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(45, 46, 47, 48.5, 49.5, 50.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": ["", "From the darkness of the smoke", "From the darkness of the smoke", "From the darkness of the smoke, a silhouette forms", "From the darkness of the smoke, a silhouette forms", ""]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node/getting closer and closer, until the form of a human,:text")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(50.5, 51.5, 52.5, 53.5, 54.5, 55),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": ["", "getting closer and closer,", "getting closer and closer,", "getting closer and closer, until the form of a human,", "getting closer and closer, until the form of a human,", ""]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Node/dishevelled and almost grey:text")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(55, 56, 57, 57.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": ["", "dishevelled and almost grey", "dishevelled and almost grey", ""]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Node/steps out into the clearer waters_:text")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(57.5, 59.5, 60.5, 61.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": ["", "steps out into the clearer waters.", "steps out into the clearer waters.", ""]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("5SmokeWTaalita:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(61.5, 63, 83, 85),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Node/I stare in shock, looking over everything she had_:text")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(63, 64, 65, 66, 67, 67.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": ["", "I stare in shock", "I stare in shock", "I stare in shock, looking over everything she had.", "I stare in shock, looking over everything she had.", ""]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Node/Jewellery worth more than me in gold:text")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(67.5, 69.5, 70.5, 71.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": ["", "Jewellery worth more than me in gold", "Jewellery worth more than me in gold", ""]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Node/young but clearly having been trapped here for quite some time:text")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(71.50518, 73.50518, 74.50518, 75.50518),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": ["", "young but clearly having been trapped here for quite some time", "young but clearly having been trapped here for quite some time", ""]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Node/is this the princess?:text")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(76, 78, 79, 80),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": ["", "is this the princess?", "is this the princess?", ""]
+}
+
+[sub_resource type="Animation" id="Animation_rhpos"]
+resource_name = "cutscene 4"
+length = 60.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1CloseShotOfGemBeingPutTogetherLamNioYun:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("2PovGemInHandsTristan:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(8, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node/The last rune is finally completed:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3, 4.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "The last rune is finally completed"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b5w26"]
+_data = {
+&"RESET": SubResource("Animation_hbkxh"),
+&"cutscene 4": SubResource("Animation_rhpos")
+}
+
+[node name="Scene 4" type="Node2D"]
+script = ExtResource("1_7p87k")
+
+[node name="1CloseShotOfGemBeingPutTogetherLamNioYun" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(577, 325)
+scale = Vector2(3.6, 3.6)
+texture = ExtResource("1_rhpos")
+
+[node name="2PovGemInHandsTristan" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(577.5, 325)
+scale = Vector2(3.596875, 3.6)
+texture = ExtResource("2_hbkxh")
+
+[node name="3SmokeOnly" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(576.5, 325)
+scale = Vector2(3.603125, 3.6111112)
+texture = ExtResource("3_hbkxh")
+
+[node name="4SmokeWSilhouette" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(576, 324)
+scale = Vector2(3.6, 3.6055555)
+texture = ExtResource("4_ijncq")
+
+[node name="5SmokeWTaalita" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(574.5, 329.5)
+scale = Vector2(3.603125, 3.6277778)
+texture = ExtResource("5_8ro7g")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_b5w26")
+}
+autoplay = "RESET"
+
+[node name="Node" type="Node" parent="."]
+
+[node name="The last rune is finally completed" type="RichTextLabel" parent="Node"]
+clip_contents = false
+offset_left = 252.0
+offset_top = 557.0
+offset_right = 917.0
+offset_bottom = 612.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 40
+fit_content = true
+horizontal_alignment = 1
+
+[node name="the last piece of the gem sinks into my palms_" type="RichTextLabel" parent="Node"]
+clip_contents = false
+offset_left = 151.0
+offset_top = 562.0
+offset_right = 1050.0
+offset_bottom = 672.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 40
+fit_content = true
+
+[node name="It moves, finding its home with the other pieces_" type="RichTextLabel" parent="Node"]
+clip_contents = false
+offset_left = 135.0
+offset_top = 569.0
+offset_right = 1083.0
+offset_bottom = 679.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 40
+fit_content = true
+
+[node name="The fragments fuse together" type="RichTextLabel" parent="Node"]
+clip_contents = false
+offset_left = 311.0
+offset_top = 563.0
+offset_right = 877.0
+offset_bottom = 618.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 40
+fit_content = true
+
+[node name="forming one blindingly shiny gem" type="RichTextLabel" parent="Node"]
+clip_contents = false
+offset_left = 267.0
+offset_top = 569.0
+offset_right = 929.0
+offset_bottom = 624.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 40
+fit_content = true
+
+[node name="It shines, beckoning me to use it_" type="RichTextLabel" parent="Node"]
+clip_contents = false
+offset_left = 270.0
+offset_top = 568.0
+offset_right = 924.0
+offset_bottom = 678.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 40
+fit_content = true
+
+[node name="As the light bends around the gem, smoke appears in the distance" type="RichTextLabel" parent="Node"]
+clip_contents = false
+offset_left = 273.0
+offset_top = 561.0
+offset_right = 959.0
+offset_bottom = 616.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 40
+fit_content = true
+
+[node name="smoke appears in the distance" type="RichTextLabel" parent="Node"]
+clip_contents = false
+offset_left = 300.0
+offset_top = 561.0
+offset_right = 905.0
+offset_bottom = 616.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 40
+fit_content = true
+
+[node name="It spreads an ashen veil_" type="RichTextLabel" parent="Node"]
+clip_contents = false
+offset_left = 386.0
+offset_top = 565.0
+offset_right = 875.0
+offset_bottom = 620.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 40
+fit_content = true
+
+[node name="From the darkness of the smoke, a silhouette forms" type="RichTextLabel" parent="Node"]
+clip_contents = false
+offset_left = 79.0
+offset_top = 561.0
+offset_right = 1083.0
+offset_bottom = 616.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 40
+fit_content = true
+
+[node name="getting closer and closer, until the form of a human," type="RichTextLabel" parent="Node"]
+clip_contents = false
+offset_left = 84.0
+offset_top = 553.0
+offset_right = 1091.0
+offset_bottom = 608.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 40
+fit_content = true
+
+[node name="dishevelled and almost grey" type="RichTextLabel" parent="Node"]
+clip_contents = false
+offset_left = 341.0
+offset_top = 553.0
+offset_right = 886.0
+offset_bottom = 608.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 40
+fit_content = true
+
+[node name="steps out into the clearer waters_" type="RichTextLabel" parent="Node"]
+clip_contents = false
+offset_left = 273.0
+offset_top = 561.0
+offset_right = 959.0
+offset_bottom = 616.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 40
+fit_content = true
+
+[node name="I stare in shock, looking over everything she had_" type="RichTextLabel" parent="Node"]
+clip_contents = false
+offset_left = 111.0
+offset_top = 562.0
+offset_right = 1062.0
+offset_bottom = 617.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 40
+fit_content = true
+
+[node name="Jewellery worth more than me in gold" type="RichTextLabel" parent="Node"]
+clip_contents = false
+offset_left = 226.0
+offset_top = 554.0
+offset_right = 964.0
+offset_bottom = 609.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 40
+fit_content = true
+
+[node name="young but clearly having been trapped here for quite some time" type="RichTextLabel" parent="Node"]
+clip_contents = false
+offset_left = 61.0
+offset_top = 557.0
+offset_right = 1117.0
+offset_bottom = 612.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 34
+fit_content = true
+
+[node name="is this the princess?" type="RichTextLabel" parent="Node"]
+clip_contents = false
+offset_left = 392.0
+offset_top = 555.0
+offset_right = 782.0
+offset_bottom = 610.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 40
+fit_content = true
