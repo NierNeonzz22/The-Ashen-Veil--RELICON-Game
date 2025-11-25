@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b101mo5y2073t"
-path="res://.godot/imported/dagat.png-8ade92d141b2a3fc5915cd2b6fe879a1.ctex"
+uid="uid://dndi4xvs3g7sr"
+path="res://.godot/imported/3 smoke only.png-1dc74ef93afddf54319f1c62031849da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/assets scene 4/dagat.png"
-dest_files=["res://.godot/imported/dagat.png-8ade92d141b2a3fc5915cd2b6fe879a1.ctex"]
+source_file="res://assets/assets scene 4/3 smoke only.png"
+dest_files=["res://.godot/imported/3 smoke only.png-1dc74ef93afddf54319f1c62031849da.ctex"]
 
 [params]
 

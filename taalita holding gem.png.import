@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b101mo5y2073t"
-path="res://.godot/imported/dagat.png-8ade92d141b2a3fc5915cd2b6fe879a1.ctex"
+uid="uid://c4nuxta1tdex3"
+path="res://.godot/imported/taalita holding gem.png-afd3e8e2882ada306fb6d709f893a7e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/assets scene 4/dagat.png"
-dest_files=["res://.godot/imported/dagat.png-8ade92d141b2a3fc5915cd2b6fe879a1.ctex"]
+source_file="res://assets/assets scene 4/taalita holding gem.png"
+dest_files=["res://.godot/imported/taalita holding gem.png-afd3e8e2882ada306fb6d709f893a7e4.ctex"]
 
 [params]
 
