@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://mesinsqmlluf"]
 
 [ext_resource type="Texture2D" uid="uid://bddfe1eek5t0d" path="res://elia & pablo.png" id="1_0hol4"]
-[ext_resource type="Script" path="res://control.gd" id="2_epypp"]
-[ext_resource type="Texture2D" uid="uid://bsvja7hk2x35p" path="res://download.jpg" id="3_0hol4"]
-[ext_resource type="Texture2D" uid="uid://bvlop14wsmxgc" path="res://Fade-PNG-Photos.png" id="4_0hol4"]
+[ext_resource type="Script" path="res://control.gd" id="2_q6r6c"]
+[ext_resource type="Texture2D" uid="uid://bsvja7hk2x35p" path="res://download.jpg" id="3_kdubu"]
+[ext_resource type="Texture2D" uid="uid://bvlop14wsmxgc" path="res://Fade-PNG-Photos.png" id="4_d21ai"]
 
 [sub_resource type="Animation" id="Animation_kdubu"]
 length = 0.001
@@ -89,7 +89,7 @@ offset_left = 8.0
 offset_top = 4.0
 offset_right = 1168.0
 offset_bottom = 655.0
-script = ExtResource("2_epypp")
+script = ExtResource("2_q6r6c")
 
 [node name="DialogueBox" type="TextureRect" parent="Control"]
 layout_mode = 0
@@ -102,7 +102,7 @@ offset_bottom = 604.0
 modulate = Color(1, 1, 1, 0.8235294)
 position = Vector2(525.00006, 47.499977)
 scale = Vector2(4.6933336, 0.6444444)
-texture = ExtResource("3_0hol4")
+texture = ExtResource("3_kdubu")
 
 [node name="TextLabel" type="RichTextLabel" parent="Control/DialogueBox"]
 layout_mode = 0
@@ -168,22 +168,22 @@ vertical_alignment = 1
 [node name="1" type="Sprite2D" parent="."]
 position = Vector2(582.5, 555)
 scale = Vector2(0.74155194, 0.5403587)
-texture = ExtResource("4_0hol4")
+texture = ExtResource("4_d21ai")
 
 [node name="4" type="Sprite2D" parent="."]
 position = Vector2(599.20215, 62.847908)
 rotation = 3.1300774
 scale = Vector2(0.78255695, 0.5403587)
-texture = ExtResource("4_0hol4")
+texture = ExtResource("4_d21ai")
 
 [node name="2" type="Sprite2D" parent="."]
 position = Vector2(1097.9036, 302.1034)
 rotation = -1.5760452
 scale = Vector2(0.4569468, 0.5403587)
-texture = ExtResource("4_0hol4")
+texture = ExtResource("4_d21ai")
 
 [node name="3" type="Sprite2D" parent="."]
 position = Vector2(60.55957, 315.80457)
 rotation = -4.7144074
 scale = Vector2(0.44531175, 0.5403587)
-texture = ExtResource("4_0hol4")
+texture = ExtResource("4_d21ai")
