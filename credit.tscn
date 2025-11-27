@@ -1,0 +1,165 @@
+[gd_scene load_steps=6 format=3 uid="uid://c2u2man2awrrv"]
+
+[ext_resource type="Texture2D" uid="uid://b101mo5y2073t" path="res://assets/assets scene 4/dagat.png" id="1_5wfih"]
+[ext_resource type="Texture2D" uid="uid://c7lgmvtw12e52" path="res://assets/assets scene 4/logo.png" id="3_aokq2"]
+
+[sub_resource type="Animation" id="Animation_83x8r"]
+resource_name = "scroll"
+length = 60.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(10.799999, 59.066666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-2, 500), Vector2(-2, -2250)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Logo:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5.033334, 9.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_wsd54"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-2, 6)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Logo:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8uvic"]
+_data = {
+&"RESET": SubResource("Animation_wsd54"),
+&"scroll": SubResource("Animation_83x8r")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_right = 1155.0
+offset_bottom = 648.0
+
+[node name="Dagat" type="Sprite2D" parent="Control/TextureRect"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(578.99994, 325)
+scale = Vector2(3.6, 3.588889)
+texture = ExtResource("1_5wfih")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -2.0
+offset_top = 6.0
+offset_right = 1159.0
+offset_bottom = 2358.4219
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "
+Game by 12 - Hubble, led by Pres. Chloe Roque
+
+Game Creation headed by Rein Ignacio
+
+Game developers
+Jared Ladan
+Terenz Teodoro
+Christine Alba
+Althea Ludovice
+Sean Ramos
+Roel Jr Jerusalem
+Leydon Noche
+Kurt Damasco
+
+Concept and Story headed by Ryleigh Lemsic
+
+Scriptwriting headed by Lindsay Estella
+
+Scriptwriters
+Ryleigh Lemsic
+Precious Osida
+Roel Jr Jerusalem
+Francine Dimanlig
+Lavinia Cabalan
+Althea Ludovice
+Chloe Roque
+Kian Deuda
+Angelo Lungca
+
+Graphics and Visual Team
+Christine Mae Alba
+Valerie Balahula
+Celestine De Jesus
+Brian Burgos
+Rosezandra Unay
+Sean Ramos
+Almirah Salon
+Lavinia Paras
+
+Soundtrack design headed by Bryne Calub and Althea Ludovice
+
+Soundtrack Team
+Dionne Alido
+Macee Bautista
+Ross Lim
+Althea Copiaco
+
+Marketing headed by Kurt Damasco
+
+Marketing Team
+Keira Gravamen
+Micaella Felicano
+Yeshua De Guzman
+Chloe De las Alas
+Thea Dalanon
+Maria Elissa Magacat
+Khrizia Blancaver
+Andrey Dapula
+Francis Cabuello"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="RichTextLabel"]
+libraries = {
+&"": SubResource("AnimationLibrary_8uvic")
+}
+autoplay = "scroll"
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(568.99994, 315)
+scale = Vector2(0.5290055, 0.5290055)
+texture = ExtResource("3_aokq2")
