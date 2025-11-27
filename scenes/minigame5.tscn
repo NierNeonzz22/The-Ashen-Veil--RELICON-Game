@@ -1,10 +1,10 @@
 [gd_scene load_steps=55 format=3 uid="uid://cnslvssgvyso3"]
 
-[ext_resource type="Texture2D" uid="uid://1sjjn2yf318w" path="res://assets/assets_minigame5/minigame5 semifinal.png" id="1_4hkn6"]
 [ext_resource type="Script" uid="uid://wp6p4gwfj1ou" path="res://scripts/minigame5.gd" id="1_6hb12"]
 [ext_resource type="Script" uid="uid://bbi0aiygulkhi" path="res://scripts/tristan_gameplaymoveset.gd" id="2_6hb12"]
 [ext_resource type="PackedScene" uid="uid://l435jaidwcf4" path="res://scenes/timer_ui.tscn" id="2_7qx4m"]
 [ext_resource type="PackedScene" uid="uid://cf38e73ldd45w" path="res://scenes/label_instruction.tscn" id="3_abjjg"]
+[ext_resource type="Texture2D" uid="uid://143p3duevm0n" path="res://assets/assets_minigame5/minigame 5.png" id="4_adqki"]
 [ext_resource type="Script" uid="uid://dauxsaxv8wmwv" path="res://scripts/MG5_button_script.gd" id="5_75udb"]
 [ext_resource type="Texture2D" uid="uid://r2ughrtiehix" path="res://assets/sprites/SHIT NI TRISTAN ADJUSTED HEIGHT (2).png" id="5_lkk4d"]
 [ext_resource type="Texture2D" uid="uid://dvj1xnvrjs7p" path="res://assets/assets_minigame5/Musical Stones 1 Dark.png" id="5_uqii8"]
@@ -217,7 +217,7 @@ timer_ui_scene = ExtResource("2_7qx4m")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(899, 365)
-texture = ExtResource("1_4hkn6")
+texture = ExtResource("4_adqki")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
 
@@ -259,7 +259,8 @@ position = Vector2(902, 448)
 [node name="ButtonContainer" type="Node2D" parent="."]
 
 [node name="Button1" type="Area2D" parent="ButtonContainer"]
-position = Vector2(611, 358)
+z_index = 20
+position = Vector2(619, 404)
 script = ExtResource("5_75udb")
 note_sound = ExtResource("6_bj4go")
 
@@ -282,7 +283,8 @@ texture = ExtResource("7_306mo")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ButtonContainer/Button1"]
 
 [node name="Button2" type="Area2D" parent="ButtonContainer"]
-position = Vector2(791, 369)
+z_index = 20
+position = Vector2(798, 396)
 script = ExtResource("5_75udb")
 button_number = 2
 note_sound = ExtResource("9_oiqlh")
@@ -306,7 +308,8 @@ texture = ExtResource("10_71ioa")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ButtonContainer/Button2"]
 
 [node name="Button3" type="Area2D" parent="ButtonContainer"]
-position = Vector2(987, 363)
+z_index = 20
+position = Vector2(983, 402)
 script = ExtResource("5_75udb")
 button_number = 3
 note_sound = ExtResource("12_go66l")
@@ -330,7 +333,8 @@ texture = ExtResource("14_go66l")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ButtonContainer/Button3"]
 
 [node name="Button4" type="Area2D" parent="ButtonContainer"]
-position = Vector2(1159, 363)
+z_index = 20
+position = Vector2(1159, 397)
 script = ExtResource("5_75udb")
 button_number = 4
 note_sound = ExtResource("14_7qx4m")
@@ -354,7 +358,8 @@ texture = ExtResource("16_abjjg")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ButtonContainer/Button4"]
 
 [node name="Button5" type="Area2D" parent="ButtonContainer"]
-position = Vector2(610, 531)
+z_index = 20
+position = Vector2(621, 556)
 script = ExtResource("5_75udb")
 button_number = 5
 note_sound = ExtResource("17_adqki")
@@ -378,7 +383,8 @@ texture = ExtResource("19_6folt")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ButtonContainer/Button5"]
 
 [node name="Button6" type="Area2D" parent="ButtonContainer"]
-position = Vector2(790, 515)
+z_index = 20
+position = Vector2(798, 557)
 script = ExtResource("5_75udb")
 button_number = 6
 note_sound = ExtResource("20_km5dx")
@@ -402,7 +408,8 @@ texture = ExtResource("22_534ai")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ButtonContainer/Button6"]
 
 [node name="Button7" type="Area2D" parent="ButtonContainer"]
-position = Vector2(992, 520)
+z_index = 20
+position = Vector2(977, 563)
 script = ExtResource("5_75udb")
 button_number = 7
 note_sound = ExtResource("23_fwp4r")
@@ -426,7 +433,8 @@ texture = ExtResource("25_e004t")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ButtonContainer/Button7"]
 
 [node name="Button8" type="Area2D" parent="ButtonContainer"]
-position = Vector2(1169, 516)
+z_index = 20
+position = Vector2(1163, 561)
 script = ExtResource("5_75udb")
 button_number = 8
 note_sound = ExtResource("26_uhaqw")

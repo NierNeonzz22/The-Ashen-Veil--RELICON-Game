@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dgvl0vv0wsie2"]
+[gd_scene load_steps=11 format=3 uid="uid://dgvl0vv0wsie2"]
 
 [ext_resource type="Texture2D" uid="uid://ci8m7lmaxtpjt" path="res://dagat.png" id="1_5gkyp"]
 [ext_resource type="Texture2D" uid="uid://bdc0qeolfaea5" path="res://assets/assets_scene 3/NIUALA ANGRY.png" id="2_5nlih"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://wlw1i8otvmse" path="res://assets/assets_scene 3/TRISTAN NEUTRAL.png" id="3_jxt4k"]
 [ext_resource type="Script" uid="uid://claatj5tw5end" path="res://scripts/tell_her.gd" id="5_u68xg"]
 [ext_resource type="Script" uid="uid://bo7rw3kh8xcvg" path="res://scripts/do_not_tell_her.gd" id="6_77in1"]
+[ext_resource type="AudioStream" uid="uid://cm7o2s8rfgyv" path="res://sfx/Ost/3the_mysterious_lake_dont_swim.mp3" id="7_ne0nd"]
 
 [sub_resource type="Animation" id="Animation_77in1"]
 length = 0.001
@@ -533,23 +534,28 @@ _data = {
 }
 
 [node name="Third Rune (Scene)" type="Node2D"]
+texture_filter = 1
 
 [node name="Dagat" type="Sprite2D" parent="."]
-position = Vector2(574, 324)
-scale = Vector2(3.58125, 3.6222222)
+texture_filter = 1
+position = Vector2(576, 324)
+scale = Vector2(3.6000001, 3.6222222)
 texture = ExtResource("1_5gkyp")
 
 [node name="Niuala(Angy)" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(917, 377.375)
 scale = Vector2(0.2877604, 0.2640381)
 texture = ExtResource("2_5nlih")
 
 [node name="Niuala(Surprised)" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(917, 377.2112)
 scale = Vector2(0.2877604, 0.2640381)
 texture = ExtResource("3_5nlih")
 
 [node name="Tristan" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(222, 322)
 scale = Vector2(0.31282547, 0.3217773)
 texture = ExtResource("3_jxt4k")
@@ -646,6 +652,10 @@ offset_bottom = 369.0
 theme_override_font_sizes/font_size = 30
 text = "[DON’T TELL HER]"
 script = ExtResource("6_77in1")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_ne0nd")
+autoplay = true
 
 [connection signal="pressed" from="Control/Tell her" to="Control/Tell her" method="_on_pressed"]
 [connection signal="pressed" from="Control/Do not tell her" to="Control/Do not tell her" method="_on_pressed"]

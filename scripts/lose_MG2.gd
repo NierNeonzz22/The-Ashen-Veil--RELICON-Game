@@ -9,4 +9,4 @@ func _ready() -> void:
 	
 	# Then transition back to minigame 2
 	print("Returning to minigame 2...")
-	TransitionManager.transition_to_scene("res://scenes/Minigame 2.tscn")
+	TransitionManager.transition_to_scene("res://scenes/minigame2Test.tscn")

@@ -1,12 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://bbrweb3giikd4"]
+[gd_scene load_steps=13 format=3 uid="uid://bbrweb3giikd4"]
 
 [ext_resource type="Texture2D" uid="uid://dmohcmpqmjn61" path="res://assets/assets scene 4/tristan absorbing gem.png" id="1_5xjhb"]
 [ext_resource type="Texture2D" uid="uid://cibhgc1rw20jl" path="res://assets/assets scene 4/dagat.png" id="2_602pn"]
-[ext_resource type="Texture2D" uid="uid://cb7mccvefbslp" path="res://assets/assets scene 4/TAALITA ANGRY.png" id="3_lbm3q"]
+[ext_resource type="Texture2D" uid="uid://ctiaocqd1fufi" path="res://assets/assets scene 4/TAALITA ANGRY new.png" id="3_uit72"]
+[ext_resource type="Texture2D" uid="uid://blhk8c8n8akrl" path="res://assets/assets scene 4/TAALITA SAD new.png" id="4_2vjvv"]
 [ext_resource type="Texture2D" uid="uid://bpey836nl0dmf" path="res://assets/assets scene 4/TRISTAN SAD.png" id="4_ufas0"]
-[ext_resource type="Texture2D" uid="uid://bhtqa4sr2fxiu" path="res://assets/assets scene 4/TAALITA SAD.png" id="4_uit72"]
 [ext_resource type="Texture2D" uid="uid://5ii8sy0l4hig" path="res://assets/assets scene 4/TRISTAN WORRIED.png" id="6_7gh3j"]
 [ext_resource type="Texture2D" uid="uid://l2miuqxcp1i5" path="res://assets/assets scene 4/Taalita echo.png" id="7_2vjvv"]
+[ext_resource type="AudioStream" uid="uid://cm7o2s8rfgyv" path="res://sfx/Ost/3the_mysterious_lake_dont_swim.mp3" id="8_2vjvv"]
 [ext_resource type="Script" uid="uid://djcvq185xrvbw" path="res://scripts/There will be consequences.gd" id="8_67a8i"]
 
 [sub_resource type="Animation" id="Animation_i8x00"]
@@ -522,6 +523,29 @@ tracks/38/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
+tracks/39/type = "audio"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("AudioStreamPlayer")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("8_2vjvv")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("8_2vjvv")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("8_2vjvv")
+}],
+"times": PackedFloat32Array(0.033333335, 44.7, 98.86667)
+}
+tracks/39/use_blend = true
 
 [sub_resource type="Animation" id="Animation_73kiq"]
 length = 0.001
@@ -1011,40 +1035,47 @@ _data = {
 [node name="Scene 4 cutscene (Free yourself)" type="Node2D"]
 
 [node name="Absorbing the gem" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(576.50006, 324.00003)
 scale = Vector2(3.596875, 3.6000004)
 texture = ExtResource("1_5xjhb")
 
 [node name="Dagat" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
+texture_filter = 1
 position = Vector2(575.5, 325)
 scale = Vector2(3.603125, 3.6222224)
 texture = ExtResource("2_602pn")
 
 [node name="Taalita(Angy)" type="Sprite2D" parent="."]
 modulate = Color(1.353256, 1.353256, 1.353256, 0)
+texture_filter = 1
 position = Vector2(944, 374.24997)
 scale = Vector2(0.27213538, 0.26879883)
-texture = ExtResource("3_lbm3q")
+texture = ExtResource("3_uit72")
 
 [node name="Taalita(Sad)" type="Sprite2D" parent="."]
 modulate = Color(1.353256, 1.353256, 1.353256, 0.99607843)
+texture_filter = 1
 position = Vector2(944, 374.24997)
 scale = Vector2(0.296, 0.293)
-texture = ExtResource("4_uit72")
+texture = ExtResource("4_2vjvv")
 
 [node name="Tristan(Sad)" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(258.5, 373.00003)
 scale = Vector2(0.28059897, 0.27148435)
 texture = ExtResource("4_ufas0")
 
 [node name="Tristan(Worried)" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(208.5, 373)
 scale = Vector2(0.28059897, 0.27148435)
 texture = ExtResource("6_7gh3j")
 
 [node name="Taalita(Echo)" type="Sprite2D" parent="."]
 modulate = Color(1.353256, 1.353256, 1.353256, 1)
+texture_filter = 1
 position = Vector2(582.00006, 352.75)
 scale = Vector2(0.29451218, 0.2548729)
 texture = ExtResource("7_2vjvv")
@@ -1227,5 +1258,7 @@ theme_override_font_sizes/font_size = 30
 text = "There will be consequences for your choice.
 "
 script = ExtResource("8_67a8i")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
 [connection signal="pressed" from="Control/Button" to="Control/Button" method="_on_pressed"]

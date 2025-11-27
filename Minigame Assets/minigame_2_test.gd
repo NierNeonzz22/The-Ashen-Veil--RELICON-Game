@@ -73,6 +73,9 @@ var mouse_offset: Vector2 = Vector2.ZERO
 var is_inventory_open := false
 var timer_running := true  # Flag to control timer state
 
+# ADD THIS: Prevent multiple lose calls
+var game_ended := false
+
 
 ###############################
 # INITIAL SETUP
@@ -201,7 +204,7 @@ func _process(delta):
 	if timer_running and not timer.is_stopped():
 		current_time = int(timer.time_left)
 		update_timer_display()
-	elif current_time <= 0:
+	elif current_time <= 0 and not game_ended:  # ADDED: Check game_ended flag
 		# Time's up - lose condition
 		_on_game_lose()
 
@@ -332,7 +335,7 @@ func _on_reset_pressed():
 		slot.get_node("Highlight").color = Color(1, 0, 0, 0.4)
 		
 func _on_Timer_timeout():
-	if current_time <= 0:
+	if current_time <= 0 and not game_ended:  # ADDED: Check game_ended flag
 		_on_game_lose()
 
 
@@ -340,7 +343,7 @@ func _on_Timer_timeout():
 # WIN CONDITION
 ###############################
 func check_win_condition():
-	if correct_placements == total_placements:
+	if correct_placements == total_placements and not game_ended:  # ADDED: Check game_ended flag
 		print("YOU WIN! Transitioning to kalaoscene.tscn")
 		_on_game_win()
 
@@ -349,6 +352,8 @@ func check_win_condition():
 # WIN TRANSITION
 ###############################
 func _on_game_win():
+	# ADDED: Set game_ended flag
+	game_ended = true
 	timer_running = false
 	timer.stop()
 	
@@ -366,6 +371,8 @@ func _on_game_win():
 # LOSE TRANSITION
 ###############################
 func _on_game_lose():
+	# ADDED: Set game_ended flag
+	game_ended = true
 	timer_running = false
 	timer.stop()
 	
@@ -373,6 +380,8 @@ func _on_game_lose():
 	if timer_ui_instance:
 		timer_ui_instance.queue_free()
 		timer_ui_instance = null
+	
+	print("💀 GAME OVER - Time's up! Transitioning to LOSE scene...")
 	
 	# Wait a moment to show lose state, then transition
 	await get_tree().create_timer(2.0).timeout

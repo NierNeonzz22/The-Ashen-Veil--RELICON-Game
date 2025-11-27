@@ -1,6 +1,6 @@
 extends Button
 
-@export var cutscene_path: String = "res://scenes/cutscene_5.tscn"
+@export var cutscene_path: String = "res://scenes/scene_4_cutscene_(free_yourself).tscn"
 
 func _ready() -> void:
 	# Connect the pressed signal

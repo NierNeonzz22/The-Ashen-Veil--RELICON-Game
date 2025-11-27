@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://4ippji0j7bfw"]
+[gd_scene load_steps=8 format=3 uid="uid://4ippji0j7bfw"]
 
 [ext_resource type="Script" uid="uid://b08ta2t73joke" path="res://scripts/kalao_intro.gd" id="1_alluh"]
 [ext_resource type="Texture2D" uid="uid://cibhgc1rw20jl" path="res://assets/assets scene 4/dagat.png" id="1_yay6j"]
 [ext_resource type="Texture2D" uid="uid://vk1k021tgjiu" path="res://assets/assets_scene 3/KALAO HAPPY.png" id="2_vgj12"]
+[ext_resource type="AudioStream" uid="uid://cm7o2s8rfgyv" path="res://sfx/Ost/3the_mysterious_lake_dont_swim.mp3" id="4_f6o2y"]
 
 [sub_resource type="Animation" id="Animation_0ecwx"]
 resource_name = "Kalao Intro"
@@ -238,16 +239,19 @@ _data = {
 }
 
 [node name="Node2D" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_alluh")
 
 [node name="Dagat" type="Sprite2D" parent="."]
-position = Vector2(575.5, 322)
-scale = Vector2(3.590625, 3.588889)
+texture_filter = 1
+position = Vector2(576.00006, 323.5)
+scale = Vector2(3.6, 3.6055553)
 texture = ExtResource("1_yay6j")
 
 [node name="KalaoHappy" type="Sprite2D" parent="."]
-position = Vector2(570, 375)
-scale = Vector2(0.26269534, 0.26269537)
+texture_filter = 1
+position = Vector2(570, 376.99997)
+scale = Vector2(0.26269534, 0.26464847)
 texture = ExtResource("2_vgj12")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -276,7 +280,6 @@ theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 24
-text = "I walk to a new area, where various rocks are scattered. A spirit lingers around, just…standing there."
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -291,7 +294,6 @@ theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 24
-text = "Young, a kid. He chirps up at me with a sweet voice."
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -304,8 +306,6 @@ offset_bottom = 108.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 25
-text = "
- Hello, mister! Finally someone's here to play with me. My Rune needs to be solved. The pieces are hiding behind the rocks. Help me find them please!"
 
 [node name="Kalao_" type="RichTextLabel" parent="Node/Panel"]
 layout_mode = 0
@@ -318,3 +318,8 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 28
 text = "Kalao:"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_f6o2y")
+autoplay = true
+parameters/looping = true

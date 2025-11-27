@@ -181,6 +181,6 @@ func play_final_monologue() -> void:
 
 func transition_to_main_menu() -> void:
 	if has_node("/root/TransitionManager"):
-		TransitionManager.transition_to_scene("res://scenes/MainMenu.tscn")
+		TransitionManager.transition_to_scene("res://scenes/credit.tscn")
 	else:
-		get_tree().change_scene_to_file("res://scenes/MainMenu.tscn")
+		get_tree().change_scene_to_file("res://scenes/credit.tscn")

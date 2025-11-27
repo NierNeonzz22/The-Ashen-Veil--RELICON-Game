@@ -3,9 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://cibhgc1rw20jl" path="res://assets/assets scene 4/dagat.png" id="1_8hrhy"]
 [ext_resource type="Texture2D" uid="uid://ddilgxfddrjh" path="res://assets/assets scene 4/TRISTAN SURPRISED.png" id="2_yk5xu"]
 [ext_resource type="AudioStream" uid="uid://cm7o2s8rfgyv" path="res://sfx/Ost/3the_mysterious_lake_dont_swim.mp3" id="3_a0hgj"]
-[ext_resource type="Texture2D" uid="uid://bhtqa4sr2fxiu" path="res://assets/assets scene 4/TAALITA SAD.png" id="3_gfy1e"]
-[ext_resource type="Texture2D" uid="uid://b00e7uo27qg0a" path="res://assets/assets scene 4/TAALITA NEUTRAL.png" id="4_u7dcc"]
-[ext_resource type="Texture2D" uid="uid://civnqwglvjot" path="res://assets/assets scene 4/TAALITA SMILE.png" id="5_tqhda"]
+[ext_resource type="Texture2D" uid="uid://blhk8c8n8akrl" path="res://assets/assets scene 4/TAALITA SAD new.png" id="4_a0hgj"]
+[ext_resource type="Texture2D" uid="uid://bdscp8kb7s3mo" path="res://assets/assets scene 4/TAALITA NEUTRAL new.png" id="5_qyqy2"]
+[ext_resource type="Texture2D" uid="uid://c4nqq4mr6fv54" path="res://assets/assets scene 4/TAALITA SMILE new.png" id="6_dhpjk"]
 [ext_resource type="Script" uid="uid://d0dcuf0gnmsxb" path="res://scripts/BAD_ENDING_BUTTON.gd" id="6_ecva6"]
 [ext_resource type="Script" uid="uid://iwxvxj21owwv" path="res://scripts/GOOD_ENDING_BUTTON.gd" id="7_a0hgj"]
 
@@ -1060,8 +1060,9 @@ _data = {
 [node name="Node2D" type="Node2D"]
 
 [node name="Dagat" type="Sprite2D" parent="."]
-position = Vector2(576.5, 325)
-scale = Vector2(3.603125, 3.5666666)
+texture_filter = 1
+position = Vector2(576.5, 324)
+scale = Vector2(3.603125, 3.6000001)
 texture = ExtResource("1_8hrhy")
 
 [node name="TristanSurprised" type="Sprite2D" parent="Dagat"]
@@ -1078,17 +1079,17 @@ autoplay = "dialogue 4"
 [node name="TaalitaSad" type="Sprite2D" parent="Dagat"]
 position = Vector2(-103.93753, 12.056076)
 scale = Vector2(0.07588899, 0.07666474)
-texture = ExtResource("3_gfy1e")
+texture = ExtResource("4_a0hgj")
 
 [node name="TaalitaNeutral" type="Sprite2D" parent="Dagat"]
 position = Vector2(103.104935, 10.654213)
 scale = Vector2(0.07769588, 0.07849012)
-texture = ExtResource("4_u7dcc")
+texture = ExtResource("5_qyqy2")
 
 [node name="TaalitaSmile" type="Sprite2D" parent="Dagat"]
 position = Vector2(-103.52124, 11.401871)
 scale = Vector2(0.07534691, 0.07611712)
-texture = ExtResource("5_tqhda")
+texture = ExtResource("6_dhpjk")
 
 [node name="Node" type="Node" parent="."]
 
@@ -1380,3 +1381,4 @@ text = "FREE THE PRINCESS"
 script = ExtResource("7_a0hgj")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+autoplay = true

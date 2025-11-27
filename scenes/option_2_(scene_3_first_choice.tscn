@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://8llp1plipdra"]
+[gd_scene load_steps=11 format=3 uid="uid://8llp1plipdra"]
 
 [ext_resource type="Texture2D" uid="uid://ci8m7lmaxtpjt" path="res://dagat.png" id="1_uoahw"]
 [ext_resource type="Texture2D" uid="uid://cd1v076620my4" path="res://assets/assets_scene 3/NAMARU SURPISED.png" id="2_b65s7"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://exuo0x6m20px" path="res://scripts/option_1(2).gd" id="4_rlheo"]
 [ext_resource type="Script" uid="uid://b4t6jcygym31l" path="res://scripts/option_2(2).gd" id="5_y5oum"]
 [ext_resource type="Script" uid="uid://p52ll1ln667d" path="res://scripts/option_3(2).gd" id="6_y5oum"]
+[ext_resource type="AudioStream" uid="uid://cm7o2s8rfgyv" path="res://sfx/Ost/3the_mysterious_lake_dont_swim.mp3" id="7_yrpru"]
 
 [sub_resource type="Animation" id="Animation_y5oum"]
 resource_name = "Option 2"
@@ -482,18 +483,22 @@ _data = {
 }
 
 [node name="Option 2 (scene 3 first choice" type="Node2D"]
+texture_filter = 1
 
 [node name="Dagat" type="Sprite2D" parent="."]
-position = Vector2(577.5, 323)
-scale = Vector2(3.6156247, 3.6000001)
+texture_filter = 1
+position = Vector2(577.5, 323.5)
+scale = Vector2(3.6156247, 3.6055555)
 texture = ExtResource("1_uoahw")
 
 [node name="Namaru(Surprised)" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(531.84894, 368.663)
 scale = Vector2(0.2931654, 0.27799124)
 texture = ExtResource("2_b65s7")
 
 [node name="Namaru(Smile)" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(531.84894, 368.663)
 scale = Vector2(0.2931654, 0.27799124)
 texture = ExtResource("3_rlheo")
@@ -599,6 +604,11 @@ offset_bottom = 453.0
 theme_override_font_sizes/font_size = 30
 text = "“Just get me out of here.”"
 script = ExtResource("6_y5oum")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_yrpru")
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="Control/Option 1(2)" to="Control/Option 1(2)" method="_on_pressed"]
 [connection signal="pressed" from="Control/Option 2(2)" to="Control/Option 2(2)" method="_on_pressed"]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://ivveeruux7lv"]
+[gd_scene load_steps=8 format=3 uid="uid://ivveeruux7lv"]
 
 [ext_resource type="Script" uid="uid://dxxwutw86720p" path="res://scripts/lose_retry_MG1.gd" id="1_7kx5j"]
 [ext_resource type="Texture2D" uid="uid://ci8m7lmaxtpjt" path="res://dagat.png" id="1_10xbe"]
 [ext_resource type="Texture2D" uid="uid://cd1v076620my4" path="res://assets/assets_scene 3/NAMARU SURPISED.png" id="2_pd1io"]
+[ext_resource type="AudioStream" uid="uid://cm7o2s8rfgyv" path="res://sfx/Ost/3the_mysterious_lake_dont_swim.mp3" id="4_e1ge1"]
 
 [sub_resource type="Animation" id="Animation_ocanv"]
 resource_name = "Lose"
@@ -285,14 +286,17 @@ _data = {
 }
 
 [node name="lose scene (namaru)" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_7kx5j")
 
 [node name="Dagat" type="Sprite2D" parent="."]
-position = Vector2(576.5, 323.99997)
-scale = Vector2(3.5968752, 3.6222215)
+texture_filter = 1
+position = Vector2(575.50006, 323.99997)
+scale = Vector2(3.603125, 3.6222215)
 texture = ExtResource("1_10xbe")
 
 [node name="Namaru(Surprised)" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(569.0899, 344.2019)
 scale = Vector2(0.30871075, 0.29707214)
 texture = ExtResource("2_pd1io")
@@ -362,3 +366,8 @@ offset_bottom = 565.0
 theme_override_colors/default_color = Color(0.59607846, 1, 0.59607846, 1)
 theme_override_font_sizes/normal_font_size = 30
 text = "Namaru:"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_e1ge1")
+autoplay = true
+parameters/looping = true

@@ -1,16 +1,16 @@
 [gd_scene load_steps=20 format=3 uid="uid://m27tcea44pb2"]
 
 [ext_resource type="Script" uid="uid://dqvu5fih85p20" path="res://scripts/MainMenu.gd" id="1_2nypq"]
-[ext_resource type="Texture2D" uid="uid://ckh3l7y23qwwx" path="res://assets/Main Menu assets/Start_button.png" id="2_bky6r"]
-[ext_resource type="Texture2D" uid="uid://byx1g2ds16psh" path="res://assets/Main Menu assets/settings_button.png" id="3_l4mxc"]
-[ext_resource type="Texture2D" uid="uid://ca7wsw7l01w3e" path="res://assets/Main Menu assets/Quit_button.png" id="4_5faoh"]
-[ext_resource type="Texture2D" uid="uid://d4be7c7gsqp6" path="res://assets/Main Menu assets/langit.png" id="5_ptake"]
+[ext_resource type="Texture2D" uid="uid://ckh3l7y23qwwx" path="res://Main Menu assets/Start_button.png" id="2_bky6r"]
+[ext_resource type="Texture2D" uid="uid://byx1g2ds16psh" path="res://Main Menu assets/settings_button.png" id="3_l4mxc"]
+[ext_resource type="Texture2D" uid="uid://ca7wsw7l01w3e" path="res://Main Menu assets/Quit_button.png" id="4_5faoh"]
+[ext_resource type="Texture2D" uid="uid://d4be7c7gsqp6" path="res://Main Menu assets/langit.png" id="5_ptake"]
 [ext_resource type="Script" uid="uid://d0g33cxpav7kl" path="res://scripts/langit_moving.gd" id="6_hubol"]
-[ext_resource type="Texture2D" uid="uid://bn1xylcymig51" path="res://assets/Main Menu assets/Title Sample(no photoshop pa).png" id="7_8vx4p"]
-[ext_resource type="Texture2D" uid="uid://b1tm8odbiuy57" path="res://assets/Main Menu assets/Ilaw effect.png" id="8_tdapf"]
-[ext_resource type="Texture2D" uid="uid://d2abvfbjl0bkn" path="res://assets/Main Menu assets/main2.png" id="9_v41fp"]
-[ext_resource type="Texture2D" uid="uid://ck363d8y7h67j" path="res://assets/Main Menu assets/dahon.png" id="10_7shrw"]
-[ext_resource type="Texture2D" uid="uid://bfr8po36bepvt" path="res://assets/Main Menu assets/LINES.png" id="11_viowm"]
+[ext_resource type="Texture2D" uid="uid://bn1xylcymig51" path="res://Main Menu assets/Title Sample(no photoshop pa).png" id="7_8vx4p"]
+[ext_resource type="Texture2D" uid="uid://b1tm8odbiuy57" path="res://Main Menu assets/Ilaw effect.png" id="8_tdapf"]
+[ext_resource type="Texture2D" uid="uid://d2abvfbjl0bkn" path="res://Main Menu assets/main2.png" id="9_v41fp"]
+[ext_resource type="Texture2D" uid="uid://ck363d8y7h67j" path="res://Main Menu assets/dahon.png" id="10_7shrw"]
+[ext_resource type="Texture2D" uid="uid://bfr8po36bepvt" path="res://Main Menu assets/LINES.png" id="11_viowm"]
 [ext_resource type="AudioStream" uid="uid://p8r6t6uy8s6f" path="res://sfx/Ost/1mainmenu.mp3" id="12_bky6r"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_flqon"]
@@ -107,6 +107,7 @@ _data = {
 }
 
 [node name="MainMenu" type="Control"]
+texture_filter = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -132,22 +133,26 @@ grow_vertical = 0
 scale = Vector2(0.5, 0.5)
 
 [node name="StartButton" type="Button" parent="UI"]
+texture_filter = 1
 layout_mode = 2
 theme_override_icons/icon = ExtResource("2_bky6r")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_flqon")
 
 [node name="Button2" type="Button" parent="UI"]
+texture_filter = 1
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_rcqid")
 icon = ExtResource("3_l4mxc")
 
 [node name="QuitButton" type="Button" parent="UI"]
+texture_filter = 1
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_1ajci")
 icon = ExtResource("4_5faoh")
 
 [node name="Langit_moving" type="Sprite2D" parent="."]
 show_behind_parent = true
+texture_filter = 1
 position = Vector2(-1579.0001, 4.5474735e-13)
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("5_ptake")
@@ -155,29 +160,34 @@ centered = false
 script = ExtResource("6_hubol")
 
 [node name="TitleSample(noPhotoshopPa)" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(838, 198)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("7_8vx4p")
 
 [node name="IlawEffect" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(576, 324.5)
 scale = Vector2(0.075120434, 0.07556995)
 texture = ExtResource("8_tdapf")
 
 [node name="Main2" type="Sprite2D" parent="."]
 show_behind_parent = true
+texture_filter = 1
 position = Vector2(575.94104, 324)
 scale = Vector2(0.07499792, 0.074991316)
 texture = ExtResource("9_v41fp")
 
 [node name="Dahon" type="Sprite2D" parent="."]
 show_behind_parent = true
+texture_filter = 1
 position = Vector2(576, 325)
 scale = Vector2(0.07509895, 0.07562031)
 texture = ExtResource("10_7shrw")
 
 [node name="Lines" type="Sprite2D" parent="."]
 show_behind_parent = true
+texture_filter = 1
 position = Vector2(962.31256, 498)
 scale = Vector2(0.24841669, 0.52960527)
 texture = ExtResource("11_viowm")

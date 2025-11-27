@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bc1ilj4u0gh58"]
+[gd_scene load_steps=11 format=3 uid="uid://bc1ilj4u0gh58"]
 
 [ext_resource type="Texture2D" uid="uid://ci8m7lmaxtpjt" path="res://dagat.png" id="1_pm07d"]
 [ext_resource type="Texture2D" uid="uid://cgsen5qqwvtkq" path="res://assets/assets_scene 3/NAMARU SMILE.png" id="2_50dt6"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://c177dq1ax6wsd" path="res://scripts/button_1(3).gd" id="4_mn17n"]
 [ext_resource type="Script" uid="uid://cdf84flgh7jo" path="res://scripts/button_2(3).gd" id="5_4lsin"]
 [ext_resource type="Script" uid="uid://dlcld2t0ag2sj" path="res://scripts/button_3(3).gd" id="6_dp76j"]
+[ext_resource type="AudioStream" uid="uid://cm7o2s8rfgyv" path="res://sfx/Ost/3the_mysterious_lake_dont_swim.mp3" id="7_qimqr"]
 
 [sub_resource type="Animation" id="Animation_s431n"]
 length = 0.001
@@ -384,19 +385,23 @@ _data = {
 }
 
 [node name="Option 3 result (scene 3 second choice)" type="Node2D"]
+texture_filter = 1
 
 [node name="Dagat" type="Sprite2D" parent="."]
-position = Vector2(576, 323)
-scale = Vector2(3.6062498, 3.6000001)
+texture_filter = 1
+position = Vector2(576, 323.5)
+scale = Vector2(3.6062498, 3.6055555)
 texture = ExtResource("1_pm07d")
 
 [node name="Namaru(Smile)" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(531.84894, 368.663)
 scale = Vector2(0.2931654, 0.27799124)
 texture = ExtResource("2_50dt6")
 
 [node name="Namaru(Angry)" type="Sprite2D" parent="."]
 self_modulate = Color(1, 1, 1, 0)
+texture_filter = 1
 position = Vector2(531.84894, 368.663)
 scale = Vector2(0.2931654, 0.27799124)
 texture = ExtResource("3_50dt6")
@@ -480,6 +485,11 @@ offset_bottom = 449.0
 theme_override_font_sizes/font_size = 30
 text = "“Kill me now.”"
 script = ExtResource("6_dp76j")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_qimqr")
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="Control/Button1(3)" to="Control/Button1(3)" method="_on_pressed"]
 [connection signal="pressed" from="Control/Button2(3)" to="Control/Button2(3)" method="_on_pressed"]

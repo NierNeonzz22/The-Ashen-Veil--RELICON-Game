@@ -349,15 +349,15 @@ script = ExtResource("1_7p87k")
 [node name="1CloseShotOfGemBeingPutTogetherLamNioYun" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 1)
 texture_filter = 1
-position = Vector2(577, 325)
-scale = Vector2(3.6, 3.6)
+position = Vector2(576.49994, 324.5)
+scale = Vector2(3.603125, 3.6055553)
 texture = ExtResource("1_rhpos")
 
 [node name="2PovGemInHandsTristan" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
 texture_filter = 1
-position = Vector2(577.5, 325)
-scale = Vector2(3.596875, 3.6)
+position = Vector2(576.5, 324.5)
+scale = Vector2(3.6031249, 3.6055553)
 texture = ExtResource("2_hbkxh")
 
 [node name="3SmokeOnly" type="Sprite2D" parent="."]

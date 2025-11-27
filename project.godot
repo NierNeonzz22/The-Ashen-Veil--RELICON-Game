@@ -19,6 +19,7 @@ config/icon="uid://q8a2eredmure"
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 TransitionManager="*res://scripts/transition_manager.gd"
+Settings="*res://scripts/Settings.gd"
 
 [display]
 

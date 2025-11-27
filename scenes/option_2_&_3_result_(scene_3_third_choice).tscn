@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://crhufubiko8kh"]
+[gd_scene load_steps=11 format=3 uid="uid://crhufubiko8kh"]
 
 [ext_resource type="Texture2D" uid="uid://ci8m7lmaxtpjt" path="res://dagat.png" id="1_b1ll7"]
 [ext_resource type="Texture2D" uid="uid://cgsen5qqwvtkq" path="res://assets/assets_scene 3/NAMARU SMILE.png" id="2_wddrq"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://dl04oy7hgbu38" path="res://scripts/button_1(4).gd" id="4_alqha"]
 [ext_resource type="Script" uid="uid://dkftnkla0nvqk" path="res://scripts/button_2(4).gd" id="5_yd268"]
 [ext_resource type="Script" uid="uid://dnaab2twdrv15" path="res://scripts/button_3(4).gd" id="6_kk4lp"]
+[ext_resource type="AudioStream" uid="uid://cm7o2s8rfgyv" path="res://sfx/Ost/3the_mysterious_lake_dont_swim.mp3" id="7_g1gkc"]
 
 [sub_resource type="Animation" id="Animation_yd268"]
 length = 0.001
@@ -432,18 +433,22 @@ _data = {
 }
 
 [node name="Option 2 & 3 result (Scene 3 third choice)" type="Node2D"]
+texture_filter = 1
 
 [node name="Dagat" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(576, 323)
 scale = Vector2(3.6062498, 3.6000001)
 texture = ExtResource("1_b1ll7")
 
 [node name="Namaru(Smile)" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(531.84894, 368.663)
 scale = Vector2(0.2931654, 0.27799124)
 texture = ExtResource("2_wddrq")
 
 [node name="Namaru(Sad)" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(531.84894, 368.663)
 scale = Vector2(0.2931654, 0.27799124)
 texture = ExtResource("3_t6ool")
@@ -511,9 +516,9 @@ offset_bottom = 40.0
 [node name="Button1(4)" type="Button" parent="Control"]
 custom_minimum_size = Vector2(568, 0)
 layout_mode = 0
-offset_left = -781.0
+offset_left = 280.0
 offset_top = 217.0
-offset_right = -213.0
+offset_right = 848.0
 offset_bottom = 275.0
 theme_override_font_sizes/font_size = 30
 text = "“Then tell me what I have to do.”"
@@ -522,9 +527,9 @@ script = ExtResource("4_alqha")
 [node name="Button2(4)" type="Button" parent="Control"]
 custom_minimum_size = Vector2(568, 58)
 layout_mode = 0
-offset_left = -780.0
+offset_left = 279.0
 offset_top = 302.0
-offset_right = -212.0
+offset_right = 847.0
 offset_bottom = 360.0
 theme_override_font_sizes/font_size = 30
 text = "“Please… help me.”"
@@ -532,14 +537,19 @@ script = ExtResource("5_yd268")
 
 [node name="Button3(4)" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = -778.0
+offset_left = 279.0
 offset_top = 391.0
-offset_right = -210.0
+offset_right = 847.0
 offset_bottom = 449.0
 theme_override_font_sizes/font_size = 30
 text = "*Stay silent*
 "
 script = ExtResource("6_kk4lp")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_g1gkc")
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="Control/Button1(4)" to="Control/Button1(4)" method="_on_pressed"]
 [connection signal="pressed" from="Control/Button2(4)" to="Control/Button2(4)" method="_on_pressed"]

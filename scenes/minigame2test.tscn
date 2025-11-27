@@ -1,6 +1,5 @@
 [gd_scene load_steps=69 format=3 uid="uid://c8vcakbgkunrq"]
 
-[ext_resource type="Texture2D" uid="uid://cm04fddpjnbk2" path="res://Minigame Assets/minigame2 semifinal.png" id="1_3m0ai"]
 [ext_resource type="Script" uid="uid://cn44mv5drdmx" path="res://Minigame Assets/minigame_2_test.gd" id="1_7yig0"]
 [ext_resource type="Script" uid="uid://bjeh1p8wdp4m6" path="res://Minigame Assets/character_body_2d2.gd" id="2_bm7f1"]
 [ext_resource type="PackedScene" uid="uid://cf38e73ldd45w" path="res://scenes/label_instruction.tscn" id="2_eskyw"]
@@ -11,6 +10,7 @@
 [ext_resource type="Script" uid="uid://dmn5ionfmhoov" path="res://Minigame Assets/static_body_2d.gd" id="5_axt1m"]
 [ext_resource type="Texture2D" uid="uid://0cjpnr64s4c" path="res://Minigame Assets/Relicon_MULAWIN__M_-removebg-preview.png" id="7_axt1m"]
 [ext_resource type="Shader" uid="uid://bpdjff2ab0joq" path="res://Minigame Assets/new_shader.gdshader" id="7_cvuvx"]
+[ext_resource type="Texture2D" uid="uid://bswp56odrl738" path="res://assets/assets_minigame2/minigame2.png" id="7_oh2tf"]
 [ext_resource type="Texture2D" uid="uid://r2ughrtiehix" path="res://assets/sprites/SHIT NI TRISTAN ADJUSTED HEIGHT (2).png" id="7_vuirk"]
 [ext_resource type="Texture2D" uid="uid://xi3gnv2kit4a" path="res://Minigame Assets/Relicon_MULAWIN__U_-removebg-preview.png" id="8_pnrgl"]
 [ext_resource type="Texture2D" uid="uid://b2cdlm4hhuxi0" path="res://Minigame Assets/rock 2.png" id="9_fnfnq"]
@@ -315,7 +315,7 @@ shape = SubResource("RectangleShape2D_7yig0")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(577, 330)
 scale = Vector2(0.51779366, 0.64508283)
-texture = ExtResource("1_3m0ai")
+texture = ExtResource("7_oh2tf")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
 

@@ -12,11 +12,11 @@ var names = [
 ]
 
 var lines = [
-	"The air is cool, almost chilly, with small gusts of wind grazing Elia’s arms…",
+	"The air is cool, almost chilly, with small gusts of wind grazing Elia's arms…",
 	"She looks up at the welcoming skies; they're bright and clear today. She sighs. The sky is in their favor, yet as she stares at the big blue, all she can yearn for is a familiar voice to call her name. One does, but not the one she expects…",
 	"Elia!!",
 	"Gah! What?!",
-	"You keep zoning out! It’s a beautiful day…",
+	"You keep zoning out! It's a beautiful day…",
 	"I just— I wish he were here to see this.",
 	"Oh… I— I think he is.",
 	"You think?"
@@ -26,43 +26,78 @@ var final_monologue := "Two lives entered the lake that night. Only one returned
 
 var index := 0
 var typing := false
-var type_speed := 0.01
+var type_speed := 0.015
+var ending_started := false
+
+# Reference to the poster
+var poster: Sprite2D
+
 
 func _ready():
-	# Hide fader completely
-	$Control/Control2/Fader.visible = false
-	$Control/Control2/Fader/ScreenFade.visible = false
-	$Control/Control2/Fader/ScreenFade.modulate.a = 0
-	$Control/Control2/Fader/TheEndLabel.visible = false
-	$Control/Control2/Fader/TheEndLabel.modulate.a = 0
+	# Get the poster node - CORRECTED NAME
+	poster = get_node_or_null("../Poster")  # Changed from "poster (1)" to "Poster"
+	
+	# Debug check
+	if poster:
+		print("Poster found! Ready to display during final monologue.")
+	else:
+		print("Poster node not found! Looking for '../Poster'")
+	
+	# Hide poster initially
+	if poster:
+		poster.visible = false
+		poster.modulate.a = 0  # Start fully transparent
+	
+	# Fader initial visibility
+	$Control2/Fader.visible = true
+	$Control2/Fader/ScreenFade.visible = true
+	$Control2/Fader/ScreenFade.modulate.a = 1.0
+	$Control2/Fader/TheEndLabel.visible = false
+	$Control2/Fader/TheEndLabel.modulate.a = 0
 
-	$Control/Control2/NameLabel.bbcode_enabled = true
-	$Control/DialogueBox/DialogueLabel.bbcode_enabled = true
+	# Enable BBCode
+	$DialogueBox/TextLabel.bbcode_enabled = true
+	$Control2/TextLabel1.bbcode_enabled = true
+
+	# Play fade animation
+	$Control2/Fader/anim.play("fade in")
 
 	await show_line()
+
 
 # ----------------- Dialogue -----------------
 
 func show_line() -> void:
-	# NAME LABEL
-	$Control/Control2/NameLabel.text = names[index]
+	var label = $DialogueBox/TextLabel
+	var name_label = $Control2/TextLabel1
 
-	# DIALOGUE LABEL
-	$Control/DialogueBox/DialogueLabel.text = ""
+	# Correct display: name goes to NameLabel ONLY
+	name_label.text = names[index]
+	label.text = ""
 
 	typing = true
 	var segs = get_segments(lines[index])
 	await type_segments(segs)
 	typing = false
 
+
 func type_segments(segs: Array) -> void:
-	var label = $Control/DialogueBox/DialogueLabel
+	var label = $DialogueBox/TextLabel
+
 	for segment in segs:
-		label.text += segment["text"]
+		if segment["is_tag"]:
+			label.text += segment["text"]
+			continue
+
+		for ch in segment["text"]:
+			label.text += ch
+			await get_tree().create_timer(type_speed).timeout
+
 		if segment["pause"] > 0:
 			await get_tree().create_timer(segment["pause"]).timeout
 
-# ----------------- BBCode -----------------
+
+# ----------------- BBCode Handling -----------------
 
 func split_bbcode(text: String) -> Array:
 	var bbcode_regex := RegEx.new()
@@ -83,6 +118,7 @@ func split_bbcode(text: String) -> Array:
 
 	return result
 
+
 func get_segments(text: String) -> Array:
 	var segments: Array = []
 	var parts: Array = split_bbcode(text)
@@ -92,7 +128,7 @@ func get_segments(text: String) -> Array:
 			segments.append({"text": part, "pause": 0.0, "is_tag": true})
 		else:
 			var word_regex := RegEx.new()
-			word_regex.compile(r"(\s+|[\w’']+|…|\.|,|;|!+|\?+)")
+			word_regex.compile(r"(\s+|[\w'']+|…|\.|,|;|!+|\?+)")
 			var words = word_regex.search_all(part)
 
 			for i in range(words.size()):
@@ -117,58 +153,60 @@ func get_segments(text: String) -> Array:
 
 	return segments
 
+
 # ----------------- Input -----------------
 
 func _unhandled_input(event):
-	if event.is_action_pressed("ui_accept") and not typing:
+	if event.is_action_pressed("ui_accept") and not typing and not ending_started:
 		if index < lines.size() - 1:
 			index += 1
 			await show_line()
 		else:
+			ending_started = true
 			await play_final_monologue()
+
 
 # ----------------- Final Monologue -----------------
 
 func play_final_monologue() -> void:
-	var fader_layer = $Control/Control2/Fader
-	var fader = $Control/Control2/Fader/ScreenFade
-	var end_label = $Control/Control2/Fader/TheEndLabel
+	# Clear dialogue
+	$DialogueBox/TextLabel.text = ""
+	$Control2/TextLabel1.text = ""
 
-	fader_layer.visible = false
-	fader.visible = false
-	fader.modulate.a = 0
-	end_label.visible = false
-	end_label.modulate.a = 0
-
-	# Clear text
-	$Control/DialogueBox/DialogueLabel.text = ""
-	$Control/Control2/NameLabel.text = ""
+	# Show and fade in the poster
+	if poster:
+		poster.visible = true
+		var poster_tween = create_tween()
+		poster_tween.tween_property(poster, "modulate:a", 1.0, 2.0)  # Fade in over 2 seconds
+		print("Poster fading in during final monologue...")
+	else:
+		print("Poster not available to display")
 
 	typing = true
 	var segs = get_segments(final_monologue)
 	await type_segments(segs)
 	typing = false
 
-	await get_tree().create_timer(1.5).timeout
+	await get_tree().create_timer(1.0).timeout
 
-	# Fade to white
-	fader_layer.visible = true
-	fader.visible = true
-	fader.modulate.a = 0
+	# Fade out animation
+	if not $Control2/Fader/anim.is_playing():
+		$Control2/Fader/anim.play("fade out")
+		await $Control2/Fader/anim.animation_finished
 
-	for i in range(20):
-		fader.modulate.a = (i + 1) * 0.05
-		await get_tree().create_timer(0.05).timeout
-
-	# THE END text
-	end_label.visible = true
-	end_label.modulate.a = 0
-	for i in range(20):
-		end_label.modulate.a = (i + 1) * 0.05
-		await get_tree().create_timer(0.05).timeout
+	# Fade THE END
+	$Control2/Fader/TheEndLabel.visible = true
+	for i in range(30):
+		$Control2/Fader/TheEndLabel.modulate.a = float(i) / 29.0
+		await get_tree().create_timer(0.03).timeout
 
 	await get_tree().create_timer(5.0).timeout
 
-	for i in range(20):
-		end_label.modulate.a = 1.0 - (i + 1) * 0.05
-		await get_tree().create_timer(0.05).timeout
+	transition_to_main_menu()
+
+
+func transition_to_main_menu() -> void:
+	if has_node("/root/TransitionManager"):
+		TransitionManager.transition_to_scene("res://scenes/credit.tscn")
+	else:
+		get_tree().change_scene_to_file("res://scenes/credit.tscn")

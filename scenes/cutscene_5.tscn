@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://yxjm1x2yiu6x"]
+[gd_scene load_steps=9 format=3 uid="uid://yxjm1x2yiu6x"]
 
+[ext_resource type="Script" uid="uid://duioyb5cp6i7q" path="res://scripts/cutscene_5.gd" id="1_pxuxi"]
 [ext_resource type="Texture2D" uid="uid://p5iqdapxkj64" path="res://assets/assets_scene5/Shot of volcano erupting.png" id="3_53rrf"]
 [ext_resource type="Texture2D" uid="uid://3rv70ukg42yf" path="res://assets/assets_scene5/tristan rising from water.png" id="4_44j3e"]
 [ext_resource type="AudioStream" uid="uid://pu6nyunlwsk5" path="res://Sounds/lv_0_20251122230015-muffled.ogg" id="5_53rrf"]
@@ -452,6 +453,7 @@ _data = {
 }
 
 [node name="Cutscene5" type="Node2D"]
+script = ExtResource("1_pxuxi")
 
 [node name="Volcano erruption" type="Sprite2D" parent="."]
 modulate = Color(0.78815395, 0.78815395, 0.78815395, 1)

@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dfqiy4d4dsg2w"]
+[gd_scene load_steps=8 format=3 uid="uid://dfqiy4d4dsg2w"]
 
 [ext_resource type="Script" uid="uid://dsx73fvsnakn5" path="res://scripts/lose_MG2.gd" id="1_trp0n"]
 [ext_resource type="Texture2D" uid="uid://cibhgc1rw20jl" path="res://assets/assets scene 4/dagat.png" id="1_wfsce"]
 [ext_resource type="Texture2D" uid="uid://cu5w1q6xegjen" path="res://assets/assets scene 4/KALAO SAD.png" id="2_ydssd"]
+[ext_resource type="AudioStream" uid="uid://cm7o2s8rfgyv" path="res://sfx/Ost/3the_mysterious_lake_dont_swim.mp3" id="4_g47xu"]
 
 [sub_resource type="Animation" id="Animation_ag1i6"]
 resource_name = "LOSE option"
@@ -273,11 +274,13 @@ _data = {
 }
 
 [node name="Node2D" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_trp0n")
 
 [node name="Dagat" type="Sprite2D" parent="."]
-position = Vector2(577.2222, 322.99997)
-scale = Vector2(3.588889, 3.6555557)
+texture_filter = 1
+position = Vector2(576.00006, 322.99997)
+scale = Vector2(3.6000004, 3.6555557)
 texture = ExtResource("1_wfsce")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -287,6 +290,7 @@ libraries = {
 autoplay = "LOSE option"
 
 [node name="KalaoSad" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(566.00006, 386.00003)
 scale = Vector2(0.2578125, 0.25781253)
 texture = ExtResource("2_ydssd")
@@ -364,3 +368,8 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 27
 metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_g47xu")
+autoplay = true
+parameters/looping = true

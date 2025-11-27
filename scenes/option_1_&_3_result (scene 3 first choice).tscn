@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://dnqmix4gjsjqy"]
+[gd_scene load_steps=10 format=3 uid="uid://dnqmix4gjsjqy"]
 
 [ext_resource type="Texture2D" uid="uid://ci8m7lmaxtpjt" path="res://dagat.png" id="1_cpckp"]
 [ext_resource type="Texture2D" uid="uid://cgsen5qqwvtkq" path="res://assets/assets_scene 3/NAMARU SMILE.png" id="2_cpckp"]
 [ext_resource type="Script" uid="uid://exuo0x6m20px" path="res://scripts/option_1(2).gd" id="3_bo0vv"]
 [ext_resource type="Script" uid="uid://b4t6jcygym31l" path="res://scripts/option_2(2).gd" id="4_rxn5t"]
 [ext_resource type="Script" uid="uid://p52ll1ln667d" path="res://scripts/option_3(2).gd" id="5_6k3dt"]
+[ext_resource type="AudioStream" uid="uid://cm7o2s8rfgyv" path="res://sfx/Ost/3the_mysterious_lake_dont_swim.mp3" id="6_lu3aw"]
 
 [sub_resource type="Animation" id="Animation_sva7b"]
 resource_name = "Cutscene option 1 and 3"
@@ -310,13 +311,16 @@ _data = {
 }
 
 [node name="Option 1 & 3 result" type="Node2D"]
+texture_filter = 1
 
 [node name="Dagat" type="Sprite2D" parent="."]
-position = Vector2(576, 323)
-scale = Vector2(3.6062498, 3.6000001)
+texture_filter = 1
+position = Vector2(576, 323.5)
+scale = Vector2(3.6062498, 3.6055555)
 texture = ExtResource("1_cpckp")
 
 [node name="Namaru" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(531.84894, 368.663)
 scale = Vector2(0.2931654, 0.27799124)
 texture = ExtResource("2_cpckp")
@@ -363,10 +367,10 @@ offset_bottom = 40.0
 
 [node name="Option 1(2)" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = -776.916
-offset_top = 216.88986
-offset_right = -208.91559
-offset_bottom = 274.888
+offset_left = 280.0
+offset_top = 217.0
+offset_right = 848.0004
+offset_bottom = 274.99814
 theme_override_font_sizes/font_size = 30
 text = "“What does this have to do with me?”
 "
@@ -374,9 +378,9 @@ script = ExtResource("3_bo0vv")
 
 [node name="Option 2(2)" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = -771.0
+offset_left = 278.0
 offset_top = 302.0
-offset_right = -200.00024
+offset_right = 848.99976
 offset_bottom = 360.0
 theme_override_font_sizes/font_size = 30
 text = "“What does she want from me?”"
@@ -384,13 +388,18 @@ script = ExtResource("4_rxn5t")
 
 [node name="Option 3(2)" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = -777.01733
-offset_top = 391.07535
-offset_right = -205.01715
-offset_bottom = 453.07535
+offset_left = 279.0
+offset_top = 391.0
+offset_right = 851.0002
+offset_bottom = 453.0
 theme_override_font_sizes/font_size = 30
 text = "“Just get me out of here.”"
 script = ExtResource("5_6k3dt")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_lu3aw")
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="Control/Option 1(2)" to="Control/Option 1(2)" method="_on_pressed"]
 [connection signal="pressed" from="Control/Option 2(2)" to="Control/Option 2(2)" method="_on_pressed"]

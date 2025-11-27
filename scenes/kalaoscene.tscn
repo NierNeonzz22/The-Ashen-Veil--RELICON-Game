@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://2rxs3nx1kwu"]
+[gd_scene load_steps=11 format=3 uid="uid://2rxs3nx1kwu"]
 
 [ext_resource type="Script" uid="uid://bvgx3c81fdbpe" path="res://scripts/kalaoscene.gd" id="1_k0o0u"]
 [ext_resource type="Texture2D" uid="uid://de58s75vswvld" path="res://assets/assets_scene 3/dagat (1).png" id="1_w6lve"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://vk1k021tgjiu" path="res://assets/assets_scene 3/KALAO HAPPY.png" id="3_ht33g"]
 [ext_resource type="Texture2D" uid="uid://wlw1i8otvmse" path="res://assets/assets_scene 3/TRISTAN NEUTRAL.png" id="4_honsj"]
 [ext_resource type="Texture2D" uid="uid://civb8s05hbluu" path="res://assets/assets_scene 3/TRISTAN SMILE.png" id="5_oqvjy"]
+[ext_resource type="AudioStream" uid="uid://cm7o2s8rfgyv" path="res://sfx/Ost/3the_mysterious_lake_dont_swim.mp3" id="7_qixer"]
 
 [sub_resource type="Animation" id="Animation_cts0s"]
 length = 80.0
@@ -718,11 +719,13 @@ _data = {
 }
 
 [node name="Node2D" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_k0o0u")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(575.88885, 325.5)
-scale = Vector2(3.605555, 3.6055558)
+texture_filter = 1
+position = Vector2(575.88885, 325)
+scale = Vector2(3.605555, 3.6111112)
 texture = ExtResource("1_w6lve")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -733,6 +736,7 @@ autoplay = "kalao"
 
 [node name="Kalao" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.058823526)
+texture_filter = 1
 position = Vector2(840.00006, 265)
 scale = Vector2(0.37150067, 0.37150082)
 texture = ExtResource("2_t2agv")
@@ -740,18 +744,21 @@ texture = ExtResource("2_t2agv")
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 visible = false
 modulate = Color(1, 1, 1, 0)
+texture_filter = 1
 position = Vector2(840.125, 261.83334)
 scale = Vector2(0.3735352, 0.37353525)
 texture = ExtResource("3_ht33g")
 
 [node name="Sprite2D3" type="Sprite2D" parent="."]
 visible = false
+texture_filter = 1
 position = Vector2(334.00003, 330)
 scale = Vector2(0.3227539, 0.3227539)
 texture = ExtResource("4_honsj")
 
 [node name="Sprite2D4" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
+texture_filter = 1
 position = Vector2(332, 329.16675)
 scale = Vector2(0.32242838, 0.32242844)
 texture = ExtResource("5_oqvjy")
@@ -882,3 +889,8 @@ text = "I nod, doing as the kid says."
 horizontal_alignment = 1
 visible_characters = 0
 visible_ratio = 0.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_qixer")
+autoplay = true
+parameters/looping = true

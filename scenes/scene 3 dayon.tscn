@@ -674,40 +674,48 @@ _data = {
 }
 
 [node name="Node2D" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_j6nv4")
 
 [node name="bg" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(576.00006, 325)
 scale = Vector2(3.594444, 3.5944448)
 texture = ExtResource("1_4pmfa")
 
 [node name="TristanNeutral" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(243.11671, 323.84445)
 scale = Vector2(0.31495216, 0.3149523)
 texture = ExtResource("2_scda2")
 
 [node name="TristanWorried" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
+texture_filter = 1
 position = Vector2(243.11671, 323.84445)
 scale = Vector2(0.31495216, 0.3149523)
 texture = ExtResource("3_onb2n")
 
 [node name="TristanSurprised" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(243.11671, 323.84445)
 scale = Vector2(0.31495216, 0.3149523)
 texture = ExtResource("4_5oqs5")
 
 [node name="DayonSad" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(924, 338)
 scale = Vector2(0.38151047, 0.38151047)
 texture = ExtResource("5_mm8cr")
 
 [node name="DayonSurprised" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(924, 338)
 scale = Vector2(0.38151047, 0.38151047)
 texture = ExtResource("6_jix4k")
 
 [node name="DayonNeutral" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(924, 338)
 scale = Vector2(0.38151047, 0.38151047)
 texture = ExtResource("7_e2qwg")

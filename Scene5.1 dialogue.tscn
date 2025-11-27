@@ -1,9 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://7ek4v54t1mef"]
+[gd_scene load_steps=12 format=3 uid="uid://7ek4v54t1mef"]
 
+[ext_resource type="Texture2D" uid="uid://du6sa4v42d5o" path="res://assets/assets_scene 5.1/;poster (1).png" id="1_4mwvo"]
 [ext_resource type="Texture2D" uid="uid://cwrqr33v74vd8" path="res://elia & pablo.png" id="1_x0iwq"]
 [ext_resource type="Script" uid="uid://bqsbp47vgss1a" path="res://control.gd" id="2_lkvtl"]
 [ext_resource type="Texture2D" uid="uid://csuku0tchpb35" path="res://download.jpg" id="3_4mwvo"]
 [ext_resource type="Texture2D" uid="uid://dkilubbu7wkd2" path="res://Fade-PNG-Photos.png" id="4_x72xx"]
+[ext_resource type="AudioStream" uid="uid://p8r6t6uy8s6f" path="res://sfx/Ost/1mainmenu.mp3" id="5_lkvtl"]
 
 [sub_resource type="Animation" id="Animation_kdubu"]
 length = 0.001
@@ -78,9 +80,16 @@ _data = {
 [node name="Node2D" type="Node2D"]
 
 [node name="Dagat" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(576.49994, 324.49997)
 scale = Vector2(3.6031253, 3.6055558)
 texture = ExtResource("1_x0iwq")
+
+[node name="Poster" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(576, 324.00003)
+scale = Vector2(3.6000001, 3.6000004)
+texture = ExtResource("1_4mwvo")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -100,6 +109,7 @@ offset_bottom = 604.0
 
 [node name="ReliconDialogueBox(1)" type="Sprite2D" parent="Control/DialogueBox"]
 modulate = Color(1, 1, 1, 0.8235294)
+texture_filter = 1
 position = Vector2(525.00006, 47.499977)
 scale = Vector2(4.6933336, 0.6444444)
 texture = ExtResource("3_4mwvo")
@@ -130,6 +140,7 @@ theme_override_font_sizes/normal_font_size = 25
 theme_override_font_sizes/bold_font_size = 22
 
 [node name="Fader" type="CanvasLayer" parent="Control/Control2"]
+visible = false
 
 [node name="ScreenFade" type="ColorRect" parent="Control/Control2/Fader"]
 anchors_preset = -1
@@ -166,24 +177,33 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="1" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(582.5, 555)
 scale = Vector2(0.74155194, 0.5403587)
 texture = ExtResource("4_x72xx")
 
 [node name="4" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(599.20215, 62.847908)
 rotation = 3.1300774
 scale = Vector2(0.78255695, 0.5403587)
 texture = ExtResource("4_x72xx")
 
 [node name="2" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1097.9036, 302.1034)
 rotation = -1.5760452
 scale = Vector2(0.4569468, 0.5403587)
 texture = ExtResource("4_x72xx")
 
 [node name="3" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(60.55957, 315.80457)
 rotation = -4.7144074
 scale = Vector2(0.44531175, 0.5403587)
 texture = ExtResource("4_x72xx")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_lkvtl")
+autoplay = true
+parameters/looping = true

@@ -8,6 +8,9 @@ var is_player_turn = false
 var game_active = true
 var is_first_sequence = true
 
+# ADD THIS: Prevent multiple game over calls
+var game_ended = false
+
 # References - UPDATED with correct node name
 @onready var player = $Tristan_gameplay  # Changed from $Player
 @onready var camera = $Tristan_gameplay/Camera2D  # Updated path
@@ -21,13 +24,13 @@ var timer_ui_instance: Node2D = null
 var game_timer: Timer
 var time_remaining: float = 0.0
 var level_time_limits = {
-	1: 45.0,   # Reduced from 60 seconds
-	2: 55.0,   # Reduced from 75 seconds  
-	3: 65.0,   # Reduced from 90 seconds
-	4: 75.0,   # Reduced from 105 seconds
-	5: 85.0,   # Reduced from 120 seconds
-	6: 95.0,   # Reduced from 135 seconds
-	7: 105.0   # Reduced from 150 seconds
+	1: 30.0,   # INCREASED from 10 to 30 seconds
+	2: 55.0,   
+	3: 65.0,   
+	4: 75.0,   
+	5: 85.0,   
+	6: 95.0,   
+	7: 105.0   
 }
 
 # Store original camera offset
@@ -96,10 +99,19 @@ func _setup_game_timer():
 	game_timer.timeout.connect(_on_game_timeout)
 
 func connect_buttons():
+	print("=== CONNECTING BUTTONS ===")
 	for i in range(1, 9):
 		var button = button_container.get_node("Button" + str(i))
 		if button:
-			button.button_pressed.connect(on_button_pressed)
+			print("Found Button" + str(i) + ": ", button)
+			# Check if signal is already connected
+			if not button.button_pressed.is_connected(on_button_pressed):
+				button.button_pressed.connect(on_button_pressed)
+				print("Connected Button" + str(i))
+			else:
+				print("Button" + str(i) + " already connected")
+		else:
+			print("❌ Button" + str(i) + " NOT FOUND!")
 
 func start_game():
 	current_level = 1
@@ -119,6 +131,7 @@ func load_level(level_num, is_retry: bool = false):
 	current_note_index = 0
 	is_player_turn = false
 	game_active = true
+	game_ended = false
 	
 	# Only reset timer if it's NOT a retry (i.e., fresh level load)
 	if not is_retry:
@@ -268,7 +281,7 @@ func highlight_button(note_number: int):
 		button.highlight()
 
 func start_player_turn():
-	print("Your turn! Repeat the sequence")
+	print("🎮 PLAYER TURN STARTED - Buttons should be enabled now!")
 	is_player_turn = true
 	current_note_index = 0
 	skip_initial_rests()
@@ -304,14 +317,16 @@ func start_level_timer():
 	_update_timer_display()
 
 func _process(delta):
-	if game_active and is_player_turn:
+	if game_active and is_player_turn and not game_ended:
 		time_remaining -= delta
 		_update_timer_display()
 		
 		if time_remaining <= 0:
+			print("⏰ TIME'S UP in _process! Calling game over...")
 			game_active = false
 			set_process(false)
-			_on_game_timeout()
+			# Use call_deferred to ensure game_over runs in the next frame
+			call_deferred("game_over")
 
 func _update_timer_display():
 	# Update the timer UI if it exists
@@ -323,13 +338,19 @@ func skip_initial_rests():
 		current_note_index += 1
 
 func on_button_pressed(button_number: int):
+	print("🎹 BUTTON PRESSED: Button", button_number, " - is_player_turn:", is_player_turn, " game_active:", game_active)
+	
 	if not is_player_turn or not game_active:
+		print("❌ BUTTON REJECTED - Not player turn or game not active")
 		return
+		
+	print("✅ BUTTON ACCEPTED - Processing input...")
 		
 	while current_note_index < sequence_notes.size() and (sequence_notes[current_note_index] == 0 or (sequence_notes[current_note_index] > 0 and sequence_notes[current_note_index] < 1)):
 		current_note_index += 1
 	
 	if current_note_index >= sequence_notes.size():
+		print("⚠️ Button pressed but sequence already complete?")
 		game_over()
 		return
 	
@@ -349,7 +370,12 @@ func on_button_pressed(button_number: int):
 		else:
 			print("Correct! Continue...")
 	else:
-		game_over()
+	# WRONG BUTTON - REPLAY THE DEMONSTRATION SEQUENCE
+		print("❌ Wrong note! Replaying the sequence...")
+		is_player_turn = false
+		disable_all_buttons()
+		await get_tree().create_timer(2.0).timeout  # Changed from 0.5 to 2.0 seconds
+		demonstrate_sequence(level_data[current_level]["bpm"])
 
 func get_note_name(button_number: int) -> String:
 	var note_names = {
@@ -387,6 +413,14 @@ func win_game():
 		call_deferred("load_level", current_level, false)  # Pass false for is_retry (new level)
 
 func game_over():
+	# ADDED: Safety check to prevent multiple calls
+	if game_ended:
+		print("⚠️ Game over already called, ignoring...")
+		return
+	
+	game_ended = true
+	print("💀 GAME OVER function called from timer!")
+	
 	var expected_index = current_note_index
 	while expected_index < sequence_notes.size() and (sequence_notes[expected_index] == 0 or (sequence_notes[expected_index] > 0 and sequence_notes[expected_index] < 1)):
 		expected_index += 1
@@ -408,22 +442,41 @@ func game_over():
 		timer_ui_instance.queue_free()
 		timer_ui_instance = null
 	
-	await get_tree().create_timer(2.0).timeout
-	call_deferred("load_level", current_level, true)  # Pass true for is_retry
+	print("💀 Cleanup complete, transitioning in 2 seconds...")
+	
+	# Use a timer instead of await to be more reliable
+	var transition_timer = get_tree().create_timer(2.0)
+	await transition_timer.timeout
+	
+	print("💀 Now transitioning to Dayon lose scene...")
+	
+	# Direct transition
+	if has_node("/root/TransitionManager"):
+		print("✅ Using TransitionManager")
+		TransitionManager.transition_to_scene("res://scenes/Dayon lose.tscn")
+	else:
+		print("❌ Using direct scene change")
+		get_tree().change_scene_to_file("res://scenes/Dayon lose.tscn")
 
 func _on_game_timeout():
-	if game_active and is_player_turn:
-		print("⏰ TIME'S UP! Level failed.")
-		game_over()
+	if game_active and is_player_turn and not game_ended:
+		print("⏰ GAME TIMER TIMEOUT! Calling game over...")
+		game_active = false
+		set_process(false)
+		call_deferred("game_over")
 
 func disable_all_buttons():
+	print("🔴 DISABLING ALL BUTTONS")
 	for i in range(1, 9):
 		var button = button_container.get_node("Button" + str(i))
 		if button:
 			button.set_disabled(true)
+			print("Disabled Button" + str(i))
 
 func enable_all_buttons():
+	print("🟢 ENABLING ALL BUTTONS")
 	for i in range(1, 9):
 		var button = button_container.get_node("Button" + str(i))
 		if button:
 			button.set_disabled(false)
+			print("Enabled Button" + str(i))

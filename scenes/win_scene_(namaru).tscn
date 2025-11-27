@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://ogr63hc366i6"]
+[gd_scene load_steps=9 format=3 uid="uid://ogr63hc366i6"]
 
 [ext_resource type="Script" uid="uid://cy57dboll2asf" path="res://scripts/win_scene_(namaru).gd" id="1_fy0sc"]
 [ext_resource type="Texture2D" uid="uid://ci8m7lmaxtpjt" path="res://dagat.png" id="1_ukx54"]
 [ext_resource type="Texture2D" uid="uid://cgsen5qqwvtkq" path="res://assets/assets_scene 3/NAMARU SMILE.png" id="2_cm3wb"]
 [ext_resource type="Texture2D" uid="uid://wlw1i8otvmse" path="res://assets/assets_scene 3/TRISTAN NEUTRAL.png" id="3_ea0ar"]
+[ext_resource type="AudioStream" uid="uid://cm7o2s8rfgyv" path="res://sfx/Ost/3the_mysterious_lake_dont_swim.mp3" id="5_cbtqh"]
 
 [sub_resource type="Animation" id="Animation_s2rry"]
 length = 0.001
@@ -787,19 +788,23 @@ _data = {
 }
 
 [node name="Win scene (Namaru)" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_fy0sc")
 
 [node name="Dagat" type="Sprite2D" parent="."]
-position = Vector2(576.5, 323.99997)
-scale = Vector2(3.5968752, 3.6222215)
+texture_filter = 1
+position = Vector2(576.00006, 323.99997)
+scale = Vector2(3.6000001, 3.6222215)
 texture = ExtResource("1_ukx54")
 
 [node name="Namaru" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(893.8203, 386.40375)
 scale = Vector2(0.27106738, 0.25625366)
 texture = ExtResource("2_cm3wb")
 
 [node name="Tristan" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(222, 322)
 scale = Vector2(0.31282547, 0.3217773)
 texture = ExtResource("3_ea0ar")
@@ -963,3 +968,8 @@ offset_bottom = 558.0
 theme_override_colors/default_color = Color(0.6627451, 0.8392157, 1, 1)
 theme_override_font_sizes/normal_font_size = 30
 text = "Tristan:"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_cbtqh")
+autoplay = true
+parameters/looping = true

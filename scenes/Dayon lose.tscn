@@ -1,0 +1,398 @@
+[gd_scene load_steps=7 format=3 uid="uid://c47gecglbcyea"]
+
+[ext_resource type="Script" uid="uid://dypfjxv116888" path="res://scripts/dayon_lose.gd" id="1_k26ot"]
+[ext_resource type="Texture2D" uid="uid://cibhgc1rw20jl" path="res://assets/assets scene 4/dagat.png" id="1_ugv3u"]
+[ext_resource type="Texture2D" uid="uid://dtijoqkupa3c6" path="res://assets/assets_scene 3/DAYON SAD.png" id="2_3h1tq"]
+
+[sub_resource type="Animation" id="Animation_8qxyr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dagat:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DayonSad/Node/Panel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DayonSad/Node/Panel/The music faded after the wrong note, leaving only silence_:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DayonSad/Node/Panel/Dayon:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("DayonSad:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("DayonSad/Node/Panel/It’s not your fault, boy_:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("DayonSad/Node/Panel/A cold current seized and pulled me downwards_ I struggled against it, but the water was too strong_ The surface, a distant memory, receded from view_:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("DayonSad/Node/Panel/A cold current seized and pulled me downwards_ I struggled against it, but the water was too strong_ The surface, a distant memory, receded from view_:text")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["A cold current seized and pulled me downwards. I struggle"]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("DayonSad/Node/Panel/Darkness closed in_:text")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("DayonSad/Node/Panel/Darkness closed in_:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_x072s"]
+resource_name = "dayon lose"
+length = 32.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dagat:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.3707085, 28.445042, 29.957048),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DayonSad/Node/Panel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.38, 3.38),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DayonSad/Node/Panel/The music faded after the wrong note, leaving only silence_:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.422539, 4.6235437, 5.8952637, 6.976072),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": ["", "The music faded after the wrong note,", "The music faded after the wrong note,", "The music faded after the wrong note, leaving only silence."]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DayonSad/Node/Panel/Dayon:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("DayonSad/Node/Panel/The music faded after the wrong note, leaving only silence_:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(7.4225674, 8.831481),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("DayonSad/Node/Panel/Dayon:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(10.377849, 11.803944, 14.687062, 16.095976),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("DayonSad/Node/Panel/It’s not your fault, boy_:text")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(11.168215, 13.029034, 14.247558),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": ["", "
+ It’s not your fault, boy.", "
+ It’s not your fault, boy."]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("DayonSad:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(9.4981365, 10.924232, 14.704245, 16.113157),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("DayonSad/Node/Panel/It’s not your fault, boy_:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(14.704244, 16.113157),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("DayonSad/Node/Panel/A cold current seized and pulled me downwards_ I struggled against it, but the water was too strong_ The surface, a distant memory, receded from view_:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(16.734167, 26.898672, 27.826494),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("DayonSad/Node/Panel/A cold current seized and pulled me downwards_ I struggled against it, but the water was too strong_ The surface, a distant memory, receded from view_:text")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(16.730558, 18.546354, 19.494015, 21.159996, 22.92735, 25.246353, 26.827347),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": ["", "A cold current seized and pulled me downwards.", "A cold current seized and pulled me downwards.", "A cold current seized and pulled me downwards. I struggled against it, but the water was too strong.", "A cold current seized and pulled me downwards. I struggled against it, but the water was too strong.", "A cold current seized and pulled me downwards. I struggled against it, but the water was too strong. The surface, a distant memory, receded from view.", "A cold current seized and pulled me downwards. I struggled against it, but the water was too strong. The surface, a distant memory, receded from view."]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("DayonSad/Node/Panel/Darkness closed in_:text")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(28.221676, 29.25259),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "Darkness closed in."]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("DayonSad/Node/Panel/Darkness closed in_:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(30, 30.927822),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lj808"]
+_data = {
+&"RESET": SubResource("Animation_8qxyr"),
+&"dayon lose": SubResource("Animation_x072s")
+}
+
+[node name="Node2D" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_k26ot")
+
+[node name="Dagat" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(576.49994, 325)
+scale = Vector2(3.603125, 3.6111112)
+texture = ExtResource("1_ugv3u")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_lj808")
+}
+autoplay = "dayon lose"
+
+[node name="DayonSad" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(210.99998, 405)
+scale = Vector2(0.28287762, 0.28287768)
+texture = ExtResource("2_3h1tq")
+
+[node name="Node" type="Node" parent="DayonSad"]
+
+[node name="Panel" type="Panel" parent="DayonSad/Node"]
+modulate = Color(0, 0, 0, 0)
+self_modulate = Color(0.019607844, 0.019607844, 0.019607844, 0.78431374)
+offset_left = 55.0
+offset_top = 516.0
+offset_right = 1090.0
+offset_bottom = 620.0
+metadata/_edit_use_anchors_ = true
+
+[node name="The music faded after the wrong note, leaving only silence_" type="RichTextLabel" parent="DayonSad/Node/Panel"]
+layout_mode = 0
+offset_left = 1.000061
+offset_top = 3.0
+offset_right = 1037.0
+offset_bottom = 104.99999
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Dayon" type="RichTextLabel" parent="DayonSad/Node/Panel"]
+modulate = Color(0, 0, 0, 0)
+layout_mode = 0
+offset_left = 2.000122
+offset_top = 6.0
+offset_right = 1038.0001
+offset_bottom = 106.0
+theme_override_colors/default_color = Color(0.8627451, 0.78039217, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 28
+text = " Dayon:"
+metadata/_edit_use_anchors_ = true
+
+[node name="It’s not your fault, boy_" type="RichTextLabel" parent="DayonSad/Node/Panel"]
+layout_mode = 0
+offset_left = 1.000061
+offset_top = 3.0
+offset_right = 1037.0
+offset_bottom = 104.99999
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 27
+metadata/_edit_use_anchors_ = true
+
+[node name="A cold current seized and pulled me downwards_ I struggled against it, but the water was too strong_ The surface, a distant memory, receded from view_" type="RichTextLabel" parent="DayonSad/Node/Panel"]
+layout_mode = 0
+offset_left = 1.000061
+offset_top = 3.0
+offset_right = 1037.0
+offset_bottom = 104.99999
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 25
+text = "A cold current seized and pulled me downwards. I struggle"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Darkness closed in_" type="RichTextLabel" parent="DayonSad/Node/Panel"]
+layout_mode = 0
+offset_left = 1.000061
+offset_top = 3.0
+offset_right = 1037.0
+offset_bottom = 104.99999
+theme_override_colors/default_color = Color(0.84218395, 0.20263413, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true

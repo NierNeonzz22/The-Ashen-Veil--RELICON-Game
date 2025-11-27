@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://beq8y4oii0gm"]
+[gd_scene load_steps=14 format=3 uid="uid://beq8y4oii0gm"]
 
 [ext_resource type="Texture2D" uid="uid://ci8m7lmaxtpjt" path="res://dagat.png" id="1_2lpcn"]
 [ext_resource type="Script" uid="uid://58qb1p34ido8" path="res://scripts/scene_3_niuala_win.gd" id="1_colgi"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://da5xe0r2vv2o8" path="res://assets/assets_scene 3/NIUALA SURPISED.png" id="7_j3m4h"]
 [ext_resource type="Texture2D" uid="uid://mtqsgtxk14mn" path="res://assets/assets_scene 3/NIUALA SMILE.png" id="8_df7we"]
 [ext_resource type="Texture2D" uid="uid://ceojxk5h2divq" path="res://assets/assets_scene 3/NIUALA NEUTRAL.png" id="9_t6ewl"]
+[ext_resource type="AudioStream" uid="uid://cm7o2s8rfgyv" path="res://sfx/Ost/3the_mysterious_lake_dont_swim.mp3" id="10_1h1vp"]
 
 [sub_resource type="Animation" id="Animation_pclo0"]
 length = 0.001
@@ -556,48 +557,57 @@ _data = {
 }
 
 [node name="Node2D" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_colgi")
 
 [node name="bg" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(576.00006, 325)
 scale = Vector2(3.594444, 3.5944448)
 texture = ExtResource("1_2lpcn")
 
 [node name="TristanNeutral" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(243.11671, 323.84445)
 scale = Vector2(0.31495216, 0.3149523)
 texture = ExtResource("2_poq5l")
 
 [node name="TristanSmile" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 0)
+texture_filter = 1
 position = Vector2(319.68686, 425.84003)
 scale = Vector2(0.09919487, 0.09919496)
 texture = ExtResource("3_oak5s")
 
 [node name="TristanSad" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 0)
+texture_filter = 1
 position = Vector2(243.11671, 323.84445)
 scale = Vector2(0.31495216, 0.3149523)
 texture = ExtResource("6_vpq2k")
 
 [node name="TristanWorried" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 0)
+texture_filter = 1
 position = Vector2(243.11671, 323.84445)
 scale = Vector2(0.31495216, 0.3149523)
 texture = ExtResource("5_l48ix")
 
 [node name="NiualaSurprise" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(921.25, 344.3333)
 scale = Vector2(0.2965495, 0.2965495)
 texture = ExtResource("7_j3m4h")
 
 [node name="NiualaSmile" type="Sprite2D" parent="."]
 visible = false
+texture_filter = 1
 position = Vector2(921.25, 344.3333)
 scale = Vector2(0.2965495, 0.2965495)
 texture = ExtResource("8_df7we")
 
 [node name="NiualaNeutral" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(921.25, 344.3333)
 scale = Vector2(0.2965495, 0.2965495)
 texture = ExtResource("9_t6ewl")
@@ -796,3 +806,7 @@ offset_bottom = -11.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 20
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_1h1vp")
+autoplay = true

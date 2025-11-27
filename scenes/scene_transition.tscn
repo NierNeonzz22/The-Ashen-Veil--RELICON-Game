@@ -382,28 +382,33 @@ _data = {
 }
 
 [node name="Cutscene2" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_85h84")
 
 [node name="Tristan on water" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(577.99994, 327.49997)
-scale = Vector2(3.60625, 3.6388888)
+position = Vector2(577.49994, 327.49997)
+scale = Vector2(3.609375, 3.6388888)
 texture = ExtResource("1_cv4e2")
 
 [node name="Tristan suprised" type="Sprite2D" parent="Tristan on water"]
 texture_filter = 1
-scale = Vector2(1, 1.0000002)
+position = Vector2(-0.13864136, 0)
+scale = Vector2(1.0008665, 1.0000002)
 texture = ExtResource("2_rj3yn")
 
 [node name="Tristan drowning" type="Sprite2D" parent="Tristan on water/Tristan suprised"]
 self_modulate = Color(1.0653495, 1.0653495, 1.0653495, 1)
 texture_filter = 1
+position = Vector2(-0.13864136, 0)
+scale = Vector2(1.0008665, 1)
 texture = ExtResource("3_xtrrr")
 
 [node name="Ripples only" type="Sprite2D" parent="Tristan on water/Tristan suprised/Tristan drowning"]
 modulate = Color(0, 0, 0, 1)
 texture_filter = 1
-position = Vector2(0.8319061, -0.4122035)
+position = Vector2(0.27731013, -0.4122035)
+scale = Vector2(1.0034662, 1)
 texture = ExtResource("4_c5a3g")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

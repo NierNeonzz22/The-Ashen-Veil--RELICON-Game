@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://bm5lu3fgwms5i"]
+[gd_scene load_steps=8 format=3 uid="uid://bm5lu3fgwms5i"]
 
 [ext_resource type="Script" uid="uid://btijhklt27yfd" path="res://scenes/niuala_lose.gd" id="1_6afj5"]
 [ext_resource type="Texture2D" uid="uid://cibhgc1rw20jl" path="res://assets/assets scene 4/dagat.png" id="1_qe1s5"]
 [ext_resource type="Texture2D" uid="uid://bqqnj8w8mskca" path="res://assets/assets_scene 3/NIUALA SAD.png" id="2_ppajw"]
+[ext_resource type="AudioStream" uid="uid://cm7o2s8rfgyv" path="res://sfx/Ost/3the_mysterious_lake_dont_swim.mp3" id="4_6ja6o"]
 
 [sub_resource type="Animation" id="Animation_t3p4t"]
 length = 0.001
@@ -458,3 +459,7 @@ theme_override_font_sizes/normal_font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_6ja6o")
+autoplay = true

@@ -1,6 +1,6 @@
 [gd_scene load_steps=36 format=3 uid="uid://cygdilg04c7p1"]
 
-[ext_resource type="Texture2D" uid="uid://e6bv4j1pihhh" path="res://Minigame Assets/CAVE MAP SEMIFINAL(no pillar).png" id="1_hsioi"]
+[ext_resource type="Texture2D" uid="uid://b30xgepnklbok" path="res://assets/assets_minigame1/MINIGAME 1.png" id="1_68v71"]
 [ext_resource type="Script" uid="uid://bbi0aiygulkhi" path="res://scripts/tristan_gameplaymoveset.gd" id="3_646de"]
 [ext_resource type="Texture2D" uid="uid://r2ughrtiehix" path="res://assets/sprites/SHIT NI TRISTAN ADJUSTED HEIGHT (2).png" id="4_117fq"]
 [ext_resource type="Texture2D" uid="uid://dy6qmivauw827" path="res://Minigame Assets/di na lit.png" id="4_646de"]
@@ -201,111 +201,111 @@ offset_bottom = 652.0
 color = Color(0, 0, 0, 1)
 
 [node name="MG1_Map" type="Sprite2D" parent="."]
-position = Vector2(566, 381)
-scale = Vector2(1.38, 1.38)
-texture = ExtResource("1_hsioi")
+position = Vector2(570, 384)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_68v71")
 
 [node name="Spike Hitbox" type="StaticBody2D" parent="MG1_Map"]
 position = Vector2(25.362314, 3.6231797)
 scale = Vector2(1.1230732, 1.0146441)
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="MG1_Map/Spike Hitbox"]
-position = Vector2(-212.92508, -54.277622)
+position = Vector2(-449.9817, -120.19634)
 scale = Vector2(0.9999991, 0.9999992)
 shape = SubResource("RectangleShape2D_646de")
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="MG1_Map/Spike Hitbox"]
-position = Vector2(-168.4044, -131.40897)
+position = Vector2(-352.0361, -223.68097)
 scale = Vector2(0.9999993, 0.99999934)
 shape = SubResource("RectangleShape2D_646de")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="MG1_Map/Spike Hitbox"]
-position = Vector2(166.46866, 92.12912)
+position = Vector2(320.22635, 208.32602)
 scale = Vector2(0.9999995, 0.9999997)
 shape = SubResource("RectangleShape2D_646de")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="MG1_Map/Spike Hitbox"]
-position = Vector2(205.82755, -172.83128)
+position = Vector2(387.00732, -143.1929)
 scale = Vector2(0.9999997, 0.9999997)
 shape = SubResource("RectangleShape2D_646de")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="MG1_Map/Spike Hitbox"]
-position = Vector2(213.57022, -124.98129)
+position = Vector2(243.05711, -281.17233)
 scale = Vector2(0.9999995, 0.99999964)
 shape = SubResource("RectangleShape2D_646de")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="MG1_Map/Spike Hitbox"]
-position = Vector2(176.14708, -173.54555)
+position = Vector2(355.84296, -341.949)
 scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("RectangleShape2D_646de")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="MG1_Map/Spike Hitbox"]
-position = Vector2(149.04753, -112.8403)
+position = Vector2(413.7198, -258.17575)
 scale = Vector2(0.9999998, 0.9999999)
 shape = SubResource("RectangleShape2D_646de")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MG1_Map/Spike Hitbox"]
-position = Vector2(133.72336, -119.982086)
+position = Vector2(336.55054, -371.51596)
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_646de")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="MG1_Map/Spike Hitbox"]
-position = Vector2(191.0679, -14.283539)
+position = Vector2(379.58728, -394.5125)
 scale = Vector2(0.9999998, 0.9999999)
 shape = SubResource("RectangleShape2D_646de")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="MG1_Map/Spike Hitbox"]
-position = Vector2(205.18228, -67.13283)
+position = Vector2(403.3316, -302.52628)
 scale = Vector2(0.99999964, 0.9999998)
 shape = SubResource("RectangleShape2D_646de")
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="MG1_Map/Spike Hitbox"]
-position = Vector2(178.08273, 76.417175)
+position = Vector2(339.51862, 165.6181)
 scale = Vector2(0.9999994, 0.9999995)
 shape = SubResource("RectangleShape2D_646de")
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="MG1_Map/Spike Hitbox"]
-position = Vector2(-192.27783, -54.99179)
+position = Vector2(-435.1414, -51.206635)
 scale = Vector2(0.9999995, 0.9999997)
 shape = SubResource("RectangleShape2D_646de")
 
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="MG1_Map/Spike Hitbox"]
-position = Vector2(-207.76328, -25.710442)
+position = Vector2(-409.20328, -118.5537)
 scale = Vector2(0.9999995, 0.9999997)
 shape = SubResource("RectangleShape2D_646de")
 
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="MG1_Map/Spike Hitbox"]
-position = Vector2(-197.43964, 23.567917)
+position = Vector2(-421.78516, 62.13356)
 scale = Vector2(0.9999995, 0.9999997)
 shape = SubResource("RectangleShape2D_646de")
 
 [node name="CollisionShape2D15" type="CollisionShape2D" parent="MG1_Map/Spike Hitbox"]
-position = Vector2(-129.69077, 147.83508)
+position = Vector2(354.35886, 62.133587)
 scale = Vector2(0.9999991, 0.9999992)
 shape = SubResource("RectangleShape2D_646de")
 
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="MG1_Map/Spike Hitbox"]
-position = Vector2(-150.33801, 125.695526)
+position = Vector2(-329.77582, 310.1679)
 scale = Vector2(0.9999991, 0.9999992)
 shape = SubResource("RectangleShape2D_646de")
 
 [node name="CollisionShape2D17" type="CollisionShape2D" parent="MG1_Map/Spike Hitbox"]
-position = Vector2(-167.11392, 106.41269)
+position = Vector2(-359.45624, 247.74869)
 scale = Vector2(0.9999991, 0.9999992)
 shape = SubResource("RectangleShape2D_646de")
 
 [node name="CollisionShape2D18" type="CollisionShape2D" parent="MG1_Map/Spike Hitbox"]
-position = Vector2(185.82553, 22.139542)
+position = Vector2(-285.25504, 367.65933)
 scale = Vector2(0.9999991, 0.9999992)
 shape = SubResource("RectangleShape2D_646de")
 
 [node name="CollisionShape2D19" type="CollisionShape2D" parent="MG1_Map/Spike Hitbox"]
-position = Vector2(155.49979, 129.26643)
+position = Vector2(294.99792, 293.74188)
 scale = Vector2(0.99999905, 0.9999992)
 shape = SubResource("RectangleShape2D_646de")
 
 [node name="CollisionShape2D20" type="CollisionShape2D" parent="MG1_Map/Spike Hitbox"]
-position = Vector2(-187.7612, -117.83957)
+position = Vector2(-417.33316, -231.89401)
 scale = Vector2(0.9999991, 0.9999992)
 shape = SubResource("RectangleShape2D_646de")
 
@@ -314,9 +314,10 @@ position = Vector2(3.62323, 4.3478394)
 scale = Vector2(1.1230732, 1.0146441)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MG1_Map/Walls"]
-position = Vector2(41.294514, -201.39851)
+position = Vector2(97.68742, -487.21298)
+scale = Vector2(2.2504604, 2.2808628)
 build_mode = 1
-polygon = PackedVector2Array(-0.64523315, -2.8567429, 72.910706, 0, 123.238464, -21.425377, 157.43549, -15.711964, 162.59729, 39.279823, 170.98529, 67.13281, 154.20935, 115.69699, 140.6596, 173.5455, 132.91687, 245.67758, 126.4646, 320.66638, 95.49365, 343.5201, 56.78, 360.66043, 40.00409, 383.51416, 5.161804, 367.08804, -3.8713684, 374.22983, -16.130676, 366.37387, -29.68045, 369.94473, -35.48752, 378.5149, -45.165924, 372.08728, -50.97296, 379.22906, -66.458435, 378.5149, -79.362976, 372.08728, -91.622284, 380.65744, -102.591156, 375.65817, -113.56003, 387.79922, -130.33594, 370.65894, -138.07867, 374.944, -161.30685, 369.94473, -185.18027, 374.22983, -217.44165, 319.9522, -219.37733, 279.9582, -263.2528, 182.82983, -267.12415, 112.1261, -253.57439, 92.84326, -240.66983, 84.2731, -237.4437, 24.282066, -185.8255, 33.56639, -132.91684, 6.4275894, -69.68457, -0.7142029, -70.975006, -73.56047, -23.22818, -72.84629, -22.582947, 14.997734)
+polygon = PackedVector2Array(-0.64523315, -2.8567429, 72.910706, 0, 123.238464, -21.425377, 157.43549, -15.711964, 162.59729, 39.279823, 170.98529, 67.13281, 154.20935, 115.69699, 140.6596, 173.5455, 132.91687, 245.67758, 129.90784, 323.35687, 106.168335, 360.8058, 67.26193, 377.36975, 39.565857, 400.41522, 3.9565735, 383.1311, -12.529205, 385.29163, -27.696106, 390.33282, -38.24698, 397.53455, -48.13846, 389.61267, -58.029907, 393.93372, -65.28366, 388.1723, -73.85626, 393.2135, -81.109985, 389.61267, -87.704315, 396.09418, -95.61746, 390.33282, -102.21179, 394.65387, -110.12494, 390.33282, -116.71927, 395.37402, -123.31357, 385.29163, -163.53885, 393.93372, -192.5538, 393.2135, -213.65558, 349.28308, -217.44165, 319.9522, -242.01111, 278.7063, -263.2528, 182.82983, -257.83746, 120.2686, -253.57439, 92.84326, -240.66983, 84.2731, -237.4437, 24.282066, -185.8255, 33.56639, -132.91684, 6.4275894, -69.68457, -0.7142029, -70.975006, -73.56047, -23.22818, -72.84629, -22.582947, 14.997734)
 
 [node name="Tristan_gameplay" type="CharacterBody2D" parent="."]
 position = Vector2(562, 76)
@@ -341,7 +342,6 @@ animation = &"Idle_Up"
 [node name="PuzzleManager" type="Node" parent="."]
 script = ExtResource("4_wmemh")
 pillars = Array[NodePath]([NodePath("../Pillar1"), NodePath("../Pillar2"), NodePath("../Pillar3"), NodePath("../Pillar4"), NodePath("../Pillar5"), NodePath("../Pillar6"), NodePath("../Pillar7"), NodePath("../Pillar8")])
-game_time = 180.0
 gem_scene = ExtResource("7_nd5ua")
 instruction_label_scene = ExtResource("8_ias47")
 instruction_display_time = 60.0
