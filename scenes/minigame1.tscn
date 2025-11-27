@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://c0lolbtib4iel" path="res://assets/Minigame Assets/medyo lit.png" id="7_tbmet"]
 [ext_resource type="PackedScene" uid="uid://l435jaidwcf4" path="res://scenes/timer_ui.tscn" id="8_68v71"]
 [ext_resource type="PackedScene" uid="uid://cf38e73ldd45w" path="res://scenes/label_instruction.tscn" id="8_ias47"]
-[ext_resource type="PackedScene" uid="uid://dnnxk1og0cl4p" path="res://scenes/fade_in_fade_out.tscn" id="9_j6fwm"]
+[ext_resource type="AudioStream" uid="uid://cm7o2s8rfgyv" path="res://sfx/Ost/3the_mysterious_lake_dont_swim.mp3" id="13_68v71"]
 [ext_resource type="Texture2D" uid="uid://btrrto1qjwavn" path="res://assets/sprites/spirit_sprite_sheet.png" id="15_117fq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_646de"]
@@ -195,6 +195,11 @@ animations = [{
 
 [node name="Node2D" type="Node2D"]
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1157.0
+offset_bottom = 652.0
+color = Color(0, 0, 0, 1)
+
 [node name="MG1_Map" type="Sprite2D" parent="."]
 position = Vector2(566, 381)
 scale = Vector2(1.38, 1.38)
@@ -341,7 +346,6 @@ gem_scene = ExtResource("7_nd5ua")
 instruction_label_scene = ExtResource("8_ias47")
 instruction_display_time = 60.0
 timer_ui_scene = ExtResource("8_68v71")
-fade_scene = ExtResource("9_j6fwm")
 
 [node name="Timer" type="Timer" parent="PuzzleManager"]
 
@@ -539,3 +543,8 @@ scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_0wtrm")
 autoplay = "default"
 frame_progress = 0.99540985
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_68v71")
+autoplay = true
+parameters/looping = true

@@ -1,9 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://yxjm1x2yiu6x"]
+[gd_scene load_steps=8 format=3 uid="uid://yxjm1x2yiu6x"]
 
-[ext_resource type="Texture2D" uid="uid://1j7vchn7cpyl" path="res://assets/Elia assets/ELIA WORRIED.png" id="3_44j3e"]
 [ext_resource type="Texture2D" uid="uid://p5iqdapxkj64" path="res://assets/assets_scene5/Shot of volcano erupting.png" id="3_53rrf"]
 [ext_resource type="Texture2D" uid="uid://3rv70ukg42yf" path="res://assets/assets_scene5/tristan rising from water.png" id="4_44j3e"]
-[ext_resource type="Texture2D" uid="uid://dy6nxt7bmcirn" path="res://assets/Pablo assets/PABLO WORRIED.png" id="4_gcdqu"]
 [ext_resource type="AudioStream" uid="uid://pu6nyunlwsk5" path="res://Sounds/lv_0_20251122230015-muffled.ogg" id="5_53rrf"]
 [ext_resource type="AudioStream" uid="uid://mrbxinj1gy7r" path="res://Sounds/Volcano Eruption _ Sound Effect(MP3_160K).ogg" id="5_533e2"]
 
@@ -207,46 +205,22 @@ tracks/15/keys = {
 tracks/16/type = "value"
 tracks/16/imported = false
 tracks/16/enabled = true
-tracks/16/path = NodePath("Elia:modulate")
+tracks/16/path = NodePath("Node/Elia:self_modulate")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
-"times": PackedFloat32Array(52.366665, 53.366665, 57.7, 58.2667),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Color(0.9411765, 0.9411765, 0.9411765, 0), Color(0.9411765, 0.9411765, 0.9411765, 1), Color(0.9411765, 0.9411765, 0.9411765, 1), Color(1, 1, 1, 0)]
-}
-tracks/17/type = "value"
-tracks/17/imported = false
-tracks/17/enabled = true
-tracks/17/path = NodePath("Pablo:modulate")
-tracks/17/interp = 1
-tracks/17/loop_wrap = true
-tracks/17/keys = {
-"times": PackedFloat32Array(58.8, 59.6, 64.63333, 65.433334),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/18/type = "value"
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/path = NodePath("Node/Elia:self_modulate")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/keys = {
 "times": PackedFloat32Array(52.3666, 52.4, 57.7, 58.2667),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
-tracks/19/type = "value"
-tracks/19/imported = false
-tracks/19/enabled = true
-tracks/19/path = NodePath("Node/Pablo:self_modulate")
-tracks/19/interp = 1
-tracks/19/loop_wrap = true
-tracks/19/keys = {
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Node/Pablo:self_modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
 "times": PackedFloat32Array(58.7, 58.7333, 64.6333, 65.4333),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
@@ -449,7 +423,7 @@ tracks/15/keys = {
 tracks/16/type = "value"
 tracks/16/imported = false
 tracks/16/enabled = true
-tracks/16/path = NodePath("Elia:modulate")
+tracks/16/path = NodePath("Node/Elia:self_modulate")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
@@ -461,34 +435,10 @@ tracks/16/keys = {
 tracks/17/type = "value"
 tracks/17/imported = false
 tracks/17/enabled = true
-tracks/17/path = NodePath("Pablo:modulate")
+tracks/17/path = NodePath("Node/Pablo:self_modulate")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/18/type = "value"
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/path = NodePath("Node/Elia:self_modulate")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/19/type = "value"
-tracks/19/imported = false
-tracks/19/enabled = true
-tracks/19/path = NodePath("Node/Pablo:self_modulate")
-tracks/19/interp = 1
-tracks/19/loop_wrap = true
-tracks/19/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -516,18 +466,6 @@ texture_filter = 1
 position = Vector2(578.99994, 324.99997)
 scale = Vector2(3.617201, 3.6000595)
 texture = ExtResource("4_44j3e")
-
-[node name="Elia" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(230.875, 328.75784)
-scale = Vector2(0.32828775, 0.31226346)
-texture = ExtResource("3_44j3e")
-
-[node name="Pablo" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(228.00003, 322)
-scale = Vector2(0.34375, 0.31982422)
-texture = ExtResource("4_gcdqu")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

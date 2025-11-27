@@ -1,11 +1,12 @@
-[gd_scene load_steps=23 format=3 uid="uid://dmanyumhp7ud7"]
+[gd_scene load_steps=24 format=3 uid="uid://dmanyumhp7ud7"]
 
 [ext_resource type="Texture2D" uid="uid://d4be7c7gsqp6" path="res://assets/Main Menu assets/langit.png" id="1_aev2v"]
 [ext_resource type="Script" uid="uid://dypkmf8f8kykd" path="res://scripts/cutscene_1.gd" id="1_simcy"]
 [ext_resource type="Script" uid="uid://d0g33cxpav7kl" path="res://scripts/langit_moving.gd" id="2_3ohvu"]
-[ext_resource type="Texture2D" uid="uid://1403snpr5gld" path="res://assets/assets_scene 1/bg (2) (2).png" id="3_iaa37"]
 [ext_resource type="Texture2D" uid="uid://d2abvfbjl0bkn" path="res://assets/Main Menu assets/main2.png" id="4_h4u2s"]
+[ext_resource type="AudioStream" uid="uid://b4cj1icli5fvn" path="res://sfx/Ost/2just_a_normal_day_.mp3" id="4_t2gc3"]
 [ext_resource type="Texture2D" uid="uid://c6d78gthptvhu" path="res://assets/assets_scene 1/TRISTAN SMILE.png" id="5_0cu4l"]
+[ext_resource type="Texture2D" uid="uid://cyyi8tbku1jla" path="res://assets/assets_scene 1/Festival_new.png" id="5_t2gc3"]
 [ext_resource type="Texture2D" uid="uid://cdiij8827vkmf" path="res://assets/assets_scene 1/ELIA SMILE.png" id="6_b7nso"]
 [ext_resource type="Texture2D" uid="uid://bv4uk1pidh872" path="res://assets/assets_scene 1/ELIA SURPISED.png" id="7_8u8hc"]
 [ext_resource type="Texture2D" uid="uid://dp53sg3ic464v" path="res://assets/assets_scene 1/ELIA NEUTRAL.png" id="8_l4o8a"]
@@ -2317,6 +2318,37 @@ tracks/96/keys = {
 "update": 1,
 "values": [true, false]
 }
+tracks/97/type = "audio"
+tracks/97/imported = false
+tracks/97/enabled = true
+tracks/97/path = NodePath("../../../AudioStreamPlayer2D")
+tracks/97/interp = 1
+tracks/97/loop_wrap = true
+tracks/97/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_t2gc3")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_t2gc3")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_t2gc3")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_t2gc3")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_t2gc3")
+}],
+"times": PackedFloat32Array(0.0333333, 45.3, 92.76667, 139.86667, 187.73334)
+}
+tracks/97/use_blend = true
 
 [sub_resource type="Animation" id="Animation_xtrrr"]
 resource_name = "text1_2"
@@ -2830,9 +2862,9 @@ visible_ratio = 0.0
 [node name="Festival" type="Sprite2D" parent="."]
 visible = false
 texture_filter = 1
-position = Vector2(580.24994, 321.49997)
-scale = Vector2(3.6171877, 3.7277772)
-texture = ExtResource("3_iaa37")
+position = Vector2(574.05005, 328.00003)
+scale = Vector2(0.9016381, 0.9085873)
+texture = ExtResource("5_t2gc3")
 
 [node name="Main2" type="Sprite2D" parent="."]
 show_behind_parent = true
@@ -2927,3 +2959,5 @@ texture_filter = 1
 position = Vector2(592.5, 330)
 scale = Vector2(3.696875, 3.7)
 texture = ExtResource("17_rdfic")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://c3vqnpmg3c02h"]
+[gd_scene load_steps=11 format=3 uid="uid://c3vqnpmg3c02h"]
 
+[ext_resource type="Script" uid="uid://dwkhen8pc32fv" path="res://scenes/scene_transition.gd" id="1_85h84"]
 [ext_resource type="Texture2D" uid="uid://bua5sqlvhdj3x" path="res://assets/assets_scene2/tristan in water.png" id="1_cv4e2"]
 [ext_resource type="Texture2D" uid="uid://cvmuayk4d05w5" path="res://assets/assets_scene2/tristan in water (surprised).png" id="2_rj3yn"]
 [ext_resource type="Texture2D" uid="uid://blw673y4namn8" path="res://assets/assets_scene2/hand in water sinking.png" id="3_xtrrr"]
 [ext_resource type="Texture2D" uid="uid://p3l83n7a6vto" path="res://assets/assets_scene2/ripples only.png" id="4_c5a3g"]
+[ext_resource type="AudioStream" uid="uid://cm7o2s8rfgyv" path="res://sfx/Ost/3the_mysterious_lake_dont_swim.mp3" id="6_ooyqd"]
 
 [sub_resource type="Animation" id="Animation_3oth6"]
 resource_name = "FLASH"
@@ -165,6 +167,25 @@ tracks/12/keys = {
 "update": 0,
 "values": [Color(0, 0, 0, 0.60784316), Color(0, 0, 0, 0.60123616), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 0.60784316), Color(0, 0, 0, 0.60784316), Color(0, 0, 0, 0)]
 }
+tracks/13/type = "audio"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../AudioStreamPlayer2D")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("6_ooyqd")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("6_ooyqd")
+}],
+"times": PackedFloat32Array(0, 46.066666)
+}
+tracks/13/use_blend = true
 
 [sub_resource type="Animation" id="Animation_xvtrp"]
 resource_name = "FLASH 2"
@@ -361,6 +382,7 @@ _data = {
 }
 
 [node name="Cutscene2" type="Node2D"]
+script = ExtResource("1_85h84")
 
 [node name="Tristan on water" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -463,3 +485,5 @@ offset_bottom = 585.0
 theme_override_colors/default_color = Color(0.6627451, 0.8392157, 1, 1)
 theme_override_font_sizes/normal_font_size = 30
 text = "Tristan:"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://m27tcea44pb2"]
+[gd_scene load_steps=20 format=3 uid="uid://m27tcea44pb2"]
 
 [ext_resource type="Script" uid="uid://dqvu5fih85p20" path="res://scripts/MainMenu.gd" id="1_2nypq"]
 [ext_resource type="Texture2D" uid="uid://ckh3l7y23qwwx" path="res://assets/Main Menu assets/Start_button.png" id="2_bky6r"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://d2abvfbjl0bkn" path="res://assets/Main Menu assets/main2.png" id="9_v41fp"]
 [ext_resource type="Texture2D" uid="uid://ck363d8y7h67j" path="res://assets/Main Menu assets/dahon.png" id="10_7shrw"]
 [ext_resource type="Texture2D" uid="uid://bfr8po36bepvt" path="res://assets/Main Menu assets/LINES.png" id="11_viowm"]
+[ext_resource type="AudioStream" uid="uid://p8r6t6uy8s6f" path="res://sfx/Ost/1mainmenu.mp3" id="12_bky6r"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_flqon"]
 
@@ -19,7 +20,6 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ajci"]
 
 [sub_resource type="Animation" id="Animation_1ajci"]
-length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -141,7 +141,7 @@ layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_rcqid")
 icon = ExtResource("3_l4mxc")
 
-[node name="Button3" type="Button" parent="UI"]
+[node name="QuitButton" type="Button" parent="UI"]
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_1ajci")
 icon = ExtResource("4_5faoh")
@@ -198,5 +198,13 @@ anchor_bottom = 1.0061729
 offset_bottom = -6.1035156e-05
 mouse_filter = 2
 metadata/_edit_use_anchors_ = true
+
+[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_bky6r")
+
+[node name="FadeRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 651.0
 
 [connection signal="pressed" from="UI/StartButton" to="." method="_on_start_button_pressed"]

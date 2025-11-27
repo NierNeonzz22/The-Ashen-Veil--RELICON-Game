@@ -1,0 +1,184 @@
+[gd_scene load_steps=10 format=3 uid="uid://clcoyhj0x10c5"]
+
+[ext_resource type="Texture2D" uid="uid://cwrqr33v74vd8" path="res://elia & pablo.png" id="1_0hol4"]
+[ext_resource type="Script" uid="uid://2nwgbm4lgg8o" path="res://scripts/control.gd" id="2_2xw6t"]
+[ext_resource type="Texture2D" uid="uid://csuku0tchpb35" path="res://download.jpg" id="3_kdubu"]
+[ext_resource type="AudioStream" uid="uid://p8r6t6uy8s6f" path="res://sfx/Ost/1mainmenu.mp3" id="5_mrsje"]
+
+[sub_resource type="Animation" id="Animation_kdubu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ScreenFade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ScreenFade:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_d21ai"]
+resource_name = "fade out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ScreenFade:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0hol4"]
+resource_name = "fade_in"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ScreenFade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_q6r6c"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ScreenFade:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kdubu"]
+_data = {
+&"RESET": SubResource("Animation_kdubu"),
+&"fade out": SubResource("Animation_d21ai"),
+&"fade_in": SubResource("Animation_0hol4"),
+&"fade_out": SubResource("Animation_q6r6c")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Dagat" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(576.49994, 324.49997)
+scale = Vector2(3.6031253, 3.6055558)
+texture = ExtResource("1_0hol4")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 8.0
+offset_top = 4.0
+offset_right = 1168.0
+offset_bottom = 655.0
+script = ExtResource("2_2xw6t")
+
+[node name="DialogueBox" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 503.0
+offset_right = 1122.0
+offset_bottom = 604.0
+
+[node name="ReliconDialogueBox(1)" type="Sprite2D" parent="Control/DialogueBox"]
+modulate = Color(1, 1, 1, 0.8235294)
+texture_filter = 1
+position = Vector2(526.5, 57.5)
+scale = Vector2(4.7066665, 0.73333347)
+texture = ExtResource("3_kdubu")
+
+[node name="Textlabel" type="RichTextLabel" parent="Control/DialogueBox"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 20.0
+offset_right = 1023.0
+offset_bottom = 150.0
+theme_override_font_sizes/normal_font_size = 21
+tab_size = 10
+
+[node name="Control2" type="Control" parent="Control"]
+anchors_preset = 0
+offset_left = -8.0
+offset_top = 3.0
+offset_right = 1147.0
+offset_bottom = 655.0
+
+[node name="Textlabel1" type="RichTextLabel" parent="Control/Control2"]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 478.0
+offset_right = 333.0
+offset_bottom = 584.0
+theme_override_font_sizes/normal_font_size = 34
+bbcode_enabled = true
+
+[node name="Fader" type="CanvasLayer" parent="Control/Control2"]
+
+[node name="ScreenFade" type="ColorRect" parent="Control/Control2/Fader"]
+visible = false
+modulate = Color(0, 0, 0, 1)
+anchors_preset = -1
+anchor_left = 0.062000003
+anchor_right = 0.062000003
+offset_left = -83.424
+offset_top = -21.0
+offset_right = 1113.576
+offset_bottom = 663.0
+color = Color(0, 0, 0, 1)
+
+[node name="anim" type="AnimationPlayer" parent="Control/Control2/Fader"]
+libraries = {
+&"": SubResource("AnimationLibrary_kdubu")
+}
+
+[node name="TheEndLabel" type="Label" parent="Control/Control2/Fader"]
+z_index = 100
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -31.0
+offset_top = -11.5
+offset_right = 31.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "The End"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_mrsje")
+autoplay = true

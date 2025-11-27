@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bo1fgpast17ig"
+path="res://.godot/imported/4where_am_i (without_hihat).mp3-7c090e339c2833cc132219b76a75036e.mp3str"
+
+[deps]
+
+source_file="res://sfx/Ost/4where_am_i (without_hihat).mp3"
+dest_files=["res://.godot/imported/4where_am_i (without_hihat).mp3-7c090e339c2833cc132219b76a75036e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

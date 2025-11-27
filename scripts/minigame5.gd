@@ -13,6 +13,7 @@ var is_first_sequence = true
 @onready var camera = $Tristan_gameplay/Camera2D  # Updated path
 @onready var buttons_camera = $ButtonsCamera
 @onready var button_container = $ButtonContainer
+@export var label_scene: PackedScene
 
 # Timer UI integration
 @export var timer_ui_scene: PackedScene  # Assign your TimerUI.tscn here
@@ -191,6 +192,62 @@ func pan_to_player():
 	await tween.finished
 	
 	print("Camera pan to player complete")
+	
+	# Spawn label in player's Camera2D after pan is complete
+	spawn_label_in_camera()
+
+func spawn_label_in_camera():
+	# Make sure we have the camera reference
+	if not camera:
+		print("ERROR: No camera reference for spawning label!")
+		return
+	
+	# Load your label scene (replace with your actual scene path)
+	var label_scene = preload("res://scenes/label_instruction.tscn")
+	var label_instance = label_scene.instantiate()
+	
+	# Add as child of the Camera2D so it stays fixed on screen
+	camera.add_child(label_instance)
+	
+	# Set your custom text if the label has a method to do so
+	if label_instance.has_method("set_text"):
+		label_instance.set_text("Match the notes being played by the musical rocks within the given time!")
+	elif label_instance.has_node("Label") and label_instance.get_node("Label") is Label:
+		label_instance.get_node("Label").text = "Match the notes being played by the musical rocks within the given time!"
+	
+	# Position in bottom right corner of camera view
+	# Get the camera's viewport size
+	var viewport_size = get_viewport().get_visible_rect().size
+	# Position relative to camera (bottom right with some margin)
+	label_instance.position = Vector2(viewport_size.x / 2 - 200, viewport_size.y / 2 - 100)
+	
+	print("Label spawned in Camera2D at bottom right")
+	
+	# If your scene has custom methods to trigger animations, call them here
+	if label_instance.has_method("slide_in"):
+		label_instance.slide_in()
+	
+	# Wait for the label to be on screen, then wait a bit before sliding out
+	await get_tree().create_timer(3.0).timeout  # Show for 3 seconds
+	
+	# Trigger slide out animation
+	if label_instance.has_method("slide_out"):
+		label_instance.slide_out()
+		
+		# Wait for slide out animation to complete before removing
+		await get_tree().create_timer(1.0).timeout  # Adjust to match your animation duration
+	
+	# Remove the label after it slides out
+	label_instance.queue_free()
+
+func _on_label_slide_in_completed():
+	print("Label slide in completed")
+	# You could add logic here for when the slide in finishes
+
+func _on_label_slide_out_completed(label_instance):
+	print("Label slide out completed")
+	# Remove the label after slide out animation finishes
+	label_instance.queue_free()
 
 func play_single_sequence_note(index: int, base_note_delay: float):
 	var note = sequence_notes[index]

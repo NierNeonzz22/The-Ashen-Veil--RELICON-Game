@@ -4,7 +4,7 @@ extends Node2D
 @export var custom_font: FontFile  # Drag your custom font here in Inspector
 @export var font_size: int = 11
 @export var text_color: Color = Color.SADDLE_BROWN
-@export var display_duration: float = 5.0  # How long to show the instructions
+@export var display_duration: float = 20  # How long to show the instructions
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var background_sprite: AnimatedSprite2D = $AnimatedSprite2D
@@ -12,16 +12,16 @@ extends Node2D
 
 func _ready():
 	# Play slide animation if available
-	if animation_player and animation_player.has_animation("slide_left"):
-		animation_player.play("slide_left")
+	if animation_player and animation_player.has_animation("slide left"):
+		animation_player.play("slide left")
 	
-	# Set up the label
+	# Set up the label with LEFT alignment only
 	label.text = instruction_text
 	
-	# Enable auto-wrap and center alignment for better appearance
+	# ONLY CHANGE: Set to left alignment instead of center
 	label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT  # Changed from CENTER to LEFT
+	label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER    # Keep this as center
 	
 	if custom_font:
 		label.add_theme_font_override("font", custom_font)

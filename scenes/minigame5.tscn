@@ -1,9 +1,10 @@
-[gd_scene load_steps=53 format=3 uid="uid://cnslvssgvyso3"]
+[gd_scene load_steps=55 format=3 uid="uid://cnslvssgvyso3"]
 
 [ext_resource type="Texture2D" uid="uid://1sjjn2yf318w" path="res://assets/assets_minigame5/minigame5 semifinal.png" id="1_4hkn6"]
 [ext_resource type="Script" uid="uid://wp6p4gwfj1ou" path="res://scripts/minigame5.gd" id="1_6hb12"]
 [ext_resource type="Script" uid="uid://bbi0aiygulkhi" path="res://scripts/tristan_gameplaymoveset.gd" id="2_6hb12"]
 [ext_resource type="PackedScene" uid="uid://l435jaidwcf4" path="res://scenes/timer_ui.tscn" id="2_7qx4m"]
+[ext_resource type="PackedScene" uid="uid://cf38e73ldd45w" path="res://scenes/label_instruction.tscn" id="3_abjjg"]
 [ext_resource type="Script" uid="uid://dauxsaxv8wmwv" path="res://scripts/MG5_button_script.gd" id="5_75udb"]
 [ext_resource type="Texture2D" uid="uid://r2ughrtiehix" path="res://assets/sprites/SHIT NI TRISTAN ADJUSTED HEIGHT (2).png" id="5_lkk4d"]
 [ext_resource type="Texture2D" uid="uid://dvj1xnvrjs7p" path="res://assets/assets_minigame5/Musical Stones 1 Dark.png" id="5_uqii8"]
@@ -31,6 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://daed67oyb6m32" path="res://assets/assets_minigame5/Musical Stones 8 Dark.png" id="27_v1bml"]
 [ext_resource type="Texture2D" uid="uid://cbtx8u4psohd3" path="res://assets/assets_minigame5/Musical Stones 8 Light.png" id="28_6b48f"]
 [ext_resource type="Texture2D" uid="uid://btrrto1qjwavn" path="res://assets/sprites/spirit_sprite_sheet.png" id="31_lkk4d"]
+[ext_resource type="AudioStream" uid="uid://yo3601pel2np" path="res://sfx/Ost/4where_am_i (w_hihat).mp3" id="33_adqki"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4hkn6"]
 size = Vector2(18.5, 33)
@@ -210,6 +212,7 @@ animations = [{
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_6hb12")
+label_scene = ExtResource("3_abjjg")
 timer_ui_scene = ExtResource("2_7qx4m")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -451,3 +454,9 @@ position = Vector2(307.99988, 105.00001)
 scale = Vector2(1.7, 1.7)
 sprite_frames = SubResource("SpriteFrames_a3dm4")
 autoplay = "default"
+
+[node name="BGMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("33_adqki")
+volume_db = -29.171
+autoplay = true
+parameters/looping = true

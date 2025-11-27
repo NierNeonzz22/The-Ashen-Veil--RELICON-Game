@@ -19,7 +19,9 @@ extends Node2D
 
 #Variable for timer
 @export var timer_ui_scene: PackedScene  # Assign your TimerUI.tscn here
+@export var instruction_label_scene: PackedScene  # Assign your Label_instruction.tscn in inspector
 var timer_ui_instance: Node2D
+var instruction_instance: Node2D = null
 
 # WINNING STATE: Pieces 1-4,6-9 in positions around center, FinalPiece (center) at position 4
 var piece_positions = []  # piece_positions[piece_id] = current_grid_index
@@ -86,6 +88,9 @@ func start_puzzle_gameplay():
 		add_child(timer_ui_instance)
 		print("Timer UI created with slide-down animation")
 	
+	# Show instructions
+	show_instructions()
+	
 	# Setup puzzle connections
 	setup_puzzle()
 	
@@ -97,6 +102,34 @@ func start_puzzle_gameplay():
 	update_timer_display()
 	
 	print("Puzzle ready! Pieces should be movable now.")
+
+
+###############################
+# INSTRUCTION SYSTEM
+###############################
+func show_instructions():
+	if instruction_label_scene:
+		# Create instruction label instance
+		instruction_instance = instruction_label_scene.instantiate()
+		add_child(instruction_instance)
+		print("Instruction label created")
+		
+		# Set the instruction text
+		if instruction_instance.has_method("set_instruction_text"):
+			instruction_instance.set_instruction_text("Click pieces next to the empty space to move.\nSolve the puzzle!")
+		
+		# Set display duration (show for 10 seconds)
+		if instruction_instance.has_method("set_display_time"):
+			instruction_instance.set_display_time(10.0)
+		
+		# Play slide in animation
+		if instruction_instance.has_method("show_instructions"):
+			instruction_instance.show_instructions()
+		elif instruction_instance.has_node("AnimationPlayer"):
+			var anim_player = instruction_instance.get_node("AnimationPlayer")
+			if anim_player.has_animation("slide_left"):
+				anim_player.play("slide_left")
+
 
 func _on_timer_timeout():
 	if game_won or game_lost:
@@ -128,6 +161,13 @@ func on_puzzle_lost():
 	if timer_ui_instance:
 		timer_ui_instance.queue_free()
 		timer_ui_instance = null
+	
+	# Transition to lose scene
+	transition_to_lose_scene()
+
+func transition_to_lose_scene():
+	print("💀 PUZZLE FAILED! Transitioning to niuala lose scene...")
+	TransitionManager.transition_to_scene("res://scenes/niuala lose.tscn")
 
 func initialize_test_puzzle():
 	# TEST MODE: Puzzle is ONE MOVE away from completion

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://yo3601pel2np"
+path="res://.godot/imported/4where_am_i (w_hihat).mp3-7494545e7c538632d04449389eea4c80.mp3str"
+
+[deps]
+
+source_file="res://sfx/Ost/4where_am_i (w_hihat).mp3"
+dest_files=["res://.godot/imported/4where_am_i (w_hihat).mp3-7494545e7c538632d04449389eea4c80.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

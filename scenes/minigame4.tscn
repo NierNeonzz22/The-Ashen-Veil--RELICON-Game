@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cyg1qnab103s7" path="res://assets/assets_minigame4/minigame4 semifinal.png" id="1_awwlc"]
 [ext_resource type="Script" uid="uid://cp8ust1di5y7a" path="res://scripts/minigame4.gd" id="1_wu54j"]
 [ext_resource type="Script" uid="uid://bbi0aiygulkhi" path="res://scripts/tristan_gameplaymoveset.gd" id="2_x24qe"]
-[ext_resource type="Texture2D" uid="uid://bjr4uxx2ar0q8" path="res://assets/Minigame Assets/BETA SPRITE SHEET TRISTANuntitled.png" id="3_dl4oh"]
+[ext_resource type="Texture2D" uid="uid://bjr4uxx2ar0q8" path="res://Minigame Assets/BETA SPRITE SHEET TRISTANuntitled.png" id="3_dl4oh"]
 [ext_resource type="Texture2D" uid="uid://b4himuqwh4dnx" path="res://assets/assets_minigame4/00.png" id="4_37kqw"]
 [ext_resource type="Texture2D" uid="uid://b0klug2y5no7q" path="res://assets/assets_minigame4/01.png" id="5_wu54j"]
 [ext_resource type="Texture2D" uid="uid://cyjl8eyllc56t" path="res://assets/assets_minigame4/02.png" id="6_6626w"]

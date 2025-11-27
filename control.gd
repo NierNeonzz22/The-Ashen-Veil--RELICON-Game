@@ -8,7 +8,7 @@ var names = [
 	"[color=#C7F9CC]Pablo:[/color]",
 	"[color=#FFEAA7]Elia:[/color]",
 	"[color=#C7F9CC]Pablo:[/color]",
-    "[color=#FFEAA7]Elia:[/color]"
+	"[color=#FFEAA7]Elia:[/color]"
 ]
 
 var lines = [
@@ -19,7 +19,7 @@ var lines = [
 	"You keep zoning out! It’s a beautiful day…",
 	"I just— I wish he were here to see this.",
 	"Oh… I— I think he is.",
-    "You think?"
+	"You think?"
 ]
 
 var final_monologue := "Two lives entered the lake that night. Only one returned. But in every tear that touched the surface, his name was whispered, and in every breath she drew, his memory endured. Because in the end, what defines us is not the years we hold but the choices we make, and the love we leave behind…"
@@ -29,72 +29,40 @@ var typing := false
 var type_speed := 0.01
 
 func _ready():
-	$Control2/TextLabel1.bbcode_enabled = true
-	$DialogueBox/TextLabel.bbcode_enabled = true
+	# Hide fader completely
+	$Control/Control2/Fader.visible = false
+	$Control/Control2/Fader/ScreenFade.visible = false
+	$Control/Control2/Fader/ScreenFade.modulate.a = 0
+	$Control/Control2/Fader/TheEndLabel.visible = false
+	$Control/Control2/Fader/TheEndLabel.modulate.a = 0
 
-	$Control2/Fader/TheEndLabel.visible = false
-	$Control2/Fader/ScreenFade.color = Color(0,0,0,0)
+	$Control/Control2/NameLabel.bbcode_enabled = true
+	$Control/DialogueBox/DialogueLabel.bbcode_enabled = true
 
-	show_line()
+	await show_line()
 
-func show_line():
-	var label = $DialogueBox/TextLabel
-	label.text = ""
-	label.visible_characters = 0
+# ----------------- Dialogue -----------------
+
+func show_line() -> void:
+	# NAME LABEL
+	$Control/Control2/NameLabel.text = names[index]
+
+	# DIALOGUE LABEL
+	$Control/DialogueBox/DialogueLabel.text = ""
+
 	typing = true
-
-	$Control2/TextLabel1.text = names[index]
-
 	var segs = get_segments(lines[index])
 	await type_segments(segs)
-
 	typing = false
 
-	if index == lines.size() - 1:
-		await get_tree().create_timer(1.0).timeout
-		await play_final_monologue()
-		return
+func type_segments(segs: Array) -> void:
+	var label = $Control/DialogueBox/DialogueLabel
+	for segment in segs:
+		label.text += segment["text"]
+		if segment["pause"] > 0:
+			await get_tree().create_timer(segment["pause"]).timeout
 
-func play_final_monologue():
-	var label = $DialogueBox/TextLabel
-	label.text = ""
-	label.visible_characters = 0
-	typing = true
-
-	$Control2/TextLabel1.text = ""
-
-	var segs = get_segments(final_monologue)
-	await type_segments(segs)
-
-	typing = false
-	await get_tree().create_timer(1.5).timeout
-
-	# Fade out the screen
-	var fader = $Control2/Fader/ScreenFade
-	for i in range(20):
-		fader.color.a += 0.05
-		await get_tree().create_timer(0.05).timeout
-
-	# Show and fade in "THE END" label
-	var end_label = $Control2/Fader/TheEndLabel
-	end_label.visible = true
-	end_label.modulate.a = 0
-
-	# Fade in
-	for i in range(20):
-		end_label.modulate.a += 0.05
-		await get_tree().create_timer(0.05).timeout
-
-	await get_tree().create_timer(5.0).timeout
-
-	# Fade out
-	for i in range(20):
-		end_label.modulate.a -= 0.05
-		await get_tree().create_timer(0.05).timeout
-
-# ----------------------------
-#    SEGMENT SYSTEM (White Text)
-# ----------------------------
+# ----------------- BBCode -----------------
 
 func split_bbcode(text: String) -> Array:
 	var bbcode_regex := RegEx.new()
@@ -105,7 +73,6 @@ func split_bbcode(text: String) -> Array:
 	for match in bbcode_regex.search_all(text):
 		var start = match.get_start(0)
 		var end = match.get_end(0)
-
 		if start > last_idx:
 			result.append(text.substr(last_idx, start - last_idx))
 		result.append(text.substr(start, end - start))
@@ -150,26 +117,58 @@ func get_segments(text: String) -> Array:
 
 	return segments
 
-func type_segments(segs: Array) -> void:
-	var label = $DialogueBox/TextLabel
-
-	for segment in segs:
-		if segment["is_tag"]:
-			label.text += segment["text"]
-			continue
-
-		label.text += segment["text"]
-
-		while label.visible_characters < label.text.length():
-			label.visible_characters += 1
-			await get_tree().create_timer(type_speed).timeout
-
-		if segment["pause"] > 0:
-			await get_tree().create_timer(segment["pause"]).timeout
+# ----------------- Input -----------------
 
 func _unhandled_input(event):
-	if event.is_action_pressed("ui_accept"):
-		if not typing:  # Only allow next line if typing is done
-			if index < lines.size() - 1:
-				index += 1
-				show_line()
+	if event.is_action_pressed("ui_accept") and not typing:
+		if index < lines.size() - 1:
+			index += 1
+			await show_line()
+		else:
+			await play_final_monologue()
+
+# ----------------- Final Monologue -----------------
+
+func play_final_monologue() -> void:
+	var fader_layer = $Control/Control2/Fader
+	var fader = $Control/Control2/Fader/ScreenFade
+	var end_label = $Control/Control2/Fader/TheEndLabel
+
+	fader_layer.visible = false
+	fader.visible = false
+	fader.modulate.a = 0
+	end_label.visible = false
+	end_label.modulate.a = 0
+
+	# Clear text
+	$Control/DialogueBox/DialogueLabel.text = ""
+	$Control/Control2/NameLabel.text = ""
+
+	typing = true
+	var segs = get_segments(final_monologue)
+	await type_segments(segs)
+	typing = false
+
+	await get_tree().create_timer(1.5).timeout
+
+	# Fade to white
+	fader_layer.visible = true
+	fader.visible = true
+	fader.modulate.a = 0
+
+	for i in range(20):
+		fader.modulate.a = (i + 1) * 0.05
+		await get_tree().create_timer(0.05).timeout
+
+	# THE END text
+	end_label.visible = true
+	end_label.modulate.a = 0
+	for i in range(20):
+		end_label.modulate.a = (i + 1) * 0.05
+		await get_tree().create_timer(0.05).timeout
+
+	await get_tree().create_timer(5.0).timeout
+
+	for i in range(20):
+		end_label.modulate.a = 1.0 - (i + 1) * 0.05
+		await get_tree().create_timer(0.05).timeout

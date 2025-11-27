@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://byc3r4c5co5ev"]
+[gd_scene load_steps=12 format=3 uid="uid://byc3r4c5co5ev"]
 
 [ext_resource type="Texture2D" uid="uid://cibhgc1rw20jl" path="res://assets/assets scene 4/dagat.png" id="1_8hrhy"]
 [ext_resource type="Texture2D" uid="uid://ddilgxfddrjh" path="res://assets/assets scene 4/TRISTAN SURPRISED.png" id="2_yk5xu"]
+[ext_resource type="AudioStream" uid="uid://cm7o2s8rfgyv" path="res://sfx/Ost/3the_mysterious_lake_dont_swim.mp3" id="3_a0hgj"]
 [ext_resource type="Texture2D" uid="uid://bhtqa4sr2fxiu" path="res://assets/assets scene 4/TAALITA SAD.png" id="3_gfy1e"]
 [ext_resource type="Texture2D" uid="uid://b00e7uo27qg0a" path="res://assets/assets scene 4/TAALITA NEUTRAL.png" id="4_u7dcc"]
 [ext_resource type="Texture2D" uid="uid://civnqwglvjot" path="res://assets/assets scene 4/TAALITA SMILE.png" id="5_tqhda"]
@@ -394,6 +395,17 @@ tracks/31/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/32/type = "audio"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("../AudioStreamPlayer2D")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"clips": [],
+"times": PackedFloat32Array()
+}
+tracks/32/use_blend = true
 
 [sub_resource type="Animation" id="Animation_yk5xu"]
 resource_name = "dialogue 4"
@@ -1015,6 +1027,29 @@ tracks/45/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
+tracks/46/type = "audio"
+tracks/46/imported = false
+tracks/46/enabled = true
+tracks/46/path = NodePath("../AudioStreamPlayer2D")
+tracks/46/interp = 1
+tracks/46/loop_wrap = true
+tracks/46/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_a0hgj")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_a0hgj")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_a0hgj")
+}],
+"times": PackedFloat32Array(0, 45.833332, 92.03333)
+}
+tracks/46/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rlmyg"]
 _data = {
@@ -1343,3 +1378,5 @@ offset_bottom = 401.0
 theme_override_font_sizes/font_size = 30
 text = "FREE THE PRINCESS"
 script = ExtResource("7_a0hgj")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

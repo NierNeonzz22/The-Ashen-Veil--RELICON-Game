@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bicn3kkk4wmu2"]
+[gd_scene load_steps=11 format=3 uid="uid://bicn3kkk4wmu2"]
 
 [ext_resource type="Script" uid="uid://d25lpmo60ja0a" path="res://scenes/scene_4.gd" id="1_7p87k"]
 [ext_resource type="Texture2D" uid="uid://bs1wchi38r8ni" path="res://assets/assets scene 4/1 Close shot of gem being put together lam nio yun.png" id="1_rhpos"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bfr6io42e4vxx" path="res://assets/assets scene 4/3 smoke only.png" id="3_hbkxh"]
 [ext_resource type="Texture2D" uid="uid://iugk8ty8ejon" path="res://assets/assets scene 4/4 smoke w_ silhouette.png" id="4_ijncq"]
 [ext_resource type="Texture2D" uid="uid://b468nyuw4jo3p" path="res://assets/assets scene 4/5 smoke w_ TAALITA.png" id="5_8ro7g"]
+[ext_resource type="AudioStream" uid="uid://cm7o2s8rfgyv" path="res://sfx/Ost/3the_mysterious_lake_dont_swim.mp3" id="7_hyci5"]
 
 [sub_resource type="Animation" id="Animation_hbkxh"]
 length = 85.0
@@ -275,6 +276,25 @@ tracks/21/keys = {
 "update": 0,
 "values": ["", "is this the princess?", "is this the princess?", ""]
 }
+tracks/22/type = "audio"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("AudioStreamPlayer2D")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("7_hyci5")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("7_hyci5")
+}],
+"times": PackedFloat32Array(0.033333335, 47.366665)
+}
+tracks/22/use_blend = true
 
 [sub_resource type="Animation" id="Animation_rhpos"]
 resource_name = "cutscene 4"
@@ -323,34 +343,40 @@ _data = {
 }
 
 [node name="Scene 4" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_7p87k")
 
 [node name="1CloseShotOfGemBeingPutTogetherLamNioYun" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 1)
+texture_filter = 1
 position = Vector2(577, 325)
 scale = Vector2(3.6, 3.6)
 texture = ExtResource("1_rhpos")
 
 [node name="2PovGemInHandsTristan" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
+texture_filter = 1
 position = Vector2(577.5, 325)
 scale = Vector2(3.596875, 3.6)
 texture = ExtResource("2_hbkxh")
 
 [node name="3SmokeOnly" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
+texture_filter = 1
 position = Vector2(576.5, 325)
 scale = Vector2(3.603125, 3.6111112)
 texture = ExtResource("3_hbkxh")
 
 [node name="4SmokeWSilhouette" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
+texture_filter = 1
 position = Vector2(576, 324)
 scale = Vector2(3.6, 3.6055555)
 texture = ExtResource("4_ijncq")
 
 [node name="5SmokeWTaalita" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
+texture_filter = 1
 position = Vector2(574.5, 329.5)
 scale = Vector2(3.603125, 3.6277778)
 texture = ExtResource("5_8ro7g")
@@ -550,3 +576,5 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 40
 fit_content = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

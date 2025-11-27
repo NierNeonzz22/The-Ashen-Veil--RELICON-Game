@@ -3,8 +3,14 @@ extends Node2D
 @onready var inventory_panel: ColorRect = $"ColorRect" 
 @onready var timer = $Timer
 @onready var label = $Label
-var countdown_time = 1000  # replace this with however long it needs to be
+var countdown_time = 180  # replace this with however long it needs to be
 var current_time = countdown_time
+
+# Add instruction label reference
+@export var instruction_label_scene: PackedScene  # Assign your Label_instruction.tscn in inspector
+@export var timer_ui_scene: PackedScene  # Assign your TimerUI.tscn in inspector
+var instruction_instance: Node2D = null
+var timer_ui_instance: Node2D = null
 
 @onready var draggable_objects: Array = [
 	$"Sprite2D2", $"Sprite2D3", $"Sprite2D4",
@@ -84,12 +90,101 @@ func _ready():
 
 	$"ColorRect/ResetButton".visible = false
 	$"ColorRect/ResetButton".pressed.connect(_on_reset_pressed)
-	label.text = str(current_time)
+	
+	# Setup timer UI instead of using the label
+	setup_timer_ui()
 	
 	timer.connect("timeout", Callable(self, "_on_Timer_timeout"))
 	
 	#timer interval of 1 second 
 	timer.start(countdown_time)
+	
+	# Show sequential instructions when game starts
+	show_sequential_instructions()
+
+
+###############################
+# TIMER UI SETUP
+###############################
+func setup_timer_ui():
+	if timer_ui_scene:
+		# Create timer UI instance
+		timer_ui_instance = timer_ui_scene.instantiate()
+		add_child(timer_ui_instance)
+		print("Timer UI created")
+		
+		# Update timer display immediately
+		update_timer_display()
+	else:
+		print("Warning: No Timer UI scene assigned, using fallback label")
+		label.text = str(current_time)
+
+
+###############################
+# SEQUENTIAL INSTRUCTION SYSTEM
+###############################
+func show_sequential_instructions():
+	if instruction_label_scene:
+		# FIRST INSTRUCTION: Show for 10 seconds
+		await show_instruction("Find letters in the rocks and assemble them in the right order!", 10.0)
+		
+		# Wait for first instruction to complete
+		await get_tree().create_timer(10.0).timeout
+		
+		# Smooth transition: Slide out first instruction
+		await hide_current_instruction()
+		
+		# Brief pause between transitions
+		await get_tree().create_timer(0.5).timeout
+		
+		# SECOND INSTRUCTION: Show for 30 seconds
+		await show_instruction("E - Interact with rock\nF - Open inventory to assemble", 30.0)
+
+func show_instruction(text: String, duration: float):
+	if instruction_label_scene:
+		# Remove any existing instruction
+		if instruction_instance:
+			instruction_instance.queue_free()
+		
+		# Create new instruction label instance
+		instruction_instance = instruction_label_scene.instantiate()
+		add_child(instruction_instance)
+		print("Showing instruction: ", text)
+		
+		# Set the instruction text
+		if instruction_instance.has_method("set_instruction_text"):
+			instruction_instance.set_instruction_text(text)
+		
+		# Set display duration
+		if instruction_instance.has_method("set_display_time"):
+			instruction_instance.set_display_time(duration)
+		
+		# Play slide in animation and wait for it to complete
+		if instruction_instance.has_method("show_instructions"):
+			instruction_instance.show_instructions()
+		elif instruction_instance.has_node("AnimationPlayer"):
+			var anim_player = instruction_instance.get_node("AnimationPlayer")
+			if anim_player.has_animation("slide_left"):
+				anim_player.play("slide_left")
+				await anim_player.animation_finished
+
+func hide_current_instruction():
+	if instruction_instance:
+		print("Hiding current instruction with slide_right animation")
+		# Play slide out animation and wait for it to complete
+		if instruction_instance.has_method("hide_instructions"):
+			instruction_instance.hide_instructions()
+			# Wait for the hide_instructions to complete (it should handle the animation)
+			await get_tree().create_timer(0.5).timeout
+		elif instruction_instance.has_node("AnimationPlayer"):
+			var anim_player = instruction_instance.get_node("AnimationPlayer")
+			if anim_player.has_animation("slide_right"):
+				anim_player.play("slide_right")
+				await anim_player.animation_finished
+		
+		# Remove the instance
+		instruction_instance.queue_free()
+		instruction_instance = null
 
 
 ###############################
@@ -105,10 +200,22 @@ func _process(delta):
 	# Timer code
 	if timer_running and not timer.is_stopped():
 		current_time = int(timer.time_left)
-		label.text = str(current_time)
+		update_timer_display()
 	elif current_time <= 0:
 		# Time's up - lose condition
 		_on_game_lose()
+
+
+###############################
+# TIMER DISPLAY UPDATE
+###############################
+func update_timer_display():
+	# Update the timer UI if it exists
+	if timer_ui_instance and timer_ui_instance.has_method("update_time"):
+		timer_ui_instance.update_time(current_time)
+	else:
+		# Fallback to the label if no timer UI
+		label.text = str(current_time)
 
 
 ###############################
@@ -245,6 +352,11 @@ func _on_game_win():
 	timer_running = false
 	timer.stop()
 	
+	# Clean up timer UI
+	if timer_ui_instance:
+		timer_ui_instance.queue_free()
+		timer_ui_instance = null
+	
 	# Wait a moment to show win state, then transition
 	await get_tree().create_timer(2.0).timeout
 	TransitionManager.transition_to_scene("res://scenes/kalaoscene.tscn")
@@ -256,7 +368,11 @@ func _on_game_win():
 func _on_game_lose():
 	timer_running = false
 	timer.stop()
-	label.text = "Time's Up!"
+	
+	# Clean up timer UI
+	if timer_ui_instance:
+		timer_ui_instance.queue_free()
+		timer_ui_instance = null
 	
 	# Wait a moment to show lose state, then transition
 	await get_tree().create_timer(2.0).timeout

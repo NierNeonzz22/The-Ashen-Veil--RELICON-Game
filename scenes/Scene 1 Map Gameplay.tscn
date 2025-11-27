@@ -1,6 +1,8 @@
-[gd_scene load_steps=41 format=3 uid="uid://cnfxqjyoj31w1"]
+[gd_scene load_steps=45 format=3 uid="uid://cnfxqjyoj31w1"]
 
 [ext_resource type="Texture2D" uid="uid://dy8sw3h7n6b6h" path="res://assets/maps/Festival-Recovered.png" id="1_afks2"]
+[ext_resource type="Script" uid="uid://bsyodcmd0iy3o" path="res://scripts/scene_1_map_gameplay.gd" id="1_b762t"]
+[ext_resource type="PackedScene" uid="uid://cf38e73ldd45w" path="res://scenes/label_instruction.tscn" id="2_45rui"]
 [ext_resource type="PackedScene" path="res://scenes/player.tscn" id="2_afks2"]
 [ext_resource type="Texture2D" uid="uid://bcuct4ew676g5" path="res://assets/map assets/dbandarito.png" id="3_fo73v"]
 [ext_resource type="Texture2D" uid="uid://depwjbl2us2g2" path="res://assets/map assets/house likod.png" id="3_md0ks"]
@@ -27,6 +29,8 @@
 [ext_resource type="Texture2D" uid="uid://chtrhc24oenw7" path="res://assets/map assets/stage.png" id="19_ehpw1"]
 [ext_resource type="Texture2D" uid="uid://b6kwi8osofkfh" path="res://assets/map assets/fountain.png" id="20_s7fiu"]
 [ext_resource type="Script" uid="uid://d2dray23ytntt" path="res://scripts/Go_to_sea_area.gd" id="27_a0r4b"]
+[ext_resource type="AudioStream" uid="uid://b4cj1icli5fvn" path="res://sfx/Ost/2just_a_normal_day_.mp3" id="28_b58v1"]
+[ext_resource type="Script" uid="uid://cgq3sph307n4o" path="res://scripts/audio_stream_player_2d.gd" id="29_b762t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ptora"]
 size = Vector2(58.787502, 44.90912)
@@ -89,6 +93,8 @@ size = Vector2(117, 110)
 size = Vector2(272, 1435)
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_b762t")
+label_instruction_scene = ExtResource("2_45rui")
 
 [node name="FestivalRecovered" type="Sprite2D" parent="."]
 position = Vector2(1635, 580)
@@ -733,3 +739,8 @@ script = ExtResource("27_a0r4b")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(36, 280.5)
 shape = SubResource("RectangleShape2D_i786s")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("28_b58v1")
+parameters/looping = true
+script = ExtResource("29_b762t")

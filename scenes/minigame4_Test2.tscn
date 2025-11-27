@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://11cp6lp4q5sp"]
+[gd_scene load_steps=41 format=3 uid="uid://11cp6lp4q5sp"]
 
 [ext_resource type="Texture2D" uid="uid://cyg1qnab103s7" path="res://assets/assets_minigame4/minigame4 semifinal.png" id="1_2syki"]
 [ext_resource type="Script" uid="uid://d2mwx300kytx7" path="res://scripts/sliding_puzzlemanager.gd" id="2_3hmwq"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b0klug2y5no7q" path="res://assets/assets_minigame4/01.png" id="3_3hmwq"]
 [ext_resource type="PackedScene" uid="uid://dvngncmxe25vy" path="res://Gem_2.tscn" id="3_ppnyi"]
 [ext_resource type="Texture2D" uid="uid://cyjl8eyllc56t" path="res://assets/assets_minigame4/02.png" id="4_wxurk"]
+[ext_resource type="PackedScene" uid="uid://cf38e73ldd45w" path="res://scenes/label_instruction.tscn" id="5_dotgx"]
 [ext_resource type="Texture2D" uid="uid://d1jahhvmh8a8e" path="res://assets/assets_minigame4/10.png" id="5_s8045"]
 [ext_resource type="Texture2D" uid="uid://c6b5kb6xhj66o" path="res://assets/assets_minigame4/11.png" id="6_ppnyi"]
 [ext_resource type="Texture2D" uid="uid://wn6i44h6q08l" path="res://assets/assets_minigame4/12.png" id="7_c0c1n"]
@@ -16,6 +17,8 @@
 [ext_resource type="Texture2D" uid="uid://5uhppgshay1" path="res://assets/assets_minigame4/LOTUS FULL.png" id="12_s8045"]
 [ext_resource type="Script" uid="uid://bbi0aiygulkhi" path="res://scripts/tristan_gameplaymoveset.gd" id="14_tiqqe"]
 [ext_resource type="Texture2D" uid="uid://r2ughrtiehix" path="res://assets/sprites/SHIT NI TRISTAN ADJUSTED HEIGHT (2).png" id="16_mdm0o"]
+[ext_resource type="Texture2D" uid="uid://btrrto1qjwavn" path="res://assets/sprites/spirit_sprite_sheet.png" id="17_at5qs"]
+[ext_resource type="AudioStream" uid="uid://cm7o2s8rfgyv" path="res://sfx/Ost/3the_mysterious_lake_dont_swim.mp3" id="19_ouo5j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_at5qs"]
 size = Vector2(86.333305, 87)
@@ -171,6 +174,28 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_dotgx"]
+atlas = ExtResource("17_at5qs")
+region = Rect2(0, 160, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ouo5j"]
+atlas = ExtResource("17_at5qs")
+region = Rect2(80, 160, 80, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hhdne"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dotgx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ouo5j")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Minigame4_map" type="Sprite2D" parent="."]
@@ -193,6 +218,7 @@ complete_image = NodePath("../CanvasLayer/CompleteImage")
 victory_gem = ExtResource("3_ppnyi")
 timer_duration = 90.0
 timer_ui_scene = ExtResource("7_ouo5j")
+instruction_label_scene = ExtResource("5_dotgx")
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(357, 137)
@@ -331,3 +357,16 @@ position = Vector2(0, 10)
 scale = Vector2(0.65, 0.65)
 sprite_frames = SubResource("SpriteFrames_at5qs")
 animation = &"Idle_Up"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(107, 438.00003)
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_hhdne")
+autoplay = "default"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(107, 438.00003)
+scale = Vector2(0.75, 0.75)
+stream = ExtResource("19_ouo5j")
+autoplay = true
+parameters/looping = true

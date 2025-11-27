@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://civb8s05hbluu" path="res://assets/assets_scene 3/TRISTAN SMILE.png" id="5_y4xfa"]
 
 [sub_resource type="Animation" id="Animation_w6lve"]
-length = 80.0
+length = 60.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true

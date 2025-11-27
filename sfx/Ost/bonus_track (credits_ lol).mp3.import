@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c61bk2x4g5atr"
+path="res://.godot/imported/bonus_track (credits_ lol).mp3-d7c156f2035d85a96ad2b175695973e9.mp3str"
+
+[deps]
+
+source_file="res://sfx/Ost/bonus_track (credits_ lol).mp3"
+dest_files=["res://.godot/imported/bonus_track (credits_ lol).mp3-d7c156f2035d85a96ad2b175695973e9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
